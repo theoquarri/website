@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0c0c0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>Security &amp; Trust - Quarri</title>
+<meta name="description" content="Database-per-customer isolation. End-to-end encryption. US/EU residency. Built on AWS and MotherDuck. The full Quarri security architecture.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-rail" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="assets/quarri-logo.png" alt="" class="nav-mark">
+      <span class="nav-wordmark">Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav').classList.toggle('is-open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-group">
+        <a href="#" tabindex="0">Industries</a>
+        <div class="nav-pop">
+          <a href="forestry-and-milling.html">Forestry &amp; Milling</a>
+          <a href="manufacturing-and-distribution.html">Manufacturing &amp; Distribution</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <a href="#" tabindex="0">Teams</a>
+        <div class="nav-pop">
+          <a href="finance-and-strategy-teams.html">Finance &amp; Strategy</a>
+          <a href="operations-teams.html">Operations</a>
+        </div>
+      </div>
+      <a href="security.html" class="is-active">Security</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="learn-more.html" class="btn btn-primary">Book a demo</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO (dark - sets the trust tone immediately) ===== -->
+<section class="hero on-dark">
+  <img class="hero-watermark" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow reveal">// Security &amp; trust</span>
+        <h1 class="h-display reveal delay-1">Secure <span class="warm-mark">by design.</span></h1>
+        <p class="lead reveal delay-2" style="margin-top: 32px;">Quarri sits on enterprise infrastructure with database-per-customer isolation, end-to-end encryption, full audit logging, and customer-controlled data residency.</p>
+        <div class="hero-cta-row reveal delay-3">
+          <a class="btn btn-warm" href="learn-more.html">Book a demo</a>
+          <a class="btn btn-ghost btn-arrow" href="#foundations">See the architecture</a>
+        </div>
+      </div>
+
+      <div class="reveal-right delay-3">
+        <div class="flow-stack">
+          <div class="flow-block">
+            <span class="flow-label">// Built on</span>
+            <ul class="flow-list">
+              <li>AWS cloud infrastructure</li>
+              <li>Isolated data platform</li>
+              <li>Anthropic Claude</li>
+            </ul>
+          </div>
+          <div class="flow-divider" aria-hidden="true"></div>
+          <div class="flow-block">
+            <span class="flow-label">// Promised</span>
+            <ul class="flow-list">
+              <li>Database-per-customer</li>
+              <li>US / EU residency</li>
+              <li>No model training</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 / Foundations (dark) ===== -->
+<section id="foundations" class="on-dark" style="padding-top: clamp(80px, 12vh, 140px);">
+  <span class="section-index">01 <span class="total">/ 06</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// Foundations</span>
+      <h2 class="reveal delay-1">Built on infrastructure that's <span class="warm-mark">already certified.</span></h2>
+      <p class="lead reveal delay-2">Quarri runs on AWS for cloud infrastructure and a SOC 2 Type II data platform - and connects to Anthropic's Claude for reasoning. We inherit their compliance and add tenant isolation on top.</p>
+    </div>
+
+    <div class="card-grid card-grid--3">
+      <div class="card reveal-right">
+        <div class="card-tag">// Cloud infrastructure</div>
+        <h3>AWS.</h3>
+        <p>Multi-AZ deployment in US or EU regions. SOC 2, ISO 27001, FedRAMP certified. Customer chooses the region; data never leaves it.</p>
+      </div>
+      <div class="card reveal-right delay-1">
+        <div class="card-tag">// Data platform</div>
+        <h3>Isolated by design.</h3>
+        <p>SOC 2 Type II data platform with database-per-customer at the platform level - physically isolated, OAuth-bound, encrypted at rest with AES-256.</p>
+      </div>
+      <div class="card reveal-right delay-2">
+        <div class="card-tag">// AI integration</div>
+        <h3>Anthropic Claude.</h3>
+        <p>Used for reasoning over your data via Quarri's tools. Customer data is never used to train models. Subject to Anthropic's enterprise data terms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 / Tenant isolation (dark + subtle texture) ===== -->
+<section class="on-dark bg-textured has-watermark">
+  <span class="section-index">02 <span class="total">/ 06</span></span>
+  <img class="section-watermark watermark-tl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// Tenant isolation</span>
+      <h2 class="reveal delay-1" style="color:var(--white);">Your data, in <span class="warm-mark">your database.</span> Always.</h2>
+      <p class="lead reveal delay-2">Every customer gets their own isolated database at the platform layer. No shared tables. No application-level cross-tenant access. OAuth tokens are bound to a single customer database - there is no API path that could read another customer's data.</p>
+    </div>
+
+    <div class="det-benefits">
+      <div class="det-benefit reveal">
+        <div class="det-benefit-num" style="color:var(--white);">0</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Cross-tenant<br>access paths</div>
+      </div>
+      <div class="det-benefit reveal delay-1">
+        <div class="det-benefit-num" style="color:var(--white);">1:1</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Customer to<br>database mapping</div>
+      </div>
+      <div class="det-benefit reveal delay-2">
+        <div class="det-benefit-num" style="color:var(--white);">OAuth</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Token-bound<br>to your tenant</div>
+      </div>
+      <div class="det-benefit reveal delay-3">
+        <div class="det-benefit-num" style="color:var(--white);">AES-256</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Encryption at rest<br>per tenant</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 / Encryption & residency ===== -->
+<section style="padding-top: clamp(80px, 12vh, 140px);">
+  <span class="section-index">03 <span class="total">/ 06</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// Encryption &amp; residency</span>
+      <h2 class="reveal delay-1">Encrypted in transit and at rest. Hosted <span class="warm-mark">where you choose.</span></h2>
+      <p class="lead reveal delay-2">Standard cryptography end-to-end, with full customer choice over data residency.</p>
+    </div>
+
+    <div class="cap-buckets">
+      <div class="cap-bucket reveal-right">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">01</span>
+          <span class="cap-bucket-name">In transit.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>TLS 1.2+ on every connection</span><span class="sep">&middot;</span>
+          <span>HSTS enforced</span><span class="sep">&middot;</span>
+          <span>Certificate pinning where supported</span><span class="sep">&middot;</span>
+          <span>No plaintext data transmission</span>
+        </div>
+      </div>
+
+      <div class="cap-bucket reveal-right delay-1">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">02</span>
+          <span class="cap-bucket-name">At rest.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>AES-256 encryption (MotherDuck / AWS managed keys)</span><span class="sep">&middot;</span>
+          <span>Geo-redundant snapshots within region</span><span class="sep">&middot;</span>
+          <span>Encrypted credential storage</span>
+        </div>
+      </div>
+
+      <div class="cap-bucket reveal-right delay-2">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">03</span>
+          <span class="cap-bucket-name">Residency.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>US-only hosting available</span><span class="sep">&middot;</span>
+          <span>EU-only hosting available</span><span class="sep">&middot;</span>
+          <span>Choice locked at provisioning - data does not move regions</span><span class="sep">&middot;</span>
+          <span>GDPR-aligned for EU customers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 / Access & audit (dark) ===== -->
+<section class="on-dark">
+  <span class="section-index">04 <span class="total">/ 06</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// Access &amp; audit</span>
+      <h2 class="reveal delay-1">Least-privilege access. <span class="warm-mark">Every action logged.</span></h2>
+      <p class="lead reveal delay-2">Role-based access control with quarterly reviews. Comprehensive audit trail accessible to customers on request.</p>
+    </div>
+
+    <div class="cap-buckets">
+      <div class="cap-bucket reveal-right">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">01</span>
+          <span class="cap-bucket-name">Authentication.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>Unique credentials per user</span><span class="sep">&middot;</span>
+          <span>12+ character password complexity</span><span class="sep">&middot;</span>
+          <span>Failed-login monitoring &amp; account lockout</span><span class="sep">&middot;</span>
+          <span>SSO / SAML on the roadmap</span>
+        </div>
+      </div>
+
+      <div class="cap-bucket reveal-right delay-1">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">02</span>
+          <span class="cap-bucket-name">Authorisation.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>RBAC: Admin and User role separation</span><span class="sep">&middot;</span>
+          <span>Principle of least privilege</span><span class="sep">&middot;</span>
+          <span>Access rights reviewed quarterly</span><span class="sep">&middot;</span>
+          <span>Immediate revocation on offboarding</span>
+        </div>
+      </div>
+
+      <div class="cap-bucket reveal-right delay-2">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">03</span>
+          <span class="cap-bucket-name">Audit trail.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>Full query history per user</span><span class="sep">&middot;</span>
+          <span>Authentication events (success and failure)</span><span class="sep">&middot;</span>
+          <span>Configuration changes &amp; admin actions</span><span class="sep">&middot;</span>
+          <span>Customer-accessible logs on request</span><span class="sep">&middot;</span>
+          <span>Immutable retention for the customer relationship</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 / What we don't do ===== -->
+<section class="on-dark has-watermark">
+  <span class="section-index">05 <span class="total">/ 06</span></span>
+  <img class="section-watermark watermark-br" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// What we don't do</span>
+      <h2 class="reveal delay-1" style="color:var(--white);">What we <span class="warm-mark">won't do.</span></h2>
+      <p class="lead reveal delay-2">Four explicit promises. Written into our policy. Enforced at the architecture level.</p>
+    </div>
+
+    <div class="bespoke-grid" style="margin-top: clamp(56px, 8vh, 88px);">
+      <div class="bespoke-item reveal" style="border-top-color: rgba(255,255,255,0.18);">
+        <span class="bespoke-num">01</span>
+        <h3 style="color:var(--white);">No PII or PHI storage.</h3>
+        <p style="color:rgba(255,255,255,0.62);">Quarri does not store personally identifiable information or protected health information. Data scope is contractual.</p>
+      </div>
+      <div class="bespoke-item reveal delay-1" style="border-top-color: rgba(255,255,255,0.18);">
+        <span class="bespoke-num">02</span>
+        <h3 style="color:var(--white);">No model training.</h3>
+        <p style="color:rgba(255,255,255,0.62);">Customer data is never used to train Quarri's models, nor passed to Anthropic for training under our enterprise terms.</p>
+      </div>
+      <div class="bespoke-item reveal delay-2" style="border-top-color: rgba(255,255,255,0.18);">
+        <span class="bespoke-num">03</span>
+        <h3 style="color:var(--white);">No cross-tenant access.</h3>
+        <p style="color:rgba(255,255,255,0.62);">No application or API path exists to read another customer's data. Isolation is enforced below the application layer.</p>
+      </div>
+      <div class="bespoke-item reveal delay-3" style="border-top-color: rgba(255,255,255,0.18);">
+        <span class="bespoke-num">04</span>
+        <h3 style="color:var(--white);">No user-injected code.</h3>
+        <p style="color:rgba(255,255,255,0.62);">Users cannot directly inject or execute code. Pipelines are generated only by controlled AI agents in subprocess isolation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 / Reliability & DR (dark + subtle texture) ===== -->
+<section class="on-dark bg-textured" style="padding-top: clamp(80px, 12vh, 140px);">
+  <span class="section-index">06 <span class="total">/ 06</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// Reliability &amp; recovery</span>
+      <h2 class="reveal delay-1">99.9% uptime. <span class="warm-mark">Recovery in hours, not days.</span></h2>
+      <p class="lead reveal delay-2">Documented disaster recovery plan with continuous backup, regional redundancy, and a 72-hour customer-notification commitment for any incident affecting your data.</p>
+    </div>
+
+    <div class="det-benefits">
+      <div class="det-benefit reveal">
+        <div class="det-benefit-num" style="color:var(--white);">99.9%</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Uptime SLA<br>(measured monthly)</div>
+      </div>
+      <div class="det-benefit reveal delay-1">
+        <div class="det-benefit-num" style="color:var(--white);">4 hr</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Recovery time<br>objective (RTO)</div>
+      </div>
+      <div class="det-benefit reveal delay-2">
+        <div class="det-benefit-num" style="color:var(--white);">1 hr</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Recovery point<br>objective (RPO)</div>
+      </div>
+      <div class="det-benefit reveal delay-3">
+        <div class="det-benefit-num" style="color:var(--white);">30 days</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Snapshot retention<br>geo-redundant</div>
+      </div>
+    </div>
+
+    <div class="trust-row" style="justify-content: center; margin-top: 56px;">
+      <span>Continuous database replication</span>
+      <span>Daily integrity verification</span>
+      <span>Annual full DR test</span>
+      <span>72-hour customer notification on incidents</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Bottom CTA ===== -->
+<section class="on-dark cta-block has-watermark">
+  <img class="section-watermark watermark-bl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <h2 class="h-display reveal" style="color:var(--white);">Live in <span class="warm-mark">two weeks.</span></h2>
+    <p class="lead reveal delay-1" style="color:rgba(255,255,255,0.62); margin-top:32px;">See Quarri running on your own data - securely.</p>
+    <div class="hero-cta-row reveal delay-2">
+      <a class="btn btn-primary" href="learn-more.html">Book a demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo" aria-label="Quarri home">
+          <img src="assets/quarri-logo-white.png" alt="" class="nav-mark">
+          <span class="nav-wordmark">Quarri</span>
+        </a>
+        <p class="footer-tag">The AI adoption platform for industrial operators.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="learn-more.html">Book a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="forestry-and-milling.html">Forestry &amp; Milling</a></li>
+          <li><a href="manufacturing-and-distribution.html">Manufacturing &amp; Distribution</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="finance-and-strategy-teams.html">Finance &amp; Strategy</a></li>
+          <li><a href="operations-teams.html">Operations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Ltd.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JS ===== -->
+<script>
+  (function () {
+    var root = document.documentElement;
+    function updateRail() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      root.style.setProperty('--scroll', pct.toFixed(2) + '%');
+    }
+    window.addEventListener('scroll', updateRail, { passive: true });
+    window.addEventListener('resize', updateRail);
+    updateRail();
+
+    var revealNodes = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    if ('IntersectionObserver' in window && revealNodes.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-revealed');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealNodes.forEach(function (n) { io.observe(n); });
+    } else {
+      revealNodes.forEach(function (n) { n.classList.add('is-revealed'); });
+    }
+  })();
+</script>
+
+</body>
+</html>

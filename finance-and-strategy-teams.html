@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0c0c0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>Quarri for Finance &amp; Strategy</title>
+<meta name="description" content="Live cash flow, board-ready reporting, segmented analysis - without the build. Quarri turns paper invoices, weighbridge tickets, and legacy ERPs into real-time finance.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-rail" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="assets/quarri-logo.png" alt="" class="nav-mark">
+      <span class="nav-wordmark">Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav').classList.toggle('is-open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-group">
+        <a href="#" tabindex="0">Industries</a>
+        <div class="nav-pop">
+          <a href="forestry-and-milling.html">Forestry &amp; Milling</a>
+          <a href="manufacturing-and-distribution.html">Manufacturing &amp; Distribution</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <a href="#" tabindex="0">Teams</a>
+        <div class="nav-pop">
+          <a href="finance-and-strategy-teams.html" class="is-active">Finance &amp; Strategy</a>
+          <a href="operations-teams.html">Operations</a>
+        </div>
+      </div>
+      <a href="security.html">Security</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="learn-more.html" class="btn btn-primary">Book a demo</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img class="hero-watermark" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow reveal">// Quarri for Finance &amp; Strategy</span>
+        <h1 class="h-display reveal delay-1">Finance, <span class="warm-mark">reimagined.</span></h1>
+        <p class="lead reveal delay-2" style="margin-top: 32px;">Move CFO and strategy teams off spreadsheets. Live cash flow, board-ready reporting, segmented analysis - on the messy ERPs and paper records you already run.</p>
+        <div class="hero-cta-row reveal delay-3">
+          <a class="btn btn-warm" href="learn-more.html">Book a demo</a>
+          <a class="btn btn-ghost btn-arrow" href="#capabilities">See what's inside</a>
+        </div>
+      </div>
+
+      <div class="reveal-right delay-3">
+        <div class="flow-stack">
+          <div class="flow-block">
+            <span class="flow-label">// In</span>
+            <ul class="flow-list">
+              <li>Legacy ERPs</li>
+              <li>Bills of lading</li>
+              <li>GRNs &amp; weighbridge tickets</li>
+              <li>Supplier invoices</li>
+            </ul>
+          </div>
+          <div class="flow-divider" aria-hidden="true"></div>
+          <div class="flow-block">
+            <span class="flow-label">// Out</span>
+            <ul class="flow-list">
+              <li>Live cash flow</li>
+              <li>Segmented margin</li>
+              <li>Board-ready packs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 / Capabilities (textured bone - full-width section-intro pattern) ===== -->
+<section id="capabilities" class="bg-textured" style="padding-top: clamp(80px, 12vh, 140px);">
+  <span class="section-index">01 <span class="total">/ 07</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// Capabilities</span>
+      <h2 class="reveal delay-1">Three buckets of work, on the data your ERP <span class="warm-mark">already owns.</span></h2>
+      <p class="lead reveal delay-2">A scan of what Quarri does for finance teams. Live demos of each, below.</p>
+    </div>
+
+    <div class="cap-buckets">
+      <div class="cap-bucket reveal-right">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">01</span>
+          <span class="cap-bucket-name">Capture &amp; Enrich.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>Bills of lading</span><span class="sep">&middot;</span>
+          <span>GRNs &amp; weighbridge tickets</span><span class="sep">&middot;</span>
+          <span>Supplier invoices</span><span class="sep">&middot;</span>
+          <span>Systems reconciliation (ERP &middot; AP/AR &middot; GL)</span><span class="sep">&middot;</span>
+          <span>External pricing &amp; market data</span>
+        </div>
+      </div>
+
+      <div class="cap-bucket reveal-right delay-1">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">02</span>
+          <span class="cap-bucket-name">Analyse &amp; Forecast.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>Segmented profitability (site, SKU, customer, region)</span><span class="sep">&middot;</span>
+          <span>Cash flow tied to live AR/AP</span><span class="sep">&middot;</span>
+          <span>Margin &amp; growth trend analysis</span><span class="sep">&middot;</span>
+          <span>Natural-language queries</span><span class="sep">&middot;</span>
+          <span>Transaction-level drill-down</span>
+        </div>
+      </div>
+
+      <div class="cap-bucket reveal-right delay-2">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">03</span>
+          <span class="cap-bucket-name">Monitor &amp; Report.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>Profit alerts (product, service line, time-of-day)</span><span class="sep">&middot;</span>
+          <span>Live dashboards by entity, portfolio, region</span><span class="sep">&middot;</span>
+          <span>Board-ready reporting</span><span class="sep">&middot;</span>
+          <span>Excel &amp; PowerPoint exports</span><span class="sep">&middot;</span>
+          <span>Audit-ready trail</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 / Why finance can trust Quarri (problem → solution, dark) ===== -->
+<section class="on-dark has-watermark">
+  <span class="section-index">02 <span class="total">/ 07</span></span>
+  <img class="section-watermark watermark-tl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// Why finance teams trust Quarri</span>
+      <h2 class="reveal delay-1" style="color:var(--white);">Why finance can't trust LLMs.<br>Why they trust <span class="warm-mark">Quarri.</span></h2>
+      <p class="lead reveal delay-2">LLMs are flexible reasoners - but they hallucinate on data, can't be audited, and cost per call. Quarri is the deterministic layer beneath. Numbers always correct. Trail always traceable.</p>
+    </div>
+
+    <div class="det-stack reveal delay-3">
+      <div class="det-layer det-layer--prob">
+        <span class="det-layer-tag">// The problem</span>
+        <div class="det-layer-name">LLM alone</div>
+        <ul class="det-layer-points">
+          <li>Hallucinates on data</li>
+          <li>No audit trail</li>
+          <li>Per-token cost</li>
+          <li>Tiny context window</li>
+        </ul>
+      </div>
+
+      <div class="det-arrow" aria-hidden="true">&#x2195;</div>
+
+      <div class="det-layer det-layer--det">
+        <span class="det-layer-tag">// The solution</span>
+        <div class="det-layer-name">Quarri<span class="warm-mark">.</span></div>
+        <ul class="det-layer-points">
+          <li>Deterministic data layer</li>
+          <li>Fully audit-ready trail</li>
+          <li>Cents per workflow</li>
+          <li>TB-scale context</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="det-benefits">
+      <div class="det-benefit reveal">
+        <div class="det-benefit-num" style="color:var(--white);">0</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Hallucinations<br>on numbers</div>
+      </div>
+      <div class="det-benefit reveal delay-1">
+        <div class="det-benefit-num" style="color:var(--white);">100%</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Audit-ready<br>trail</div>
+      </div>
+      <div class="det-benefit reveal delay-2">
+        <div class="det-benefit-num" style="color:var(--white);">~99%</div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Cheaper than<br>pure LLM</div>
+      </div>
+      <div class="det-benefit reveal delay-3">
+        <div class="det-benefit-num" style="color:var(--white);">99%<span class="warm-mark">+</span></div>
+        <div class="det-benefit-label" style="color:rgba(255,255,255,0.55);">Document parsing<br>accuracy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 / Demo: Capture & Enrich (bone) ===== -->
+<section class="demo-section">
+  <span class="section-index">03 <span class="total">/ 07</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// In the wild</span>
+      <h2 class="reveal delay-1">Capture &amp; <span class="warm-mark">Enrich.</span></h2>
+      <p class="lead reveal delay-2">Bills of lading, GRNs, supplier invoices, weighbridge tickets - ingested, parsed, reconciled to your ERP. Plus external pricing and market data on tap.</p>
+    </div>
+
+    <div class="demo-tabs reveal" role="tablist">
+      <button class="demo-tab is-active"
+              data-demo="1"
+              data-tag="// Live demo"
+              data-title="Automated ingestion of bills of lading, GRNs, supplier invoices, and weighbridge tickets - reconciled to your ERP.">
+        <span class="demo-tab-num">01</span>
+        <span class="demo-tab-name">Paper ingestion</span>
+      </button>
+      <button class="demo-tab"
+              data-demo="2"
+              data-tag="// Live demo"
+              data-title="Market sizing and penetration - overlay external industry data on your sales by region.">
+        <span class="demo-tab-num">02</span>
+        <span class="demo-tab-name">Market sizing</span>
+      </button>
+      <button class="demo-tab"
+              data-demo="3"
+              data-tag="// Live demo"
+              data-title="Pricing benchmarks against region, sector, and supplier rate cards.">
+        <span class="demo-tab-num">03</span>
+        <span class="demo-tab-name">Pricing benchmarks</span>
+      </button>
+    </div>
+
+    <div class="demo-stage reveal delay-2">
+      <div class="demo-caption">
+        <span class="demo-caption-tag">// Live demo</span>
+        <h3 class="demo-caption-title">Automated ingestion of bills of lading, GRNs, supplier invoices, and weighbridge tickets - reconciled to your ERP.</h3>
+      </div>
+      <div class="demo-frame">
+        <iframe class="is-active" data-demo="1" src="https://timely-salmiakki-50cb67.netlify.app" loading="lazy" allowfullscreen title="Paper ingestion demo"></iframe>
+        <iframe data-demo="2" src="https://sunny-flan-b4b8da.netlify.app/" loading="lazy" allowfullscreen title="Market sizing demo"></iframe>
+        <iframe data-demo="3" src="https://lively-salmiakki-745058.netlify.app/" loading="lazy" allowfullscreen title="Pricing benchmarks demo"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 / Customer impact (stats marquee, dark) ===== -->
+<section class="on-dark stat-band">
+  <span class="section-index">04 <span class="total">/ 07</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// Customer impact</span>
+      <h2 class="reveal delay-1" style="color:var(--white);">Real numbers from <span class="warm-mark">real finance teams.</span></h2>
+    </div>
+  </div>
+
+  <div class="marquee reveal delay-2" aria-label="Real deployment statistics">
+    <div class="marquee-track">
+      <div class="marquee-stat"><span class="marquee-num">$15k<span class="warm-mark">+</span></span><span class="marquee-label">Payment errors caught</span></div>
+      <div class="marquee-stat"><span class="marquee-num">$300k</span><span class="marquee-label">Accounting error fixed</span></div>
+      <div class="marquee-stat"><span class="marquee-num">100<span class="warm-mark">+</span> hrs</span><span class="marquee-label">Manual workflows automated</span></div>
+      <div class="marquee-stat"><span class="marquee-num">100M<span class="warm-mark">+</span></span><span class="marquee-label">Data points analysed</span></div>
+      <div class="marquee-stat"><span class="marquee-num">500<span class="warm-mark">+</span></span><span class="marquee-label">PDFs &amp; images parsed</span></div>
+      <div class="marquee-stat"><span class="marquee-num">$150k<span class="warm-mark">+</span></span><span class="marquee-label">Margin discovered</span></div>
+      <div class="marquee-stat"><span class="marquee-num">99%<span class="warm-mark">+</span></span><span class="marquee-label">Scanning accuracy</span></div>
+
+      <div class="marquee-stat" aria-hidden="true"><span class="marquee-num">$15k<span class="warm-mark">+</span></span><span class="marquee-label">Payment errors caught</span></div>
+      <div class="marquee-stat" aria-hidden="true"><span class="marquee-num">$300k</span><span class="marquee-label">Accounting error fixed</span></div>
+      <div class="marquee-stat" aria-hidden="true"><span class="marquee-num">100<span class="warm-mark">+</span> hrs</span><span class="marquee-label">Manual workflows automated</span></div>
+      <div class="marquee-stat" aria-hidden="true"><span class="marquee-num">100M<span class="warm-mark">+</span></span><span class="marquee-label">Data points analysed</span></div>
+      <div class="marquee-stat" aria-hidden="true"><span class="marquee-num">500<span class="warm-mark">+</span></span><span class="marquee-label">PDFs &amp; images parsed</span></div>
+      <div class="marquee-stat" aria-hidden="true"><span class="marquee-num">$150k<span class="warm-mark">+</span></span><span class="marquee-label">Margin discovered</span></div>
+      <div class="marquee-stat" aria-hidden="true"><span class="marquee-num">99%<span class="warm-mark">+</span></span><span class="marquee-label">Scanning accuracy</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 / Demo: Analyse & Forecast (textured bone) ===== -->
+<section class="demo-section bg-textured has-watermark">
+  <span class="section-index">05 <span class="total">/ 07</span></span>
+  <img class="section-watermark watermark-br" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// In the wild</span>
+      <h2 class="reveal delay-1">Analyse &amp; <span class="warm-mark">Forecast.</span></h2>
+      <p class="lead reveal delay-2">Segmented profitability. Cash flow tied to live AR/AP. Transaction-level drill-down - all on data your ERP already owns.</p>
+    </div>
+
+    <div class="demo-tabs reveal" role="tablist">
+      <button class="demo-tab is-active"
+              data-demo="1"
+              data-tag="// Live demo"
+              data-title="Segmented profitability by site, SKU, customer, and region - asked in plain English.">
+        <span class="demo-tab-num">01</span>
+        <span class="demo-tab-name">Profitability</span>
+      </button>
+      <button class="demo-tab"
+              data-demo="2"
+              data-tag="// Live demo"
+              data-title="Cash flow forecasting tied to live AR/AP, supplier terms, and seasonal demand.">
+        <span class="demo-tab-num">02</span>
+        <span class="demo-tab-name">Cash flow forecast</span>
+      </button>
+      <button class="demo-tab"
+              data-demo="3"
+              data-tag="// Live demo"
+              data-title="From board pack to transaction in seconds - every entry traceable, in plain English.">
+        <span class="demo-tab-num">03</span>
+        <span class="demo-tab-name">Drill-down</span>
+      </button>
+    </div>
+
+    <div class="demo-stage reveal delay-2">
+      <div class="demo-caption">
+        <span class="demo-caption-tag">// Live demo</span>
+        <h3 class="demo-caption-title">Segmented profitability by site, SKU, customer, and region - asked in plain English.</h3>
+      </div>
+      <div class="demo-frame">
+        <iframe class="is-active" data-demo="1" src="https://cheery-bavarois-20469f.netlify.app/" loading="lazy" allowfullscreen title="Profitability demo"></iframe>
+        <iframe data-demo="2" src="https://melodic-tapioca-25101c.netlify.app/" loading="lazy" allowfullscreen title="Cash flow forecast demo"></iframe>
+        <iframe data-demo="3" src="https://genuine-treacle-42c574.netlify.app" loading="lazy" allowfullscreen title="Drill-down demo"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quote (dark, mid-page breather) ===== -->
+<section class="on-dark quote has-watermark">
+  <img class="section-watermark watermark-bl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="quote-grid">
+      <div class="reveal-left">
+        <span class="quote-mark" aria-hidden="true"></span>
+        <blockquote>I showed some of the financial ops team too - super impressed. Love the comparisons to CPI, benchmarking by region, and the financial controls on voids and discounts.</blockquote>
+      </div>
+      <div class="quote-attr-block reveal-right delay-1">
+        <div class="attr">CFO</div>
+        <div class="role">Inland Harbour &middot; North America</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 / Demo: Monitor & Report (white) ===== -->
+<section class="demo-section" style="background: var(--white); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+  <span class="section-index">06 <span class="total">/ 07</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">// In the wild</span>
+      <h2 class="reveal delay-1">Monitor &amp; <span class="warm-mark">Report.</span></h2>
+      <p class="lead reveal delay-2">Profit alerts on the patterns spreadsheets miss. Board packs from live data. Exports to the formats your stakeholders actually use.</p>
+    </div>
+
+    <div class="demo-tabs reveal" role="tablist">
+      <button class="demo-tab is-active"
+              data-demo="1"
+              data-tag="// Live demo"
+              data-title="Profit alerts by product, SKU, and category - flagged when margin drifts below threshold.">
+        <span class="demo-tab-num">01</span>
+        <span class="demo-tab-name">Product alerts</span>
+      </button>
+      <button class="demo-tab"
+              data-demo="2"
+              data-tag="// Live demo"
+              data-title="Profit alerts by service line, shift, and time-of-day - patterns the spreadsheets miss.">
+        <span class="demo-tab-num">02</span>
+        <span class="demo-tab-name">Service-line alerts</span>
+      </button>
+      <button class="demo-tab"
+              data-demo="3"
+              data-tag="// Live demo"
+              data-title="Board pack from live data - site-by-site P&amp;L, downloadable to Excel and PowerPoint.">
+        <span class="demo-tab-num">03</span>
+        <span class="demo-tab-name">Board reporting</span>
+      </button>
+    </div>
+
+    <div class="demo-stage reveal delay-2">
+      <div class="demo-caption">
+        <span class="demo-caption-tag">// Live demo</span>
+        <h3 class="demo-caption-title">Profit alerts by product, SKU, and category - flagged when margin drifts below threshold.</h3>
+      </div>
+      <div class="demo-frame">
+        <iframe class="is-active" data-demo="1" src="https://meek-lamington-57e982.netlify.app" loading="lazy" allowfullscreen title="Product alerts demo"></iframe>
+        <iframe data-demo="2" src="https://rad-halva-b428d6.netlify.app/" loading="lazy" allowfullscreen title="Service-line alerts demo"></iframe>
+        <iframe data-demo="3" src="https://unrivaled-meringue-228507.netlify.app" loading="lazy" allowfullscreen title="Board reporting demo"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 / Bottom CTA ===== -->
+<section class="on-dark cta-block has-watermark">
+  <span class="section-index">07 <span class="total">/ 07</span></span>
+  <img class="section-watermark watermark-tr" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <h2 class="h-display reveal" style="color:var(--white);">Live in <span class="warm-mark">two weeks.</span></h2>
+    <p class="lead reveal delay-1" style="color:rgba(255,255,255,0.62); margin-top:32px;">Bring your own messy data - we'll show you what closes faster.</p>
+    <div class="hero-cta-row reveal delay-2">
+      <a class="btn btn-primary" href="learn-more.html">Book a demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo" aria-label="Quarri home">
+          <img src="assets/quarri-logo-white.png" alt="" class="nav-mark">
+          <span class="nav-wordmark">Quarri</span>
+        </a>
+        <p class="footer-tag">The AI adoption platform for industrial operators.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="learn-more.html">Book a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="forestry-and-milling.html">Forestry &amp; Milling</a></li>
+          <li><a href="manufacturing-and-distribution.html">Manufacturing &amp; Distribution</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="finance-and-strategy-teams.html">Finance &amp; Strategy</a></li>
+          <li><a href="operations-teams.html">Operations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Ltd.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JS ===== -->
+<script>
+  (function () {
+    var root = document.documentElement;
+    function updateRail() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      root.style.setProperty('--scroll', pct.toFixed(2) + '%');
+    }
+    window.addEventListener('scroll', updateRail, { passive: true });
+    window.addEventListener('resize', updateRail);
+    updateRail();
+
+    var revealNodes = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    if ('IntersectionObserver' in window && revealNodes.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-revealed');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealNodes.forEach(function (n) { io.observe(n); });
+    } else {
+      revealNodes.forEach(function (n) { n.classList.add('is-revealed'); });
+    }
+
+    /* ---------- Tabbed live demos - pre-rendered iframes, instant switching ---------- */
+    document.querySelectorAll('.demo-section').forEach(function (section) {
+      var tabs       = section.querySelectorAll('.demo-tab');
+      var iframes    = section.querySelectorAll('.demo-frame iframe');
+      var captionTag = section.querySelector('.demo-caption-tag');
+      var titleEl    = section.querySelector('.demo-caption-title');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var demoKey  = tab.dataset.demo;
+          var tagTxt   = tab.dataset.tag;
+          var titleTxt = tab.dataset.title;
+          if (!demoKey) return;
+
+          tabs.forEach(function (t) {
+            t.classList.toggle('is-active', t === tab);
+            t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+          });
+
+          iframes.forEach(function (f) {
+            f.classList.toggle('is-active', f.dataset.demo === demoKey);
+          });
+
+          captionTag.textContent = tagTxt;
+          titleEl.innerHTML = titleTxt;
+        });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

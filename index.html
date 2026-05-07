@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0c0c0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<title>Quarri - Deployed AI for messy industrials</title>
+<meta name="description" content="The knowledge layer between your messy data and any leading LLM. Deterministic, cheap, fast - at TB scale. Deployed AI for industrial operators.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Scroll progress rail -->
+<div class="scroll-rail" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="assets/quarri-logo.png" alt="" class="nav-mark">
+      <span class="nav-wordmark">Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav').classList.toggle('is-open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="index.html" class="is-active">Home</a>
+      <div class="nav-group">
+        <a href="#" tabindex="0">Industries</a>
+        <div class="nav-pop">
+          <a href="forestry-and-milling.html">Forestry &amp; Milling</a>
+          <a href="manufacturing-and-distribution.html">Manufacturing &amp; Distribution</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <a href="#" tabindex="0">Teams</a>
+        <div class="nav-pop">
+          <a href="finance-and-strategy-teams.html">Finance &amp; Strategy</a>
+          <a href="operations-teams.html">Operations</a>
+        </div>
+      </div>
+      <a href="security.html">Security</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="learn-more.html" class="btn btn-primary">Book a demo</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img class="hero-watermark" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow reveal">Quarri &middot; The AI adoption platform for industrial operators</span>
+        <h1 class="h-display reveal delay-1">Deployed AI for messy <span class="warm-mark">industrials</span>.</h1>
+        <div class="hero-cta-row reveal delay-2">
+          <a class="btn btn-warm" href="learn-more.html">Book a demo</a>
+          <a class="btn btn-ghost btn-arrow" href="#how-it-works">See how it works</a>
+        </div>
+      </div>
+
+      <div class="reveal-right delay-3">
+        <div class="flow-stack">
+          <div class="flow-block">
+            <span class="flow-label">// From</span>
+            <ul class="flow-list">
+              <li>Legacy ERPs</li>
+              <li>Spreadsheets</li>
+              <li>Paper records</li>
+            </ul>
+          </div>
+          <div class="flow-divider" aria-hidden="true"></div>
+          <div class="flow-block">
+            <span class="flow-label">// To</span>
+            <ul class="flow-list">
+              <li>Live workflows</li>
+              <li>Board-ready reports</li>
+              <li>AI-ready data</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 01 / How Quarri works ===== -->
+<section id="how-it-works" style="padding-top: clamp(80px, 12vh, 140px);">
+  <span class="section-index">01 <span class="total">/ 09</span></span>
+  <div class="container">
+    <div class="split">
+      <div class="split-left">
+        <span class="eyebrow reveal">How Quarri works</span>
+        <h2 class="reveal delay-1">Three steps from messy reality to working intelligence.</h2>
+        <p class="lead mt-32 reveal delay-2">Every Quarri deployment starts the same way. We don't replace your stack - we make it usable by AI.</p>
+      </div>
+
+      <div class="pillars-block">
+        <div class="pillar-row reveal-right">
+          <div class="pillar-head">
+            <span class="pillar-num">01</span>
+            <span class="pillar-word">Connect.</span>
+          </div>
+          <p>Legacy ERPs, databases, spreadsheets, scanned PDFs. Half a day per source - absorbed in the SaaS fee.</p>
+        </div>
+        <div class="pillar-row reveal-right delay-1">
+          <div class="pillar-head">
+            <span class="pillar-num">02</span>
+            <span class="pillar-word">Clean.</span>
+          </div>
+          <p>Auto-cleaned, deduplicated, structured into one queryable layer.</p>
+        </div>
+        <div class="pillar-row reveal-right delay-2">
+          <div class="pillar-head">
+            <span class="pillar-num">03</span>
+            <span class="pillar-word">Contextualise.</span>
+          </div>
+          <p>Your business rules, metrics, and definitions - embedded so AI gets it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 / The architecture: live data in leading LLMs ===== -->
+<section class="on-dark kl has-watermark">
+  <span class="section-index">02 <span class="total">/ 09</span></span>
+  <img class="section-watermark watermark-tl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="kl-header">
+      <div>
+        <span class="eyebrow reveal-left">The architecture</span>
+        <h2 class="reveal-left delay-1" style="color:var(--white);">Your live data in <span class="warm-mark">leading LLMs.</span></h2>
+      </div>
+      <p class="lead reveal-right delay-2">Quarri is the layer between your messy systems and the AI model your team uses. Read, transform, write back - at scale, with no inference required for the data work itself.</p>
+    </div>
+
+    <!-- 4-node flow with feedback loop -->
+    <div class="kl-flow reveal delay-3">
+      <div class="kl-flow-row">
+        <div class="kl-flow-node">
+          <span class="kl-flow-tag">// Sources</span>
+          <div class="kl-flow-name">Your systems</div>
+          <div class="kl-flow-list">ERPs &middot; Excel<br>Databases &middot; PDFs<br>External data</div>
+        </div>
+
+        <div class="kl-flow-arrow">&rarr;</div>
+
+        <div class="kl-flow-node kl-flow-node--quarri">
+          <img class="kl-flow-logo kl-flow-logo--quarri" src="assets/quarri-logo-white.png" alt="" aria-hidden="true">
+          <span class="kl-flow-tag">// Quarri</span>
+          <div class="kl-flow-name">Quarri<span class="dot">.</span></div>
+          <div class="kl-flow-list">Knowledge layer<br>Read + write<br>Deterministic</div>
+        </div>
+
+        <div class="kl-flow-arrow">&rarr;</div>
+
+        <div class="kl-flow-node">
+          <svg class="kl-flow-logo kl-flow-logo--claude" viewBox="0 0 32 32" aria-hidden="true">
+            <g stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none">
+              <line x1="16" y1="4" x2="16" y2="28"/>
+              <line x1="4" y1="16" x2="28" y2="16"/>
+              <line x1="7.2" y1="7.2" x2="24.8" y2="24.8"/>
+              <line x1="24.8" y1="7.2" x2="7.2" y2="24.8"/>
+            </g>
+          </svg>
+          <span class="kl-flow-tag">// Claude</span>
+          <div class="kl-flow-name">Anthropic Claude</div>
+          <div class="kl-flow-list">Reasoning<br>Planning<br>Tool use</div>
+        </div>
+
+        <div class="kl-flow-arrow">&rarr;</div>
+
+        <div class="kl-flow-node">
+          <span class="kl-flow-tag">// The result</span>
+          <div class="kl-flow-name">What ships</div>
+          <div class="kl-flow-list">Automated workflows<br>Analytics<br>Natural-language queries</div>
+        </div>
+      </div>
+
+      <!-- Feedback: Outputs persist back to Quarri -->
+      <div class="kl-flow-feedback">
+        <span class="kl-flow-feedback-icon">&#x21BA;</span>
+        <span class="kl-flow-feedback-text"><span class="warm-mark">Outputs persist back to Quarri</span> - workflows saved &middot; dashboards live &middot; data captured</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 / Why deterministic - cheaper, faster, vastly larger data ===== -->
+<section class="has-watermark">
+  <span class="section-index">03 <span class="total">/ 09</span></span>
+  <img class="section-watermark watermark-br" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">Why it works</span>
+      <h2 class="reveal delay-1">Cheaper. Faster. <span class="warm-mark">Vastly larger data.</span></h2>
+      <p class="lead reveal delay-2">Quarri is a deterministic layer beneath probabilistic LLMs. Encoded workflows and structured data handle the data work - no inference required, no hallucinations on the numbers. LLMs do what they're best at: reasoning.</p>
+    </div>
+
+    <!-- 2-tier diagram: Probabilistic LLM / Deterministic Quarri -->
+    <div class="det-stack reveal delay-3">
+      <div class="det-layer det-layer--prob">
+        <span class="det-layer-tag">// Probabilistic</span>
+        <div class="det-layer-name">LLM</div>
+        <p class="det-layer-desc">Flexible reasoning. Slow per call. Per-token cost. Limited context window.</p>
+      </div>
+
+      <div class="det-arrow" aria-hidden="true">&#x2195;</div>
+
+      <div class="det-layer det-layer--det">
+        <span class="det-layer-tag">// Deterministic</span>
+        <div class="det-layer-name">Quarri<span class="warm-mark">.</span></div>
+        <p class="det-layer-desc">Encoded workflows + structured data. Cents per workflow. TB-scale. No hallucinations on the data ops.</p>
+      </div>
+    </div>
+
+    <!-- 4 benefits -->
+    <div class="det-benefits">
+      <div class="det-benefit reveal">
+        <div class="det-benefit-num">~99%</div>
+        <div class="det-benefit-label">Cheaper than pure LLM<br>workflows</div>
+      </div>
+      <div class="det-benefit reveal delay-1">
+        <div class="det-benefit-num">5&ndash;10&times;</div>
+        <div class="det-benefit-label">Faster than LLM-only<br>execution</div>
+      </div>
+      <div class="det-benefit reveal delay-2">
+        <div class="det-benefit-num">100%</div>
+        <div class="det-benefit-label">Reliable on data ops<br>no hallucinations</div>
+      </div>
+      <div class="det-benefit reveal delay-3">
+        <div class="det-benefit-num">1&nbsp;TB+</div>
+        <div class="det-benefit-label">Scale - vs MB<br>on LLM-only context</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 / Customer impact (stats marquee) ===== -->
+<section class="on-dark stat-band">
+  <span class="section-index">04 <span class="total">/ 09</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">Customer impact</span>
+      <h2 class="reveal delay-1" style="color:var(--white);">Real numbers from <span class="warm-mark">real deployments.</span></h2>
+    </div>
+  </div>
+
+  <div class="marquee reveal delay-2" aria-label="Real deployment statistics">
+    <div class="marquee-track">
+      <div class="marquee-stat">
+        <span class="marquee-num">$15k<span class="warm-mark">+</span></span>
+        <span class="marquee-label">Payment errors caught</span>
+      </div>
+      <div class="marquee-stat">
+        <span class="marquee-num">$300k</span>
+        <span class="marquee-label">Accounting error fixed</span>
+      </div>
+      <div class="marquee-stat">
+        <span class="marquee-num">100<span class="warm-mark">+</span> hrs</span>
+        <span class="marquee-label">Manual workflows automated</span>
+      </div>
+      <div class="marquee-stat">
+        <span class="marquee-num">100M<span class="warm-mark">+</span></span>
+        <span class="marquee-label">Data points analysed</span>
+      </div>
+      <div class="marquee-stat">
+        <span class="marquee-num">500<span class="warm-mark">+</span></span>
+        <span class="marquee-label">PDFs &amp; images parsed</span>
+      </div>
+      <div class="marquee-stat">
+        <span class="marquee-num">$150k<span class="warm-mark">+</span></span>
+        <span class="marquee-label">Margin discovered</span>
+      </div>
+      <div class="marquee-stat">
+        <span class="marquee-num">99%<span class="warm-mark">+</span></span>
+        <span class="marquee-label">Scanning accuracy</span>
+      </div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="marquee-stat" aria-hidden="true">
+        <span class="marquee-num">$15k<span class="warm-mark">+</span></span>
+        <span class="marquee-label">Payment errors caught</span>
+      </div>
+      <div class="marquee-stat" aria-hidden="true">
+        <span class="marquee-num">$300k</span>
+        <span class="marquee-label">Accounting error fixed</span>
+      </div>
+      <div class="marquee-stat" aria-hidden="true">
+        <span class="marquee-num">100<span class="warm-mark">+</span> hrs</span>
+        <span class="marquee-label">Manual workflows automated</span>
+      </div>
+      <div class="marquee-stat" aria-hidden="true">
+        <span class="marquee-num">100M<span class="warm-mark">+</span></span>
+        <span class="marquee-label">Data points analysed</span>
+      </div>
+      <div class="marquee-stat" aria-hidden="true">
+        <span class="marquee-num">500<span class="warm-mark">+</span></span>
+        <span class="marquee-label">PDFs &amp; images parsed</span>
+      </div>
+      <div class="marquee-stat" aria-hidden="true">
+        <span class="marquee-num">$150k<span class="warm-mark">+</span></span>
+        <span class="marquee-label">Margin discovered</span>
+      </div>
+      <div class="marquee-stat" aria-hidden="true">
+        <span class="marquee-num">99%<span class="warm-mark">+</span></span>
+        <span class="marquee-label">Scanning accuracy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 / Capabilities ===== -->
+<section class="has-watermark">
+  <span class="section-index">05 <span class="total">/ 09</span></span>
+  <img class="section-watermark watermark-tr" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">Capabilities</span>
+      <h2 class="reveal delay-1">Built around the real workflows of <span class="warm-mark">industrial operators</span>.</h2>
+      <p class="lead reveal delay-2">Resource extraction. Supply chain. Processing &amp; manufacturing. Quarri replaces the spreadsheets behind every step.</p>
+    </div>
+
+    <div class="cap-buckets">
+      <div class="cap-bucket reveal-right">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">01</span>
+          <span class="cap-bucket-name">Resource Extraction.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>Extraction management</span><span class="sep">&middot;</span>
+          <span>Resource allocation</span><span class="sep">&middot;</span>
+          <span>Contract fulfilment</span><span class="sep">&middot;</span>
+          <span>Compliance &amp; sustainability reporting</span><span class="sep">&middot;</span>
+          <span>Live dashboards by region &amp; grade</span><span class="sep">&middot;</span>
+          <span>External benchmarks</span>
+        </div>
+      </div>
+
+      <div class="cap-bucket reveal-right delay-1">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">02</span>
+          <span class="cap-bucket-name">Supply Chain &amp; Logistics.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>Bills of lading</span><span class="sep">&middot;</span>
+          <span>Delivery reports</span><span class="sep">&middot;</span>
+          <span>Payable amounts</span><span class="sep">&middot;</span>
+          <span>Goods received notes</span><span class="sep">&middot;</span>
+          <span>Multi-site inventory visibility</span><span class="sep">&middot;</span>
+          <span>Forecasting (demand, lead time, weather)</span><span class="sep">&middot;</span>
+          <span>Cross-system reconciliation</span>
+        </div>
+      </div>
+
+      <div class="cap-bucket reveal-right delay-2">
+        <div class="cap-bucket-head">
+          <span class="cap-bucket-num">03</span>
+          <span class="cap-bucket-name">Processing &amp; Manufacturing.</span>
+        </div>
+        <div class="cap-bucket-tags">
+          <span>Maintenance reports</span><span class="sep">&middot;</span>
+          <span>Performance optimisation</span><span class="sep">&middot;</span>
+          <span>Inventory management</span><span class="sep">&middot;</span>
+          <span>Defect-rate tracking</span><span class="sep">&middot;</span>
+          <span>Margin clarity (category to SKU)</span><span class="sep">&middot;</span>
+          <span>Natural-language operations queries</span><span class="sep">&middot;</span>
+          <span>Board-ready production reporting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quote ===== -->
+<section class="on-dark quote has-watermark">
+  <img class="section-watermark watermark-bl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="quote-grid">
+      <div class="reveal-left">
+        <span class="quote-mark" aria-hidden="true"></span>
+        <blockquote>The Quarri integration has made me do more with AI in the past 6 weeks than I have in the past 6 months.</blockquote>
+      </div>
+      <div class="quote-attr-block reveal-right delay-1">
+        <div class="attr">Head of Operations</div>
+        <div class="role">Forestry &amp; Milling Enterprise &middot; North America</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 / Bespoke (textured bg) ===== -->
+<section class="bg-textured">
+  <span class="section-index">06 <span class="total">/ 09</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">Bespoke deployment</span>
+      <h2 class="reveal delay-1">No data too messy. <span class="warm-mark">No workflow too complex.</span></h2>
+      <p class="lead reveal delay-2">When the standard buckets don't cover it, our team gets hands-on. Custom integrations, judgement-heavy workflows, on-prem databases - we'll build it.</p>
+    </div>
+
+    <div class="bespoke-grid">
+      <div class="bespoke-item reveal">
+        <span class="bespoke-num">01</span>
+        <h3>Handwritten PDFs.</h3>
+        <p>OCR plus structured extraction on weighbridge tickets, GRNs, invoices, and field reports.</p>
+      </div>
+      <div class="bespoke-item reveal delay-1">
+        <span class="bespoke-num">02</span>
+        <h3>Judgement-heavy Excel.</h3>
+        <p>The workbook only one person understands? We model it, automate it, replace it.</p>
+      </div>
+      <div class="bespoke-item reveal delay-2">
+        <span class="bespoke-num">03</span>
+        <h3>On-prem databases.</h3>
+        <p>Direct connectors into legacy SQL, mainframes, and proprietary systems.</p>
+      </div>
+      <div class="bespoke-item reveal delay-3">
+        <span class="bespoke-num">04</span>
+        <h3>Fragmented systems.</h3>
+        <p>Multiple ERPs from acquisitions, regional variations, off-the-shelf hacks - all reconciled.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 / Quarri in action - built around your team ===== -->
+<section class="has-watermark" style="background: var(--white); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+  <span class="section-index">07 <span class="total">/ 09</span></span>
+  <img class="section-watermark watermark-tl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">Quarri in action</span>
+      <h2 class="reveal delay-1">Built around how your team <span class="warm-mark">actually thinks.</span></h2>
+      <p class="lead reveal delay-2">The same knowledge layer powers finance and operations - with views built around how each function works. Real dashboards, on the systems your team already runs.</p>
+    </div>
+
+    <div class="product-grid product-grid--2">
+      <a href="finance-and-strategy-teams.html" class="product-card reveal">
+        <div class="product-card-head">
+          <span class="product-tag">// Finance &amp; Strategy</span>
+          <h3 class="product-card-title">For finance &amp; strategy <span class="warm-mark">teams.</span></h3>
+        </div>
+        <div class="product-img-wrap">
+          <img src="assets/products/cfo-dashboard.png" alt="Quarri CFO dashboard showing live financial metrics" loading="lazy">
+        </div>
+        <div class="product-card-foot">
+          <p>Live cash flow, board-ready reporting, segmented analysis - connected to legacy ERPs, refreshed in real time, drilled to the transaction in seconds.</p>
+          <span class="card-link">Explore Finance &amp; Strategy</span>
+        </div>
+      </a>
+
+      <a href="operations-teams.html" class="product-card reveal delay-1">
+        <div class="product-card-head">
+          <span class="product-tag">// Operations</span>
+          <h3 class="product-card-title">For operations <span class="warm-mark">teams.</span></h3>
+        </div>
+        <div class="product-img-wrap">
+          <img src="assets/products/coo-dashboard.png" alt="Quarri operations dashboard showing throughput and defect metrics" loading="lazy">
+        </div>
+        <div class="product-card-foot">
+          <p>From reactive firefighting to live, connected, strategic operations - throughput, defects, and lead time across every site, line, and shift.</p>
+          <span class="card-link">Explore Operations</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 / For your industry ===== -->
+<section style="background: var(--white); border-bottom: 1px solid var(--rule);">
+  <span class="section-index">08 <span class="total">/ 09</span></span>
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow reveal">For your industry</span>
+      <h2 class="reveal delay-1">Built for the businesses that make and move things.</h2>
+      <p class="lead reveal delay-2">Industrial operators run on legacy ERPs and paper. We start there - and turn it into a working knowledge layer.</p>
+    </div>
+
+    <div class="ind-list">
+      <a href="forestry-and-milling.html" class="ind-row reveal-right">
+        <div class="ind-head">
+          <span class="ind-num">01</span>
+          <span class="ind-name">Forestry &amp; Milling.</span>
+        </div>
+        <p>From bid to felling to finished board. Eliminate paperwork from field to office, mill to ledger.</p>
+        <span class="ind-arrow">&rarr;</span>
+      </a>
+      <a href="manufacturing-and-distribution.html" class="ind-row reveal-right delay-1">
+        <div class="ind-head">
+          <span class="ind-num">02</span>
+          <span class="ind-name">Manufacturing &amp; Distribution.</span>
+        </div>
+        <p>Cut downtime. Optimise input/output inventory. Live lead times. From plant floor to dispatched truck on one operating layer.</p>
+        <span class="ind-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 / Security & trust ===== -->
+<section class="on-dark has-watermark">
+  <span class="section-index">09 <span class="total">/ 09</span></span>
+  <img class="section-watermark watermark-bl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="split">
+      <div class="split-left">
+        <span class="eyebrow reveal">// Security &amp; trust</span>
+        <h2 class="reveal delay-1" style="color:var(--white);">Secure <span class="warm-mark">by design.</span></h2>
+        <p class="lead mt-32 reveal delay-2">Your data, in your database. Database-per-customer isolation, AES-256 encryption end-to-end, US/EU residency - and never used to train models. Built on AWS and an isolated, certified data platform.</p>
+        <div class="hero-cta-row reveal delay-3" style="margin-top: 40px;">
+          <a class="btn btn-ghost btn-arrow" href="security.html" style="border-color: rgba(255,255,255,0.4); color: var(--white);">See the security architecture</a>
+        </div>
+      </div>
+
+      <div class="reveal-right delay-2">
+        <div class="flow-stack">
+          <div class="flow-block">
+            <span class="flow-label">// Foundations</span>
+            <ul class="flow-list">
+              <li>AWS &middot; multi-AZ, US/EU regions</li>
+              <li>Isolated, certified data platform</li>
+              <li>Anthropic Claude (no training)</li>
+            </ul>
+          </div>
+          <div class="flow-divider" aria-hidden="true"></div>
+          <div class="flow-block">
+            <span class="flow-label">// Promised</span>
+            <ul class="flow-list">
+              <li>Database-per-customer</li>
+              <li>End-to-end encryption</li>
+              <li>0 cross-tenant access paths</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-row reveal delay-3" style="margin-top: 56px;">
+      <span>Database-per-customer isolation</span>
+      <span>AES-256 encryption</span>
+      <span>US / EU residency</span>
+      <span>No LLM training on your data</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Bottom CTA ===== -->
+<section class="on-dark cta-block has-watermark">
+  <img class="section-watermark watermark-tr" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <h2 class="h-display reveal" style="color:var(--white);">Live in <span class="warm-mark">two weeks.</span></h2>
+    <p class="lead reveal delay-1" style="color:rgba(255,255,255,0.62); margin-top:32px;">See Quarri running on your own data.</p>
+    <div class="hero-cta-row reveal delay-2">
+      <a class="btn btn-primary" href="learn-more.html">Book a demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo" aria-label="Quarri home">
+          <img src="assets/quarri-logo-white.png" alt="" class="nav-mark">
+          <span class="nav-wordmark">Quarri</span>
+        </a>
+        <p class="footer-tag">The AI adoption platform for industrial operators.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="learn-more.html">Book a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="forestry-and-milling.html">Forestry &amp; Milling</a></li>
+          <li><a href="manufacturing-and-distribution.html">Manufacturing &amp; Distribution</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="finance-and-strategy-teams.html">Finance &amp; Strategy</a></li>
+          <li><a href="operations-teams.html">Operations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Ltd.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JS: scroll-rail + scroll-reveal ===== -->
+<script>
+  (function () {
+    var root = document.documentElement;
+    function updateRail() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      root.style.setProperty('--scroll', pct.toFixed(2) + '%');
+    }
+    window.addEventListener('scroll', updateRail, { passive: true });
+    window.addEventListener('resize', updateRail);
+    updateRail();
+
+    var nodes = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    if (!('IntersectionObserver' in window) || !nodes.length) {
+      nodes.forEach(function (n) { n.classList.add('is-revealed'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-revealed');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    nodes.forEach(function (n) { io.observe(n); });
+  })();
+</script>
+
+</body>
+</html>
