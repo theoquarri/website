@@ -36,9 +36,13 @@
   /* Compact hero on this page so the pricing chart is visible without a
      full-viewport scroll. */
   .hero {
-    padding-top: clamp(96px, 12vh, 132px);
+    padding-top: clamp(72px, 9vh, 104px);
     padding-bottom: clamp(40px, 6vh, 64px);
   }
+  /* Top-align the two hero columns. The right-hand "included / add-ons"
+     stack is taller than the headline, so centring pushed the headline
+     down and left a big gap above it. */
+  .hero .hero-grid { align-items: start; }
   /* A lot smaller than the site-wide display heading. */
   .hero .h-display {
     font-size: clamp(30px, 4vw, 44px);
@@ -130,7 +134,7 @@
     <div class="pricing-shell">
       <iframe
         id="pricing-frame"
-        src="https://theoquarri.github.io/dashboards/quarri_pricing_chart.html?v=20260702b"
+        src="https://theoquarri.github.io/dashboards/quarri_pricing_chart.html?v=20260702c"
         loading="lazy"
         title="Quarri pricing - tiers, comparison, and add-ons"></iframe>
     </div>
