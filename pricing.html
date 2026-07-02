@@ -39,8 +39,14 @@
     padding-top: clamp(96px, 12vh, 132px);
     padding-bottom: clamp(40px, 6vh, 64px);
   }
-  .hero .lead { margin-top: 20px !important; }
-  .hero .hero-cta-row { margin-top: 32px; }
+  /* A lot smaller than the site-wide display heading. */
+  .hero .h-display {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+  .hero .lead { margin-top: 18px !important; font-size: 16px; }
+  .hero .hero-cta-row { margin-top: 28px; }
 </style>
 </head>
 <body>
@@ -85,8 +91,8 @@
     <div class="hero-grid">
       <div>
         <span class="eyebrow reveal">// Pricing</span>
-        <h1 class="h-display reveal delay-1">Simple pricing for <span class="warm-mark">industrial operators.</span></h1>
-        <p class="lead reveal delay-2" style="margin-top: 32px;">Four tiers, unlimited AI queries on every plan, and add-ons priced by use - no long-term commitment required.</p>
+        <h1 class="h-display reveal delay-1">Tailored pricing for <span class="warm-mark">all operators.</span></h1>
+        <p class="lead reveal delay-2" style="margin-top: 32px;">Unlimited AI queries on every plan, and add-ons priced by use - no long-term commitment required.</p>
         <div class="hero-cta-row reveal delay-3">
           <a class="btn btn-warm" href="learn-more.html">Book a demo</a>
           <a class="btn btn-ghost btn-arrow" href="#tiers">See the tiers</a>
@@ -124,7 +130,7 @@
     <div class="pricing-shell">
       <iframe
         id="pricing-frame"
-        src="https://theoquarri.github.io/dashboards/quarri_pricing_chart.html?v=20260702"
+        src="https://theoquarri.github.io/dashboards/quarri_pricing_chart.html?v=20260702b"
         loading="lazy"
         title="Quarri pricing - tiers, comparison, and add-ons"></iframe>
     </div>
