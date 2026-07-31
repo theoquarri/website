@@ -44,9 +44,27 @@
 
   /* --- analytics --------------------------------------------------------- */
   var loaded = false;
+  /* Three third-party scripts pulling on the network and the main thread while
+     the page is still painting is the difference between a page that feels
+     instant and one that feels sticky. None of them need to run during load, so
+     they wait for the browser to be idle. The timeout is the backstop: on a busy
+     page idle may never arrive, and analytics that never fires is worse than
+     analytics that fires late. */
+  function whenIdle(fn) {
+    if (typeof window.requestIdleCallback === 'function') {
+      window.requestIdleCallback(fn, { timeout: 2500 });
+    } else {
+      setTimeout(fn, 1200);
+    }
+  }
+
   function loadAnalytics() {
     if (loaded) return;
     loaded = true;
+    whenIdle(loadAnalyticsNow);
+  }
+
+  function loadAnalyticsNow() {
 
     if (CLARITY_ID) {
       (function (c, l, a, r, i, t, y) {
