@@ -1669,3 +1669,8 @@
   content:""; position:absolute; left:2px; top:11px;
   width:5px; height:5px; border-radius:50%; background:var(--coral);
 }
+
+/* A three-item Resources menu does not need the width the Who-we-serve menu
+   uses for eleven. Narrower, and no group headings to separate. */
+.nav-pop-sm{ min-width:238px }
+.nav-pop-sm a{ padding:11px 13px }

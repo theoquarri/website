@@ -168,7 +168,7 @@ h4{ font-weight:500 }
 .nav-inner{ display:flex; align-items:center; gap:22px; height:70px }
 .nav-logo{ display:flex; align-items:center; gap:10px; margin-right:auto; flex:none }
 .nav-logo img{ height:26px; width:auto }
-.nav-logo span{ font-size:19px; font-weight:600; letter-spacing:-.02em }
+.nav-logo span{ font-size:23px; font-weight:300; letter-spacing:-.025em }
 /* Eight links plus a login and a CTA is a lot of width. A smaller step and a
    smaller type size pull the group back toward the right, so it reads as a
    navigation cluster rather than stretching across the page as a list. */
