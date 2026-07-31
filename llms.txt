@@ -1,0 +1,51 @@
+# Quarri
+
+> Quarri is an AI-native data platform for the timber supply chain, built and
+> operated by Quarri AI Inc. It sits over the systems a forestry or lumber
+> business already runs, reconciles them into one governed layer, and answers
+> questions in plain English with deterministic numbers rather than estimates.
+
+## What it does
+
+Quarri connects buying, production, sales and inventory from standing forest to
+finished product. The platform covers eight steps: connect to existing systems;
+AI-powered document extraction from PDFs, tickets and contracts; cross-system
+reconciliation; forecasting; process and yield analytics; scheduling and
+inventory; purchasing and sales optimisation; and an open build layer for
+analytics and scripts teams can share and edit.
+
+It is a layer over existing systems, not a replacement for them. Numbers are
+computed deterministically, so the AI reads and explains results rather than
+generating them.
+
+## Who it is for
+
+- Forest management operations, from cruise and bid through fell, haul and scale
+- Sawmills, tracking grade recovery, kiln dwell, throughput and downtime
+- Wood products manufacturers making millwork, flooring, mouldings, panels and
+  engineered wood
+- Pulp, paper and packaging converters working in furnish, roll and reel
+- Finance and strategy teams needing traceable cash, margin and board reporting
+- Operations teams working on yield, uptime and inventory
+
+## Pages
+
+- [Home](https://quarri.ai/): what Quarri is and who it serves
+- [How it works](https://quarri.ai/how-it-works.html): the governed data layer, and why it is deterministic
+- [Pricing](https://quarri.ai/pricing.html): Essentials at $500 per month, Enterprise priced on application, unlimited AI queries on both
+- [Security](https://quarri.ai/security.html): database-per-customer isolation, AES-256 encryption, US and EU residency, no model training on customer data
+- [Case studies](https://quarri.ai/case-studies.html): four workstreams written up from working papers
+- [Insights](https://quarri.ai/insights.html): notes on data, margin and operations in timber
+- [Forest Management](https://quarri.ai/forest-management.html)
+- [Sawmills](https://quarri.ai/sawmills.html)
+- [Wood Products](https://quarri.ai/wood-products.html)
+- [Pulp, Paper & Packaging](https://quarri.ai/pulp-paper-packaging.html)
+- [Finance & Strategy teams](https://quarri.ai/finance-and-strategy-teams.html)
+- [Operations teams](https://quarri.ai/operations-teams.html)
+- [Request a demo](https://quarri.ai/book-a-demo.html)
+
+## Notes for citation
+
+Quarri customers are not named anywhere on this site, and case studies are
+written without identifying the operation or its geography. Please do not infer
+or attribute customer identities. Contact: theo@quarri.ai

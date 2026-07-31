@@ -2,641 +2,1180 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0c0c0c" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="format-detection" content="telephone=no">
-<title>Quarri - Deployed AI for messy industrials</title>
-<meta name="description" content="The knowledge layer between your messy data and any leading LLM. Deterministic, cheap, fast - at TB scale. Deployed AI for industrial operators.">
-<link rel="icon" type="image/png" sizes="any" href="assets/favicon.png">
+<meta name="theme-color" content="#f7f6f3">
+<title>Quarri: an AI-native platform for the timber supply chain</title>
+<meta name="description" content="Quarri connects buying, production, sales and inventory for forestry and lumber operators in one live layer, from forest to finished product.">
+<link rel="canonical" href="https://quarri.ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="Quarri: an AI-native platform for the timber supply chain">
+<meta property="og:description" content="Quarri connects buying, production, sales and inventory for forestry and lumber operators in one live layer, from forest to finished product.">
+<meta property="og:url" content="https://quarri.ai/">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quarri: an AI-native platform for the timber supply chain">
+<meta name="twitter:description" content="Quarri connects buying, production, sales and inventory for forestry and lumber operators in one live layer, from forest to finished product.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
 <link rel="icon" type="image/png" href="assets/favicon.png" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/png" href="assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=90">
+<link rel="stylesheet" href="components.css?v=90">
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "An AI-native platform for the timber supply chain.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://quarri.ai/#webpage",
+      "url": "https://quarri.ai/",
+      "name": "Quarri: an AI-native platform for the timber supply chain",
+      "description": "Quarri connects buying, production, sales and inventory for forestry and lumber operators in one live layer, from forest to finished product.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "about": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://quarri.ai/assets/og-image.jpg"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://quarri.ai/#software",
+      "name": "Quarri",
+      "url": "https://quarri.ai/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Supply chain data and analytics platform",
+      "operatingSystem": "Web browser",
+      "description": "An AI-native data platform for forestry and lumber operators. Quarri sits over the systems you already run, reconciles them into one governed layer, and answers questions in plain English with deterministic numbers.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "provider": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "featureList": [
+        "Connect: read from ERP, scale house, finance and spreadsheet systems without replacing them",
+        "AI-powered document extraction: turn PDF invoices, tickets and contracts into structured data",
+        "Cross-system reconciliation: match what was cut, hauled, scaled, invoiced and paid",
+        "Forecast: demand, price and volume forecasting on your own history",
+        "Process: yield, recovery, downtime and throughput across lines and shifts",
+        "Schedule and inventory: lead times, ageing stock and what to run next",
+        "Buy and sell better: supplier reliability, purchase price variance and margin per unit",
+        "Build anything: analytics, dashboards and scripts your team can share and edit"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Essentials",
+          "price": "500",
+          "priceCurrency": "USD",
+          "url": "https://quarri.ai/pricing.html",
+          "description": "One live data source, 1 GB of data, unlimited AI queries, one user and unlimited dashboard viewers. Implementation and data modelling included.",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "500",
+            "priceCurrency": "USD",
+            "unitText": "month",
+            "billingDuration": 1,
+            "billingIncrement": 1
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise",
+          "url": "https://quarri.ai/pricing.html",
+          "description": "Custom data sources, storage, users, roles and support for complex operations. Priced on application.",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
-
-<!-- Scroll progress rail -->
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="scroll-rail" aria-hidden="true"></div>
 
-<!-- ===== NAV ===== -->
-<header class="nav">
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Quarri home">
-      <img src="assets/quarri-logo.png" alt="" class="nav-mark">
-      <span class="nav-wordmark">Quarri</span>
+      <img src="assets/quarri-logo.png" alt="" width="26" height="26" decoding="async">
+      <span>Quarri</span>
     </a>
-    <button class="nav-toggle" aria-label="Open menu" onclick="document.querySelector('.nav').classList.toggle('is-open')">&#9776;</button>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
     <nav class="nav-links">
-      <a href="index.html" class="is-active">Home</a>
+      <a href="#platform">Platform</a>
       <div class="nav-group">
-        <a href="#" tabindex="0">Industries</a>
+        <a href="#serve" tabindex="0">Who we serve</a>
         <div class="nav-pop">
-          <a href="forestry-and-milling.html">Forestry &amp; Milling</a>
-          <a href="manufacturing-and-distribution.html">Manufacturing &amp; Distribution</a>
+          <span class="np-group">By operation</span>
+          <a href="forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
         </div>
       </div>
-      <div class="nav-group">
-        <a href="#" tabindex="0">Teams</a>
-        <div class="nav-pop">
-          <a href="finance-and-strategy-teams.html">Finance &amp; Strategy</a>
-          <a href="operations-teams.html">Operations</a>
-        </div>
-      </div>
+      <a href="how-it-works.html">How it works</a>
       <a href="security.html">Security</a>
       <a href="pricing.html">Pricing</a>
+      <a href="case-studies.html">Case studies</a>
+      <a href="insights.html">Insights</a>
       <a href="https://app.quarri.ai/" class="nav-login">Login</a>
-      <a href="learn-more.html" class="btn btn-primary">Book a demo</a>
+      <a href="book-a-demo.html" class="btn btn-primary">Request a demo</a>
     </nav>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <img class="hero-watermark" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow reveal">Quarri &middot; The AI adoption platform for industrial operators</span>
-        <h1 class="h-display reveal delay-1">Deployed AI for messy <span class="warm-mark">industrials</span>.</h1>
-        <div class="hero-cta-row reveal delay-2">
-          <a class="btn btn-warm" href="learn-more.html">Book a demo</a>
-          <a class="btn btn-ghost btn-arrow" href="#how-it-works">See how it works</a>
+<main id="main">
+<!-- ============ HERO ============ -->
+<section class="hero-split">
+  <div class="hero-head">
+    <div class="hero-media" aria-hidden="true">
+      <!-- Poster paints immediately, then the loop takes over once it can play.
+           Re-encode from source with _encode_hero_video.py if the footage changes. -->
+      <video class="hero-vid" autoplay muted loop playsinline preload="auto"
+             poster="assets/video/forest-pan-poster.webp">
+        <source src="assets/video/forest-pan.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="container">
+      <h1 class="display reveal">An AI-native platform for the <span class="coral">timber supply chain.</span></h1>
+      <p class="lead reveal d1">From standing forest to finished product. Quarri connects buying, production, sales and inventory in one live layer, so you capture more margin on every load.</p>
+      <div class="hero-jump reveal d2">
+        <a href="book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a>
+        <a href="#serve" class="btn btn-ghost">Who we serve <span class="arw">&darr;</span></a>
+        <a href="#platform" class="btn btn-ghost">The platform <span class="arw">&darr;</span></a>
+      </div>
+    </div>
+    <span class="hero-cue" aria-hidden="true">
+      Scroll
+      <svg viewBox="0 0 14 20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v14"/><path d="m2.5 11.5 4.5 4.5 4.5-4.5"/></svg>
+    </span>
+  </div>
+
+  <div class="hero-stage">
+    <div class="container">
+    <div class="flow2 reveal d3">
+      <!-- LEFT: the systems you run today -->
+      <div class="scatter">
+        <svg class="tang" viewBox="0 0 340 320" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="66" y1="52" x2="248" y2="60"/><line x1="248" y1="60" x2="72" y2="168"/>
+          <line x1="72" y1="168" x2="252" y2="176"/><line x1="252" y1="176" x2="150" y2="272"/>
+        </svg>
+        <div class="gdoc" style="top:0;left:1%;transform:rotate(-2deg)">
+          <div class="gh"><span class="gi"></span><span class="gt">Legacy ERP</span></div>
+          <div class="gl a"></div><div class="gl b"></div>
+          <span class="gsub">On-prem, nightly export</span>
+        </div>
+        <div class="gdoc" style="top:6%;left:50%;transform:rotate(3deg)">
+          <div class="gh"><span class="gi"></span><span class="gt">Spreadsheet</span></div>
+          <div class="gl a"></div><div class="gl c"></div>
+          <span class="gsub">One person understands it</span>
+        </div>
+        <div class="gdoc" style="top:35%;left:4%;transform:rotate(-3deg)">
+          <div class="gh"><span class="gi"></span><span class="gt">Scale ticket</span></div>
+          <div class="gl a"></div>
+          <span class="gval">BOL 431027 &middot; <b>41.2 t</b></span>
+        </div>
+        <div class="gdoc" style="top:41%;left:52%;transform:rotate(2deg)">
+          <div class="gh"><span class="gi"></span><span class="gt">Field tally</span></div>
+          <div class="gl a"></div>
+          <span class="gval">BOL 431027 &middot; <b class="bad">40.8 t</b></span>
+        </div>
+        <div class="gdoc" style="top:71%;left:22%;transform:rotate(-1deg)">
+          <div class="gh"><span class="gi"></span><span class="gt">Scanned invoice</span></div>
+          <div class="gl a"></div><div class="gl c"></div>
+          <span class="gsub">PDF, no line detail</span>
         </div>
       </div>
 
-      <div class="reveal-right delay-3">
-        <div class="flow-stack">
-          <div class="flow-block">
-            <span class="flow-label">// From</span>
-            <ul class="flow-list">
-              <li>Legacy ERPs</li>
-              <li>Spreadsheets</li>
-              <li>Paper records</li>
-            </ul>
+      <div class="arrow2"><span class="b">&rarr;</span></div>
+
+      <!-- RIGHT: live glass panel -->
+      <div class="glass">
+        <div class="glass-bar">
+          <span class="d"></span><span class="d"></span><span class="d"></span>
+          <span class="u">app.quarri.ai</span>
+          <span class="live"><i></i>live</span>
+        </div>
+        <div class="glass-body">
+
+          <div class="gticker">
+            <div class="tk">
+              <span>BOL 431027 matched &middot; gap <b>$0.01</b></span>
+              <span>Kiln 2 dwell <b>6.2 d</b></span>
+              <span>Loads today <b>41</b></span>
+              <span>Grade recovery <b>73%</b></span>
+              <span>FEFO draw &middot; oldest lift staged</span>
+              <span aria-hidden="true">BOL 431027 matched &middot; gap <b>$0.01</b></span>
+              <span aria-hidden="true">Kiln 2 dwell <b>6.2 d</b></span>
+              <span aria-hidden="true">Loads today <b>41</b></span>
+              <span aria-hidden="true">Grade recovery <b>73%</b></span>
+              <span aria-hidden="true">FEFO draw &middot; oldest lift staged</span>
+            </div>
           </div>
-          <div class="flow-divider" aria-hidden="true"></div>
-          <div class="flow-block">
-            <span class="flow-label">// To</span>
-            <ul class="flow-list">
-              <li>Live workflows</li>
-              <li>Board-ready reports</li>
-              <li>AI-ready data</li>
-            </ul>
+
+          <div class="gcell wide">
+            <div class="gc-head"><span class="gc-t">Grade recovery &middot; % to premium</span><span class="gc-v">73% &middot; target 75%</span></div>
+            <svg viewBox="0 0 300 74" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="ga" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#35a05f" stop-opacity=".34"/>
+                  <stop offset="100%" stop-color="#35a05f" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line class="gridline" x1="4" y1="30" x2="296" y2="30"/>
+              <path class="spark-area" fill="url(#ga)" d="M10,42 C34,36 40,26 66,22 C92,18 100,14 128,17 C156,20 164,28 192,33 C220,38 228,42 244,44 L244,74 L10,74 Z"/>
+              <path class="spark-line" d="M10,42 C34,36 40,26 66,22 C92,18 100,14 128,17 C156,20 164,28 192,33 C220,38 228,42 244,44"/>
+              <path class="spark-fc" d="M244,44 C258,45 272,42 292,36"/>
+              <circle class="spark-dot pulse" cx="244" cy="44" r="3"/>
+            </svg>
           </div>
+
+          <div class="gcell">
+            <div class="gc-head"><span class="gc-t">Margin by line</span><span class="gc-v">24%</span></div>
+            <svg viewBox="0 0 140 62" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="gbar" style="animation-delay:.5s"  x="8"   y="14" width="18" height="48" rx="2.5" fill="rgba(255,255,255,.18)"/>
+              <rect class="gbar" style="animation-delay:.62s" x="34"  y="20" width="18" height="42" rx="2.5" fill="rgba(255,255,255,.18)"/>
+              <rect class="gbar" style="animation-delay:.74s" x="60"  y="26" width="18" height="36" rx="2.5" fill="rgba(255,255,255,.18)"/>
+              <rect class="gbar" style="animation-delay:.86s" x="86"  y="32" width="18" height="30" rx="2.5" fill="rgba(255,255,255,.18)"/>
+              <rect class="gbar" style="animation-delay:.98s" x="112" y="38" width="18" height="24" rx="2.5" fill="#35a05f"/>
+            </svg>
+          </div>
+
+          <div class="gcell">
+            <div class="gc-head"><span class="gc-t">Inventory cover</span><span class="gc-v">4.2k m&sup3;</span></div>
+            <svg viewBox="0 0 140 62" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#35a05f" stop-opacity=".30"/>
+                  <stop offset="100%" stop-color="#35a05f" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="spark-area" fill="url(#gb)" d="M6,40 C22,34 30,44 46,38 C62,32 70,20 88,22 C106,24 114,32 134,26 L134,62 L6,62 Z"/>
+              <path class="spark-line" style="animation-delay:.6s" d="M6,40 C22,34 30,44 46,38 C62,32 70,20 88,22 C106,24 114,32 134,26"/>
+              <circle class="spark-dot" cx="134" cy="26" r="2.8"/>
+            </svg>
+          </div>
+
+          <div class="grec">
+            <span class="gi">&#9650;</span>
+            <span class="gtxt"><b>Reroute pine to Kiln 1.</b> Kiln 2 is drifting below the premium target</span>
+            <span class="gimp">+$6/m&sup3;</span>
+          </div>
+
+          <div class="gask">
+            <span class="qi">&#10095;</span>
+            <span class="qtxt">Which blocks are operable after Thursday's rain?</span>
+            <span class="qtag">Ask Quarri</span>
+          </div>
+
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 01 / How Quarri works ===== -->
-<section id="how-it-works" style="padding-top: clamp(80px, 12vh, 140px);">
-  <span class="section-index">01 <span class="total">/ 09</span></span>
+<!-- ============ TRUST MARQUEE ============ -->
+<div class="trust">
   <div class="container">
-    <div class="split">
-      <div class="split-left">
-        <span class="eyebrow reveal">How Quarri works</span>
-        <h2 class="reveal delay-1">Three steps from messy reality to working intelligence.</h2>
-        <p class="lead mt-32 reveal delay-2">Every Quarri deployment starts the same way. We don't replace your stack - we make it usable by AI.</p>
-      </div>
+    <p class="trust-tag reveal">Trusted by forestry and lumber operators across North America and Europe</p>
+  </div>
+  <div class="mq reveal d1" aria-label="Figures from live Quarri deployments">
+    <div class="mq-track">
+      <div class="mq-stat"><div class="mq-num">$300K</div><div class="mq-lab">Over-accrual flagged in the first month</div></div>
+      <div class="mq-stat"><div class="mq-num">99%+</div><div class="mq-lab">Extraction accuracy across 143 documents</div></div>
+      <div class="mq-stat"><div class="mq-num">500+</div><div class="mq-lab">PDFs and images parsed across deployments</div></div>
+      <div class="mq-stat"><div class="mq-num">100x</div><div class="mq-lab">Cheaper per execution than a pure LLM call</div></div>
+      <div class="mq-stat"><div class="mq-num">+240,000</div><div class="mq-lab">Net tonnes tracked in a single year</div></div>
+      <div class="mq-stat"><div class="mq-num">8,255</div><div class="mq-lab">Bills of lading matched &middot; zero exceptions</div></div>
+      <div class="mq-stat"><div class="mq-num">$0.01</div><div class="mq-lab">Largest gap on a full reconciliation cycle</div></div>
+      <div class="mq-stat"><div class="mq-num">Six figures</div><div class="mq-lab">Of proven procurement saving</div></div>
+      <div class="mq-stat"><div class="mq-num">&plusmn;258 t</div><div class="mq-lab">Per-day harvest forecast accuracy</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">$300K</div><div class="mq-lab">Over-accrual flagged in the first month</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">99%+</div><div class="mq-lab">Extraction accuracy across 143 documents</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">500+</div><div class="mq-lab">PDFs and images parsed across deployments</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">100x</div><div class="mq-lab">Cheaper per execution than a pure LLM call</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">+240,000</div><div class="mq-lab">Net tonnes tracked in a single year</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">8,255</div><div class="mq-lab">Bills of lading matched &middot; zero exceptions</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">$0.01</div><div class="mq-lab">Largest gap on a full reconciliation cycle</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">Six figures</div><div class="mq-lab">Of proven procurement saving</div></div>
+      <div class="mq-stat" aria-hidden="true"><div class="mq-num">&plusmn;258 t</div><div class="mq-lab">Per-day harvest forecast accuracy</div></div>
+    </div>
+  </div>
+</div>
 
-      <div class="pillars-block">
-        <div class="pillar-row reveal-right">
-          <div class="pillar-head">
-            <span class="pillar-num">01</span>
-            <span class="pillar-word">Connect.</span>
-          </div>
-          <p>Legacy ERPs, databases, spreadsheets, scanned PDFs. Half a day per source - absorbed in the SaaS fee.</p>
+<!-- ============ STATEMENT BAND ============ -->
+<div role="img" aria-label="Wall of banded sawn lumber packs stacked to the roof of a warehouse" class="fullbleed band-xl reveal" style="background-image:url('images/opt/pexels-nc-farm-bureau-mark-12278572.webp')">
+  <div class="bx">
+    <h2>Built for every link in the chain.</h2>
+  </div>
+</div>
+
+<!-- ============ WHO WE SERVE, the chain map ============ -->
+<section id="serve" class="bordered bg-white">
+  <div class="container">
+    <span class="label reveal">// Who we serve</span>
+
+    <div class="chainmap reveal d1" style="margin-top:clamp(24px,3vw,38px)">
+      <div class="cm-rail" aria-hidden="true"></div>
+
+      <a href="forest-management.html" class="cmx">
+        <div role="img" aria-label="Dense stand of tall conifers in a managed forest, standing timber before harvest" class="cm-photo" style="background-image:url('images/opt/forestry-vertical-page-1-sm.webp')">
+          <span class="cm-step">01 &middot; Upstream</span>
         </div>
-        <div class="pillar-row reveal-right delay-1">
-          <div class="pillar-head">
-            <span class="pillar-num">02</span>
-            <span class="pillar-word">Clean.</span>
-          </div>
-          <p>Auto-cleaned, deduplicated, structured into one queryable layer.</p>
+        <div class="cm-body">
+          <span class="cm-io">Land &rarr; log</span>
+          <h3>Forest Management</h3>
+          <p class="cm-who">Timberland owners and managers, forest management organisations, logging and haulage contractors.</p>
+          <span class="cm-go">Explore &rarr;</span>
         </div>
-        <div class="pillar-row reveal-right delay-2">
-          <div class="pillar-head">
-            <span class="pillar-num">03</span>
-            <span class="pillar-word">Contextualise.</span>
-          </div>
-          <p>Your business rules, metrics, and definitions - embedded so AI gets it.</p>
+      </a>
+
+      <a href="sawmills.html" class="cmx">
+        <div role="img" aria-label="Roadside deck of cut logs stacked against an overcast sky" class="cm-photo" style="background-image:url('images/opt/stacked-logs-sm.webp')">
+          <span class="cm-step">02 &middot; Primary process</span>
         </div>
-      </div>
+        <div class="cm-body">
+          <span class="cm-io">Log &rarr; lumber</span>
+          <h3>Sawmills</h3>
+          <p class="cm-who">Multi-site groups, integrated forest products companies.</p>
+          <span class="cm-go">Explore &rarr;</span>
+        </div>
+      </a>
+
+      <a href="wood-products.html" class="cmx">
+        <div role="img" aria-label="Operator running a CNC milling machine cutting panel product, sawdust in the air" class="cm-photo" style="background-image:url('images/opt/pexels-mandiri-abadi-396768996-14805033-sm.webp')">
+          <span class="cm-step">03 &middot; Finished product</span>
+        </div>
+        <div class="cm-body">
+          <span class="cm-io">Lumber &rarr; finished</span>
+          <h3>Wood Products</h3>
+          <p class="cm-who">Millwork, moulding and flooring, windows and joinery, pallets, panels and engineered wood.</p>
+          <span class="cm-go">Explore &rarr;</span>
+        </div>
+      </a>
+
+      <a href="pulp-paper-packaging.html" class="cmx">
+        <div role="img" aria-label="Aisles of pallet racking in a distribution warehouse" class="cm-photo" style="background-image:url('images/opt/pexels-tiger-lily-4483608-sm.webp')">
+          <span class="cm-step">04 &middot; Fibre</span>
+        </div>
+        <div class="cm-body">
+          <span class="cm-io">Fibre &rarr; board</span>
+          <h3>Pulp, Paper &amp; Packaging</h3>
+          <p class="cm-who">Packaging and tissue producers, paperboard and container manufacturers.</p>
+          <span class="cm-go">Explore &rarr;</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ===== 02 / The architecture: live data in leading LLMs ===== -->
-<section class="on-dark kl has-watermark">
-  <span class="section-index">02 <span class="total">/ 09</span></span>
-  <img class="section-watermark watermark-tl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+<!-- ============ PLATFORM ============ -->
+<section id="platform">
   <div class="container">
-    <div class="kl-header">
-      <div>
-        <span class="eyebrow reveal-left">The architecture</span>
-        <h2 class="reveal-left delay-1" style="color:var(--white);">Your live data in <span class="warm-mark">leading LLMs.</span></h2>
-      </div>
-      <p class="lead reveal-right delay-2">Quarri is the layer between your messy systems and the AI model your team uses. Read, transform, write back - at scale, with no inference required for the data work itself.</p>
+    <div class="section-intro">
+      <span class="label reveal">// The platform</span>
+      <h2 class="reveal d1">Quarri connects everything. <span class="coral">No migration project, no rip-out.</span></h2>
     </div>
 
-    <!-- 4-node flow with feedback loop -->
-    <div class="kl-flow reveal delay-3">
-      <div class="kl-flow-row">
-        <div class="kl-flow-node">
-          <span class="kl-flow-tag">// Sources</span>
-          <div class="kl-flow-name">Your systems</div>
-          <div class="kl-flow-list">ERPs &middot; Excel<br>Databases &middot; PDFs<br>External data</div>
+    <!-- Agent chips are logo-ready. When the logo files arrive, replace each
+         <svg class="ag-mark"> with <img class="ag-mark" src="assets/logos/<name>.svg" alt="">.
+         Nothing else needs to change. -->
+    <div class="agentstrip reveal d1">
+      <span class="ag-lab">// Plug your data into any agent</span>
+      <div class="ag-row">
+        <span class="ag-chip">
+          <svg class="ag-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><ellipse cx="12" cy="12" rx="10" ry="4.1"/><ellipse cx="12" cy="12" rx="10" ry="4.1" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.1" transform="rotate(120 12 12)"/></svg>
+          <span>ChatGPT</span>
+        </span>
+        <span class="ag-chip">
+          <svg class="ag-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/><line x1="18.4" y1="5.6" x2="5.6" y2="18.4"/></svg>
+          <span>Claude</span>
+        </span>
+        <span class="ag-chip">
+          <svg class="ag-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.6-7-9.4A4.1 4.1 0 0 1 12 8a4.1 4.1 0 0 1 7 2.6C19 15.4 12 20 12 20Z"/></svg>
+          <span>Lovable</span>
+        </span>
+      </div>
+      <span class="ag-more">and whichever agent your team already uses</span>
+    </div>
+
+    <div class="aiband reveal d1">
+      <div class="aib">
+        <svg class="aii" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h13"/><circle cx="19" cy="12" r="2"/></svg>
+        <h4>It learns your vocabulary</h4>
+        <p>Your species codes, your grades, your process names. Not someone else's template.</p>
+      </div>
+      <div class="aib">
+        <svg class="aii" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18V6a2 2 0 0 1 2-2h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="m9 13 2.2 2.2L16 10.4"/></svg>
+        <h4>Deterministic underneath</h4>
+        <p>The data work is encoded logic. Numbers are computed, never guessed.</p>
+      </div>
+      <div class="aib">
+        <svg class="aii" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L7 21l1.1-3.6A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+        <h4>Ask it in plain English</h4>
+        <p>In Quarri, or through Claude, ChatGPT and whichever agent your team already uses.</p>
+      </div>
+    </div>
+
+    <!-- 01 CONNECT -->
+    <div class="modrow reveal" id="connect">
+      <div class="mr-copy">
+        <div class="wf-stage"><span class="num">01</span></div>
+        <div class="mr-name"><h3>Connect</h3></div>
+        <p>Every system you already run, brought into one live layer: your ERP, mill system, on-prem database and the spreadsheets your team actually trusts. Connected into leading models to build customised outputs.</p>
+        <ul class="mr-list">
+          <li>No migration project and no rip-out</li>
+          <li>A live sync, not a one-off export</li>
+          <li>New sources added whenever you need them</li>
+        </ul>
+      </div>
+      <div class="mr-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// Your systems &rarr; one layer &rarr; AI</span><em>live</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <text x="4" y="13" class="mono-s">YOUR SYSTEMS</text>
+            <g class="dr-up" style="animation-delay:.05s"><rect x="4" y="20" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="30" class="mono-w">ERP</text></g>
+            <g class="dr-up" style="animation-delay:.12s"><rect x="4" y="39" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="49" class="mono-w">MILL SYS</text></g>
+            <g class="dr-up" style="animation-delay:.19s"><rect x="4" y="58" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="68" class="mono-w">SQL</text></g>
+            <g class="dr-up" style="animation-delay:.26s"><rect x="4" y="77" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="87" class="mono-w">SHEETS</text></g>
+            <g class="dr-up" style="animation-delay:.33s"><rect x="4" y="96" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="106" class="mono-w">PAPER</text></g>
+
+            <path class="dr-flow" d="M78 27 C104 27 104 60 122 62" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
+            <path class="dr-flow" d="M78 46 C104 46 104 62 122 64" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
+            <path class="dr-flow" d="M78 65 C104 65 104 65 122 66" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
+            <path class="dr-flow" d="M78 84 C104 84 104 68 122 68" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
+            <path class="dr-flow" d="M78 103 C104 103 104 70 122 70" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
+
+            <rect x="126" y="26" width="92" height="80" rx="6" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.32)"/>
+            <text x="134" y="42" class="mono-g">GOVERNED</text>
+            <text x="134" y="53" class="mono-g">LAYER</text>
+            <line x1="134" y1="60" x2="210" y2="60" stroke="rgba(255,255,255,.14)"/>
+            <text x="134" y="73" class="mono-s">CLEANED</text>
+            <text x="134" y="86" class="mono-s">JOINED</text>
+            <text x="134" y="99" class="mono-s">GOVERNED</text>
+            <circle class="spark-dot pulse" cx="208" cy="36" r="3"/>
+
+            <path class="dr-flow" d="M220 66 h20" fill="none" stroke="#35a05f" stroke-width="1.2"/>
+            <path d="m236 62 6 4-6 4" fill="none" stroke="#35a05f" stroke-width="1.2" stroke-linecap="round"/>
+
+            <rect x="246" y="14" width="110" height="104" rx="6" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.22)"/>
+            <text x="255" y="29" class="mono-w">AI MODELS</text>
+            <line x1="255" y1="35" x2="348" y2="35" stroke="rgba(255,255,255,.14)"/>
+            <g class="dr-up" style="animation-delay:.5s"><rect x="255" y="42" width="86" height="14" rx="4" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="262" y="52" class="mono-g">SKILLS</text></g>
+            <g class="dr-up" style="animation-delay:.58s"><rect x="255" y="60" width="86" height="14" rx="4" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="262" y="70" class="mono-g">TOOLS</text></g>
+            <g class="dr-up" style="animation-delay:.66s"><rect x="255" y="78" width="86" height="14" rx="4" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="262" y="88" class="mono-g">CONTEXT</text></g>
+            <g class="dr-up" style="animation-delay:.74s"><rect x="255" y="96" width="86" height="14" rx="4" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="262" y="106" class="mono-g">AGENTS</text></g>
+          </svg>
+          <p class="cap">One deployment syncs your ERP daily alongside weighbridge data, scanned authority invoices and live weather.</p>
         </div>
+      </div>
+    </div>
 
-        <div class="kl-flow-arrow">&rarr;</div>
-
-        <div class="kl-flow-node kl-flow-node--quarri">
-          <img class="kl-flow-logo kl-flow-logo--quarri" src="assets/quarri-logo-white.png" alt="" aria-hidden="true">
-          <span class="kl-flow-tag">// Quarri</span>
-          <div class="kl-flow-name">Quarri<span class="dot">.</span></div>
-          <div class="kl-flow-list">Knowledge layer<br>Read + write<br>Deterministic</div>
+    <!-- 02 CAPTURE -->
+    <div class="modrow flip reveal" id="capture">
+      <div class="mr-copy">
+        <div class="wf-stage"><span class="num">02</span></div>
+        <div class="mr-name"><h3>AI-powered document extraction</h3></div>
+        <p>Scale tickets, field tallies, delivery dockets, supplier invoices and contracts. Handwritten, scanned or buried in a legacy export, read and turned into structured, queryable data.</p>
+        <ul class="mr-list">
+          <li>Every value traceable back to the page it came from</li>
+          <li>Human in the loop for exceptions</li>
+          <li>Replayable, auditable, cheap and works at scale</li>
+        </ul>
+      </div>
+      <div class="mr-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// Document capture</span><em>143 / 143</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <rect x="4" y="14" width="86" height="104" rx="5" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.16)"/>
+            <text x="14" y="32" class="mono-s">SCANNED</text>
+            <path d="M14 46h60M14 56h44M14 66h66M14 76h38M14 86h58M14 96h30" stroke="rgba(255,255,255,.22)" stroke-width="3" stroke-linecap="round"/>
+            <path class="dr-flow" d="M100 66h30" stroke="#35a05f" stroke-width="1.3" fill="none"/>
+            <path d="m128 62 6 4-6 4" fill="none" stroke="#35a05f" stroke-width="1.3" stroke-linecap="round"/>
+            <rect x="144" y="14" width="212" height="104" rx="5" fill="rgba(53,160,95,.07)" stroke="rgba(53,160,95,.26)"/>
+            <text x="154" y="32" class="mono-g">STRUCTURED</text>
+            <line x1="154" y1="40" x2="346" y2="40" stroke="rgba(255,255,255,.14)"/>
+            <text x="154" y="55" class="mono-w">BOL</text><text x="212" y="55" class="mono-w">SPECIES</text><text x="300" y="55" class="mono-w">m3</text>
+            <g class="dr-up" style="animation-delay:.5s"><text x="154" y="72" class="mono-s">431026</text><text x="212" y="72" class="mono-s">White Pine</text><text x="300" y="72" class="mono-g">28.4</text></g>
+            <g class="dr-up" style="animation-delay:.62s"><text x="154" y="89" class="mono-s">431027</text><text x="212" y="89" class="mono-s">Hemlock</text><text x="300" y="89" class="mono-g">31.2</text></g>
+            <g class="dr-up" style="animation-delay:.74s"><text x="154" y="106" class="mono-s">431028</text><text x="212" y="106" class="mono-s">Mixed Hwd</text><text x="300" y="106" class="mono-g">26.9</text></g>
+          </svg>
+          <p class="cap">Every contract, offer and measurement ingested.</p>
         </div>
+      </div>
+    </div>
 
-        <div class="kl-flow-arrow">&rarr;</div>
+    <!-- 03 RECONCILE -->
+    <div class="modrow reveal" id="reconciliation">
+      <div class="mr-copy">
+        <div class="wf-stage"><span class="num">03</span></div>
+        <div class="mr-name"><h3>Cross-system reconciliation</h3></div>
+        <p>Way tickets, operational data sets, accounting ledgers and invoices reconciled, with exceptions flagged.</p>
+        <ul class="mr-list">
+          <li>Variances flagged and aged rather than absorbed</li>
+          <li>Quick issue resolution</li>
+          <li>Entries posted straight into your finance system (coming soon)</li>
+        </ul>
+      </div>
+      <div class="mr-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// Ticket &rarr; invoice &rarr; ledger</span><em>1 variance</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <text x="6" y="14" class="mono-s">BOL</text>
+            <text x="76" y="14" class="mono-s">TICKET</text>
+            <text x="150" y="14" class="mono-s">INVOICE</text>
+            <text x="228" y="14" class="mono-s">LEDGER</text>
+            <text x="300" y="14" class="mono-s">MATCH</text>
+            <line x1="6" y1="20" x2="354" y2="20" stroke="rgba(255,255,255,.14)"/>
 
-        <div class="kl-flow-node">
-          <svg class="kl-flow-logo kl-flow-logo--claude" viewBox="0 0 32 32" aria-hidden="true">
-            <g stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none">
-              <line x1="16" y1="4" x2="16" y2="28"/>
-              <line x1="4" y1="16" x2="28" y2="16"/>
-              <line x1="7.2" y1="7.2" x2="24.8" y2="24.8"/>
-              <line x1="24.8" y1="7.2" x2="7.2" y2="24.8"/>
+            <g class="dr-up" style="animation-delay:.1s">
+              <text x="6" y="38" class="mono-s">431026</text><text x="76" y="38" class="mono-s">39.6 t</text>
+              <text x="150" y="38" class="mono-s">39.6 t</text><text x="228" y="38" class="mono-s">39.6 t</text>
+              <text x="300" y="38" class="mono-g">TIED</text>
+            </g>
+            <g class="dr-up" style="animation-delay:.22s">
+              <text x="6" y="58" class="mono-s">431027</text><text x="76" y="58" class="mono-s">41.2 t</text>
+              <text x="150" y="58" class="mono-s">41.2 t</text><text x="228" y="58" class="mono-s">41.2 t</text>
+              <text x="300" y="58" class="mono-g">TIED</text>
+            </g>
+            <g class="dr-up" style="animation-delay:.34s">
+              <text x="6" y="78" class="mono-s">431028</text><text x="76" y="78" class="mono-s">38.9 t</text>
+              <text x="150" y="78" class="mono-s">38.9 t</text><text x="228" y="78" class="mono-s">38.9 t</text>
+              <text x="300" y="78" class="mono-g">TIED</text>
+            </g>
+            <g class="dr-up" style="animation-delay:.46s">
+              <rect x="2" y="86" width="356" height="22" rx="4" fill="rgba(192,57,43,.13)" stroke="rgba(192,57,43,.45)"/>
+              <text x="6" y="101" class="mono-s">431029</text><text x="76" y="101" class="mono-r">$1.50/t</text>
+              <text x="150" y="101" class="mono-r">$9/t</text><text x="228" y="101" class="mono-s">not posted</text>
+              <text x="300" y="101" class="mono-r">+500%</text>
+            </g>
+            <text x="6" y="124" class="mono-s">TOLERANCE ON VOLUME AND VALUE &middot; LARGEST GAP UNDER A PENNY</text>
+          </svg>
+          <p class="cap">Caught by matching at bill-of-lading level, not by comparing totals.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 FORECAST -->
+    <div class="modrow flip reveal">
+      <div class="mr-copy">
+        <div class="wf-stage"><span class="num">04</span></div>
+        <div class="mr-name"><h3>Forecast</h3></div>
+        <p>Your own history, overlaid with the outside world. Volume, demand and price modelled against live weather and price inflation.</p>
+        <ul class="mr-list">
+          <li>Confidence bands, not single-point guesses</li>
+          <li>Each day rated for operability before crews are committed</li>
+          <li>External data piped in live</li>
+        </ul>
+      </div>
+      <div class="mr-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// 15-day forecast &middot; tonnes/day</span><em>&plusmn;258 t</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <defs><linearGradient id="fc" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#35a05f" stop-opacity=".26"/><stop offset="100%" stop-color="#35a05f" stop-opacity="0"/>
+            </linearGradient></defs>
+            <line class="gridline" x1="8" y1="30" x2="352" y2="30"/>
+            <line class="gridline" x1="8" y1="62" x2="352" y2="62"/>
+            <line class="gridline" x1="8" y1="94" x2="352" y2="94"/>
+            <path d="M12,74 C48,56 70,44 108,40 C146,36 168,52 206,58 C244,64 266,48 300,42 C324,38 336,44 348,46 L348,86 C336,84 324,76 300,72 C266,66 244,84 206,90 C168,96 146,74 108,70 C70,66 48,84 12,98 Z" fill="url(#fc)" class="spark-area"/>
+            <path class="spark-line" d="M12,86 C48,70 70,56 108,55 C146,54 168,68 206,74 C244,80 266,66 300,57 C324,51 336,54 348,56"/>
+            <circle class="spark-dot pulse" cx="348" cy="56" r="3"/>
+            <rect x="12" y="112" width="14" height="8" rx="2" fill="#35a05f" opacity=".8"/>
+            <rect x="30" y="112" width="14" height="8" rx="2" fill="#35a05f" opacity=".8"/>
+            <rect x="48" y="112" width="14" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
+            <rect x="66" y="112" width="14" height="8" rx="2" fill="#35a05f" opacity=".8"/>
+            <rect x="84" y="112" width="14" height="8" rx="2" fill="#35a05f" opacity=".8"/>
+            <rect x="102" y="112" width="14" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
+            <text x="126" y="120" class="mono-s">OPERABILITY &middot; HIGH / LOW BY DAY</text>
+          </svg>
+          <p class="cap">Harvest forecasting trained on 1,461 days of history against live weather.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 PROCESS -->
+    <div class="modrow reveal">
+      <div class="mr-copy">
+        <div class="wf-stage"><span class="num">05</span></div>
+        <div class="mr-name"><h3>Process</h3></div>
+        <p>See where throughput actually goes. Yield, recovery and downtime across every stage, so the real constraint is managed.</p>
+        <ul class="mr-list">
+          <li>Recovery and quality tracked by line, shift and species</li>
+          <li>Bottlenecks identified from your own data</li>
+          <li>Drift helps forward manage</li>
+        </ul>
+      </div>
+      <div class="mr-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// Process flow &middot; utilisation</span><em>trim 78% down</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <text x="6" y="18" class="mono-s">LOGS IN</text>
+            <rect x="6" y="34" width="58" height="34" rx="5" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/>
+            <text x="20" y="55" class="mono-w">SAW</text>
+            <rect x="6" y="76" width="58" height="6" rx="3" fill="rgba(255,255,255,.14)"/>
+            <rect class="dr-bar" x="6" y="76" width="46" height="6" rx="3" fill="#35a05f"/>
+
+            <rect x="82" y="34" width="58" height="34" rx="5" fill="rgba(192,57,43,.14)" stroke="rgba(192,57,43,.5)"/>
+            <text x="94" y="55" class="mono-w">TRIM</text>
+            <rect x="82" y="76" width="58" height="6" rx="3" fill="rgba(255,255,255,.14)"/>
+            <rect class="dr-bar" style="animation-delay:.12s" x="82" y="76" width="13" height="6" rx="3" fill="#c0392b"/>
+            <text x="82" y="96" class="mono-s">BOTTLENECK</text>
+
+            <rect x="158" y="34" width="58" height="34" rx="5" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/>
+            <text x="172" y="55" class="mono-w">KILN</text>
+            <rect x="158" y="76" width="58" height="6" rx="3" fill="rgba(255,255,255,.14)"/>
+            <rect class="dr-bar" style="animation-delay:.24s" x="158" y="76" width="50" height="6" rx="3" fill="#35a05f"/>
+
+            <rect x="234" y="34" width="58" height="34" rx="5" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/>
+            <text x="243" y="55" class="mono-w">PLANER</text>
+            <rect x="234" y="76" width="58" height="6" rx="3" fill="rgba(255,255,255,.14)"/>
+            <rect class="dr-bar" style="animation-delay:.36s" x="234" y="76" width="40" height="6" rx="3" fill="#35a05f"/>
+
+            <rect x="310" y="34" width="46" height="34" rx="5" fill="rgba(53,160,95,.1)" stroke="rgba(53,160,95,.3)"/>
+            <text x="319" y="55" class="mono-g">SHIP</text>
+
+            <path d="M66 51h14M142 51h14M218 51h14M294 51h14" stroke="rgba(255,255,255,.3)" stroke-width="1.2"/>
+          </svg>
+          <p class="cap">Early warning of key bottlenecks in the process line.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 SCHEDULE -->
+    <div class="modrow flip reveal">
+      <div class="mr-copy">
+        <div class="wf-stage"><span class="num">06</span></div>
+        <div class="mr-name"><h3>Schedule &amp; inventory</h3></div>
+        <p>The order book sequenced against what the plant can actually do, drawing oldest stock first, with reorder points and supplier lead times live.</p>
+        <ul class="mr-list">
+          <li>Reorder flags raised before you run short</li>
+          <li>Supplier lead times re-rated from what actually happened</li>
+          <li>Dead and excess stock surfaced against months of supply</li>
+        </ul>
+      </div>
+      <div class="mr-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// Cover vs lead time</span><em>2 reorder flags</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <text x="6" y="14" class="mono-s">ITEM</text>
+            <text x="150" y="14" class="mono-s">WEEKS OF COVER</text>
+            <text x="266" y="14" class="mono-s">LEAD</text>
+            <text x="310" y="14" class="mono-s">ACTION</text>
+            <line x1="6" y1="20" x2="354" y2="20" stroke="rgba(255,255,255,.14)"/>
+
+            <text x="6" y="40" class="mono-s">WRC 2&amp;BTR</text>
+            <rect x="150" y="32" width="100" height="9" rx="3" fill="rgba(255,255,255,.12)"/>
+            <rect class="dr-bar" x="150" y="32" width="78" height="9" rx="3" fill="#35a05f" opacity=".85"/>
+            <text x="266" y="40" class="mono-s">3 wk</text><text x="310" y="40" class="mono-g">OK</text>
+
+            <text x="6" y="62" class="mono-s">BASSWOOD S2S</text>
+            <rect x="150" y="54" width="100" height="9" rx="3" fill="rgba(255,255,255,.12)"/>
+            <rect class="dr-bar" style="animation-delay:.12s" x="150" y="54" width="22" height="9" rx="3" fill="#c0392b"/>
+            <text x="266" y="62" class="mono-r">6 wk</text><text x="310" y="62" class="mono-r">REORDER</text>
+
+            <text x="6" y="84" class="mono-s">RED OAK FAS</text>
+            <rect x="150" y="76" width="100" height="9" rx="3" fill="rgba(255,255,255,.12)"/>
+            <rect class="dr-bar" style="animation-delay:.24s" x="150" y="76" width="64" height="9" rx="3" fill="#35a05f" opacity=".85"/>
+            <text x="266" y="84" class="mono-s">2 wk</text><text x="310" y="84" class="mono-g">OK</text>
+
+            <text x="6" y="106" class="mono-s">HARD MAPLE</text>
+            <rect x="150" y="98" width="100" height="9" rx="3" fill="rgba(255,255,255,.12)"/>
+            <rect class="dr-bar" style="animation-delay:.36s" x="150" y="98" width="30" height="9" rx="3" fill="#c0392b"/>
+            <text x="266" y="106" class="mono-r">9 wk</text><text x="310" y="106" class="mono-r">REORDER</text>
+
+            <text x="6" y="126" class="mono-s">OLDEST STOCK DRAWN FIRST &middot; DEAD STOCK SURFACED</text>
+          </svg>
+          <p class="cap">AI powered reordering, tailored to your workflows, inputs and outputs, flagging reorders so you hit every PO.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 BUY & SELL -->
+    <div class="modrow reveal">
+      <div class="mr-copy">
+        <div class="wf-stage"><span class="num">07</span></div>
+        <div class="mr-name"><h3>Buy &amp; sell better</h3></div>
+        <p>Input and output prices, both benchmarked. Every purchase line compared against your own like-for-like buying, and every quote priced against where the market actually is.</p>
+        <ul class="mr-list">
+          <li>Benchmark against internal data and CPI</li>
+          <li>Sales trends, margin floors, and account and SKU level margin</li>
+          <li>Bankable savings from supplier switching and requote prompts</li>
+        </ul>
+      </div>
+      <div class="mr-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// Input benchmark &middot; output trend</span><em>proven saving</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <defs><linearGradient id="bs" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#35a05f" stop-opacity=".24"/><stop offset="100%" stop-color="#35a05f" stop-opacity="0"/>
+            </linearGradient></defs>
+
+            <text x="6" y="13" class="mono-s">IN &middot; $ PER UNIT BY SUPPLIER</text>
+            <line x1="6" y1="52" x2="164" y2="52" stroke="rgba(255,255,255,.3)" stroke-dasharray="4 5"/>
+            <rect class="dr-bar" x="16" y="36" width="24" height="26" rx="3" fill="#35a05f" opacity=".7"/>
+            <rect class="dr-bar" style="animation-delay:.1s" x="56" y="32" width="24" height="30" rx="3" fill="#35a05f" opacity=".7"/>
+            <rect class="dr-bar" style="animation-delay:.2s" x="96" y="22" width="24" height="40" rx="3" fill="#c0392b" opacity=".9"/>
+            <rect class="dr-bar" style="animation-delay:.3s" x="136" y="34" width="24" height="28" rx="3" fill="#35a05f" opacity=".7"/>
+            <text x="94" y="76" class="mono-r">OUTLIER</text>
+
+            <line x1="182" y1="8" x2="182" y2="88" stroke="rgba(255,255,255,.14)"/>
+
+            <text x="194" y="13" class="mono-s">OUT &middot; YOU VS MARKET</text>
+            <path class="spark-area" fill="url(#bs)" d="M194,50 C216,44 230,36 252,32 C274,28 294,34 316,30 C334,27 344,24 354,22 L354,62 L194,62 Z"/>
+            <path class="spark-line" d="M194,50 C216,44 230,36 252,32 C274,28 294,34 316,30 C334,27 344,24 354,22"/>
+            <path d="M194,56 C216,53 230,50 252,48 C274,46 294,47 316,44 C334,42 344,40 354,39" fill="none" stroke="rgba(255,255,255,.38)" stroke-width="1.1" stroke-dasharray="3 4"/>
+            <circle class="spark-dot pulse" cx="354" cy="22" r="3"/>
+            <text x="194" y="76" class="mono-s">MARKET DASHED</text>
+
+            <line x1="6" y1="92" x2="354" y2="92" stroke="rgba(255,255,255,.14)"/>
+            <text x="6" y="108" class="mono-s">PROVEN &middot; SAME SPEC, SAME QUARTER</text>
+            <text x="268" y="108" class="mono-g">SIX FIGURES</text>
+            <text x="6" y="124" class="mono-s">INDICATIVE &middot; NEEDS QUOTES</text>
+            <text x="280" y="124" class="mono-s">$119,195</text>
+          </svg>
+          <p class="cap">Supply and sale optimised with internal and external market data.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 08 BUILD ANYTHING -->
+    <div class="modrow flip reveal" id="build">
+      <div class="mr-copy">
+        <div class="wf-stage"><span class="num">08</span></div>
+        <div class="mr-name"><h3>Build anything</h3></div>
+        <p>Chat with your data through leading models and build what you actually need, or get the analysis you want. Or our deployment team can develop it for you.</p>
+        <ul class="mr-list">
+          <li>Custom workbooks and reports, built from a conversation</li>
+          <li>Your own processes and workflows, encoded and repeatable</li>
+          <li>Dashboards and analytics for whoever needs them</li>
+        </ul>
+      </div>
+      <div class="mr-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// Ask, then keep it</span><em>saved &amp; scheduled</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <rect x="4" y="14" width="352" height="26" rx="6" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)"/>
+            <text x="14" y="31" class="mono-g">&#10095;</text>
+            <text x="30" y="31" class="mono-w">Build me a weekly kiln utilisation workbook by species</text>
+
+            <path class="dr-flow" d="M180 44 v12" fill="none" stroke="#35a05f" stroke-width="1.2"/>
+            <path d="m176 52 4 6 4-6" fill="none" stroke="#35a05f" stroke-width="1.2" stroke-linecap="round"/>
+
+            <g class="dr-up" style="animation-delay:.3s">
+              <rect x="4" y="62" width="112" height="52" rx="6" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.3)"/>
+              <text x="14" y="79" class="mono-g">WORKBOOK</text>
+              <path d="M14 88h92M14 96h64M14 104h80" stroke="rgba(255,255,255,.2)" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <g class="dr-up" style="animation-delay:.42s">
+              <rect x="124" y="62" width="112" height="52" rx="6" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.3)"/>
+              <text x="134" y="79" class="mono-g">DASHBOARD</text>
+              <rect x="134" y="88" width="16" height="20" rx="2" fill="#35a05f" opacity=".7"/>
+              <rect x="156" y="94" width="16" height="14" rx="2" fill="#35a05f" opacity=".55"/>
+              <rect x="178" y="84" width="16" height="24" rx="2" fill="#35a05f" opacity=".8"/>
+              <rect x="200" y="92" width="16" height="16" rx="2" fill="#35a05f" opacity=".6"/>
+            </g>
+            <g class="dr-up" style="animation-delay:.54s">
+              <rect x="244" y="62" width="112" height="52" rx="6" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.3)"/>
+              <text x="254" y="79" class="mono-g">SCHEDULED JOB</text>
+              <text x="254" y="95" class="mono-s">RUNS EVERY MONDAY</text>
+              <text x="254" y="107" class="mono-s">WRITES BACK</text>
             </g>
           </svg>
-          <span class="kl-flow-tag">// Claude</span>
-          <div class="kl-flow-name">Anthropic Claude</div>
-          <div class="kl-flow-list">Reasoning<br>Planning<br>Tool use</div>
+          <p class="cap">The spreadsheet one person maintains becomes a workflow the whole team can run.</p>
         </div>
-
-        <div class="kl-flow-arrow">&rarr;</div>
-
-        <div class="kl-flow-node">
-          <span class="kl-flow-tag">// The result</span>
-          <div class="kl-flow-name">What ships</div>
-          <div class="kl-flow-list">Automated workflows<br>Analytics<br>Natural-language queries</div>
-        </div>
-      </div>
-
-      <!-- Feedback: Outputs persist back to Quarri -->
-      <div class="kl-flow-feedback">
-        <span class="kl-flow-feedback-icon">&#x21BA;</span>
-        <span class="kl-flow-feedback-text"><span class="warm-mark">Outputs persist back to Quarri</span> - workflows saved &middot; dashboards live &middot; data captured</span>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- ===== 03 / Why deterministic - cheaper, faster, vastly larger data ===== -->
-<section class="has-watermark">
-  <span class="section-index">03 <span class="total">/ 09</span></span>
-  <img class="section-watermark watermark-br" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+<!-- ============ WHY QUARRI ============ -->
+<section class="on-dark why-photo" style="background-image:url('images/opt/forestry-vertical-page-1.webp')">
   <div class="container">
     <div class="section-intro">
-      <span class="eyebrow reveal">Why it works</span>
-      <h2 class="reveal delay-1">Cheaper. Faster. <span class="warm-mark">Vastly larger data.</span></h2>
-      <p class="lead reveal delay-2">Quarri is a deterministic layer beneath probabilistic LLMs. Encoded workflows and structured data handle the data work - no inference required, no hallucinations on the numbers. LLMs do what they're best at: reasoning.</p>
+      <span class="label reveal">// Why Quarri</span>
+      <h2 class="reveal d1">Purpose-built for timber. <span class="coral">Not adapted to it.</span></h2>
+      <p class="lead reveal d2">Generic platforms treat species, grades and board feet as a data-cleaning problem. We treat them as the business.</p>
     </div>
-
-    <!-- 2-tier diagram: Probabilistic LLM / Deterministic Quarri -->
-    <div class="det-stack reveal delay-3">
-      <div class="det-layer det-layer--prob">
-        <span class="det-layer-tag">// Probabilistic</span>
-        <div class="det-layer-name">LLM</div>
-        <p class="det-layer-desc">Flexible reasoning. Slow per call. Per-token cost. Limited context window.</p>
+    <div class="pillars reveal d2">
+      <div class="pil">
+        <h3>Built for the industry</h3>
+        <p>Tonnes and cubic metres upstream, board feet and MBF downstream, with conversions, species codes, grades and random lengths already understood rather than configured in later.</p>
       </div>
-
-      <div class="det-arrow" aria-hidden="true">&#x2195;</div>
-
-      <div class="det-layer det-layer--det">
-        <span class="det-layer-tag">// Deterministic</span>
-        <div class="det-layer-name">Quarri<span class="warm-mark">.</span></div>
-        <p class="det-layer-desc">Encoded workflows + structured data. Cents per workflow. TB-scale. No hallucinations on the data ops.</p>
+      <div class="pil">
+        <h3>AI-native, deterministic where it counts</h3>
+        <p>The matching, reconciling and converting runs as encoded logic, not model guesswork. AI does the reasoning on top, so there are no hallucinated numbers in front of your board.</p>
       </div>
-    </div>
-
-    <!-- 4 benefits -->
-    <div class="det-benefits">
-      <div class="det-benefit reveal">
-        <div class="det-benefit-num">~99%</div>
-        <div class="det-benefit-label">Cheaper than pure LLM<br>workflows</div>
-      </div>
-      <div class="det-benefit reveal delay-1">
-        <div class="det-benefit-num">5&ndash;10&times;</div>
-        <div class="det-benefit-label">Faster than LLM-only<br>execution</div>
-      </div>
-      <div class="det-benefit reveal delay-2">
-        <div class="det-benefit-num">100%</div>
-        <div class="det-benefit-label">Reliable on data ops<br>no hallucinations</div>
-      </div>
-      <div class="det-benefit reveal delay-3">
-        <div class="det-benefit-num">1&nbsp;TB+</div>
-        <div class="det-benefit-label">Scale - vs MB<br>on LLM-only context</div>
+      <div class="pil">
+        <h3>One connected layer</h3>
+        <p>Your ERP, mill system and spreadsheets stay where they are. Quarri governs a layer over them, so you are live in weeks rather than committed to a five-year replacement.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 04 / Customer impact (stats marquee) ===== -->
-<section class="on-dark stat-band">
-  <span class="section-index">04 <span class="total">/ 09</span></span>
+<!-- ============ RESULTS ============ -->
+<section id="results" class="bordered bg-white">
   <div class="container">
     <div class="section-intro">
-      <span class="eyebrow reveal">Customer impact</span>
-      <h2 class="reveal delay-1" style="color:var(--white);">Real numbers from <span class="warm-mark">real deployments.</span></h2>
+      <span class="label reveal">// Results</span>
+      <h2 class="reveal d1">Real impact from <span class="coral">real deployments.</span></h2>
     </div>
-  </div>
-
-  <div class="marquee reveal delay-2" aria-label="Real deployment statistics">
-    <div class="marquee-track">
-      <div class="marquee-stat">
-        <span class="marquee-num">$15k<span class="warm-mark">+</span></span>
-        <span class="marquee-label">Payment errors caught</span>
+    <div class="proof reveal d2">
+      <div class="pf">
+        <span class="who">// Timberland</span>
+        <div class="big">+2,000 m&sup3;</div>
+        <p class="cap">Of harvested volume found missing from the owner's own ledger on a single property, worth roughly &euro;100k.</p>
       </div>
-      <div class="marquee-stat">
-        <span class="marquee-num">$300k</span>
-        <span class="marquee-label">Accounting error fixed</span>
+      <div class="pf">
+        <span class="who">// Procurement</span>
+        <div class="big">Six figures</div>
+        <p class="cap">Of proven, bankable purchasing saving, evidenced line by line on same product, same spec, same quarter.</p>
       </div>
-      <div class="marquee-stat">
-        <span class="marquee-num">100<span class="warm-mark">+</span> hrs</span>
-        <span class="marquee-label">Manual workflows automated</span>
+      <div class="pf">
+        <span class="who">// Forest management</span>
+        <div class="big">+100 files</div>
+        <p class="cap">Of regulator and authority paperwork reconciled every cycle without re-keying, replacing days of manual matching in the finance month.</p>
       </div>
-      <div class="marquee-stat">
-        <span class="marquee-num">100M<span class="warm-mark">+</span></span>
-        <span class="marquee-label">Data points analysed</span>
+      <div class="pf">
+        <span class="who">// Supplier reliability</span>
+        <div class="big">6 in 10</div>
+        <p class="cap">Purchase orders arrived after the promised date, averaging nine days late across more than 13,000 closed orders. Nobody had measured it.</p>
       </div>
-      <div class="marquee-stat">
-        <span class="marquee-num">500<span class="warm-mark">+</span></span>
-        <span class="marquee-label">PDFs &amp; images parsed</span>
+      <div class="pf">
+        <span class="who">// Margin, account level</span>
+        <div class="big">+$80k</div>
+        <p class="cap">Recoverable from two accounts found selling below cost and not offset elsewhere, separated from the loss leaders worth protecting.</p>
       </div>
-      <div class="marquee-stat">
-        <span class="marquee-num">$150k<span class="warm-mark">+</span></span>
-        <span class="marquee-label">Margin discovered</span>
-      </div>
-      <div class="marquee-stat">
-        <span class="marquee-num">99%<span class="warm-mark">+</span></span>
-        <span class="marquee-label">Scanning accuracy</span>
-      </div>
-
-      <!-- Duplicate set for seamless loop -->
-      <div class="marquee-stat" aria-hidden="true">
-        <span class="marquee-num">$15k<span class="warm-mark">+</span></span>
-        <span class="marquee-label">Payment errors caught</span>
-      </div>
-      <div class="marquee-stat" aria-hidden="true">
-        <span class="marquee-num">$300k</span>
-        <span class="marquee-label">Accounting error fixed</span>
-      </div>
-      <div class="marquee-stat" aria-hidden="true">
-        <span class="marquee-num">100<span class="warm-mark">+</span> hrs</span>
-        <span class="marquee-label">Manual workflows automated</span>
-      </div>
-      <div class="marquee-stat" aria-hidden="true">
-        <span class="marquee-num">100M<span class="warm-mark">+</span></span>
-        <span class="marquee-label">Data points analysed</span>
-      </div>
-      <div class="marquee-stat" aria-hidden="true">
-        <span class="marquee-num">500<span class="warm-mark">+</span></span>
-        <span class="marquee-label">PDFs &amp; images parsed</span>
-      </div>
-      <div class="marquee-stat" aria-hidden="true">
-        <span class="marquee-num">$150k<span class="warm-mark">+</span></span>
-        <span class="marquee-label">Margin discovered</span>
-      </div>
-      <div class="marquee-stat" aria-hidden="true">
-        <span class="marquee-num">99%<span class="warm-mark">+</span></span>
-        <span class="marquee-label">Scanning accuracy</span>
+      <div class="pf">
+        <span class="who">// Aged inventory</span>
+        <div class="big">+4.5M BF</div>
+        <p class="cap">Sat unsold for more than 360 days, roughly a third of stock, alongside 150+ SKUs untouched for over a year at another operation.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 05 / Capabilities ===== -->
-<section class="has-watermark">
-  <span class="section-index">05 <span class="total">/ 09</span></span>
-  <img class="section-watermark watermark-tr" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+<!-- ============ CASE STUDIES ============ -->
+<section id="case-studies">
   <div class="container">
     <div class="section-intro">
-      <span class="eyebrow reveal">Capabilities</span>
-      <h2 class="reveal delay-1">Built around the real workflows of <span class="warm-mark">industrial operators</span>.</h2>
-      <p class="lead reveal delay-2">Resource extraction. Supply chain. Processing &amp; manufacturing. Quarri replaces the spreadsheets behind every step.</p>
+      <span class="label reveal">// Case studies</span>
+      <h2 class="reveal d1">Four workstreams, four <span class="coral">things nobody knew.</span></h2>
+      <p class="lead reveal d2">Customers are not named. No case-study clearance has been granted, and we would rather stay useful than impressive. <a href="case-studies.html" style="color:var(--coral);font-weight:500">All case studies &rarr;</a></p>
+      <p class="conveyor-hint reveal d3">Hover to pause &middot; scroll for more</p>
     </div>
 
-    <div class="cap-buckets">
-      <div class="cap-bucket reveal-right">
-        <div class="cap-bucket-head">
-          <span class="cap-bucket-num">01</span>
-          <span class="cap-bucket-name">Resource Extraction.</span>
-        </div>
-        <div class="cap-bucket-tags">
-          <span>Extraction management</span><span class="sep">&middot;</span>
-          <span>Resource allocation</span><span class="sep">&middot;</span>
-          <span>Contract fulfilment</span><span class="sep">&middot;</span>
-          <span>Compliance &amp; sustainability reporting</span><span class="sep">&middot;</span>
-          <span>Live dashboards by region &amp; grade</span><span class="sep">&middot;</span>
-          <span>External benchmarks</span>
-        </div>
-      </div>
-
-      <div class="cap-bucket reveal-right delay-1">
-        <div class="cap-bucket-head">
-          <span class="cap-bucket-num">02</span>
-          <span class="cap-bucket-name">Supply Chain &amp; Logistics.</span>
-        </div>
-        <div class="cap-bucket-tags">
-          <span>Bills of lading</span><span class="sep">&middot;</span>
-          <span>Delivery reports</span><span class="sep">&middot;</span>
-          <span>Payable amounts</span><span class="sep">&middot;</span>
-          <span>Goods received notes</span><span class="sep">&middot;</span>
-          <span>Multi-site inventory visibility</span><span class="sep">&middot;</span>
-          <span>Forecasting (demand, lead time, weather)</span><span class="sep">&middot;</span>
-          <span>Cross-system reconciliation</span>
-        </div>
-      </div>
-
-      <div class="cap-bucket reveal-right delay-2">
-        <div class="cap-bucket-head">
-          <span class="cap-bucket-num">03</span>
-          <span class="cap-bucket-name">Processing &amp; Manufacturing.</span>
-        </div>
-        <div class="cap-bucket-tags">
-          <span>Maintenance reports</span><span class="sep">&middot;</span>
-          <span>Performance optimisation</span><span class="sep">&middot;</span>
-          <span>Inventory management</span><span class="sep">&middot;</span>
-          <span>Defect-rate tracking</span><span class="sep">&middot;</span>
-          <span>Margin clarity (category to SKU)</span><span class="sep">&middot;</span>
-          <span>Natural-language operations queries</span><span class="sep">&middot;</span>
-          <span>Board-ready production reporting</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Quote ===== -->
-<section class="on-dark quote has-watermark">
-  <img class="section-watermark watermark-bl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
-  <div class="container">
-    <div class="quote-grid">
-      <div class="reveal-left">
-        <span class="quote-mark" aria-hidden="true"></span>
-        <blockquote>The Quarri integration has made me do more with AI in the past 6 weeks than I have in the past 6 months.</blockquote>
-      </div>
-      <div class="quote-attr-block reveal-right delay-1">
-        <div class="attr">Head of Operations</div>
-        <div class="role">Forestry &amp; Milling Enterprise &middot; North America</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 06 / Bespoke (textured bg) ===== -->
-<section class="bg-textured">
-  <span class="section-index">06 <span class="total">/ 09</span></span>
-  <div class="container">
-    <div class="section-intro">
-      <span class="eyebrow reveal">Bespoke deployment</span>
-      <h2 class="reveal delay-1">No data too messy. <span class="warm-mark">No workflow too complex.</span></h2>
-      <p class="lead reveal delay-2">When the standard buckets don't cover it, our team gets hands-on. Custom integrations, judgement-heavy workflows, on-prem databases - we'll build it.</p>
-    </div>
-
-    <div class="bespoke-grid">
-      <div class="bespoke-item reveal">
-        <span class="bespoke-num">01</span>
-        <h3>Handwritten PDFs.</h3>
-        <p>OCR plus structured extraction on weighbridge tickets, GRNs, invoices, and field reports.</p>
-      </div>
-      <div class="bespoke-item reveal delay-1">
-        <span class="bespoke-num">02</span>
-        <h3>Judgement-heavy Excel.</h3>
-        <p>The workbook only one person understands? We model it, automate it, replace it.</p>
-      </div>
-      <div class="bespoke-item reveal delay-2">
-        <span class="bespoke-num">03</span>
-        <h3>On-prem databases.</h3>
-        <p>Direct connectors into legacy SQL, mainframes, and proprietary systems.</p>
-      </div>
-      <div class="bespoke-item reveal delay-3">
-        <span class="bespoke-num">04</span>
-        <h3>Fragmented systems.</h3>
-        <p>Multiple ERPs from acquisitions, regional variations, off-the-shelf hacks - all reconciled.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 07 / Quarri in action - built around your team ===== -->
-<section class="has-watermark" style="background: var(--white); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
-  <span class="section-index">07 <span class="total">/ 09</span></span>
-  <img class="section-watermark watermark-tl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
-  <div class="container">
-    <div class="section-intro">
-      <span class="eyebrow reveal">Quarri in action</span>
-      <h2 class="reveal delay-1">Built around how your team <span class="warm-mark">actually thinks.</span></h2>
-      <p class="lead reveal delay-2">The same knowledge layer powers finance and operations - with views built around how each function works. Real dashboards, on the systems your team already runs.</p>
-    </div>
-
-    <div class="product-grid product-grid--2">
-      <a href="finance-and-strategy-teams.html" class="product-card reveal">
-        <div class="product-card-head">
-          <span class="product-tag">// Finance &amp; Strategy</span>
-          <h3 class="product-card-title">For finance &amp; strategy <span class="warm-mark">teams.</span></h3>
-        </div>
-        <div class="product-img-wrap">
-          <img src="assets/products/cfo-dashboard.png" alt="Quarri CFO dashboard showing live financial metrics" loading="lazy">
-        </div>
-        <div class="product-card-foot">
-          <p>Live cash flow, board-ready reporting, segmented analysis - connected to legacy ERPs, refreshed in real time, drilled to the transaction in seconds.</p>
-          <span class="card-link">Explore Finance &amp; Strategy</span>
+    <div class="conveyor reveal d2" data-auto>
+      <div class="conv-track">
+      <!-- HOME-CASES:START, generated by _publish.py, do not hand-edit -->
+      <a href="case-studies/stumpage-reconciliation.html" class="post">
+        <div role="img" aria-label="Dense stand of tall conifers in a managed forest, standing timber before harvest" class="ph" style="background-image:url('images/opt/forestry-vertical-page-1-sm.webp')"></div>
+        <div class="pb">
+          <span class="pm">RECONCILIATION &middot; A FORESTRY OPERATION</span>
+          <h3>Moving timber levies from paper to reconciled</h3>
+          <p>Three days a month of manual matching returned to the team, an $80k over-accrual credit in one cycle, and a surcharge running more than 500% out.</p>
+          <span class="pl">Read the case study &rarr;</span>
         </div>
       </a>
-
-      <a href="operations-teams.html" class="product-card reveal delay-1">
-        <div class="product-card-head">
-          <span class="product-tag">// Operations</span>
-          <h3 class="product-card-title">For operations <span class="warm-mark">teams.</span></h3>
-        </div>
-        <div class="product-img-wrap">
-          <img src="assets/products/coo-dashboard.png" alt="Quarri operations dashboard showing throughput and defect metrics" loading="lazy">
-        </div>
-        <div class="product-card-foot">
-          <p>From reactive firefighting to live, connected, strategic operations - throughput, defects, and lead time across every site, line, and shift.</p>
-          <span class="card-link">Explore Operations</span>
+      <a href="case-studies/input-costs-and-receivables.html" class="post">
+        <div role="img" aria-label="Roadside deck of cut logs stacked against an overcast sky" class="ph" style="background-image:url('images/opt/stacked-logs-sm.webp')"></div>
+        <div class="pb">
+          <span class="pm">PURCHASING &middot; THE SAME OPERATION</span>
+          <h3>Moving purchasing from habit to evidence</h3>
+          <p>One item code, several products. Length lives in free text, so supplier comparison quietly stops working and nobody can see that it has.</p>
+          <span class="pl">Read the case study &rarr;</span>
         </div>
       </a>
+      <a href="case-studies/inventory-and-remanufacturing.html" class="post">
+        <div role="img" aria-label="Operator running a CNC milling machine cutting panel product, sawdust in the air" class="ph" style="background-image:url('images/opt/pexels-mandiri-abadi-396768996-14805033-sm.webp')"></div>
+        <div class="pb">
+          <span class="pm">PLANNING &middot; THE SAME OPERATION</span>
+          <h3>Moving reordering from a spreadsheet to an AI optimiser</h3>
+          <p>A planning board running off a manual snapshot, and a buy list carrying units that had no supplier behind them to buy from.</p>
+          <span class="pl">Read the case study &rarr;</span>
+        </div>
+      </a>
+      <a href="case-studies/account-margin.html" class="post">
+        <div role="img" aria-label="Freshly cut softwood log ends stacked in a roadside pile" class="ph" style="background-image:url('images/opt/stacked-logs-2-sm.webp')"></div>
+        <div class="pb">
+          <span class="pm">MARGIN &middot; A LUMBER AND MILLWORK OPERATION</span>
+          <h3>Moving margin from an estimate to account and SKU</h3>
+          <p>Growth and margin moving in opposite directions. Judged at account level, the same below-cost line is a loss leader in one account and a leak in another.</p>
+          <span class="pl">Read the case study &rarr;</span>
+        </div>
+      </a>
+      <!-- HOME-CASES:END -->
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 08 / For your industry ===== -->
-<section style="background: var(--white); border-bottom: 1px solid var(--rule);">
-  <span class="section-index">08 <span class="total">/ 09</span></span>
+
+<!-- ============ SECURITY ============ -->
+<section class="on-dark" style="background:var(--forest-2)">
+  <div class="container">
+    <div class="section-intro" style="margin-bottom:clamp(28px,3.4vw,44px)">
+      <span class="label reveal">// Security</span>
+      <h2 class="reveal d1">Your data, in <span class="coral">your database.</span></h2>
+      <p class="lead reveal d2">Quarri runs on certified enterprise infrastructure with database-per-customer isolation. Your numbers are yours, never shared and never used to train models.</p>
+    </div>
+    <div class="sec-strip reveal d2">
+      <div class="sec-cell"><div class="sv">1 : 1</div><div class="sl">One isolated database per customer, with no shared tables and no cross-tenant paths</div></div>
+      <div class="sec-cell"><div class="sv">AES-256</div><div class="sl">Encrypted at rest, TLS 1.2+ in transit, end to end</div></div>
+      <div class="sec-cell"><div class="sv">US / EU</div><div class="sl">Your choice of residency, locked at provisioning</div></div>
+      <div class="sec-cell"><div class="sv">0</div><div class="sl">Customer data used for model training, ever</div></div>
+    </div>
+    <p class="reveal d3" style="margin-top:26px"><a href="security.html" style="color:var(--coral);font-weight:500;font-size:14.5px">Read the full security architecture &rarr;</a></p>
+  </div>
+</section>
+
+<!-- ============ INSIGHTS ============ -->
+<section id="insights" class="bordered bg-white">
   <div class="container">
     <div class="section-intro">
-      <span class="eyebrow reveal">For your industry</span>
-      <h2 class="reveal delay-1">Built for the businesses that make and move things.</h2>
-      <p class="lead reveal delay-2">Industrial operators run on legacy ERPs and paper. We start there - and turn it into a working knowledge layer.</p>
+      <span class="label reveal">// Insights</span>
+      <h2 class="reveal d1">Seeing the wood <span class="coral">for the trees.</span></h2>
+      <p class="lead reveal d2"><a href="insights.html" style="color:var(--coral);font-weight:500">All insights &rarr;</a></p>
+      <p class="conveyor-hint reveal d3">Hover to pause &middot; scroll for more</p>
     </div>
-
-    <div class="ind-list">
-      <a href="forestry-and-milling.html" class="ind-row reveal-right">
-        <div class="ind-head">
-          <span class="ind-num">01</span>
-          <span class="ind-name">Forestry &amp; Milling.</span>
+    <div class="conveyor reveal d2" data-auto>
+      <div class="conv-track">
+      <!-- HOME-INSIGHTS:START, generated by _publish.py, do not hand-edit -->
+      <a href="insights/tariff-fifty-duty-forty-five.html" class="post">
+        <div role="img" aria-label="Wall of banded sawn lumber packs stacked to the roof of a warehouse" class="ph" style="background-image:url('images/opt/pexels-nc-farm-bureau-mark-12278572-sm.webp')"></div>
+        <div class="pb">
+          <span class="pm">Trade &middot; 31 Jul 2026</span>
+          <h3>The tariff everyone is quoting is 50%. The one that moves the market is 45%.</h3>
+          <p>The new 50% tariff exempts softwood lumber. The duty softwood already carries is 45.16% all-in, and one producer's filing shows $202m of it in six months.</p>
+          <span class="pl">Read more &rarr;</span>
         </div>
-        <p>From bid to felling to finished board. Eliminate paperwork from field to office, mill to ledger.</p>
-        <span class="ind-arrow">&rarr;</span>
       </a>
-      <a href="manufacturing-and-distribution.html" class="ind-row reveal-right delay-1">
-        <div class="ind-head">
-          <span class="ind-num">02</span>
-          <span class="ind-name">Manufacturing &amp; Distribution.</span>
+      <a href="insights/weyerhaeuser-ai-billion.html" class="post">
+        <div role="img" aria-label="Dense stand of tall conifers in a managed forest, standing timber before harvest" class="ph" style="background-image:url('images/opt/forestry-vertical-page-1-sm.webp')"></div>
+        <div class="pb">
+          <span class="pm">Analysis &middot; 16 Jul 2026</span>
+          <h3>Weyerhaeuser's $1bn isn't an AI number. It might also be too small.</h3>
+          <p>The number that travelled around the industry this year is that Weyerhaeuser
+  will add $1bn of annual profit by 2030 using AI. That isn't what the company said.</p>
+          <span class="pl">Read more &rarr;</span>
         </div>
-        <p>Cut downtime. Optimise input/output inventory. Live lead times. From plant floor to dispatched truck on one operating layer.</p>
-        <span class="ind-arrow">&rarr;</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 09 / Security & trust ===== -->
-<section class="on-dark has-watermark">
-  <span class="section-index">09 <span class="total">/ 09</span></span>
-  <img class="section-watermark watermark-bl" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
-  <div class="container">
-    <div class="split">
-      <div class="split-left">
-        <span class="eyebrow reveal">// Security &amp; trust</span>
-        <h2 class="reveal delay-1" style="color:var(--white);">Secure <span class="warm-mark">by design.</span></h2>
-        <p class="lead mt-32 reveal delay-2">Your data, in your database. Database-per-customer isolation, AES-256 encryption end-to-end, US/EU residency - and never used to train models. Built on AWS and an isolated, certified data platform.</p>
-        <div class="hero-cta-row reveal delay-3" style="margin-top: 40px;">
-          <a class="btn btn-ghost btn-arrow" href="security.html" style="border-color: rgba(255,255,255,0.4); color: var(--white);">See the security architecture</a>
+      <a href="insights/stumpage-accruals-never-tie.html" class="post">
+        <div role="img" aria-label="Freshly cut softwood log ends stacked in a roadside pile" class="ph" style="background-image:url('images/opt/stacked-logs-2-sm.webp')"></div>
+        <div class="pb">
+          <span class="pm">Reconciliation &middot; 12 Jul 2026</span>
+          <h3>Why stumpage accruals never tie to the invoice</h3>
+          <p>The gap is almost never arithmetic. It's the bill of lading, and what happens to it between the scale house and the ledger.</p>
+          <span class="pl">Read more &rarr;</span>
         </div>
-      </div>
-
-      <div class="reveal-right delay-2">
-        <div class="flow-stack">
-          <div class="flow-block">
-            <span class="flow-label">// Foundations</span>
-            <ul class="flow-list">
-              <li>AWS &middot; multi-AZ, US/EU regions</li>
-              <li>Isolated, certified data platform</li>
-              <li>Anthropic Claude (no training)</li>
-            </ul>
-          </div>
-          <div class="flow-divider" aria-hidden="true"></div>
-          <div class="flow-block">
-            <span class="flow-label">// Promised</span>
-            <ul class="flow-list">
-              <li>Database-per-customer</li>
-              <li>End-to-end encryption</li>
-              <li>0 cross-tenant access paths</li>
-            </ul>
-          </div>
-        </div>
+      </a>
+      <!-- HOME-INSIGHTS:END -->
       </div>
     </div>
-
-    <div class="trust-row reveal delay-3" style="margin-top: 56px;">
-      <span>Database-per-customer isolation</span>
-      <span>AES-256 encryption</span>
-      <span>US / EU residency</span>
-      <span>No LLM training on your data</span>
-    </div>
   </div>
 </section>
 
-<!-- ===== Bottom CTA ===== -->
-<section class="on-dark cta-block has-watermark">
-  <img class="section-watermark watermark-tr" src="assets/diagonal-watermark.svg" alt="" aria-hidden="true">
+<!-- ============ CTA ============ -->
+<section class="on-dark cta cta-forest" style="background-image:url('images/opt/pexels-nc-farm-bureau-mark-12278574.webp')">
   <div class="container">
-    <h2 class="h-display reveal" style="color:var(--white);">Live in <span class="warm-mark">two weeks.</span></h2>
-    <p class="lead reveal delay-1" style="color:rgba(255,255,255,0.62); margin-top:32px;">See Quarri running on your own data.</p>
-    <div class="hero-cta-row reveal delay-2">
-      <a class="btn btn-primary" href="learn-more.html">Book a demo</a>
+    <h2 class="display reveal">Ready to modernise your <span class="coral">timber operation?</span></h2>
+    <p class="lead reveal d1">Built for forestry and lumber from the ground up. Live on your own data in two weeks.</p>
+    <div class="hero-cta reveal d2">
+      <a href="book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a>
+      <a href="how-it-works.html" class="btn btn-ghost">See how it works <span class="arw">&rarr;</span></a>
     </div>
   </div>
 </section>
+</main>
 
-<!-- ===== FOOTER ===== -->
+<!-- ============ FOOTER ============ -->
 <footer>
   <div class="container">
     <div class="footer-top">
       <div>
-        <a href="index.html" class="footer-logo" aria-label="Quarri home">
-          <img src="assets/quarri-logo-white.png" alt="" class="nav-mark">
-          <span class="nav-wordmark">Quarri</span>
-        </a>
-        <p class="footer-tag">The AI adoption platform for industrial operators.</p>
+        <a href="index.html" class="footer-logo"><img src="assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">An AI-native platform for the timber supply chain.</p>
       </div>
       <div>
-        <h4>Quick links</h4>
+        <h4>Platform</h4>
         <ul>
+          <li><a href="index.html#platform">The eight steps</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
           <li><a href="security.html">Security</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="learn-more.html">Book a demo</a></li>
         </ul>
       </div>
       <div>
-        <h4>Industries</h4>
+        <h4>Who we serve</h4>
         <ul>
-          <li><a href="forestry-and-milling.html">Forestry &amp; Milling</a></li>
-          <li><a href="manufacturing-and-distribution.html">Manufacturing &amp; Distribution</a></li>
+          <li><a href="forest-management.html">Forest Management</a></li>
+          <li><a href="sawmills.html">Sawmills</a></li>
+          <li><a href="wood-products.html">Wood Products</a></li>
+          <li><a href="pulp-paper-packaging.html">Pulp, Paper &amp; Packaging</a></li>
+          <li><a href="finance-and-strategy-teams.html">Finance &amp; Strategy</a></li>
+          <li><a href="operations-teams.html">Operations</a></li>
         </ul>
       </div>
       <div>
         <h4>Company</h4>
         <ul>
-          <li><a href="finance-and-strategy-teams.html">Finance &amp; Strategy</a></li>
-          <li><a href="operations-teams.html">Operations</a></li>
+          <li><a href="case-studies.html">Case studies</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="book-a-demo.html">Request a demo</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; Quarri AI Ltd.</span>
+      <span>&copy; Quarri AI Inc.</span>
       <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
     </div>
   </div>
 </footer>
 
-<!-- ===== JS: scroll-rail + scroll-reveal ===== -->
 <script>
-  (function () {
-    var root = document.documentElement;
-    function updateRail() {
-      var max = document.documentElement.scrollHeight - window.innerHeight;
-      var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
-      root.style.setProperty('--scroll', pct.toFixed(2) + '%');
-    }
-    window.addEventListener('scroll', updateRail, { passive: true });
-    window.addEventListener('resize', updateRail);
-    updateRail();
+(function(){
+  /* scroll-in reveals, also the trigger for every chart animation */
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.1, rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){ io.observe(e); });
+  } else { els.forEach(function(e){e.classList.add('in')}); }
 
-    var nodes = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-    if (!('IntersectionObserver' in window) || !nodes.length) {
-      nodes.forEach(function (n) { n.classList.add('is-revealed'); });
-      return;
-    }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-revealed');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    nodes.forEach(function (n) { io.observe(n); });
-  })();
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero video: hold on the poster for anyone who has asked for less motion */
+  var hv = document.querySelector('.hero-vid');
+  if (hv && reduceMotion) { hv.removeAttribute('autoplay'); hv.pause(); }
+
+  /* hero parallax: the footage drifts slower than the page, which reads as depth.
+     rAF-throttled so it never runs more than once a frame. */
+  var media = document.querySelector('.hero-media');
+  var head = document.querySelector('.hero-head');
+  if (media && head && !reduceMotion) {
+    /* Height is cached rather than read per scroll, so the handler does no
+       layout work. Deliberately no requestAnimationFrame guard: rAF does not
+       fire in a background tab, and a "ticking" flag would latch on and kill
+       the effect permanently. Setting one custom property is cheap enough. */
+    var headH = head.offsetHeight || 1;
+    var applyParallax = function () {
+      var seen = Math.min(Math.max(window.scrollY, 0), headH);
+      /* scale(1.18) gives 9% overflow per edge; stay under it with headroom */
+      media.style.setProperty('--pxy',
+        Math.min(seen * 0.14, headH * 0.06).toFixed(1) + 'px');
+    };
+    window.addEventListener('scroll', applyParallax, {passive: true});
+    window.addEventListener('resize', function () {
+      headH = head.offsetHeight || 1;
+      applyParallax();
+    });
+    applyParallax();
+  }
+
+  /* the scroll cue is only useful before you have scrolled */
+  var cue = document.querySelector('.hero-cue');
+  if (cue) {
+    window.addEventListener('scroll', function () {
+      cue.style.opacity = window.scrollY > 120 ? '0' : '';
+      cue.style.transition = 'opacity .3s ease';
+    }, {passive: true});
+  }
+
+  /* scroll progress rail */
+  var root = document.documentElement;
+  function rail(){
+    var max = root.scrollHeight - window.innerHeight;
+    root.style.setProperty('--scroll', (max > 0 ? (window.scrollY / max) * 100 : 0).toFixed(2) + '%');
+  }
+  window.addEventListener('scroll', rail, {passive:true});
+  window.addEventListener('resize', rail);
+  rail();
+})();
 </script>
-
+<script src="assets/consent.js?v=90" defer></script>
+<script src="assets/carousel.js?v=90" defer></script>
 </body>
 </html>

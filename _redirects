@@ -1,0 +1,21 @@
+# Netlify redirects. Must sit in the published directory root.
+#
+# The v1 site renamed three pages that are indexed today. Without these, those
+# URLs 404 on launch and lose whatever ranking and inbound links they carry.
+# Both forms are listed because the old site linked with .html and Netlify also
+# serves the extensionless form, so Google may have either.
+#
+# 301 = permanent, which is what passes ranking. Do not use 302 here.
+
+/forestry-and-milling.html            /forest-management.html    301
+/forestry-and-milling                 /forest-management.html    301
+
+/manufacturing-and-distribution.html  /wood-products.html        301
+/manufacturing-and-distribution       /wood-products.html        301
+
+/learn-more.html                      /how-it-works.html         301
+/learn-more                           /how-it-works.html         301
+
+# forestry-and-milling split into forest-management and sawmills. It points at
+# forest-management because that is the closer match to the old page's content;
+# the nav gets the reader to sawmills in one click from there.

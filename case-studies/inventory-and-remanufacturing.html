@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="card-hook" content="A planning board running off a manual snapshot, and a buy list carrying units that had no supplier behind them to buy from.">
+<meta name="card-order" content="3">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f3">
+
+<!-- ▼▼ EDIT 1: headline + one-sentence description; keep the slug in sync below ▼▼ -->
+<title>Moving reordering from a spreadsheet to an AI optimiser | Quarri</title>
+<meta name="description" content="A planner keeping reorder points in a spreadsheet, and right to. Most of the catalogue exists only because something else was cut down to make it.">
+<link rel="canonical" href="https://quarri.ai/case-studies/inventory-and-remanufacturing.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="Moving reordering from a spreadsheet to an AI optimiser | Quarri">
+<meta property="og:description" content="A planner keeping reorder points in a spreadsheet, and right to. Most of the catalogue exists only because something else was cut down to make it.">
+<meta property="og:url" content="https://quarri.ai/case-studies/inventory-and-remanufacturing.html">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Moving reordering from a spreadsheet to an AI optimiser | Quarri">
+<meta name="twitter:description" content="A planner keeping reorder points in a spreadsheet, and right to. Most of the catalogue exists only because something else was cut down to make it.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+<!-- ▲▲ EDIT 1 ends ▲▲ -->
+
+<link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="../styles.css?v=90">
+<link rel="stylesheet" href="../components.css?v=90">
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "An AI-native platform for the timber supply chain.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://quarri.ai/case-studies/inventory-and-remanufacturing.html#webpage",
+      "url": "https://quarri.ai/case-studies/inventory-and-remanufacturing.html",
+      "headline": "Moving reordering from a spreadsheet to an AI optimiser",
+      "description": "A planner keeping reorder points in a spreadsheet, and right to. Most of the catalogue exists only because something else was cut down to make it.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "author": {
+        "@id": "https://quarri.ai/#theo-leslie"
+      },
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "articleSection": "Case studies",
+      "about": {
+        "@id": "https://quarri.ai/#software"
+      },
+      "image": "https://quarri.ai/assets/og-image.jpg",
+      "breadcrumb": {
+        "@id": "https://quarri.ai/case-studies/inventory-and-remanufacturing.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://quarri.ai/#theo-leslie",
+      "name": "Theo Leslie",
+      "url": "https://quarri.ai/",
+      "worksFor": {
+        "@id": "https://quarri.ai/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://quarri.ai/case-studies/inventory-and-remanufacturing.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quarri.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Case studies",
+          "item": "https://quarri.ai/case-studies.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Moving reordering from a spreadsheet to an AI optimiser"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="../assets/quarri-logo.png" alt="" width="26" height="26" decoding="async"><span>Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="../index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="../index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a href="../forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="../sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="../wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="../pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="../finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="../operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
+      <a href="../how-it-works.html">How it works</a>
+      <a href="../security.html">Security</a>
+      <a href="../pricing.html">Pricing</a>
+      <a href="../case-studies.html" class="is-active">Case studies</a>
+      <a href="../insights.html">Insights</a>
+      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
+      <a href="../book-a-demo.html" class="btn btn-primary">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ▼▼ EDIT 2: hero image (use ../images/opt/*.webp), eyebrow, headline ▼▼ -->
+<div role="img" aria-label="A CNC router cutting a wood panel on a shop floor, sawdust in the air" class="art-hero" style="background-image:url('../images/opt/pexels-mandiri-abadi-396768996-14805033.webp')">
+  <div class="in">
+    <span class="meta">PLANNING &middot; THE SAME OPERATION</span>
+    <h1>Moving reordering from a spreadsheet to an AI optimiser</h1>
+    <p class="byline">Case study &middot; 4 min read</p>
+  </div>
+</div>
+<!-- ▲▲ EDIT 2 ends ▲▲ -->
+
+<article class="article">
+  <a class="art-back" href="../case-studies.html">&larr; All case studies</a>
+
+  <p class="standfirst">We met a planner keeping reorder points in a spreadsheet, and he was right to.
+  Most of what this operation sells cannot be ordered from anybody. It exists only because something
+  else was cut down to make it, so a shortfall is a question about routing rather than purchasing, and
+  reorder points are not built for that.</p>
+
+  <div class="pull">
+    <div class="n">Around 3x</div>
+    <div class="t">The stock the planning board could see, once a live per-site feed replaced a
+    snapshot somebody had loaded by hand. Nothing was bought or sold to achieve it. It was already in
+    the yard.</div>
+  </div>
+
+  <h2>Who we met</h2>
+  <p>The partner responsible for buying and the people planning production across two sites. Their
+  working position came from a manual snapshot, and the spreadsheet existed because no reorder-point
+  system they had looked at could answer the question in front of them.</p>
+
+  <p>The daily feed had been carrying the on-hand quantity fields all along and returning zeros in
+  them. That is a common enough behaviour in an inventory endpoint and it is not visible from the
+  outside, so one site and a set of fast-moving stock at another were simply absent from the picture.
+  Nobody was planning badly. They were planning against the only number available.</p>
+
+  <div class="cs-quote">
+    <p>I'm asking it to go through my last six months of one item code, come up with safety stock,
+    based on my purchases. Then I went through and started excluding certain things. See what it
+    would do, and it just keeps kicking out more and more stuff.</p>
+    <cite>Partner, lumber and millwork operation</cite>
+  </div>
+
+  <h2>What we did</h2>
+  <p>Interviews with the buyers and the planners first, then a line-by-line read of the spreadsheet,
+  because it held years of judgement about what gets made and what gets bought.</p>
+
+  <div class="cs-band">
+    <div class="cb-in">
+      <figure>
+        <img src="../images/opt/stacked-logs-wide.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="A roadside deck of cut logs stacked end on, hundreds of sawn faces of varying diameter">
+        <figcaption>Stock in an operation like this is rarely a shelf. It is one thing on its way to becoming another, and it is counted more than once on the journey.</figcaption>
+      </figure>
+      <div class="cb-body">
+        <h3>Tracing the spreadsheet back to source</h3>
+        <p>Tracing that spreadsheet's inputs back to source is how we found the zeros. Nobody had
+        reason to check a field that was present, populated and wrong.</p>
+        <p>Then we connected the live per-site feed, verified it against the hand-load on the items
+        that overlapped rather than assuming it was better, and modelled the position so board feet,
+        lineal feet and each could sit in one view.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>The bigger piece was the routing. We built the map of what can be made from what out of their
+  own work-order history, which runs to thousands of routes, with a large share of items appearing as
+  both an input and an output depending on the day. Several loop back to themselves through drying or
+  heat treatment. That map is the thing no packaged system holds, and it took a fortnight of asking to
+  get right.</p>
+
+  <p>Their rules went into the layer, not into our code. Which order types count as demand on stock
+  and which never touch the warehouse. Which internal accounts and transfers come out. Which codes
+  look like items and are not. Every one of those was their decision, and each one changes the buy
+  list.</p>
+
+  <p>The first version we showed them was wrong in a way worth recording. Run rates were a flat
+  six-month average, which one large order inflates for half a year before it falls away. They said
+  so. It is now built from how often an item actually moves and how much moves each time, net of what
+  the shop floor produces itself.</p>
+
+  <h2>What we left them with</h2>
+  <p>A board rebuilt daily that answers the question the spreadsheet was there for, and separates the
+  three possible answers to a shortfall rather than treating all of them as a purchase.</p>
+
+  <div class="cs-flow reveal">
+    <div class="cf-in">
+      <div class="cf-head">
+        <h3>Make it, buy it, or neither.</h3>
+        <span class="cf-sub">// Illustrative &middot; not the customer's data</span>
+      </div>
+      <div class="cf-grid">
+
+        <div class="wf-panel cf-wide">
+          <div class="pt"><span>// A shortfall on a finished item</span><em>three possible answers</em></div>
+          <svg viewBox="0 0 760 132" aria-hidden="true">
+            <text x="6" y="14" class="mono-s">SHORTFALL</text>
+            <text x="286" y="14" class="mono-s">WHAT THE ORDER DATE ALLOWS</text>
+            <text x="586" y="14" class="mono-s">WHAT HAPPENS</text>
+            <line x1="6" y1="20" x2="754" y2="20" stroke="rgba(255,255,255,.14)"/>
+            <g class="dr-up" style="animation-delay:.1s">
+              <rect x="6" y="46" width="200" height="40" rx="3" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.20)"/>
+              <text x="18" y="63" class="mono-w">FINISHED ITEM SHORT</text>
+              <text x="18" y="79" class="mono-s">AGAINST A DATED ORDER</text>
+            </g>
+            <path d="M 220 66 L 274 66" stroke="rgba(255,255,255,.30)" fill="none" class="dr-flow"/>
+            <path d="M 268 62 L 274 66 L 268 70" stroke="rgba(255,255,255,.45)" fill="none"/>
+            <g class="dr-up" style="animation-delay:.3s">
+              <text x="286" y="42" class="mono-s">MAKING IT STILL HITS THE DATE</text>
+              <text x="286" y="70" class="mono-s">BUYING IT IS QUICKER</text>
+              <text x="286" y="98" class="mono-s">NEITHER ROUTE EXISTS</text>
+            </g>
+            <path d="M 540 38 L 572 38" stroke="rgba(255,255,255,.30)" fill="none" class="dr-flow"/>
+            <path d="M 566 34 L 572 38 L 566 42" stroke="rgba(255,255,255,.45)" fill="none"/>
+            <path d="M 540 66 L 572 66" stroke="rgba(255,255,255,.30)" fill="none" class="dr-flow"/>
+            <path d="M 566 62 L 572 66 L 566 70" stroke="rgba(255,255,255,.45)" fill="none"/>
+            <path d="M 540 94 L 572 94" stroke="rgba(255,255,255,.30)" fill="none" class="dr-flow"/>
+            <path d="M 566 90 L 572 94 L 566 98" stroke="rgba(255,255,255,.45)" fill="none"/>
+            <g class="dr-up" style="animation-delay:.5s">
+              <text x="586" y="42" class="mono-g">MAKE &middot; AND RESERVE THE INPUT</text>
+              <text x="586" y="70" class="mono-g">BUY &middot; ON THE SHORTER LEAD</text>
+              <text x="586" y="98" class="mono-r">RAISE IT WITH A PERSON</text>
+              <text x="586" y="122" class="mono-s">NEVER SILENTLY DROPPED</text>
+            </g>
+          </svg>
+          <p class="cap">The third row is the one that matters. An item with no supplier and no way to make it in time is a decision for a person, and it now says so on its face instead of sitting on a buy list.</p>
+        </div>
+
+        <div class="wf-panel">
+          <div class="pt"><span>// Excess stock</span><em>not all of it is free</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <text x="6" y="16" class="mono-s">STOCK SITTING ON AN EXCESS LINE</text>
+            <rect x="6" y="26" width="330" height="18" rx="2" fill="rgba(255,255,255,.10)"/>
+            <rect x="6" y="26" width="126" height="18" rx="2" fill="#c0392b" class="dr-bar"/>
+            <g class="dr-up" style="animation-delay:.4s">
+              <text x="6" y="66" class="mono-r">CLAIMED &middot; A SCHEDULED RUN NEEDS IT</text>
+              <text x="6" y="84" class="mono-g">FREE &middot; THIS IS THE PART YOU CAN SELL</text>
+              <line x1="6" y1="96" x2="336" y2="96" stroke="rgba(255,255,255,.14)"/>
+              <text x="6" y="118" class="mono-w">CLEAR THE SURPLUS, NOT THE LINE</text>
+            </g>
+          </svg>
+          <p class="cap">Clear an excess line without checking what is spoken for and you sell the input a scheduled run depends on. The claimed portion is held back and shown separately.</p>
+        </div>
+
+        <div class="wf-panel">
+          <div class="pt"><span>// Demand on the warehouse</span><em>most of it isn't</em></div>
+          <svg viewBox="0 0 360 130" aria-hidden="true">
+            <text x="6" y="16" class="mono-s">COMMITTED DEMAND, AS THE SYSTEM PRESENTS IT</text>
+            <rect x="6" y="26" width="330" height="16" rx="2" fill="rgba(255,255,255,.34)" class="dr-bar"/>
+            <g class="dr-up" style="animation-delay:.35s">
+              <text x="6" y="66" class="mono-s">DEMAND THAT ACTUALLY TOUCHES STOCK</text>
+              <rect x="6" y="74" width="66" height="16" rx="2" fill="#2d8a4e"/>
+              <rect x="72" y="74" width="264" height="16" rx="2" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.16)"/>
+              <text x="6" y="118" class="mono-s">COUNT THE REST AND EVERY REORDER INFLATES</text>
+            </g>
+          </svg>
+          <p class="cap">Orders shipping straight from a supplier to a customer never touch the warehouse. They can dominate an order book without being demand on stock at all.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <p>One purchase order on that board has been open for years. It stays there, flagged, rather than
+  being filtered out, because the board's job is to show what the system holds and let a person decide
+  it is wrong. Tidying it belongs to them. Being able to see it is what was missing.</p>
+
+  <h2>The result</h2>
+
+  <div class="cs-metrics">
+    <div class="m"><span class="m-n">~3x</span><span class="m-d">The stock the planning board could see, once the live per-site feed replaced the manual snapshot</span></div>
+    <div class="m"><span class="m-n">8 in 10</span><span class="m-d">Finished items replenished only by remanufacturing an input, now routed rather than reordered</span></div>
+    <div class="m"><span class="m-n">2 in 5</span><span class="m-d">Units taken off the first buy list because no supplier and no pathway existed behind them</span></div>
+    <div class="m"><span class="m-n">Daily</span><span class="m-d">Rebuild of the position, against a snapshot that had been weeks old</span></div>
+  </div>
+
+  <p class="cs-note">Rebuilt daily from the operation's own inventory, order and work-order data.
+  Valued at recent selling price so board feet, lineal feet and each are comparable, which makes the
+  total a resale figure rather than a book one. A share of volume carries no price or cost source and
+  is shown without a value rather than dropped. Figures given as proportions throughout.</p>
+
+  <div class="cs-value">
+    <div class="v">
+      <div class="v-h"><span class="v-k">Cash</span><span class="v-n">Surplus only</span></div>
+      <p class="v-t">Excess separated into what is genuinely free and what a scheduled run already
+      depends on, so clearing it releases cash without stopping production. Dead stock separated again
+      as material with no movement at all.</p>
+    </div>
+    <div class="v">
+      <div class="v-h"><span class="v-k">Accuracy</span><span class="v-n">~3x the stock</span></div>
+      <p class="v-t">The board went from showing roughly a third of the position to all of it, across
+      both sites, with the units reconciled so they can be added together.</p>
+    </div>
+    <div class="v">
+      <div class="v-k v-n">Time</div>
+      <p class="v-t">A buy list rebuilt daily with the un-buyable taken off it, and every open sales
+      line split into what comes from stock, what comes from inbound and what has to be ordered.</p>
+    </div>
+  </div>
+
+  <p>The spreadsheet is gone, which was never the point. The point is that a planner opens the board
+  and the number on it is the number in the yard. There's more on how this works across a
+  finished-products operation on the <a href="../wood-products.html">wood products</a> page.</p>
+
+</article>
+</main>
+
+<section class="on-dark cta cta-forest" style="background-image:url('../images/opt/pexels-nc-farm-bureau-mark-12278574.webp')">
+  <div class="container">
+    <h2 class="display reveal">See it on <span class="coral">your own data.</span></h2>
+    <p class="lead reveal d1">Live in two weeks, on the systems you already run.</p>
+    <div class="hero-cta reveal d2"><a href="../book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="../index.html" class="footer-logo"><img src="../assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">An AI-native platform for the timber supply chain.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="../index.html#platform">The eight steps</a></li>
+          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../security.html">Security</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="../forest-management.html">Forest Management</a></li>
+          <li><a href="../sawmills.html">Sawmills</a></li>
+          <li><a href="../wood-products.html">Wood Products</a></li>
+          <li><a href="../pulp-paper-packaging.html">Pulp, Paper &amp; Packaging</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../case-studies.html">Case studies</a></li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../book-a-demo.html">Request a demo</a></li>
+          <li><a href="../privacy.html">Privacy</a></li>
+          <li><a href="../terms.html">Terms</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Inc.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+})();
+</script>
+<script src="../assets/consent.js?v=90" defer></script>
+</body>
+</html>

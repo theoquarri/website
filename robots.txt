@@ -1,0 +1,74 @@
+User-agent: *
+Allow: /
+Disallow: /_*
+
+User-agent: GPTBot
+Allow: /
+Disallow: /_*
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /_*
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /_*
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /_*
+
+User-agent: Claude-User
+Allow: /
+Disallow: /_*
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /_*
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /_*
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /_*
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /_*
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /_*
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /_*
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /_*
+
+User-agent: Bingbot
+Allow: /
+Disallow: /_*
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /_*
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /_*
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /_*
+
+User-agent: YouBot
+Allow: /
+Disallow: /_*
+
+Sitemap: https://quarri.ai/sitemap.xml
+# Plain-text site summary: https://quarri.ai/llms.txt

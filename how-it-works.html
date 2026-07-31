@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f3">
+<title>How Quarri works, a governed data layer over your stack</title>
+<meta name="description" content="Quarri is a governed data layer over the systems you already run. No rip and replace, and deterministic where it counts.">
+<link rel="canonical" href="https://quarri.ai/how-it-works.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="How Quarri works, a governed data layer over your stack">
+<meta property="og:description" content="Quarri is a governed data layer over the systems you already run. No rip and replace, and deterministic where it counts.">
+<meta property="og:url" content="https://quarri.ai/how-it-works.html">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Quarri works, a governed data layer over your stack">
+<meta name="twitter:description" content="Quarri is a governed data layer over the systems you already run. No rip and replace, and deterministic where it counts.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=90">
+<link rel="stylesheet" href="components.css?v=90">
+<style>
+.keepadd{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:34px }
+.ka{ border:1px solid var(--rule); border-radius:var(--radius); background:var(--white); padding:24px 26px }
+.ka h4{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--coral); font-weight:400; margin-bottom:14px }
+.ka ul{ list-style:none; display:flex; flex-direction:column; gap:10px }
+.ka li{ font-size:14.5px; color:var(--ink-2); padding-left:20px; position:relative }
+.ka li::before{ content:""; position:absolute; left:0; top:8px; width:8px; height:8px; border-radius:2px; background:var(--coral) }
+.steps{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px }
+.step{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); padding:26px }
+.step .sn{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--coral) }
+.step h3{ margin:12px 0 10px }
+.step p{ font-size:14px; color:var(--ink-2); line-height:1.6 }
+@media(max-width:900px){
+  .keepadd{ grid-template-columns:1fr }
+}
+</style>
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "An AI-native platform for the timber supply chain.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://quarri.ai/how-it-works.html#webpage",
+      "url": "https://quarri.ai/how-it-works.html",
+      "name": "How Quarri works, a governed data layer over your stack",
+      "description": "Quarri is a governed data layer over the systems you already run. No rip and replace, and deterministic where it counts.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "about": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://quarri.ai/assets/og-image.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://quarri.ai/how-it-works.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://quarri.ai/how-it-works.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quarri.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How it works"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="assets/quarri-logo.png" alt="" width="26" height="26" decoding="async"><span>Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a href="forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
+      <a href="how-it-works.html" class="is-active">How it works</a>
+      <a href="security.html">Security</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="case-studies.html">Case studies</a>
+      <a href="insights.html">Insights</a>
+      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
+      <a href="book-a-demo.html" class="btn btn-primary">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="label reveal">// How it works</span>
+      <h1 class="display reveal d1">A governed data layer over the stack you <span class="coral">already run.</span></h1>
+      <p class="lead reveal d2">No migration project and no five-year platform bet. Your ERPs, databases and spreadsheets stay exactly where they are, and Quarri makes them usable by any leading model, safely and at scale.</p>
+    </div>
+    <div class="keepadd reveal d2">
+      <div class="ka">
+        <h4>// Keep</h4>
+        <ul>
+          <li>Your ERPs, mill systems and databases</li>
+          <li>The spreadsheets your team trusts</li>
+          <li>How your people already work</li>
+        </ul>
+      </div>
+      <div class="ka">
+        <h4>// Add</h4>
+        <ul>
+          <li>A governed layer over all of it</li>
+          <li>Safe read + write into your systems</li>
+          <li>AI, dashboards and automation on top</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE (from the MNRF / investor deck) -->
+<section style="padding-top:clamp(20px,3vh,40px)">
+  <div class="container">
+    <div class="section-intro" style="margin-bottom:clamp(22px,3vw,34px)">
+      <span class="label reveal">// Where Quarri sits</span>
+      <h2 class="reveal d1">Under the model. <span class="coral">Over your data.</span></h2>
+      <p class="lead reveal d2">General-purpose models sit on top and do the reasoning. Quarri is the layer beneath them that holds your data, your definitions and your workflows, and it reads and writes back into the systems you already run.</p>
+    </div>
+
+    <div class="arch reveal d2">
+      <span class="arch-cap">// Horizontal AI</span>
+      <div class="arch-tier">
+        <h4>General-purpose models <em>reasoning</em></h4>
+        <div class="arch-chips">
+          <span class="arch-chip has-logo"><img src="assets/logos/anthropic.png" width="44" height="44" alt="" loading="lazy" decoding="async">Anthropic</span>
+          <span class="arch-chip has-logo"><img src="assets/logos/openai.png" width="44" height="44" alt="" loading="lazy" decoding="async">OpenAI</span>
+          <span class="arch-chip">Open source</span>
+          <span class="arch-chip">Your own agents</span>
+        </div>
+      </div>
+
+      <div class="arch-rw" aria-hidden="true">
+        <span>
+          <svg viewBox="0 0 12 26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <path class="dr-flow" d="M6 24V4"/><path d="m2.4 7.2 3.6-3.6 3.6 3.6"/>
+          </svg>Read
+        </span>
+        <span>
+          <svg viewBox="0 0 12 26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <path class="dr-flow" d="M6 2v20"/><path d="m2.4 18.8 3.6 3.6 3.6-3.6"/>
+          </svg>Write
+        </span>
+      </div>
+
+      <div class="arch-quarri">
+        <h4>Quarri <em>an MCP plugin</em></h4>
+
+        <div class="arch-layer">
+          <span class="arch-lname">Product layer <i>what your team uses</i></span>
+          <div class="arch-pills">
+            <b>Document extraction</b><b>Cross-system reconciliation</b><b>Forecasting</b><b>Schedule &amp; inventory</b><b>Price benchmarking</b><b>Build anything</b>
+          </div>
+        </div>
+
+        <div class="arch-layer">
+          <span class="arch-lname">Infrastructure layer <i>deterministic execution</i></span>
+          <div class="arch-pills"><b>100+ agent tools</b><b>Versioned workflows</b><b>Reusable across teams</b></div>
+        </div>
+
+        <div class="arch-layer">
+          <span class="arch-lname">Context layer</span>
+          <div class="arch-pills"><b>Semantic model</b><b>Company glossary</b><b>Memory of work</b></div>
+        </div>
+
+        <div class="arch-layer">
+          <span class="arch-lname">Data layer</span>
+          <div class="arch-pills"><b>Warehouse</b><b>Agentic modelling</b><b>Role-based data access</b><b>Read + write</b></div>
+        </div>
+
+        <div class="arch-layer">
+          <span class="arch-lname">Connectors &amp; ingestion</span>
+          <div class="arch-pills"><b>Daily sync</b><b>APIs &amp; databases</b><b>Scanned documents</b><b>External feeds</b></div>
+        </div>
+      </div>
+
+      <div class="arch-ingest" aria-hidden="true">
+        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
+        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
+        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
+        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
+        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
+        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
+        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
+      </div>
+
+      <span class="arch-cap">// Your sources</span>
+      <div class="arch-src">
+        <b>Paper &amp; handwritten</b><b>Legacy ERP</b><b>Mill systems</b><b>Spreadsheets</b><b>Databases</b><b>Scanned PDFs</b><b>External data</b>
+      </div>
+    </div>
+
+    <p class="reveal d3" style="margin-top:20px;font-size:14px;color:var(--ink-3);max-width:74ch">Model your data once, then any workflow builds on top. One source of truth, flexible, fast to build and cheap to run.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="bordered bg-white">
+  <div class="container">
+    <div class="section-intro">
+      <span class="label reveal">// The process</span>
+      <h2 class="reveal d1">Three steps from messy reality to <span class="coral">working intelligence.</span></h2>
+      <p class="lead reveal d2">Every Quarri deployment starts the same way. We don't replace your stack, we make it usable by AI.</p>
+    </div>
+    <div class="steps reveal d2">
+      <div class="step"><span class="sn">01</span><h3>Connect.</h3><p>Legacy ERPs, databases, spreadsheets, scanned PDFs and paper documents. Around half a day per source, absorbed in the SaaS fee.</p></div>
+      <div class="step"><span class="sn">02</span><h3>Clean.</h3><p>Automatically cleaned, deduplicated and structured into one queryable layer, with the reconciliation logic encoded as rules.</p></div>
+      <div class="step"><span class="sn">03</span><h3>Contextualise.</h3><p>Your business rules, metrics and definitions, species, grades, units, cost centres, embedded so AI answers in your language.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REUSABLE INFRASTRUCTURE -->
+<section class="on-dark">
+  <div class="container">
+    <div class="section-intro">
+      <span class="label reveal">// Built once, used everywhere</span>
+      <h2 class="reveal d1">Every workflow you build is <span class="coral">reusable, shareable and yours to edit.</span></h2>
+      <p class="lead reveal d2">A reconciliation built for the finance team's month end does not stay with the finance team. It is versioned, documented and available to operations the next morning, and anyone with access can open it, read exactly what it does and change it. That is the part that compounds.</p>
+    </div>
+    <div class="pillars reveal d2">
+      <div class="pil">
+        <h3>Shared across teams</h3>
+        <p>Built once in finance, reused in operations, no rebuild and no second version drifting out of sync.</p>
+      </div>
+      <div class="pil">
+        <h3>Versioned, not fragile</h3>
+        <p>Every change is tracked and every edit runs against a verification harness before it lands. If something breaks, roll it back.</p>
+      </div>
+      <div class="pil">
+        <h3>Open, not a black box</h3>
+        <p>Your people can read the logic, see which rule produced a number and change it themselves. No ticket, no vendor.</p>
+      </div>
+      <div class="pil">
+        <h3>Outputs persist</h3>
+        <p>Workflows saved, dashboards live, data captured and written back into your ERP rather than exported and forgotten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPLOYMENT -->
+<section class="bordered bg-white" id="deployment">
+  <div class="container">
+    <div class="section-intro">
+      <span class="label reveal">// What we actually do</span>
+      <h2 class="reveal d1">The part that <span class="coral">isn't software.</span></h2>
+      <p class="lead reveal d2">Software that needs a data team is not much use to an operator who does not have one. So we do that work. Connecting the systems, modelling the data, encoding the rules your business already runs on and automating the processes that carry risk. It is included, it is where most of the early value comes from, and it is the part nobody puts on a website.</p>
+    </div>
+
+    <div class="dep-grid reveal d2">
+      <div class="dep">
+        <span class="dep-n">01</span>
+        <h3>Fix the foundation</h3>
+        <p>Connect the systems you already run and build a clean model on top of them. The rules your team carries in its head get written down: rate tables, department mappings, the exceptions everybody knows and nobody documented.</p>
+      </div>
+      <div class="dep">
+        <span class="dep-n">02</span>
+        <h3>Automate what carries risk</h3>
+        <p>Replace the manual processes where an error costs money. Reconciliations, accruals, extraction from paper. Each one gets validation checks so a mistake is caught by the process rather than by somebody noticing.</p>
+      </div>
+      <div class="dep">
+        <span class="dep-n">03</span>
+        <h3>Hand it over</h3>
+        <p>Your power users learn to build, not just to read. Standalone workbooks get retired as people query the data directly, and the team that runs the operation stops queuing behind whoever owns the spreadsheet.</p>
+      </div>
+      <div class="dep">
+        <span class="dep-n">04</span>
+        <h3>Keep building</h3>
+        <p>Forecasting, new sources, cross-business views. Each workflow built is reusable, so the second and third are faster than the first, and what we learn on one process carries into the next.</p>
+      </div>
+    </div>
+
+    <div class="dep-time reveal d3">
+      <div class="dt">
+        <span class="dt-k">Week 1</span>
+        <p>Kick-off, priorities agreed, first systems connected. Around half a day per legacy source, absorbed in the fee.</p>
+      </div>
+      <div class="dt">
+        <span class="dt-k">Week 2</span>
+        <p>First workstream live in production, not in a sandbox. This is what "live in two weeks" means.</p>
+      </div>
+      <div class="dt">
+        <span class="dt-k">Month 2 onward</span>
+        <p>Development days each month for new automations, a monthly call to set priorities, and maintenance of everything already running.</p>
+      </div>
+    </div>
+
+    <div class="cs-quote reveal d3" style="margin-top:clamp(30px,4vw,44px)">
+      <p>Your contribution to data organisation, cleaning and catching improvements in process flow is two thirds of the value.</p>
+      <cite>Customer, forestry operation</cite>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DETERMINISTIC -->
+<section class="on-dark">
+  <div class="container">
+    <div class="section-intro">
+      <span class="label reveal">// Why deterministic</span>
+      <h2 class="reveal d1">Encoded logic on the data. <span class="coral">AI on the reasoning.</span></h2>
+      <p class="lead reveal d2">Quarri is a deterministic layer beneath probabilistic AI. The matching, converting and reconciling runs as encoded workflows, replayable, auditable and with no model call per document, so the numbers in front of your board are never guessed. Every figure below traces to a live deployment.</p>
+    </div>
+    <div class="stats reveal d2">
+      <div class="stat"><div class="num">0</div><div class="lbl">LLM calls per document on extraction, fully replayable and auditable</div></div>
+      <div class="stat"><div class="num">~1 sec</div><div class="lbl">To re-solve a full order book, within 1% to 1.6% of a brute-force optimum</div></div>
+      <div class="stat"><div class="num">&lt;30 sec</div><div class="lbl">Full reconciliation runtime, replacing a 4-minute previous build</div></div>
+      <div class="stat"><div class="num">125</div><div class="lbl">ERP tables synced daily at a single mill deployment</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta bordered bg-white">
+  <div class="container">
+    <h2 class="display reveal">See it on <span class="coral">your own data.</span></h2>
+    <p class="lead reveal d1">Live in two weeks, on the systems you already run.</p>
+    <div class="hero-cta reveal d2">
+      <a href="book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a>
+      <a href="faq.html" class="btn btn-ghost">Read the FAQ <span class="arw">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo"><img src="assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">An AI-native platform for the timber supply chain.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="index.html#platform">The eight steps</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="forest-management.html">Forest Management</a></li>
+          <li><a href="sawmills.html">Sawmills</a></li>
+          <li><a href="wood-products.html">Wood Products</a></li>
+          <li><a href="pulp-paper-packaging.html">Pulp, Paper &amp; Packaging</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="book-a-demo.html">Request a demo</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Inc.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12, rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+<script src="assets/consent.js?v=90" defer></script>
+</body>
+</html>
