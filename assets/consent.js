@@ -21,6 +21,7 @@
   var CLARITY_ID = 'xv39rrgvu1';  // Microsoft Clarity project id, set 31 Jul 2026
   var HUBSPOT_PORTAL_ID = '147071120';  // read from the Quarri account, 31 Jul 2026
   var GA4_ID = 'G-5GV2GJQNQR';    // Google Analytics 4, set 31 Jul 2026
+  var APOLLO_APP_ID = '693c1443ff04600021d02786';  // Apollo visitor tracking, set 6 Aug 2026
 
   /* HubSpot serves the tracking script from the data centre the portal lives
      in. A US portal on the eu1 host silently 404s and nothing tracks, which
@@ -100,13 +101,32 @@
       /* IP anonymisation is on by default in GA4; ads signals are not. */
       window.gtag('config', GA4_ID, { anonymize_ip: true, allow_google_signals: false });
     }
+    /* Apollo resolves a visiting IP to a company, for outbound signal. It is
+       company-level and does not identify a person, but an IP address is
+       personal data under GDPR either way, so it sits behind the same gate as
+       everything else rather than in the page head where Apollo's own install
+       guide puts it. That placement is deliberate: it means visitors who
+       decline, and EU visitors before they accept, are not tracked at all. */
+    if (APOLLO_APP_ID) {
+      var ap = document.createElement('script');
+      /* the cache-buster is Apollo's own loader contract, not ours */
+      ap.src = 'https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache='
+             + Math.random().toString(36).substring(7);
+      ap.async = true; ap.defer = true;
+      ap.onload = function () {
+        if (window.trackingFunctions && window.trackingFunctions.onLoad) {
+          window.trackingFunctions.onLoad({ appId: APOLLO_APP_ID });
+        }
+      };
+      document.head.appendChild(ap);
+    }
   }
 
   function revokeAnalytics() {
     /* Clear anything already dropped, then reload so nothing keeps reporting. */
     document.cookie.split(';').forEach(function (c) {
       var n = c.split('=')[0].trim();
-      if (/^(_cl|_hs|hubspotutk|__hs|_ga|_gid)/.test(n)) {
+      if (/^(_cl|_hs|hubspotutk|__hs|_ga|_gid|apollo|__apollo)/i.test(n)) {
         document.cookie = n + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
       }
     });
