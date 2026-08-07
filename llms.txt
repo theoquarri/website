@@ -9,7 +9,7 @@
 
 Quarri connects buying, production, sales and inventory from standing forest to
 finished product. The platform covers eight steps: connect to existing systems;
-AI-powered document extraction from PDFs, tickets and contracts; cross-system
+Capture from PDFs, tickets and contracts; cross-system
 reconciliation; forecasting; process and yield analytics; scheduling and
 inventory; purchasing and sales optimisation; and an open build layer for
 analytics and scripts teams can share and edit.
