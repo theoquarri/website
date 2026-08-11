@@ -46,3 +46,44 @@
 /case-studies/supplier-reliability           /case-studies.html   301
 /case-studies/document-extraction.html       /case-studies.html   301
 /case-studies/document-extraction            /case-studies.html   301
+
+# Seen in the first fortnight of real traffic, both 404s with 0s engagement.
+# /cpg-1 was never a page on this domain; it is an external link from somewhere
+# predating the forestry positioning. The homepage is the honest landing.
+/cpg-1        /   301
+/cpg-1.html   /   301
+
+# ---- generated below this line by _sync_redirects.py, do not hand-edit ----
+# Underscore variants of every hyphenated slug. Somebody mistyping or
+# mis-copying a URL by name should land on the page, not a 404.
+
+/book_a_demo.html   /book-a-demo.html   301
+/book_a_demo        /book-a-demo.html   301
+/case_studies.html   /case-studies.html   301
+/case_studies        /case-studies.html   301
+/finance_and_strategy_teams.html   /finance-and-strategy-teams.html   301
+/finance_and_strategy_teams        /finance-and-strategy-teams.html   301
+/forest_management.html   /forest-management.html   301
+/forest_management        /forest-management.html   301
+/how_it_works.html   /how-it-works.html   301
+/how_it_works        /how-it-works.html   301
+/operations_teams.html   /operations-teams.html   301
+/operations_teams        /operations-teams.html   301
+/pulp_paper_packaging.html   /pulp-paper-packaging.html   301
+/pulp_paper_packaging        /pulp-paper-packaging.html   301
+/wood_products.html   /wood-products.html   301
+/wood_products        /wood-products.html   301
+/insights/canadian_lumber_demand_recovering.html   /insights/canadian-lumber-demand-recovering.html   301
+/insights/canadian_lumber_demand_recovering        /insights/canadian-lumber-demand-recovering.html   301
+/insights/tariff_fifty_duty_forty_five.html   /insights/tariff-fifty-duty-forty-five.html   301
+/insights/tariff_fifty_duty_forty_five        /insights/tariff-fifty-duty-forty-five.html   301
+/insights/weyerhaeuser_ai_billion.html   /insights/weyerhaeuser-ai-billion.html   301
+/insights/weyerhaeuser_ai_billion        /insights/weyerhaeuser-ai-billion.html   301
+/case-studies/account_margin.html   /case-studies/account-margin.html   301
+/case-studies/account_margin        /case-studies/account-margin.html   301
+/case-studies/input_costs_and_receivables.html   /case-studies/input-costs-and-receivables.html   301
+/case-studies/input_costs_and_receivables        /case-studies/input-costs-and-receivables.html   301
+/case-studies/inventory_and_remanufacturing.html   /case-studies/inventory-and-remanufacturing.html   301
+/case-studies/inventory_and_remanufacturing        /case-studies/inventory-and-remanufacturing.html   301
+/case-studies/stumpage_reconciliation.html   /case-studies/stumpage-reconciliation.html   301
+/case-studies/stumpage_reconciliation        /case-studies/stumpage-reconciliation.html   301
