@@ -19,3 +19,30 @@
 # forestry-and-milling split into forest-management and sawmills. It points at
 # forest-management because that is the closer match to the old page's content;
 # the nav gets the reader to sawmills in one click from there.
+
+# Pages that were published and then removed. A deleted page is not a dead end:
+# it was indexed, shared and linked, and a 404 throws away everything it earned.
+# Each points at the nearest surviving thing on the same subject rather than
+# dumping the reader on the index.
+
+# Deleted 7 Aug. Its subject is the stumpage reconciliation work, which the case
+# study covers in more depth than the article did.
+/insights/stumpage-accruals-never-tie.html   /case-studies/stumpage-reconciliation.html   301
+/insights/stumpage-accruals-never-tie        /case-studies/stumpage-reconciliation.html   301
+
+# Superseded draft of the Canadian lumber demand piece. Same subject, same data,
+# published under a different slug.
+/insights/lumber-exports-june-gap.html       /insights/canadian-lumber-demand-recovering.html   301
+/insights/lumber-exports-june-gap            /insights/canadian-lumber-demand-recovering.html   301
+
+# Withdrawn, no direct successor.
+/insights/measured-not-reconciled.html       /insights.html   301
+/insights/measured-not-reconciled            /insights.html   301
+
+# Placeholder case studies that were never written.
+/case-studies/unit-of-measure-error.html     /case-studies.html   301
+/case-studies/unit-of-measure-error          /case-studies.html   301
+/case-studies/supplier-reliability.html      /case-studies.html   301
+/case-studies/supplier-reliability           /case-studies.html   301
+/case-studies/document-extraction.html       /case-studies.html   301
+/case-studies/document-extraction            /case-studies.html   301
