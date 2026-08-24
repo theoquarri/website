@@ -1,7 +1,7 @@
 # Quarri
 
-> Quarri is an AI-native data platform for the timber supply chain, built and
-> operated by Quarri AI Inc. It sits over the systems a forestry or lumber
+> Quarri is the timber data platform, built and
+> operated by Quarri AI Inc. AI-native, it sits over the systems a forestry or lumber
 > business already runs, reconciles them into one governed layer, and answers
 > questions in plain English with deterministic numbers rather than estimates.
 
