@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bp-page="howitworks">
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -31,8 +31,8 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=110">
-<link rel="stylesheet" href="components.css?v=110">
+<link rel="stylesheet" href="styles.css?v=117">
+<link rel="stylesheet" href="components.css?v=117">
 <style>
 .keepadd{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:34px }
 .ka{ border:1px solid var(--rule); border-radius:var(--radius); background:var(--white); padding:24px 26px }
@@ -282,48 +282,120 @@
         </div>
       </div>
 
-      <div class="arch-ingest" aria-hidden="true">
-        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
-        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
-        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
-        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
-        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
-        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
-        <svg viewBox="0 0 10 26" aria-hidden="true"><path class="dr-flow" d="M5 26V5"/><path d="m1 9 4-4 4 4"/></svg>
+      <div class="arch-outside">
+        <span class="arch-cap">// Your sources</span>
+        <div class="arch-src">
+          <span class="src"><svg viewBox="0 0 10 59" aria-hidden="true"><path class="dr-flow" d="M5 59V3"/><path d="m1 7 4-4 4 4"/></svg><b>Paper &amp; handwritten</b></span>
+          <span class="src"><svg viewBox="0 0 10 59" aria-hidden="true"><path class="dr-flow" d="M5 59V3"/><path d="m1 7 4-4 4 4"/></svg><b>Legacy ERP</b></span>
+          <span class="src"><svg viewBox="0 0 10 59" aria-hidden="true"><path class="dr-flow" d="M5 59V3"/><path d="m1 7 4-4 4 4"/></svg><b>Mill systems</b></span>
+          <span class="src"><svg viewBox="0 0 10 59" aria-hidden="true"><path class="dr-flow" d="M5 59V3"/><path d="m1 7 4-4 4 4"/></svg><b>Spreadsheets</b></span>
+          <span class="src"><svg viewBox="0 0 10 59" aria-hidden="true"><path class="dr-flow" d="M5 59V3"/><path d="m1 7 4-4 4 4"/></svg><b>Databases</b></span>
+          <span class="src"><svg viewBox="0 0 10 59" aria-hidden="true"><path class="dr-flow" d="M5 59V3"/><path d="m1 7 4-4 4 4"/></svg><b>Scanned PDFs</b></span>
+          <span class="src"><svg viewBox="0 0 10 59" aria-hidden="true"><path class="dr-flow" d="M5 59V3"/><path d="m1 7 4-4 4 4"/></svg><b>External data</b></span>
+        </div>
+        <p class="arch-foot">Model your data once, then any workflow builds on top. One source of truth, flexible, fast to build and cheap to run.</p>
       </div>
-
-      <span class="arch-cap">// Your sources</span>
-      <div class="arch-src">
-        <b>Paper &amp; handwritten</b><b>Legacy ERP</b><b>Mill systems</b><b>Spreadsheets</b><b>Databases</b><b>Scanned PDFs</b><b>External data</b>
       </div>
     </div>
-
-    <p class="reveal d3" style="margin-top:20px;font-size:14px;color:var(--ink-3);max-width:74ch">Model your data once, then any workflow builds on top. One source of truth, flexible, fast to build and cheap to run.</p>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="bordered bg-white">
+<!-- PROCESS: one sequence, five steps, edge-to-edge bands. The timeline that
+     used to be a third list is the `when` tag on each step. -->
+<section class="bordered bg-white" id="process">
   <div class="container">
     <div class="section-intro">
       <span class="label reveal">// The process</span>
-      <h2 class="reveal d1">Three steps from messy reality to <span class="coral">working intelligence.</span></h2>
-      <p class="lead reveal d2">Every Quarri deployment starts the same way. We don't replace your stack, we make it usable by AI.</p>
+      <h2 class="reveal d1">Five steps, done with you, <span class="coral">not sold to you.</span></h2>
+      <p class="lead reveal d2">Software that needs a data team is not much use to an operator who does not have one. So the connecting, modelling and encoding is done by us, inside the fee, and it is where most of the early value comes from. This is what happens, in order.</p>
     </div>
-    <div class="steps reveal d2">
-      <div class="step"><span class="sn">01</span><h3>Connect.</h3><p>Legacy ERPs, databases, spreadsheets, scanned PDFs and paper documents. Around half a day per source, absorbed in the SaaS fee.</p></div>
-      <div class="step"><span class="sn">02</span><h3>Clean.</h3><p>Automatically cleaned, deduplicated and structured into one queryable layer, with the reconciliation logic encoded as rules.</p></div>
-      <div class="step"><span class="sn">03</span><h3>Contextualise.</h3><p>Your business rules, metrics and definitions, species, grades, units, cost centres, embedded so AI answers in your language.</p></div>
+  </div>
+
+  <div class="hw-step reveal">
+    <div class="hs-in">
+      <div>
+        <span class="hs-n">01</span>
+        <span class="hs-when">Week 1</span>
+      </div>
+      <div>
+        <h3>Connect what you already run.</h3>
+        <p>Legacy ERPs, mill systems, databases, spreadsheets, scanned PDFs and paper. Nothing moves and nothing is replaced: Quarri reads from the systems you have and writes back into them. Around half a day per source, absorbed in the SaaS fee.</p>
+        <ul class="hs-list"><li>Legacy ERP</li><li>Mill systems</li><li>Spreadsheets</li><li>Scanned PDFs</li><li>Paper &amp; handwritten</li><li>External data</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="hw-step reveal">
+    <div class="hs-in">
+      <div>
+        <span class="hs-n">02</span>
+        <span class="hs-when">Week 1</span>
+      </div>
+      <div>
+        <h3>Clean it and model it once.</h3>
+        <p>Every source is cleaned, deduplicated and structured into one queryable layer. The rules your team carries in its head get written down: rate tables, department mappings, the exceptions everybody knows and nobody documented. Model the data once, and every workflow after it builds on the same layer.</p>
+        <ul class="hs-list"><li>One queryable layer</li><li>Rate tables</li><li>Mappings</li><li>Exceptions, documented</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="hw-step reveal">
+    <div class="hs-in">
+      <div>
+        <span class="hs-n">03</span>
+        <span class="hs-when">Weeks 1 and 2</span>
+      </div>
+      <div>
+        <h3>Encode your rules, in your language.</h3>
+        <p>Your definitions go into the model: species, grades, units, cost centres, the metrics you actually run on. The reconciliation logic goes in as rules rather than prompts, so the matching, converting and reconciling runs as encoded workflows. Replayable, auditable, and with no model call per document, which is why a number in front of your board is never guessed.</p>
+        <ul class="hs-list"><li>Semantic model</li><li>Company glossary</li><li>Rules, not prompts</li><li>Replayable</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="hw-step reveal">
+    <div class="hs-in">
+      <div>
+        <span class="hs-n">04</span>
+        <span class="hs-when">Week 2<br>First workstream live</span>
+      </div>
+      <div>
+        <h3>Automate what carries risk.</h3>
+        <p>The first workstream goes live in production, not in a sandbox. That is what "live in two weeks" means. We start with the manual processes where an error costs money: reconciliations, accruals, extraction from paper. Each one gets validation checks, so a mistake is caught by the process rather than by somebody noticing.</p>
+        <ul class="hs-list"><li>Reconciliations</li><li>Accruals</li><li>Extraction from paper</li><li>Validation checks</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="hw-step reveal">
+    <div class="hs-in">
+      <div>
+        <span class="hs-n">05</span>
+        <span class="hs-when">Month 2 onward</span>
+      </div>
+      <div>
+        <h3>Hand it over, then keep building.</h3>
+        <p>Your power users learn to build, not just to read. Standalone workbooks get retired as people query the data directly, and the team that runs the operation stops queuing behind whoever owns the spreadsheet.</p>
+        <p>From month two: development days each month for new automations, a monthly call to set priorities, and maintenance of everything already running. Each workflow built is reusable, so the second and third are faster than the first, and what we learn on one process carries into the next.</p>
+        <ul class="hs-list"><li>Development days</li><li>Monthly priorities</li><li>Maintenance included</li><li>Forecasting next</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cs-quote reveal d2" style="margin-top:clamp(36px,5vw,56px)">
+      <p>Your contribution to data organisation, cleaning and catching improvements in process flow is two thirds of the value.</p>
+      <cite>Customer, forestry operation</cite>
     </div>
   </div>
 </section>
 
-<!-- REUSABLE INFRASTRUCTURE -->
+<!-- BUILT ONCE, USED EVERYWHERE -->
 <section class="on-dark">
   <div class="container">
     <div class="section-intro">
-      <span class="label reveal">// Built once, used everywhere</span>
-      <h2 class="reveal d1">Every workflow you build is <span class="coral">reusable, shareable and yours to edit.</span></h2>
+      <span class="label reveal">// What every step leaves behind</span>
+      <h2 class="reveal d1">Everything built is <span class="coral">reusable, shareable and yours to edit.</span></h2>
       <p class="lead reveal d2">A reconciliation built for the finance team's month end does not stay with the finance team. It is versioned, documented and available to operations the next morning, and anyone with access can open it, read exactly what it does and change it. That is the part that compounds.</p>
     </div>
     <div class="pillars reveal d2">
@@ -347,67 +419,13 @@
   </div>
 </section>
 
-<!-- DEPLOYMENT -->
-<section class="bordered bg-white" id="deployment">
-  <div class="container">
-    <div class="section-intro">
-      <span class="label reveal">// What we actually do</span>
-      <h2 class="reveal d1">The part that <span class="coral">isn't software.</span></h2>
-      <p class="lead reveal d2">Software that needs a data team is not much use to an operator who does not have one. So we do that work. Connecting the systems, modelling the data, encoding the rules your business already runs on and automating the processes that carry risk. It is included, it is where most of the early value comes from, and it is the part nobody puts on a website.</p>
-    </div>
-
-    <div class="dep-grid reveal d2">
-      <div class="dep">
-        <span class="dep-n">01</span>
-        <h3>Fix the foundation</h3>
-        <p>Connect the systems you already run and build a clean model on top of them. The rules your team carries in its head get written down: rate tables, department mappings, the exceptions everybody knows and nobody documented.</p>
-      </div>
-      <div class="dep">
-        <span class="dep-n">02</span>
-        <h3>Automate what carries risk</h3>
-        <p>Replace the manual processes where an error costs money. Reconciliations, accruals, extraction from paper. Each one gets validation checks so a mistake is caught by the process rather than by somebody noticing.</p>
-      </div>
-      <div class="dep">
-        <span class="dep-n">03</span>
-        <h3>Hand it over</h3>
-        <p>Your power users learn to build, not just to read. Standalone workbooks get retired as people query the data directly, and the team that runs the operation stops queuing behind whoever owns the spreadsheet.</p>
-      </div>
-      <div class="dep">
-        <span class="dep-n">04</span>
-        <h3>Keep building</h3>
-        <p>Forecasting, new sources, cross-business views. Each workflow built is reusable, so the second and third are faster than the first, and what we learn on one process carries into the next.</p>
-      </div>
-    </div>
-
-    <div class="dep-time reveal d3">
-      <div class="dt">
-        <span class="dt-k">Week 1</span>
-        <p>Kick-off, priorities agreed, first systems connected. Around half a day per legacy source, absorbed in the fee.</p>
-      </div>
-      <div class="dt">
-        <span class="dt-k">Week 2</span>
-        <p>First workstream live in production, not in a sandbox. This is what "live in two weeks" means.</p>
-      </div>
-      <div class="dt">
-        <span class="dt-k">Month 2 onward</span>
-        <p>Development days each month for new automations, a monthly call to set priorities, and maintenance of everything already running.</p>
-      </div>
-    </div>
-
-    <div class="cs-quote reveal d3" style="margin-top:clamp(30px,4vw,44px)">
-      <p>Your contribution to data organisation, cleaning and catching improvements in process flow is two thirds of the value.</p>
-      <cite>Customer, forestry operation</cite>
-    </div>
-  </div>
-</section>
-
-<!-- WHY DETERMINISTIC -->
-<section class="on-dark">
+<!-- THE PROOF -->
+<section class="bordered">
   <div class="container">
     <div class="section-intro">
       <span class="label reveal">// Why deterministic</span>
       <h2 class="reveal d1">Encoded logic on the data. <span class="coral">AI on the reasoning.</span></h2>
-      <p class="lead reveal d2">Quarri is a deterministic layer beneath probabilistic AI. The matching, converting and reconciling runs as encoded workflows, replayable, auditable and with no model call per document, so the numbers in front of your board are never guessed. Every figure below traces to a live deployment.</p>
+      <p class="lead reveal d2">Quarri is a deterministic layer beneath probabilistic AI. Every figure below traces to a live deployment.</p>
     </div>
     <div class="stats reveal d2">
       <div class="stat"><div class="num">0</div><div class="lbl">LLM calls per document on extraction, fully replayable and auditable</div></div>
@@ -487,6 +505,6 @@
   els.forEach(function(e){ io.observe(e); });
 })();
 </script>
-<script src="assets/consent.js?v=110" defer></script>
+<script src="assets/consent.js?v=117" defer></script>
 </body>
 </html>

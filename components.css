@@ -16,7 +16,7 @@
   margin-top:clamp(38px,4.6vw,58px);
   display:grid; grid-template-columns:0.84fr auto 1.16fr; gap:clamp(14px,2vw,30px);
   align-items:start;
-  background:var(--white); border:1px solid var(--rule); border-radius:var(--radius-lg);
+  background:var(--white); border:1px solid var(--rule);
   padding:clamp(24px,3vw,40px);
   box-shadow:0 40px 90px -64px rgba(17,17,17,.5);
 }
@@ -32,25 +32,25 @@
 .mess .tangle line{ stroke:#d8d5cd; stroke-width:1.5; stroke-dasharray:3 6 }
 .doc{
   position:absolute; width:132px; background:var(--white);
-  border:1px solid var(--rule); border-radius:9px; padding:11px 12px 13px;
+  border:1px solid var(--rule); padding:11px 12px 13px;
   box-shadow:0 16px 30px -20px rgba(17,17,17,.4); filter:grayscale(1) opacity(.94);
 }
 .doc .dh{ display:flex; align-items:center; gap:7px; margin-bottom:9px }
-.doc .di{ width:15px; height:15px; border-radius:4px; background:#e7e4dd; flex:none }
+.doc .di{ width:15px; height:15px; background:#e7e4dd; flex:none }
 .doc .dt{ font-family:var(--mono); font-size:9px; letter-spacing:.04em; text-transform:uppercase; color:#8c8a84 }
-.doc .dl{ height:5px; border-radius:3px; background:#eeece6; margin-top:6px }
+.doc .dl{ height:5px; background:#eeece6; margin-top:6px }
 .doc .dl.a{ width:88% } .doc .dl.b{ width:62% } .doc .dl.c{ width:75% }
 .mess .gap{ position:absolute; font-family:var(--mono); font-size:15px; color:#b9b2a8 }
 .mess .byhand{
   position:absolute; bottom:-2px; left:4%;
   font-family:var(--mono); font-size:9.5px; letter-spacing:.08em; text-transform:uppercase;
-  color:#9a8f86; background:var(--bone); border:1px dashed #cdc7bd; border-radius:999px; padding:4px 11px;
+  color:#9a8f86; background:var(--bone); border:1px dashed #cdc7bd; padding:4px 11px;
 }
 
 /* middle */
 .ps-mid{ display:flex; flex-direction:column; align-items:center; gap:11px; align-self:center; padding-top:46px }
 .ps-mid .badge{
-  width:52px; height:52px; border-radius:50%; background:var(--coral); color:var(--white);
+  width:52px; height:52px; background:var(--coral); color:var(--white);
   display:flex; align-items:center; justify-content:center; font-size:23px; line-height:1;
   box-shadow:0 0 0 7px var(--coral-soft);
 }
@@ -58,26 +58,26 @@
 
 /* ---------- WIDGET (data surface — GREEN only) ---------- */
 .widget{
-  margin-top:18px; border-radius:14px; overflow:hidden;
+  margin-top:18px; overflow:hidden;
   border:1px solid #24242c; background:#0d0d10;
   box-shadow:0 44px 80px -44px rgba(17,17,17,.62);
 }
 .widget-bar{ display:flex; align-items:center; gap:6px; padding:11px 14px; background:#08080a; border-bottom:1px solid #24242c }
-.widget-bar .d{ width:9px; height:9px; border-radius:50%; background:#3a3a42 }
-.widget-bar .url{ margin-left:10px; font-family:var(--mono); font-size:10px; color:rgba(255,255,255,.5); background:rgba(255,255,255,.04); border:1px solid #24242c; border-radius:6px; padding:4px 12px }
+.widget-bar .d{ width:9px; height:9px; background:#3a3a42 }
+.widget-bar .url{ margin-left:10px; font-family:var(--mono); font-size:10px; color:rgba(255,255,255,.5); background:rgba(255,255,255,.04); border:1px solid #24242c; padding:4px 12px }
 .widget-body{ padding:14px; display:flex; flex-direction:column; gap:10px }
 .widget-head{ display:flex; align-items:center; justify-content:space-between; font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.5) }
 .widget-head .live{ color:var(--gain-2) }
 
-.chart{ background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.1); border-radius:11px; padding:12px 14px 10px }
+.chart{ background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.1); padding:12px 14px 10px }
 .chart-head{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:9px }
 .chart-t{ font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.55) }
 .chart-v{ font-family:var(--mono); font-size:11px; color:var(--gain-2); white-space:nowrap }
 .chart svg{ width:100%; height:auto; display:block }
 
-.rec{ background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.1); border-radius:11px; padding:12px 14px; display:flex; flex-direction:column; gap:5px }
+.rec{ background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.1); padding:12px 14px; display:flex; flex-direction:column; gap:5px }
 .rec-top{ display:flex; align-items:center; justify-content:space-between; gap:10px }
-.rec-tag{ font-family:var(--mono); font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.55); border:1px solid rgba(255,255,255,.16); border-radius:999px; padding:3px 10px; white-space:nowrap }
+.rec-tag{ font-family:var(--mono); font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.55); border:1px solid rgba(255,255,255,.16); padding:3px 10px; white-space:nowrap }
 .rec-impact{ font-family:var(--mono); font-size:12px; font-weight:500; color:var(--gain-2); white-space:nowrap }
 .rec h4{ font-size:14px; font-weight:600; line-height:1.25; color:var(--white); letter-spacing:-.01em }
 .rec p{ font-size:11.5px; line-height:1.4; color:rgba(255,255,255,.56) }
@@ -87,9 +87,9 @@
 .agents{ margin-top:6px; border-top:1px solid rgba(255,255,255,.08); padding-top:15px }
 .agents .at{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.5); display:block; margin-bottom:13px }
 .agent-row{ display:flex; align-items:center; gap:9px; flex-wrap:wrap }
-.agent-src{ font-family:var(--mono); font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:rgba(255,255,255,.72); border:1px solid rgba(255,255,255,.16); border-radius:9px; padding:9px 12px }
+.agent-src{ font-family:var(--mono); font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:rgba(255,255,255,.72); border:1px solid rgba(255,255,255,.16); padding:9px 12px }
 .agent-arw{ color:var(--gain-2); font-size:16px }
-.agent-chip{ display:flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,.18); border-radius:10px; padding:8px 13px; background:rgba(255,255,255,.03) }
+.agent-chip{ display:flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,.18); padding:8px 13px; background:rgba(255,255,255,.03) }
 .agent-chip svg{ width:17px; height:17px; color:var(--white); flex:none }
 .agent-chip .nm{ font-size:13px; color:var(--white); font-weight:500 }
 .agent-more{ font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:rgba(255,255,255,.5); padding:0 4px }
@@ -97,7 +97,7 @@
 
 /* ---------- Capability stack ---------- */
 .stack{ display:flex; flex-direction:column; align-items:center; gap:9px }
-.layer{ width:100%; background:var(--white); border:1px solid var(--rule); border-radius:12px; padding:16px 24px; display:flex; align-items:center; gap:22px }
+.layer{ width:100%; background:var(--white); border:1px solid transparent; padding:16px 24px; display:flex; align-items:center; gap:22px }
 .layer .lx{ font-family:var(--mono); font-size:13px; letter-spacing:.1em; color:var(--coral); flex:none; width:26px }
 .layer .lname{ font-size:16px; font-weight:600; letter-spacing:-.01em; flex:none; width:198px }
 .layer .ldesc{ font-size:14px; color:var(--ink-2); line-height:1.45 }
@@ -106,10 +106,10 @@
 .layer.apex .lname{ color:var(--white) }
 .layer.apex .ldesc{ color:rgba(255,255,255,.84) }
 .srcs{ display:inline-flex; flex-wrap:wrap; gap:6px; margin-left:4px; vertical-align:middle }
-.srcs b{ font-family:var(--mono); font-size:11px; font-weight:400; letter-spacing:.05em; text-transform:uppercase; color:var(--ink); border:1px solid var(--rule); border-radius:999px; padding:3px 10px; background:var(--bone) }
+.srcs b{ font-family:var(--mono); font-size:11px; font-weight:400; letter-spacing:.05em; text-transform:uppercase; color:var(--ink); border:1px solid var(--rule); padding:3px 10px; background:var(--bone) }
 
 /* ---------- Scene band ---------- */
-.scene{ position:relative; border-radius:var(--radius-lg); overflow:hidden; min-height:clamp(240px,30vw,380px); background-size:cover; background-position:center; display:flex; align-items:flex-end }
+.scene{ position:relative; overflow:hidden; min-height:clamp(240px,30vw,380px); background-size:cover; background-position:center; display:flex; align-items:flex-end }
 .scene::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,10,10,.05) 15%,rgba(10,10,10,.72)) }
 .scene-cap{ position:relative; z-index:1; padding:clamp(24px,3.2vw,40px); color:var(--white); max-width:42ch }
 .scene-cap .t{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.8) }
@@ -123,12 +123,12 @@
 .op-num{ font-family:var(--mono); font-size:12px; color:var(--coral); letter-spacing:.1em }
 .op-name{ font-size:clamp(20px,2vw,28px); font-weight:600; letter-spacing:-.02em }
 .op-row p{ font-size:14.5px; color:var(--ink-2); margin-top:7px; max-width:70ch }
-.op-soon{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--coral); border:1px dashed rgba(218,119,86,.5); border-radius:999px; padding:3px 10px; margin-left:9px; white-space:nowrap }
+.op-soon{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--coral); border:1px dashed rgba(218,119,86,.5); padding:3px 10px; margin-left:9px; white-space:nowrap }
 .op-arw{ font-size:20px; color:var(--coral); transition:transform .3s var(--ease) }
 .op-row:hover .op-arw{ transform:translateX(5px) }
 
 /* ---------- Problem grid ---------- */
-.prob-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden }
+.prob-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1px; background:var(--rule); border:1px solid transparent; }
 .prob{ background:var(--bone); padding:28px 26px 30px }
 .prob .pn{ font-family:var(--mono); font-size:11px; color:var(--coral); letter-spacing:.1em }
 .prob h3{ margin:12px 0 9px }
@@ -142,7 +142,7 @@
 
 /* ---------- Workflow / example cards ---------- */
 .ex-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px }
-.ex{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); padding:26px; display:flex; flex-direction:column; gap:12px }
+.ex{ background:var(--white); border:1px solid transparent; padding:26px; display:flex; flex-direction:column; gap:12px }
 .ex .who{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--coral) }
 .ex h3{ letter-spacing:-.015em }
 .ex p{ font-size:14px; color:var(--ink-2); line-height:1.6 }
@@ -179,7 +179,7 @@
 
 /* named modules */
 .mods{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px }
-.mod{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); padding:28px 26px 30px; display:flex; flex-direction:column; gap:12px; transition:border-color .25s var(--ease), transform .25s var(--ease) }
+.mod{ background:var(--white); border:1px solid transparent; padding:28px 26px 30px; display:flex; flex-direction:column; gap:12px; transition:border-color .25s var(--ease), transform .25s var(--ease) }
 .mod:hover{ border-color:var(--coral); transform:translateY(-2px) }
 .mod .mi{ width:30px; height:30px; color:var(--coral) }
 .mod h3{ letter-spacing:-.015em }
@@ -188,7 +188,7 @@
 
 /* who we serve */
 .serve{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px }
-.srv{ position:relative; border-radius:var(--radius); overflow:hidden; min-height:300px; display:flex; align-items:flex-end; background-size:cover; background-position:center }
+.srv{ position:relative; overflow:hidden; min-height:300px; display:flex; align-items:flex-end; background-size:cover; background-position:center }
 .srv::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,10,10,.12) 30%,rgba(10,10,10,.82)) }
 .srv-in{ position:relative; z-index:1; padding:26px; color:var(--white) }
 .srv-in .sn{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.75) }
@@ -203,14 +203,14 @@
 .on-dark .wh p{ color:var(--on-forest) }
 
 /* testimonial */
-.quote-band{ border:1px solid var(--rule); border-radius:var(--radius-lg); background:var(--white); padding:clamp(30px,4vw,52px); margin-bottom:clamp(40px,5vw,64px) }
+.quote-band{ border:1px solid transparent; background:var(--white); padding:clamp(30px,4vw,52px); margin-bottom:clamp(40px,5vw,64px) }
 .quote-band blockquote{ font-size:clamp(20px,2.3vw,30px); font-weight:500; line-height:1.35; letter-spacing:-.02em; max-width:44ch }
 .quote-band .attr{ margin-top:22px; font-size:13.5px; color:var(--ink-3) }
 .quote-band .attr b{ color:var(--ink); font-weight:500; display:block; font-size:14.5px }
 
 /* proof cards */
 .proof{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px }
-.pf{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); padding:28px 26px; display:flex; flex-direction:column; gap:10px }
+.pf{ background:var(--white); border:1px solid transparent; padding:28px 26px; display:flex; flex-direction:column; gap:10px }
 .on-dark .pf{ background:rgba(255,255,255,.04); border-color:rgba(255,255,255,.14) }
 .pf .who{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--coral) }
 .pf .big{ font-family:var(--mono); font-size:clamp(28px,3.2vw,42px); font-weight:700; letter-spacing:-.03em; line-height:1; margin:6px 0 2px }
@@ -231,21 +231,21 @@
 .show-copy p{ font-size:15.5px; color:var(--ink-2); line-height:1.65; margin-top:16px; max-width:48ch }
 .show-pts{ list-style:none; margin-top:22px; display:flex; flex-direction:column; gap:10px }
 .show-pts li{ font-size:14.5px; color:var(--ink); padding-left:24px; position:relative; line-height:1.5 }
-.show-pts li::before{ content:""; position:absolute; left:0; top:8px; width:9px; height:9px; border-radius:2px; background:var(--gain) }
+.show-pts li::before{ content:""; position:absolute; left:0; top:8px; width:9px; height:9px; background:var(--gain) }
 .show-pts li{ color:var(--ink-2) }
 .show-vis{ position:relative }
-.win-frame{ border-radius:12px; overflow:hidden; border:1px solid var(--rule); background:var(--white); box-shadow:0 44px 90px -50px rgba(16,42,28,.55) }
+.win-frame{ border:1px solid transparent; background:var(--white); box-shadow:0 44px 90px -50px rgba(16,42,28,.55) }
 .win-frame .wf-bar{ display:flex; align-items:center; gap:6px; padding:10px 13px; background:#f1efeb; border-bottom:1px solid var(--rule) }
-.win-frame .wf-bar .d{ width:9px; height:9px; border-radius:50%; background:#d5d2cb }
-.win-frame .wf-bar .u{ margin-left:10px; font-family:var(--mono); font-size:10px; color:var(--ink-3); background:var(--white); border:1px solid var(--rule); border-radius:6px; padding:4px 12px }
+.win-frame .wf-bar .d{ width:9px; height:9px; background:#d5d2cb }
+.win-frame .wf-bar .u{ margin-left:10px; font-family:var(--mono); font-size:10px; color:var(--ink-3); background:var(--white); border:1px solid var(--rule); padding:4px 12px }
 .win-frame img{ width:100%; display:block }
-.show-badge{ position:absolute; right:-10px; bottom:-16px; background:var(--forest); color:var(--white); border-radius:10px; padding:14px 18px; box-shadow:0 20px 40px -20px rgba(16,42,28,.6); max-width:230px }
+.show-badge{ position:absolute; right:-10px; bottom:-16px; background:var(--forest); color:var(--white); padding:14px 18px; box-shadow:0 20px 40px -20px rgba(16,42,28,.6); max-width:230px }
 .show-badge .bn{ font-family:var(--mono); font-size:20px; font-weight:700; color:#7fc79b; letter-spacing:-.02em }
 .show-badge .bl{ font-size:11.5px; color:rgba(255,255,255,.72); line-height:1.4; margin-top:5px }
 
 /* image strip */
 .strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px }
-.strip div{ height:clamp(150px,17vw,215px); border-radius:10px; background-size:cover; background-position:center }
+.strip div{ height:clamp(150px,17vw,215px); background-size:cover; background-position:center }
 .strip div:nth-child(1){ grid-row:span 1 }
 
 /* forest CTA with image */
@@ -264,7 +264,7 @@
 .modrow{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(28px,4vw,64px); align-items:center; padding:clamp(40px,5vw,68px) 0; border-top:1px solid var(--rule) }
 .modrow.flip .mr-copy{ order:2 } .modrow.flip .mr-vis{ order:1 }
 .mr-name{ display:flex; align-items:center; gap:12px; margin-bottom:14px }
-.mr-name .ic{ width:34px; height:34px; border-radius:8px; background:var(--coral-soft); color:var(--coral); display:flex; align-items:center; justify-content:center; flex:none }
+.mr-name .ic{ width:34px; height:34px; background:var(--coral-soft); color:var(--coral); display:flex; align-items:center; justify-content:center; flex:none }
 .mr-name .ic svg{ width:19px; height:19px }
 /* Now the section's primary heading rather than a subhead under an eyebrow, so
    it takes the display treatment: Archivo Light, and larger. At 500 above 20px
@@ -273,7 +273,7 @@
 .mr-copy > p{ font-size:15.5px; color:var(--ink-2); line-height:1.65; max-width:46ch }
 .mr-list{ list-style:none; margin-top:20px; display:flex; flex-direction:column; gap:11px }
 .mr-list li{ font-size:14.5px; line-height:1.5; padding-left:22px; position:relative; color:var(--ink-2) }
-.mr-list li::before{ content:""; position:absolute; left:0; top:7px; width:8px; height:8px; border-radius:2px; background:var(--gain) }
+.mr-list li::before{ content:""; position:absolute; left:0; top:7px; width:8px; height:8px; background:var(--gain) }
 .mr-link{ display:inline-block; margin-top:22px; font-size:14px; font-weight:500; color:var(--coral) }
 
 /* pillars on forest */
@@ -284,7 +284,7 @@
 
 /* insights */
 .posts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px }
-.post{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; transition:transform .25s var(--ease), border-color .25s var(--ease) }
+.post{ background:var(--white); border:1px solid transparent; display:flex; flex-direction:column; transition:transform .25s var(--ease), border-color .25s var(--ease) }
 .post:hover{ transform:translateY(-3px); border-color:var(--coral) }
 .post .ph{ height:150px; background-size:cover; background-position:center }
 .post .pb{ padding:22px 22px 24px; display:flex; flex-direction:column; gap:10px; flex:1 }
@@ -330,7 +330,7 @@
 
 /* photo mosaic */
 .mosaic{ display:grid; grid-template-columns:repeat(6,1fr); grid-auto-rows:clamp(120px,13vw,180px); gap:8px }
-.mosaic div{ background-size:cover; background-position:center; border-radius:4px }
+.mosaic div{ background-size:cover; background-position:center}
 .mosaic .a{ grid-column:span 2; grid-row:span 2 }
 .mosaic .b{ grid-column:span 2 }
 .mosaic .c{ grid-column:span 2 }
@@ -375,7 +375,7 @@
 .article ul,.article ol{ margin:0 0 24px 20px }
 .article li{ font-size:17px; line-height:1.7; color:var(--ink-2); margin-bottom:9px }
 .article blockquote{ border-left:3px solid var(--coral); padding:6px 0 6px 22px; margin:32px 0; font-size:19px; line-height:1.5; color:var(--ink); font-weight:500 }
-.article img{ border-radius:var(--radius); margin:32px 0 }
+.article img{ margin:32px 0 }
 .article figure{ margin:34px 0 }
 .article figure img{ margin:0; width:100% }
 .article figure figcaption{ font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.55 }
@@ -394,8 +394,7 @@
        page and only worked here with three inline overrides. --- */
 .cs-metrics{
   display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
-  background:var(--rule); border:1px solid var(--rule);
-  border-radius:var(--radius); overflow:hidden; margin:30px 0 16px;
+  background:var(--rule); border:1px solid var(--rule); overflow:hidden; margin:30px 0 16px;
 }
 .cs-metrics .m{ background:var(--white); padding:20px 22px 22px }
 .cs-metrics .m-n{
@@ -426,7 +425,7 @@
   gap:clamp(28px,4.5vw,64px); align-items:center;
 }
 .cs-band figure{ margin:0 }
-.cs-band img{ width:100%; margin:0; border-radius:var(--radius) }
+.cs-band img{ width:100%; margin:0}
 .cs-band figcaption{ font-size:12.5px; color:var(--ink-3); line-height:1.5; margin-top:10px }
 /* Same voice as the article h2s: Archivo Light. At 500 these read as a second
    heading style; 300 needs ~24px+ to hold, hence the larger clamp. */
@@ -538,7 +537,7 @@
    labelled so it reads as a distinct destination rather than more of the list
    above it. */
 .xover{
-  border:1px solid var(--rule); border-radius:var(--radius-lg);
+  border:1px solid transparent;
   background:var(--white);
   padding:clamp(26px,3.6vw,42px);
   display:grid; grid-template-columns:1fr auto;
@@ -558,8 +557,7 @@
    construction as .cs-metrics, so a label-only row still looks finished. */
 .who-grid{
   display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
-  background:var(--rule); border:1px solid var(--rule);
-  border-radius:var(--radius); overflow:hidden; margin-top:20px;
+  background:var(--rule); border:1px solid var(--rule); overflow:hidden; margin-top:20px;
 }
 .who-cell{ background:var(--white); padding:20px 22px 22px }
 .who-n{
@@ -584,7 +582,7 @@
    line between a fixed platform and one built as a model of the operation.
    ========================================================================== */
 .ai-compare{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(16px,2.4vw,26px) }
-.aic{ border:1px solid var(--rule); border-radius:var(--radius-lg); padding:clamp(24px,3vw,34px) }
+.aic{ border:1px solid var(--rule); padding:clamp(24px,3vw,34px) }
 .aic-t{
   display:block; font-family:var(--mono); font-size:11px; letter-spacing:.14em;
   text-transform:uppercase; margin-bottom:18px;
@@ -622,7 +620,7 @@
 }
 .an-list li::before{
   content:""; position:absolute; left:0; top:9px;
-  width:7px; height:7px; border-radius:2px; background:var(--gain-2);
+  width:7px; height:7px; background:var(--gain-2);
 }
 .an-caps{ margin-top:22px }
 /* .an-grid prefix so this outranks `.ph-caps span`, which is defined later in
@@ -684,7 +682,7 @@
    the panel sits ON the photograph, the reading taken of the scene. Mirrored
    on flipped rows so the collage alternates sides down the page. */
 .mr-photo{
-  margin:0; border-radius:var(--radius); overflow:hidden;
+  margin:0;
   aspect-ratio:3/2; background:var(--rule);
 }
 .mr-photo img{
@@ -754,9 +752,8 @@
    emphasis so the type does not have to: heavier weight here read as a
    different typeface against the body copy. */
 .ph-callout{
-  position:relative; overflow:hidden;
+  position:relative;
   border:1px solid rgba(218,119,86,.28); border-left:3px solid var(--coral);
-  border-radius:var(--radius);
   background:
     radial-gradient(130% 150% at 0% 0%, rgba(218,119,86,.22), transparent 58%),
     radial-gradient(100% 130% at 100% 100%, rgba(53,160,95,.10), transparent 64%),
@@ -781,7 +778,7 @@
 .ph-caps span{
   font-family:var(--mono); font-size:10.5px; letter-spacing:.09em;
   text-transform:uppercase; color:var(--ink-2);
-  border:1px solid var(--rule); border-radius:999px; padding:5px 11px;
+  border:1px solid var(--rule); padding:5px 11px;
   background:var(--white); white-space:nowrap;
 }
 
@@ -789,8 +786,8 @@
        so the one thing that is not built yet is also the thing that catches
        the eye. Honest about status in the copy, optimistic in the styling. --- */
 .soon-block{
-  position:relative; overflow:hidden;
-  border:1px solid rgba(218,119,86,.42); border-radius:var(--radius-lg);
+  position:relative;
+  border:1px solid transparent;
   padding:clamp(30px,4.4vw,52px);
   background:
     radial-gradient(120% 100% at 12% 0%, rgba(218,119,86,.20), transparent 58%),
@@ -802,14 +799,14 @@
 .soon-block .sb-tag{
   font-family:var(--mono); font-size:10.5px; letter-spacing:.14em;
   text-transform:uppercase; color:var(--coral-hi);
-  border:1px solid rgba(240,144,106,.45); border-radius:999px;
+  border:1px solid rgba(240,144,106,.45);
   background:rgba(240,144,106,.10);
   padding:5px 13px 5px 11px; display:inline-flex; align-items:center; gap:8px;
   margin-bottom:18px;
 }
 /* live dot: says "in motion" without claiming a ship date */
 .soon-block .sb-tag::before{
-  content:""; width:6px; height:6px; border-radius:50%;
+  content:""; width:6px; height:6px;
   background:var(--coral-hi); flex:none;
   animation:sbPulse 2.2s ease-in-out infinite;
 }
@@ -854,8 +851,7 @@
        previously set as ordinary <strong>-led paragraphs. --- */
 .cs-value{ display:flex; flex-direction:column; gap:14px; margin:30px 0 }
 .cs-value .v{
-  background:var(--white); border:1px solid var(--rule); border-left:3px solid var(--coral);
-  border-radius:var(--radius); padding:22px 26px 24px;
+  background:var(--white); border:1px solid transparent; border-left:3px solid transparent; padding:22px 26px 24px;
   transition:transform .25s var(--ease);
 }
 .cs-value .v:hover{ transform:translateY(-2px) }
@@ -875,7 +871,7 @@
        narration. Stacked quotes get real separation. --- */
 .cs-quote{
   position:relative; background:var(--bone);
-  border:1px solid var(--rule); border-radius:var(--radius);
+  border:1px solid var(--rule);
   padding:28px 32px 24px 64px; margin:30px 0;
 }
 /* Two speakers in a row read as a pair, so they sit tighter than the 30px that
@@ -902,13 +898,13 @@
   .cs-quote{ padding:26px 22px 22px 22px }
   .cs-quote::before{ position:static; display:block; margin-bottom:-14px }
 }
-.article .pull{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); padding:24px 26px; margin:32px 0 }
+.article .pull{ background:var(--white); border:1px solid var(--rule); padding:24px 26px; margin:32px 0 }
 .article .pull .n{ font-family:var(--mono); font-size:28px; font-weight:700; color:var(--coral); letter-spacing:-.02em }
 .article .pull .t{ font-size:14.5px; color:var(--ink-2); margin-top:8px; line-height:1.55 }
 .art-back{ display:inline-block; font-size:14px; color:var(--coral); font-weight:500; margin-bottom:26px }
 
 /* insights index */
-.ins-featured{ display:grid; grid-template-columns:1.15fr 1fr; gap:0; border:1px solid var(--rule); border-radius:var(--radius-lg); overflow:hidden; background:var(--white); margin-bottom:clamp(30px,4vw,52px) }
+.ins-featured{ display:grid; grid-template-columns:1.15fr 1fr; gap:0; border:1px solid transparent; background:var(--white); margin-bottom:clamp(30px,4vw,52px) }
 .ins-featured .f-photo{ min-height:340px; background-size:cover; background-position:center }
 .ins-featured .f-copy{ padding:clamp(28px,3.4vw,46px); display:flex; flex-direction:column; justify-content:center }
 .ins-featured .f-copy .pm{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--coral) }
@@ -1088,41 +1084,39 @@
 .scatter svg.tang line{ stroke:rgba(255,255,255,.16); stroke-width:1.2; stroke-dasharray:2 7 }
 .gdoc{
   position:absolute; width:clamp(132px,12vw,158px);
-  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
-  border-radius:8px; padding:11px 13px 13px;
+  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); padding:11px 13px 13px;
 }
 .gdoc .gh{ display:flex; align-items:center; gap:6px; margin-bottom:8px }
-.gdoc .gi{ width:13px; height:13px; border-radius:3px; background:rgba(255,255,255,.22); flex:none }
+.gdoc .gi{ width:13px; height:13px; background:rgba(255,255,255,.22); flex:none }
 .gdoc .gt{ font-family:var(--mono); font-size:8.5px; letter-spacing:.05em; text-transform:uppercase; color:rgba(255,255,255,.62); white-space:nowrap }
-.gdoc .gl{ height:4px; border-radius:2px; background:rgba(255,255,255,.13); margin-top:5px }
+.gdoc .gl{ height:4px; background:rgba(255,255,255,.13); margin-top:5px }
 .gdoc .gl.a{ width:86% } .gdoc .gl.b{ width:58% } .gdoc .gl.c{ width:72% }
 .scatter .gx{ position:absolute; font-family:var(--mono); font-size:14px; color:rgba(255,255,255,.34) }
 .scatter .ghand{
   position:absolute; bottom:0; left:2%;
   font-family:var(--mono); font-size:9px; letter-spacing:.09em; text-transform:uppercase;
-  color:rgba(255,255,255,.5); border:1px dashed rgba(255,255,255,.24); border-radius:999px; padding:4px 11px;
+  color:rgba(255,255,255,.5); border:1px dashed rgba(255,255,255,.24); padding:4px 11px;
 }
 .arrow2{ display:flex; align-items:center; justify-content:center }
 .arrow2 .b{
-  width:46px; height:46px; border-radius:50%; background:var(--coral); color:#fff;
+  width:46px; height:46px; background:var(--coral); color:#fff;
   display:flex; align-items:center; justify-content:center; font-size:21px; line-height:1;
   box-shadow:0 0 0 8px rgba(218,119,86,.16);
 }
 
 /* glass live panel */
-.glass{
-  border-radius:14px; overflow:hidden;
+.glass{ overflow:hidden;
   background:rgba(10,22,15,.62); border:1px solid rgba(255,255,255,.14);
   backdrop-filter:blur(14px); box-shadow:0 40px 90px -40px rgba(0,0,0,.7);
 }
 .glass-bar{ display:flex; align-items:center; gap:6px; padding:10px 14px; border-bottom:1px solid rgba(255,255,255,.1) }
-.glass-bar .d{ width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.22) }
+.glass-bar .d{ width:8px; height:8px; background:rgba(255,255,255,.22) }
 .glass-bar .u{ margin-left:8px; font-family:var(--mono); font-size:9.5px; color:rgba(255,255,255,.52) }
 .glass-bar .live{ margin-left:auto; font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--gain-2); display:flex; align-items:center; gap:6px }
-.glass-bar .live i{ width:6px; height:6px; border-radius:50%; background:var(--gain-2); font-style:normal; animation:blip 2.4s ease-in-out infinite }
+.glass-bar .live i{ width:6px; height:6px; background:var(--gain-2); font-style:normal; animation:blip 2.4s ease-in-out infinite }
 @keyframes blip{ 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(53,160,95,.5)} 50%{opacity:.55;box-shadow:0 0 0 5px rgba(53,160,95,0)} }
 .glass-body{ padding:14px; display:grid; grid-template-columns:1fr 1fr; gap:11px }
-.gcell{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09); border-radius:10px; padding:12px 13px 9px }
+.gcell{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09); padding:12px 13px 9px }
 .gcell.wide{ grid-column:1 / -1 }
 .gc-head{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:8px }
 .gc-t{ font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5) }
@@ -1160,8 +1154,8 @@
 
 /* recommendation strip inside glass */
 .grec{ grid-column:1 / -1; display:flex; align-items:center; gap:12px; background:rgba(53,160,95,.09);
-  border:1px solid rgba(53,160,95,.26); border-radius:10px; padding:11px 14px }
-.grec .gi{ width:26px; height:26px; border-radius:7px; background:rgba(53,160,95,.2); color:var(--gain-2);
+  border:1px solid rgba(53,160,95,.26); padding:11px 14px }
+.grec .gi{ width:26px; height:26px; background:rgba(53,160,95,.2); color:var(--gain-2);
   display:flex; align-items:center; justify-content:center; flex:none; font-size:13px }
 .grec .gtxt{ font-size:12.5px; color:rgba(255,255,255,.9); line-height:1.35 }
 .grec .gtxt b{ color:#fff; font-weight:600 }
@@ -1170,7 +1164,7 @@
 /* agents row on glass */
 .gagents{ grid-column:1 / -1; display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding-top:2px }
 .gagents .gl2{ font-family:var(--mono); font-size:9px; letter-spacing:.13em; text-transform:uppercase; color:rgba(255,255,255,.45) }
-.gagents .gchip{ display:flex; align-items:center; gap:6px; border:1px solid rgba(255,255,255,.16); border-radius:8px; padding:6px 10px; background:rgba(255,255,255,.04) }
+.gagents .gchip{ display:flex; align-items:center; gap:6px; border:1px solid rgba(255,255,255,.16); padding:6px 10px; background:rgba(255,255,255,.04) }
 .gagents .gchip svg{ width:14px; height:14px; color:#fff }
 .gagents .gchip span{ font-size:11.5px; color:#fff }
 
@@ -1194,8 +1188,8 @@
 .wf-stage{ display:flex; align-items:center; gap:12px; margin-bottom:16px }
 .wf-stage .num{ font-family:var(--mono); font-size:12px; letter-spacing:.12em; color:var(--coral) }
 .wf-stage .who{ font-family:var(--mono); font-size:10px; letter-spacing:.11em; text-transform:uppercase;
-  color:var(--ink-3); border:1px solid var(--rule); border-radius:999px; padding:4px 11px; background:var(--white) }
-.wf-panel{ border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,.1); background:#0e2318;
+  color:var(--ink-3); border:1px solid var(--rule); padding:4px 11px; background:var(--white) }
+.wf-panel{ overflow:hidden; border:1px solid rgba(255,255,255,.1); background:#0e2318;
   box-shadow:0 40px 80px -46px rgba(11,31,20,.7); padding:20px 22px }
 .wf-panel .pt{ font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase;
   color:rgba(255,255,255,.5); margin-bottom:14px; display:flex; justify-content:space-between; align-items:baseline }
@@ -1221,8 +1215,8 @@
 @keyframes tick{ to{ transform:translateX(-50%) } }
 
 /* ---- Hero glass: Ask Quarri typing row ---- */
-.gask{ grid-column:1 / -1; display:flex; align-items:center; gap:10px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:10px 14px }
-.gask .qi{ width:22px; height:22px; border-radius:6px; background:rgba(53,160,95,.18); color:var(--gain-2); display:flex; align-items:center; justify-content:center; flex:none; font-size:12px }
+.gask{ grid-column:1 / -1; display:flex; align-items:center; gap:10px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); padding:10px 14px }
+.gask .qi{ width:22px; height:22px; background:rgba(53,160,95,.18); color:var(--gain-2); display:flex; align-items:center; justify-content:center; flex:none; font-size:12px }
 .gask .qtxt{ font-family:var(--mono); font-size:11px; color:rgba(255,255,255,.82); overflow:hidden; white-space:nowrap;
   min-width:0; text-overflow:ellipsis; max-width:0; animation:typing 2.6s steps(38,end) 1.4s forwards }
 @keyframes typing{ to{ max-width:100% } }
@@ -1241,14 +1235,14 @@
 
 /* ---- Chain strip (vertical pages + homepage) ---- */
 .chain{ display:flex; align-items:center; gap:0; flex-wrap:wrap; margin-top:26px }
-.chain .cnode{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.55); border:1px solid rgba(255,255,255,.22); border-radius:999px; padding:6px 14px; white-space:nowrap; transition:all .2s var(--ease) }
+.chain .cnode{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.55); border:1px solid rgba(255,255,255,.22); padding:6px 14px; white-space:nowrap; transition:all .2s var(--ease) }
 .chain .cnode.on{ color:#fff; border-color:var(--coral); background:rgba(218,119,86,.16) }
 .chain a.cnode:hover{ color:#fff; border-color:rgba(255,255,255,.5) }
 .chain .csep{ color:rgba(255,255,255,.35); font-size:12px; padding:0 8px }
 
 /* ---- Vertical sub-segments (Wood Products) ---- */
 .vsegs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px }
-.vseg{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); padding:24px 24px 26px; transition:border-color .25s var(--ease), transform .25s var(--ease) }
+.vseg{ background:var(--white); border:1px solid var(--rule); padding:24px 24px 26px; transition:border-color .25s var(--ease), transform .25s var(--ease) }
 .vseg:hover{ border-color:var(--coral); transform:translateY(-2px) }
 .vseg .vn{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--coral) }
 .vseg h3{ margin:10px 0 8px; font-size:18px }
@@ -1256,7 +1250,7 @@
 
 /* ---- Adjacent chain cross-links ---- */
 .xlinks{ display:grid; grid-template-columns:1fr 1fr; gap:16px }
-.xlink{ position:relative; border-radius:var(--radius); overflow:hidden; min-height:190px; display:flex; align-items:flex-end; background-size:cover; background-position:center }
+.xlink{ position:relative; overflow:hidden; min-height:190px; display:flex; align-items:flex-end; background-size:cover; background-position:center }
 .xlink::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,10,10,.2) 20%,rgba(10,10,10,.82)) }
 .xlink .xin{ position:relative; z-index:1; padding:22px; color:#fff }
 .xlink .xd{ font-family:var(--mono); font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:rgba(255,255,255,.7) }
@@ -1266,19 +1260,19 @@
 
 /* ---- Pricing ---- */
 .tiers{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; max-width:860px }
-.tier{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius-lg); padding:34px 32px 36px; display:flex; flex-direction:column; gap:14px }
-.tier.hot{ border-color:var(--coral); box-shadow:0 30px 70px -50px rgba(218,119,86,.55) }
+.tier{ background:var(--white); border:1px solid transparent; padding:34px 32px 36px; display:flex; flex-direction:column; gap:14px }
+.tier.hot{ border-color:transparent; box-shadow:0 30px 70px -50px rgba(218,119,86,.55) }
 .tier .tn{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--coral) }
 .tier .tp{ font-size:clamp(34px,3.6vw,46px); font-weight:600; letter-spacing:-.03em; line-height:1 }
 .tier .tp small{ font-size:15px; font-weight:400; color:var(--ink-3); letter-spacing:0 }
 .tier .td{ font-size:14.5px; color:var(--ink-2); line-height:1.6 }
 .tier ul{ list-style:none; display:flex; flex-direction:column; gap:9px; margin-top:6px }
 .tier li{ font-size:14px; color:var(--ink); padding-left:22px; position:relative; line-height:1.5 }
-.tier li::before{ content:""; position:absolute; left:0; top:7px; width:8px; height:8px; border-radius:2px; background:var(--coral) }
+.tier li::before{ content:""; position:absolute; left:0; top:7px; width:8px; height:8px; background:var(--coral) }
 .tier .btn{ margin-top:auto; justify-content:center }
 .price-note{ font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3) }
 
-.cmp-wrap{ overflow-x:auto; border:1px solid var(--rule); border-radius:var(--radius); background:var(--white) }
+.cmp-wrap{ overflow-x:auto; border:1px solid var(--rule); background:var(--white) }
 .cmp{ width:100%; border-collapse:collapse; min-width:560px }
 .cmp th,.cmp td{ text-align:left; padding:13px 20px; font-size:14px; border-bottom:1px solid var(--rule) }
 .cmp thead th{ font-size:15px; font-weight:600; background:var(--bone); position:sticky; top:0 }
@@ -1290,7 +1284,7 @@
 .cmp tbody tr:last-child td{ border-bottom:0 }
 
 /* ---- Security strip (homepage condensed) ---- */
-.sec-strip{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); overflow:hidden }
+.sec-strip{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.12); overflow:hidden }
 .sec-cell{ background:var(--forest-2); padding:22px 24px }
 .sec-cell .sv{ font-family:var(--mono); font-size:17px; font-weight:500; color:#fff; letter-spacing:-.01em }
 .sec-cell .sl{ font-size:12.5px; color:var(--on-forest); margin-top:6px; line-height:1.45 }
@@ -1300,7 +1294,7 @@
    and more scannable than three paragraph boxes for a list of guarantees. */
 .capb{ display:flex; flex-direction:column; gap:14px }
 .capb-row{
-  background:var(--white); border:1px solid var(--rule); border-radius:var(--radius);
+  background:var(--white); border:1px solid var(--rule);
   padding:22px 26px 24px; display:grid; grid-template-columns:minmax(150px,220px) 1fr;
   gap:clamp(14px,2.4vw,36px); align-items:start;
   transition:border-color .25s var(--ease), transform .25s var(--ease);
@@ -1327,11 +1321,11 @@
 .promise p{ font-size:14px; color:var(--on-forest); line-height:1.6 }
 
 /* ---- Demo scheduler ---- */
-.sched-shell{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius-lg); overflow:hidden; margin-top:clamp(20px,3vh,36px) }
+.sched-shell{ background:var(--white); border:1px solid var(--rule); overflow:hidden; margin-top:clamp(20px,3vh,36px) }
 .sched-shell iframe{ display:block; width:100%; height:760px; border:0 }
 .expect{ list-style:none; display:flex; flex-direction:column; gap:14px; margin-top:22px }
 .expect li{ font-size:15px; line-height:1.55; padding-left:26px; position:relative; color:var(--ink-2) }
-.expect li::before{ content:""; position:absolute; left:0; top:8px; width:9px; height:9px; border-radius:2px; background:var(--coral) }
+.expect li::before{ content:""; position:absolute; left:0; top:8px; width:9px; height:9px; background:var(--coral) }
 .expect li b{ color:var(--ink); font-weight:500 }
 
 /* ---- 404 ---- */
@@ -1343,8 +1337,9 @@
    Models on top, Quarri underneath, data sources feeding up from the bottom.
    ========================================================================== */
 .arch{
-  background:#0e2318; border:1px solid rgba(255,255,255,.1); border-radius:var(--radius-lg);
-  padding:clamp(16px,2.2vw,26px); box-shadow:0 44px 90px -50px rgba(11,31,20,.75);
+  --arch-pad:clamp(16px,2.2vw,26px);
+  background:#0e2318; border:1px solid rgba(255,255,255,.1);
+  padding:var(--arch-pad); overflow:hidden; box-shadow:0 44px 90px -50px rgba(11,31,20,.75);
 }
 .arch-cap{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase;
   color:rgba(255,255,255,.48); display:block; margin-bottom:7px }
@@ -1352,15 +1347,14 @@
    few px of padding and every stack a few px of gap, which takes roughly a
    fifth off the height without shrinking any type. */
 .arch-tier{
-  border:1px solid rgba(255,255,255,.17); border-radius:12px;
+  border:1px solid rgba(255,255,255,.17);
   background:rgba(255,255,255,.045); padding:12px 14px 13px;
 }
 .arch-tier h4{ font-size:15px; font-weight:500; color:#fff; letter-spacing:-.01em }
 .arch-tier h4 em{ font-style:normal; font-family:var(--mono); font-size:10px; letter-spacing:.1em;
   text-transform:uppercase; color:rgba(255,255,255,.45); margin-left:9px }
 .arch-chips{ display:flex; gap:6px; flex-wrap:wrap; margin-top:9px }
-.arch-chip{ font-size:12.5px; color:#fff; border:1px solid rgba(255,255,255,.2);
-  border-radius:8px; padding:4px 10px; background:rgba(255,255,255,.05) }
+.arch-chip{ font-size:12.5px; color:#fff; border:1px solid rgba(255,255,255,.2); padding:4px 10px; background:rgba(255,255,255,.05) }
 
 /* read / write band between the models and Quarri */
 .arch-rw{ display:flex; align-items:center; justify-content:center; gap:clamp(28px,6vw,72px); padding:6px 0 }
@@ -1369,7 +1363,7 @@
 .arch-rw svg{ width:12px; height:20px; overflow:visible }
 
 /* the Quarri block */
-.arch-quarri{ border:1px solid rgba(53,160,95,.36); border-radius:12px;
+.arch-quarri{ border:1px solid rgba(53,160,95,.36);
   background:rgba(53,160,95,.07); padding:12px 14px 13px }
 .arch-quarri > h4{ font-size:16px; font-weight:500; color:#fff; letter-spacing:-.012em; margin-bottom:4px }
 .arch-quarri > h4 em{ font-style:normal; font-family:var(--mono); font-size:10px; letter-spacing:.1em;
@@ -1380,27 +1374,55 @@
 .arch-lname i{ font-style:normal; color:rgba(255,255,255,.5) }
 .arch-pills{ display:flex; gap:5px; flex-wrap:wrap; margin-top:6px }
 .arch-pills b{ font-weight:400; font-size:12px; color:rgba(255,255,255,.84);
-  border:1px solid rgba(255,255,255,.15); border-radius:999px; padding:3px 10px;
+  border:1px solid rgba(255,255,255,.15); padding:3px 10px;
   background:rgba(255,255,255,.035) }
 
-/* ingestion band and the sources at the bottom */
-/* Seven arrows, one per source, each its own svg so nothing stretches. The
-   old version was a single 600-wide viewBox with preserveAspectRatio:none
-   scaled to full width, which flattened every arrowhead, and its five fixed
-   positions could never line up with a wrapping row of pills. */
-.arch-ingest{
-  display:flex; justify-content:space-around; align-items:center;
-  height:26px; margin:4px 0 9px; padding:0 2%;
+/* The sources at the bottom, and the arrows that join them to Quarri.
+
+   The sources are OUTSIDE Quarri, so they sit on the page's own bone surface,
+   not on the platform's dark one: a strip along the panel foot, bled to the
+   panel edges, white cards with dark ink (Theo, 4 Sep).
+
+   Each arrow is a child of its own source item and rises from that box's top
+   edge, through the strip, across the dark lane and onto the Quarri box's
+   bottom border. Binding arrow to box is what makes every arrow land: the
+   previous version laid the arrows out in one space-around row and the boxes
+   in another, and two rows with different item widths never share columns.
+
+   The eyebrow has its own column on the left, so no lane can run through it.
+   The lane height and strip padding are variables because the arrow's height
+   is their sum; change one and the arrow still lands. */
+.arch{ --arch-lane:44px; --arch-strip-pad:14px }
+.arch-quarri{ margin-bottom:var(--arch-lane) }
+.arch-outside{
+  margin:0 calc(-1 * var(--arch-pad)) calc(-1 * var(--arch-pad));
+  padding:var(--arch-strip-pad) var(--arch-pad) 16px;
+  background:var(--bone); border-top:1px solid rgba(255,255,255,.14);
+  display:grid; grid-template-columns:auto 1fr; column-gap:clamp(16px,2vw,28px); align-items:center;
 }
-.arch-ingest svg{ width:10px; height:20px; overflow:visible; flex:none }
-.arch-ingest path{
-  stroke:#35a05f; stroke-width:1.3; stroke-linecap:round; fill:none; opacity:.8;
+.arch-outside .arch-cap{ color:var(--coral); margin:0; white-space:nowrap }
+.arch-src{ display:flex; gap:7px; flex-wrap:wrap; justify-content:space-between }
+.src{ position:relative; display:inline-block }
+.src b{ display:block; font-weight:400; font-size:12px; color:var(--ink);
+  background:var(--white); border:1px solid var(--rule); padding:6px 11px }
+/* tail on the box top, head on the Quarri border: lane + strip padding + the
+   strip's own 1px top rule */
+.src svg{
+  position:absolute; left:50%; bottom:100%; transform:translateX(-50%);
+  width:10px; height:calc(var(--arch-lane) + var(--arch-strip-pad) + 1px);
+  overflow:visible; pointer-events:none;
 }
-/* The sources sit under their own arrows, so the row spreads to match. */
-.arch-src{ justify-content:space-around }
-.arch-src{ display:flex; gap:7px; flex-wrap:wrap }
-.arch-src b{ font-weight:400; font-size:12px; color:rgba(255,255,255,.72);
-  border:1px dashed rgba(255,255,255,.22); border-radius:8px; padding:6px 11px }
+.src path{ stroke:#35a05f; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; fill:none }
+.arch-outside .arch-foot{ grid-column:1 / -1; color:var(--ink-2); border-top-color:var(--rule) }
+/* Once the row wraps, a second row of boxes would put its arrows through the
+   first row. The lane closes and the arrows go; the strip still reads as
+   "outside" on its own surface. */
+@media(max-width:820px){
+  .arch-outside{ grid-template-columns:1fr; row-gap:10px }
+  .arch-quarri{ margin-bottom:0 }
+  .src svg{ display:none }
+  .arch-src{ justify-content:flex-start }
+}
 @media(max-width:640px){
   .arch-rw{ gap:22px }
   .arch-tier, .arch-quarri{ padding:13px 14px 14px }
@@ -1413,7 +1435,7 @@
 .fb-social{
   display:inline-flex; align-items:center; justify-content:center;
   width:32px; height:32px; flex:none;
-  border:1px solid rgba(255,255,255,.18); border-radius:50%;
+  border:1px solid rgba(255,255,255,.18);
   color:var(--on-forest);
   transition:color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
 }
@@ -1462,14 +1484,14 @@
 .nav-group:hover > a::after, .nav-group:focus-within > a::after{ transform:rotate(225deg) translateY(-3px) }
 .nav-pop{
   position:absolute; top:100%; left:50%; transform:translate(-50%,8px);
-  min-width:290px; background:var(--white); border:1px solid var(--rule); border-radius:12px;
+  min-width:290px; background:var(--white); border:1px solid var(--rule);
   box-shadow:0 30px 60px -30px rgba(17,17,17,.42); padding:8px;
   opacity:0; visibility:hidden; transition:opacity .2s var(--ease), transform .2s var(--ease), visibility .2s;
   display:flex; flex-direction:column; gap:2px;
 }
 .nav-group:hover .nav-pop, .nav-group:focus-within .nav-pop{ opacity:1; visibility:visible; transform:translate(-50%,4px) }
 .nav-pop::before{ content:""; position:absolute; top:-10px; left:0; right:0; height:10px }
-.nav-pop a{ display:block; padding:10px 13px; border-radius:8px; transition:background .18s var(--ease) }
+.nav-pop a{ display:block; padding:10px 13px; transition:background .18s var(--ease) }
 .nav-pop a:hover{ background:var(--bone) }
 /* 400, not 500. These sat heavier and darker than every other nav item, which
    made the flyout look like a different piece of furniture. Colour alone is
@@ -1485,7 +1507,7 @@
 .cm-rail{ position:absolute; left:0; right:0; top:52px; height:1px; background:var(--rule); z-index:0 }
 .cmx{
   position:relative; z-index:1; display:flex; flex-direction:column; gap:0;
-  background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden;
+  background:var(--white); border:1px solid var(--rule); overflow:hidden;
   transition:border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
 }
 .cmx:hover{ border-color:var(--coral); transform:translateY(-3px); box-shadow:0 26px 50px -34px rgba(17,17,17,.4) }
@@ -1530,7 +1552,7 @@
 
 /* ---- Case studies ---- */
 .cases{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px }
-.cs{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius-lg); overflow:hidden;
+.cs{ background:var(--white); border:1px solid var(--rule); overflow:hidden;
   display:flex; flex-direction:column; transition:border-color .25s var(--ease), transform .25s var(--ease) }
 .cs:hover{ border-color:var(--coral); transform:translateY(-2px) }
 .cs-head{ padding:22px 24px 18px; border-bottom:1px solid var(--rule); background:var(--bone) }
@@ -1576,14 +1598,13 @@
 .agentstrip{
   display:flex; align-items:center; gap:clamp(14px,2vw,26px); flex-wrap:wrap;
   padding:22px 26px; margin-top:clamp(26px,3.4vw,44px);
-  background:var(--white); border:1px solid var(--rule);
-  border-radius:var(--radius) var(--radius) 0 0; border-bottom:0;
+  background:var(--white); border:1px solid var(--rule); border-bottom:0;
 }
 .agentstrip .ag-lab{ font-family:var(--mono); font-size:11px; letter-spacing:.14em;
   text-transform:uppercase; color:var(--ink-3); flex:none }
 .agentstrip .ag-row{ display:flex; align-items:center; gap:10px; flex-wrap:wrap }
 .ag-chip{ display:inline-flex; align-items:center; gap:9px; padding:8px 14px;
-  border:1px solid var(--rule); border-radius:999px; background:var(--bone) }
+  border:1px solid var(--rule); background:var(--bone) }
 .ag-chip .ag-mark{ width:17px; height:17px; color:var(--ink); flex:none; object-fit:contain }
 .ag-chip span{ font-size:13.5px; color:var(--ink); letter-spacing:-.01em }
 .agentstrip .ag-more{ font-size:13px; color:var(--ink-3) }
@@ -1592,37 +1613,99 @@
 .aihead{ font-family:var(--mono); font-size:11.5px; font-weight:400; letter-spacing:.16em;
   text-transform:uppercase; color:var(--coral); margin-top:clamp(26px,3.4vw,44px) }
 .aiband{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1px;
-  background:var(--rule); border:1px solid var(--rule);
-  border-radius:0 0 var(--radius) var(--radius); overflow:hidden; margin-top:0 }
+  background:var(--rule); border:1px solid var(--rule); overflow:hidden; margin-top:0 }
 .aib{ background:var(--white); padding:26px 26px 28px; display:flex; flex-direction:column; gap:11px }
 .aib .aii{ width:26px; height:26px; color:var(--coral); flex:none }
 .aib h4{ font-size:16px; font-weight:500; letter-spacing:-.012em; line-height:1.3 }
 .aib p{ font-size:13.5px; color:var(--ink-2); line-height:1.6 }
 
 /* ==========================================================================
-   DEPLOYMENT, on how-it-works
-   The implementation work is most of the early value and appeared nowhere on
-   the site. Four workstreams as a grid, then the timeline that backs the
-   "live in two weeks" claim.
-   ========================================================================== */
-.dep-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--rule);
-  border:1px solid var(--rule); border-radius:var(--radius-lg); overflow:hidden }
-.dep{ background:var(--white); padding:clamp(22px,2.8vw,32px) }
-.dep-n{ display:block; font-family:var(--mono); font-size:11px; letter-spacing:.14em;
-  color:var(--coral); margin-bottom:12px }
-.dep h3{ font-size:clamp(18px,1.9vw,21px); font-weight:500; letter-spacing:-.015em; margin-bottom:10px }
-.dep p{ font-size:15px; line-height:1.65; color:var(--ink-2) }
+   HOW IT WORKS - the process as edge-to-edge bands
 
-.dep-time{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2.4vw,28px);
-  margin-top:clamp(22px,3vw,34px) }
-.dt{ border-top:2px solid var(--coral); padding-top:16px }
-.dt-k{ display:block; font-family:var(--mono); font-size:11px; letter-spacing:.13em;
-  text-transform:uppercase; color:var(--coral); margin-bottom:9px }
-.dt p{ font-size:14.5px; line-height:1.6; color:var(--ink-2) }
-@media(max-width:820px){
-  .dep-grid{ grid-template-columns:1fr }
-  .dep-time{ grid-template-columns:1fr; gap:18px }
+   The page used to run three numbered sequences at once: a 3-step process, a
+   4-step deployment grid and a 3-stage timeline, overlapping but never lining
+   up, which is what Theo meant by "jumbled" (4 Sep 2026). They are now ONE
+   sequence of five steps, and the timeline is a `when` tag on each step
+   rather than a third list.
+
+   Each step is a full-bleed band on the same mechanics as .cs-band: 100vw
+   with the margin trick, its own surface and rules, an inner grid centred on
+   the page container. Unlike .cs-band the number column does NOT alternate
+   sides. Swapping a numbered spine left and right is exactly how a sequence
+   stops reading as a sequence; rhythm comes from the alternating surface
+   instead. --gutter and --content keep the inner grid on the same edges as
+   the section intro above it.
+   ========================================================================== */
+.hw-step{
+  width:100vw; margin:0 calc(50% - 50vw);
+  border-top:1px solid var(--rule);
+  padding:clamp(40px,5.5vw,64px) 0;
 }
+.hw-step:nth-of-type(odd){ background:var(--bone) }
+.hw-step:nth-of-type(even){ background:var(--white) }
+.hw-step:last-of-type{ border-bottom:1px solid var(--rule) }
+.hw-step .hs-in{
+  max-width:var(--content); margin:0 auto; padding:0 var(--gutter);
+  display:grid; grid-template-columns:minmax(150px,.42fr) 1fr;
+  gap:clamp(24px,4.5vw,64px); align-items:start;
+}
+/* The number is the drafting mark for the step: mono, light, coral, big
+   enough to read as a station on a spine when the page is skimmed. */
+.hw-step .hs-n{
+  display:block; font-family:var(--mono); font-weight:300;
+  font-size:clamp(44px,5.4vw,68px); line-height:.9; letter-spacing:-.03em;
+  color:var(--coral);
+}
+.hw-step .hs-when{
+  display:block; margin-top:16px;
+  font-family:var(--mono); font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3); line-height:1.5;
+}
+/* Same voice as the case-study band h3: Archivo Light needs ~23px+ to hold. */
+.hw-step h3{
+  margin:0 0 14px; font-size:clamp(23px,2.3vw,28px);
+  font-weight:300; letter-spacing:-.02em;
+}
+.hw-step p{ font-size:16px; line-height:1.7; color:var(--ink-2); margin:0 0 14px; max-width:64ch }
+.hw-step p:last-of-type{ margin-bottom:0 }
+/* What the step touches, as mono chips: the same vocabulary as .arch-pills so
+   the process reads as the platform diagram put in order. */
+.hw-step .hs-list{ list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 0; padding:0 }
+.hw-step .hs-list li{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.05em; line-height:1;
+  color:var(--ink-2); background:var(--white); border:1px solid var(--rule); padding:8px 11px;
+}
+.hw-step:nth-of-type(even) .hs-list li{ background:var(--bone) }
+@media(max-width:820px){
+  .hw-step .hs-in{ grid-template-columns:1fr; gap:14px }
+  .hw-step .hs-n{ font-size:40px }
+  .hw-step .hs-when{ margin-top:8px }
+}
+
+/* The hero's keep / add pair. It had no rule at all, so it rendered as two
+   unstyled lists under the lead and was the first thing on the page that
+   looked unfinished. */
+.keepadd{
+  display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  margin-top:clamp(28px,3.5vw,40px); max-width:760px;
+  background:var(--rule); border:1px solid var(--rule);
+  overflow:hidden;
+}
+.ka{ background:var(--white); padding:clamp(18px,2.4vw,26px) clamp(20px,2.6vw,28px) }
+.ka h4{
+  font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--coral); font-weight:400; margin:0 0 12px;
+}
+.ka ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px }
+.ka li{ font-size:14.5px; line-height:1.5; color:var(--ink-2); padding-left:16px; position:relative }
+.ka li::before{ content:""; position:absolute; left:0; top:.62em; width:7px; height:1px; background:var(--coral) }
+@media(max-width:640px){ .keepadd{ grid-template-columns:1fr } }
+
+/* The diagram's closing line lives inside the panel, ruled off like the
+   layers above it. It used to sit below the panel as a loose grey sentence
+   in the gutter, which read as an orphan (Theo, 4 Sep 2026). */
+.arch-foot{ margin:18px 0 0; padding-top:14px; border-top:1px solid rgba(255,255,255,.1);
+  font-size:13.5px; line-height:1.6; color:rgba(255,255,255,.66); max-width:74ch }
 
 /* Model marks in the architecture diagram. Supplied as black glyphs, recoloured
    white at build time because the chip sits on a deep forest panel. alt="" as
@@ -1644,7 +1727,7 @@
 .faq-jump{ display:flex; flex-wrap:wrap; gap:10px; margin-top:18px }
 .faq-jump a{
   font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--on-forest); border:1px solid rgba(255,255,255,.22); border-radius:100px;
+  color:var(--on-forest); border:1px solid rgba(255,255,255,.22);
   padding:8px 15px; transition:border-color .25s var(--ease), color .25s var(--ease);
 }
 .faq-jump a:hover{ border-color:var(--coral); color:#fff }
@@ -1667,10 +1750,509 @@
 }
 .faq-a li::before{
   content:""; position:absolute; left:2px; top:11px;
-  width:5px; height:5px; border-radius:50%; background:var(--coral);
+  width:5px; height:5px; background:var(--coral);
 }
 
 /* A three-item Resources menu does not need the width the Who-we-serve menu
    uses for eleven. Narrower, and no group headings to separate. */
 .nav-pop-sm{ min-width:238px }
 .nav-pop-sm a{ padding:11px 13px }
+
+/* ==========================================================================
+   DRAFTING LANGUAGE
+   Merged into production 4 Sep 2026 from the preview overlay it was designed
+   in (_experiment-blueprint.css + _experiment-blueprint-pages.css, v49).
+
+   Nothing in this section uses !important. The two things the overlay had
+   to force are
+   fixed at source instead: the radii are zero on the tokens in styles.css and
+   removed from every component in this file, and the L1 components below no
+   longer clip with overflow:hidden or paint their own border, because the
+   drafting frame replaces it.
+
+   Hierarchy, so the language reads deliberate rather than sprayed:
+     L1  cards, photos, widget panels -> hairline frame, corners overrun 6px
+     L2  buttons                      -> sharp corners only, no marks
+     L3  photo tiles that own a text-protection gradient -> aligned hairline
+         (outline), no overrun, because their ::before is load-bearing
+     L4  chips, pills, inputs         -> sharp corners, no marks
+
+   Per-page devices are scoped by [data-bp-page] on <html>, stamped by
+   _sync_blueprint.py. A page without the attribute gets the shared language
+   and none of the family devices, which is a safe default.
+   ========================================================================== */
+
+/* -- L1: cards, photos, widget panels ------------------------------------ */
+:where(.post, .mod, .ex, .pf, .quote-band, .layer, .win-frame,
+       .aib, .ph-callout, .prob-grid, .soon-block, .xover, .ins-featured,
+       .mr-photo, .strip > div){
+  position: relative;
+}
+/* Absolutely positioned pseudo-elements anchor to the PADDING box, so each
+   line needs pulling out by the 1px border width to sit where the border was. */
+:where(.post, .mod, .ex, .pf, .quote-band, .layer, .win-frame,
+       .aib, .ph-callout, .prob-grid, .soon-block, .xover, .ins-featured,
+       .mr-photo, .strip > div)::before{
+  content:""; position:absolute; pointer-events:none; z-index:3;
+  top:-1px; bottom:-1px;
+  left:calc(-1px - var(--bpo)); right:calc(-1px - var(--bpo));
+  border-top:1px solid var(--bp); border-bottom:1px solid var(--bp);
+}
+:where(.post, .mod, .ex, .pf, .quote-band, .layer, .win-frame,
+       .aib, .ph-callout, .prob-grid, .soon-block, .xover, .ins-featured,
+       .mr-photo, .strip > div)::after{
+  content:""; position:absolute; pointer-events:none; z-index:3;
+  left:-1px; right:-1px;
+  top:calc(-1px - var(--bpo)); bottom:calc(-1px - var(--bpo));
+  border-left:1px solid var(--bp); border-right:1px solid var(--bp);
+}
+/* Dark surfaces draw light lines. The dark widget panels and callouts are
+   dark even inside light sections, so they are listed, not just .on-dark. */
+.on-dark :where(.post,.mod,.ex,.pf,.layer,.aib,.ph-callout)::before,
+.on-dark :where(.post,.mod,.ex,.pf,.layer,.aib,.ph-callout)::after,
+:where(.soon-block, .ph-callout)::before,
+:where(.soon-block, .ph-callout)::after{ border-color: var(--bp-d); }
+/* Hover keeps meaning: the drafting lines pick up the accent. */
+:where(.post, .mod):hover::before,
+:where(.post, .mod):hover::after{ border-color: var(--coral); }
+
+/* -- L3: photo tiles that own a load-bearing gradient --------------------
+   These paint their own text-protection gradient on a pseudo-element, so the
+   frame has to be an outline: a pseudo of ours would land on the same element
+   and fight it.
+
+   .art-hero owns its gradient on ::after, and the L1 frame uses ::after too.
+   The two do not clobber each other outright, because :where() carries no
+   specificity and the component rule keeps inset:0 - but the frame's z-index:3
+   was inherited by the gradient, which then painted OVER the headline sitting
+   at z-index:1. Caught in contrast QA, 4 Sep 2026, before this went live.
+   Light ink because the hero surface is dark by the foot of that gradient
+   (rgba(8,20,13,.88)) and a black hairline on it is invisible. */
+:where(.scene, .srv, .f-photo){ outline:1px solid var(--bp); outline-offset:-1px }
+.art-hero{ outline:1px solid var(--bp-d); outline-offset:-1px }
+
+/* -- Registration crosshair beside each section eyebrow ------------------ */
+.section-intro{ position:relative }
+.section-intro::before{
+  content:""; position:absolute; left:-30px; top:6px; width:16px; height:16px;
+  pointer-events:none;
+  background:
+    linear-gradient(var(--bp), var(--bp)) center / 1px 16px no-repeat,
+    linear-gradient(var(--bp), var(--bp)) center / 16px 1px no-repeat;
+}
+/* No room for it beside the copy once the gutter closes. */
+@media (max-width: 900px){ .section-intro::before{ display:none } }
+
+/* -- Widget captions as numbered figures, drawing-index style ------------ */
+p.cap{ position:relative }
+p.cap::before{
+  counter-increment: fig;
+  content: "FIG. " counter(fig, decimal-leading-zero) "  ";
+  font-family: var(--mono); font-size:.82em; letter-spacing:.12em; color: var(--coral);
+}
+
+/* -- Application panels: one drafted extension line down a single side,
+      overshooting like a dimension line, the side alternating with the row
+      so successive panels hand the eye down the page. --------------------- */
+.mr-vis .wf-panel{ position:relative; overflow:visible }
+.mr-vis .wf-panel::after{
+  content:""; position:absolute; top:-18px; bottom:-18px; left:-14px; width:0;
+  border-left:1px solid var(--bp); pointer-events:none;
+}
+.modrow.flip .mr-vis .wf-panel::after{ left:auto; right:-14px }
+
+/* -- Gutter ink, used by the grain and the gutter rules ------------------ */
+:root{
+  --bpr:   rgba(17,17,17,.30);
+  --bpr-d: rgba(255,255,255,.20);
+}
+
+/* -- The grain: a wood cross section down the gutter, revealed by scroll ---
+
+   Homepage only, and desktop only. Theo, 4 Sep 2026: drop the grain on
+   mobile, it is too much. It lives in the free gutter beside the 1240px
+   column, which does not exist on a narrow screen anyway. Every other device
+   in this file stays at all widths.
+
+   Why it is built in bands. Measured: drawing the grain is free (35.6fps
+   drawn against 34.0fps hidden) but a scroll-linked mask over a whole section
+   halved it to 17.8fps, because a mask re-rasterises its whole box on every
+   frame its value changes. So the drawing is split into ~500px bands, each
+   masked over its own slice of scroll: only the one or two bands under the
+   reveal edge ever repaint. Knots get their own small box each, likewise. */
+.bp-tpl{ display:none }
+.bp-sect{
+  position:absolute; right:0; z-index:-1; pointer-events:none;
+  width:max(84px, calc(((100vw - 1240px) / 2 - 34px) * 0.67));
+  overflow:hidden; contain:layout paint; content-visibility:auto;
+}
+@media (max-width: 1420px){ .bp-sect{ display:none } }
+.bp-part{ position:absolute }
+.bp-part svg{ display:block; width:100%; height:100% }
+/* stroke-width is set inline per svg to 160/stripWidth, cancelling the
+   horizontal squash so every line renders at 0.8 CSS px: exactly one device
+   pixel at 125% Windows scaling, which is what keeps them sharp. */
+.bp-part path{ fill:none; stroke:#c0b9a9; shape-rendering:geometricPrecision }
+.bp-part .w1{ stroke-opacity:.45 }   /* isolated earlywood, palest */
+.bp-part .w2{ stroke-opacity:.72 }
+.bp-part .w3{ stroke-opacity:1 }     /* tight latewood pairs, darkest */
+/* On dark bands a bone stroke reads as white scratches, so the grain there is
+   a lifted version of the forest itself. Flat green and photographs need
+   different lifts: the stroke that vanishes into a busy photo glares against
+   flat #0b1f14. */
+.bp-lite  .bp-part path{ stroke:#2d4235 }
+.bp-photo .bp-part path{ stroke:#4a5c50 }
+@supports (animation-timeline: scroll()){
+  .bp-part{
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 400px), transparent);
+            mask-image: linear-gradient(to bottom, #000 calc(100% - 400px), transparent);
+    -webkit-mask-size: 100% calc(100% + 400px);
+            mask-size: 100% calc(100% + 400px);
+    -webkit-mask-repeat: no-repeat;  mask-repeat: no-repeat;
+    -webkit-mask-position: 0 var(--m0);  mask-position: 0 var(--m0);
+  }
+  /* A scroll-driven animation is re-evaluated every frame even where its
+     value never moves, so leaving all forty-odd attached cost a third of the
+     frame rate for nothing. The script attaches this only near the viewport
+     and swaps passed boxes to bp-done: no mask, no animation, a flat picture. */
+  .bp-part.bp-live{ animation: bpWipe linear both; animation-timeline: scroll(root) }
+  .bp-part.bp-done{ -webkit-mask-image:none; mask-image:none; animation:none }
+}
+@keyframes bpWipe{
+  from{ -webkit-mask-position: 0 var(--m0); mask-position: 0 var(--m0) }
+  to  { -webkit-mask-position: 0 0;         mask-position: 0 0 }
+}
+@media (prefers-reduced-motion: reduce){
+  .bp-part{ -webkit-mask-image:none; mask-image:none; animation:none }
+}
+
+/* == SHARED ============================================================ */
+
+/* The base overlay L3 outline treatment, extended to the listing-card and
+   article photo tiles it was never written against. Same reason as L3: these
+   carry their own gradient or image and a pseudo-element would clobber it. */
+:where(.ph, .cs-hero, .v-img){ outline:1px solid var(--bp); outline-offset:-1px; }
+
+/* == GUTTER RULES ======================================================
+
+   A second gutter device, in place of the grain, for the pages that are not
+   the homepage. The grain is the homepage signature and stays that way; it
+   is also 122KB inlined, which does not survive being cascaded a dozen times.
+
+   These are pure CSS: one element per section, two or three plain gradients.
+   No SVG, no mask, no scroll-driven animation - so none of the three cost
+   traps documented in the base file apply. Plain gradients tiled with
+   background-size, never repeating-linear-gradient, because the latter smears
+   at Windows 125% scaling.
+
+   Placement mirrors the grain exactly: a negative-z child of each section, so
+   it paints above that section own background (photo backgrounds included)
+   and below all of its content. Injected by the page runtime, which also sets
+   bp-lite / bp-photo from the same test the grain runtime uses.            */
+
+.bp-rule{
+  position:absolute; z-index:-1; pointer-events:none;
+  width:max(64px, calc(((100vw - 1240px) / 2 - 34px) * 0.55));
+  overflow:hidden; contain:layout paint; content-visibility:auto;
+  --ink: var(--bpr);
+}
+.bp-rule.bp-lite{ --ink: var(--bpr-d); }
+.bp-rule.bp-photo{ --ink: rgba(255,255,255,.26); }
+@media (max-width: 1420px){ .bp-rule{ display:none; } }
+
+/* A - the scale rule. Verticals and function pages. Left gutter, because a
+   measurement margin belongs on the left of a drawing and because the right
+   gutter is the grain on the homepage: keeping them on opposite sides stops
+   the two devices reading as variants of one thing.
+
+   A spine, minor ticks every 13px, major ticks every 65px. The 13/65 spacing
+   is deliberately not a round 12/60: on a page whose section heights are
+   arbitrary, a round figure lines up with content edges often enough to look
+   like a mistake. */
+[data-bp-page="vertical"] .bp-rule{
+  left:0; right:auto;
+  background-image:
+    linear-gradient(var(--ink), var(--ink)),
+    linear-gradient(to bottom, var(--ink) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--ink) 1px, transparent 1px);
+  background-repeat: no-repeat, repeat-y, repeat-y;
+  background-size: 1px 100%, 7px 13px, 15px 65px;
+  background-position: right 24px top, right 24px top, right 24px top;
+}
+
+/* B - the margin rule. Listing and article pages. Right gutter, quieter than
+   the scale: a spine and one tick every 78px, no minor ticks. Editorial pages
+   are long and text-heavy and a ticked scale beside running prose reads as
+   noise. */
+[data-bp-page="listing"] .bp-rule,
+[data-bp-page="article"] .bp-rule{
+  right:0; left:auto;
+  background-image:
+    linear-gradient(var(--ink), var(--ink)),
+    linear-gradient(to bottom, var(--ink) 1px, transparent 1px);
+  background-repeat: no-repeat, repeat-y;
+  background-size: 1px 100%, 11px 78px;
+  background-position: left 26px top, left 26px top;
+}
+
+/* == VERTICAL + FUNCTION PAGES =========================================
+   Signature: the process chain read as a dimension line, and the phase
+   numbers set as drafted station marks.                                    */
+
+/* The phase nav numbers become station boxes. A drafting number sits in a
+   box, not beside the text, and the box is what makes it read as an index
+   rather than as decoration. */
+[data-bp-page="vertical"] .pt-in a .n{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:var(--bp-tag-w); height:var(--bp-tag-h); margin-right:9px; padding:0 5px;
+  border:1px solid var(--bp);
+  font-family:var(--mono); font-size:var(--bp-lab); letter-spacing:.08em;
+  line-height:1;
+}
+[data-bp-page="vertical"] .pt-in a:hover .n,
+[data-bp-page="vertical"] .pt-in a[aria-current] .n{ border-color:var(--coral); color:var(--coral); }
+
+/* The stage chain and the cross-vertical chain both become dimension lines:
+   a hairline running the width of the row with a tick turned down at each
+   end, which is how a measured span is drawn. The arrows keep their job as
+   the direction of travel; the rule underneath is what makes the row read as
+   one measured sequence rather than a list of words. */
+[data-bp-page="vertical"] .op-spine,
+[data-bp-page="vertical"] .chain{ position:relative; }
+[data-bp-page="vertical"] .op-spine::after,
+[data-bp-page="vertical"] .chain::after{
+  content:""; position:absolute; left:0; right:0; bottom:-11px; height:6px;
+  pointer-events:none;
+  border-bottom:1px solid var(--bp);
+  border-left:1px solid var(--bp);
+  border-right:1px solid var(--bp);
+}
+[data-bp-page="vertical"] .on-dark .op-spine::after,
+[data-bp-page="vertical"] .on-dark .chain::after{
+  border-color:var(--bp-d);
+}
+
+/* == HOW IT WORKS ======================================================
+   Signature: the architecture stack drawn as an exploded assembly, each
+   layer bracketed and indexed the way an assembly drawing indexes its
+   parts. No corner marks here - the layers are bands in a stack, not cards,
+   and framing each one would fight the stack reading as a stack.           */
+
+[data-bp-page="howitworks"] .arch-layer{ position:relative; }
+[data-bp-page="howitworks"] .arch-layer::before{
+  content:""; position:absolute; left:-16px; top:2px; bottom:2px; width:7px;
+  pointer-events:none;
+  border-left:1px solid var(--bp);
+  border-top:1px solid var(--bp);
+  border-bottom:1px solid var(--bp);
+}
+[data-bp-page="howitworks"] .arch-quarri{ counter-reset: archl; }
+[data-bp-page="howitworks"] .arch-lname::after{
+  counter-increment: archl;
+  content: "L" counter(archl);
+  margin-left:10px;
+  font-family:var(--mono); font-size:var(--bp-lab); letter-spacing:var(--bp-track);
+  color:var(--coral); vertical-align:2px;
+}
+/* the capability chips lose their pill shape with the base overlay radius
+   reset; a hairline gives them back an edge so they do not read as loose
+   text once the fill is the only thing holding them together */
+[data-bp-page="howitworks"] .arch-pills b{
+  border:1px solid var(--bp);
+}
+[data-bp-page="howitworks"] .on-dark .arch-layer::before,
+[data-bp-page="howitworks"] .on-dark .arch-pills b{ border-color:var(--bp-d); }
+
+/* == PRICING ===========================================================
+   Signature: the comparison table drawn as a specification sheet.          */
+
+/* the tiers are genuinely cards, so they take the base L1 frame */
+[data-bp-page="pricing"] :where(.tier){
+  position:relative;
+}
+[data-bp-page="pricing"] :where(.tier)::before{
+  content:""; position:absolute; pointer-events:none; z-index:3;
+  top:-1px; bottom:-1px;
+  left:calc(-1px - var(--bpo)); right:calc(-1px - var(--bpo));
+  border-top:1px solid var(--bp); border-bottom:1px solid var(--bp);
+}
+[data-bp-page="pricing"] :where(.tier)::after{
+  content:""; position:absolute; pointer-events:none; z-index:3;
+  left:-1px; right:-1px;
+  top:calc(-1px - var(--bpo)); bottom:calc(-1px - var(--bpo));
+  border-left:1px solid var(--bp); border-right:1px solid var(--bp);
+}
+/* the recommended tier is the one place a heavier line is earned */
+[data-bp-page="pricing"] .tier.hot::before,
+[data-bp-page="pricing"] .tier.hot::after{ border-color:var(--coral); }
+
+/* category rows become sheet section headers: a mono label sitting on a rule
+   that runs the full width of the table */
+[data-bp-page="pricing"] tr.cat td{
+  font-family:var(--mono); font-size:var(--bp-lab); letter-spacing:var(--bp-track);
+  text-transform:uppercase;
+  border-top:1px solid var(--bp); border-bottom:1px solid var(--bp);
+  padding-top:20px; padding-bottom:7px;
+}
+/* the tick becomes a drafted mark rather than a glyph: a small square with
+   the tick inside it, so the yes column reads as a filled checkbox down a
+   specification sheet */
+[data-bp-page="pricing"] td.yes{ color:transparent; position:relative; }
+[data-bp-page="pricing"] td.yes::after{
+  content:"\2713"; position:absolute; inset:0; margin:auto;
+  width:17px; height:17px; line-height:15px; text-align:center;
+  border:1px solid var(--coral); color:var(--coral); font-size:.72rem;
+}
+[data-bp-page="pricing"] td.no{ color:var(--bp); }
+
+/* == SECURITY ==========================================================
+   Signature: the capability list drawn as a numbered specification sheet.
+   The numbers are already there in the markup; the device is boxing them and
+   running a leader rule from the number out to the row, which is how a spec
+   sheet ties an item number to its item.                                   */
+
+[data-bp-page="security"] .capb-row{ position:relative; }
+[data-bp-page="security"] .capb-num{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:var(--bp-tag-w); height:var(--bp-tag-h); padding:0 5px;
+  border:1px solid var(--bp);
+  font-family:var(--mono); font-size:var(--bp-lab); letter-spacing:.08em; line-height:1;
+}
+[data-bp-page="security"] .capb-head{ position:relative; }
+/* the leader: a hairline from the boxed number along under the name */
+[data-bp-page="security"] .capb-head::after{
+  content:""; position:absolute; left:0; right:0; bottom:-9px; height:1px;
+  background:var(--bp); pointer-events:none;
+}
+[data-bp-page="security"] .on-dark .capb-num{ border-color:var(--bp-d); }
+[data-bp-page="security"] .on-dark .capb-head::after{ background:var(--bp-d); }
+/* the middot separators become drafting tick marks */
+[data-bp-page="security"] .capb-tags .sep{
+  color:transparent; position:relative; display:inline-block; width:13px;
+}
+[data-bp-page="security"] .capb-tags .sep::after{
+  content:""; position:absolute; left:6px; top:50%; width:1px; height:9px;
+  margin-top:-4px; background:var(--bp);
+}
+[data-bp-page="security"] .on-dark .capb-tags .sep::after{ background:var(--bp-d); }
+
+/* == LISTING PAGES - insights.html, case-studies.html ==================
+   Signature: the card grid read as an index of sheets. The cards already
+   take the base L1 frame, so the device here is the numbering, which echoes
+   the FIG. counter on the homepage widgets without repeating it.           */
+
+[data-bp-page="listing"] .posts{ counter-reset: sheet; }
+[data-bp-page="listing"] .post{ counter-increment: sheet; }
+[data-bp-page="listing"] .pm::before{
+  content: "SHEET " counter(sheet, decimal-leading-zero) "  /  ";
+  color: var(--coral); letter-spacing:var(--bp-track);
+}
+/* the read link gets a drafted underline that overruns, so the card one
+   interactive element carries the corner-overrun idiom at small scale */
+[data-bp-page="listing"] .pl{ position:relative; }
+[data-bp-page="listing"] .pl::after{
+  content:""; position:absolute; left:-4px; right:-4px; bottom:-5px; height:1px;
+  background:var(--bp); pointer-events:none;
+}
+[data-bp-page="listing"] .post:hover .pl::after{ background:var(--coral); }
+
+/* == ARTICLE PAGES - insights/*, case-studies/* ========================
+   Signature: the inline widgets read as figure plates. These are the pages
+   where the drawing-index idea is most at home, because they genuinely are
+   documents with figures in them.                                          */
+
+[data-bp-page="article"] .v{
+  position:relative;
+}
+[data-bp-page="article"] .v::before{
+  content:""; position:absolute; pointer-events:none; z-index:3;
+  top:-1px; bottom:-1px;
+  left:calc(-1px - var(--bpo)); right:calc(-1px - var(--bpo));
+  border-top:1px solid var(--bp); border-bottom:1px solid var(--bp);
+}
+[data-bp-page="article"] .v::after{
+  content:""; position:absolute; pointer-events:none; z-index:3;
+  left:-1px; right:-1px;
+  top:calc(-1px - var(--bpo)); bottom:calc(-1px - var(--bpo));
+  border-left:1px solid var(--bp); border-right:1px solid var(--bp);
+}
+/* metrics get a baseline with turned-up ends rather than a full frame: they
+   sit in a row and four frames side by side would read as a table */
+[data-bp-page="article"] .m{ position:relative; }
+[data-bp-page="article"] .m::after{
+  content:""; position:absolute; left:0; right:0; bottom:-10px; height:6px;
+  pointer-events:none;
+  border-bottom:1px solid var(--bp);
+  border-left:1px solid var(--bp);
+  border-right:1px solid var(--bp);
+}
+/* the widget key becomes the figure number, continuing the homepage counter
+   idiom into the article body */
+/* document-wide plate numbering. fig is re-declared alongside it because the
+   base overlay resets fig on body, and a bare counter-reset here would drop
+   it and restart the homepage FIG. counter logic on any article that uses a
+   .cap caption. */
+[data-bp-page="article"] body{ counter-reset: fig plate; }
+[data-bp-page="article"] .v-k::before{
+  counter-increment: plate;
+  content: "FIG. " counter(plate, decimal-leading-zero) "  ";
+  font-family:var(--mono); font-size:var(--bp-lab); letter-spacing:var(--bp-track);
+  color:var(--coral);
+}
+[data-bp-page="article"] .on-dark .v::before,
+[data-bp-page="article"] .on-dark .v::after,
+[data-bp-page="article"] .on-dark .m::after{ border-color:var(--bp-d); }
+
+/* == FAQ ===============================================================
+   Signature: a revision list. One rule down the whole list with a tick
+   turned out at each question, and the questions numbered in mono. No
+   frames: twenty-two framed blocks would be the sprayed failure the base
+   file warns about.                                                        */
+
+/* the spine sits in the margin, not in the flow: the list keeps production's
+   exact left edge and nothing moves. Hidden where the margin is not there. */
+[data-bp-page="faq"] .faq-list{ position:relative; counter-reset: qn; }
+[data-bp-page="faq"] .faq-list::before{
+  content:""; position:absolute; left:-30px; top:4px; bottom:4px; width:1px;
+  background:var(--bp); pointer-events:none;
+}
+[data-bp-page="faq"] .faq-q{ position:relative; counter-increment: qn; }
+[data-bp-page="faq"] .faq-q::before{
+  content:""; position:absolute; left:-30px; top:15px; width:12px; height:1px;
+  background:var(--bp); pointer-events:none;
+}
+@media (max-width: 900px){
+  [data-bp-page="faq"] .faq-list::before,
+  [data-bp-page="faq"] .faq-q::before{ display:none; }
+}
+[data-bp-page="faq"] .faq-q > h3::before{
+  content: counter(qn, decimal-leading-zero);
+  margin-right:12px;
+  font-family:var(--mono); font-size:var(--bp-lab); letter-spacing:var(--bp-track);
+  color:var(--coral); vertical-align:3px;
+}
+
+/* == 404 ===============================================================
+   Signature: one origin crosshair, large. The page has almost nothing on it,
+   so the restrained move is a single mark rather than a set of devices.     */
+
+[data-bp-page="notfound"] .container{ position:relative; }
+[data-bp-page="notfound"] .container::before{
+  content:""; position:absolute; left:-46px; top:-10px; width:64px; height:64px;
+  pointer-events:none; opacity:.9;
+  background:
+    linear-gradient(var(--bp), var(--bp)) center / 1px 64px no-repeat,
+    linear-gradient(var(--bp), var(--bp)) center / 64px 1px no-repeat;
+}
+@media (max-width: 1100px){ [data-bp-page="notfound"] .container::before{ display:none; } }
+
+/* == PLAIN - book-a-demo ===============================================
+   The scheduler is a third-party embed. It takes the base language, the
+   sharp corners and the drafting grid, and nothing else: adding a device
+   around an iframe we do not control would be decoration for its own sake. */
+
+/* -- Paper does not need the drafting furniture ------------------------- */
+@media print{
+  .bp-rule, .bp-sect{ display:none }
+  body{ background-image:none }
+}
