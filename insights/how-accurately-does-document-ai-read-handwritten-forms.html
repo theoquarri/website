@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-bp-page="article">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f3">
+
+<title>How accurately does document AI read handwritten forms? | Quarri</title>
+<meta name="description" content="Close to a careful person on free text, weaker on handwritten tables, and wrong in plausible ways. What 2025 and 2026 benchmarks found.">
+<link rel="canonical" href="https://quarri.ai/insights/how-accurately-does-document-ai-read-handwritten-forms.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="How accurately does document AI read handwritten forms? | Quarri">
+<meta property="og:description" content="Close to a careful person on free text, weaker on handwritten tables, and wrong in plausible ways. What 2025 and 2026 benchmarks found.">
+<meta property="og:url" content="https://quarri.ai/insights/how-accurately-does-document-ai-read-handwritten-forms.html">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How accurately does document AI read handwritten forms? | Quarri">
+<meta name="twitter:description" content="Close to a careful person on free text, weaker on handwritten tables, and wrong in plausible ways. What 2025 and 2026 benchmarks found.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+
+<link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="../styles.css?v=121">
+<link rel="stylesheet" href="../components.css?v=121">
+<meta name="quarri-corpus" content="article">
+<meta name="quarri-section" content="Research through a data lens">
+<meta name="quarri-section-url" content="https://quarri.ai/insights/research-through-a-data-lens.html">
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "alternateName": "Quarri AI",
+      "disambiguatingDescription": "Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is the timber data platform. AI-native, it connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "The timber data platform.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://quarri.ai/insights/how-accurately-does-document-ai-read-handwritten-forms.html#webpage",
+      "url": "https://quarri.ai/insights/how-accurately-does-document-ai-read-handwritten-forms.html",
+      "headline": "How accurately does document AI read handwritten forms?",
+      "description": "Close to a careful person on free text, weaker on handwritten tables, and wrong in plausible ways. What 2025 and 2026 benchmarks found.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "author": {
+        "@id": "https://quarri.ai/#theo-leslie"
+      },
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "articleSection": "Insights",
+      "about": {
+        "@id": "https://quarri.ai/#software"
+      },
+      "image": "https://quarri.ai/assets/og-image.jpg",
+      "breadcrumb": {
+        "@id": "https://quarri.ai/insights/how-accurately-does-document-ai-read-handwritten-forms.html#breadcrumb"
+      },
+      "datePublished": "2026-09-28"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://quarri.ai/#theo-leslie",
+      "name": "Theo Leslie",
+      "url": "https://quarri.ai/",
+      "worksFor": {
+        "@id": "https://quarri.ai/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://quarri.ai/insights/how-accurately-does-document-ai-read-handwritten-forms.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quarri.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://quarri.ai/insights.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Research through a data lens",
+          "item": "https://quarri.ai/insights/research-through-a-data-lens.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How accurately does document AI read handwritten forms?"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="../assets/quarri-logo.png" alt="" width="26" height="26" decoding="async"><span>Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="../index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="../index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a href="../forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="../sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="../wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="../pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="../finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="../operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
+      <a href="../how-it-works.html">How it works</a>
+      <a href="../security.html">Security</a>
+      <a href="../pricing.html">Pricing</a>
+      <div class="nav-group">
+        <a href="../case-studies.html" tabindex="0">Resources</a>
+        <div class="nav-pop nav-pop-sm">
+          <a href="../case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
+          <a href="../insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a href="../faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        </div>
+      </div>
+      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
+      <a href="../book-a-demo.html" class="btn btn-primary">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<div class="art-hero art-hero-plain">
+  <div class="in">
+    <span class="meta">Research through a data lens &middot; 28 Sep 2026</span>
+    <h1>How accurately does document AI read handwritten forms?</h1>
+    <p class="byline">Theo Leslie &middot; 4 min read</p>
+  </div>
+</div>
+
+<article class="article">
+  <a class="art-back" href="research-through-a-data-lens.html">&larr; Research through a data lens</a>
+
+  <p class="standfirst">Close to a careful person on free text, less well on handwritten tables, and wrong in ways that are harder to spot. An August 2026 benchmark tested 18 models on 500 real handwritten documents. The best scored 71.85 on a composite of text, table and formula measures, against 77.09 for people transcribing the same pages in one pass. It beat them on text and trailed them by over 14 points on tables. More of its errors were plausible substitutions: 66.56% of its table errors, against 34.48% of the humans'.</p>
+  <h2>What the usual answer says</h2>
+  <p>The usual answer gives 80 to 99% accuracy for handwritten forms, depending on legibility, with human review of low-confidence fields. Vendor pages at the top of the search repeat figures in that range, usually without saying what was counted or how. The research is more useful because it says both.</p>
+  <figure class="art-fig">
+  <svg viewBox="0 0 720 250" role="img" aria-label="Two panels from the 2026 benchmark: the best model scored 71.85 overall against 77.09 for single-pass humans, ahead on text and behind on tables by over 14 points; 66.56% of its table errors were prior-driven against 34.48% for humans">
+    <g font-family="Archivo, sans-serif">
+      <text x="10" y="26" font-size="16" font-weight="600" fill="#111111">Overall score</text>
+      <text x="10" y="46" font-size="13" fill="#888888">composite of text, table and formula</text>
+      <text x="10" y="84" font-size="13" font-weight="600" fill="#555555">Best model</text>
+      <rect x="10" y="92" width="179.625" height="26" rx="0" fill="#888888"/>
+      <text x="197.625" y="110" font-size="16" font-weight="600" fill="#111111">71.85</text>
+      <text x="10" y="150" font-size="13" font-weight="600" fill="#555555">Humans, one pass</text>
+      <rect x="10" y="158" width="192.725" height="26" rx="0" fill="#888888"/>
+      <text x="210.725" y="176" font-size="16" font-weight="600" fill="#111111">77.09</text>
+      <text x="10" y="212" font-size="13" fill="#555555">Text: the best model ahead</text>
+      <text x="10" y="232" font-size="13" font-weight="600" fill="#111111">Tables: humans ahead by over 14 points</text>
+      <path d="M355,20 L355,238" fill="none" stroke="#e5e4e0" stroke-width="1"/>
+      <text x="380" y="26" font-size="16" font-weight="600" fill="#111111">Table errors that were prior-driven</text>
+      <text x="380" y="46" font-size="13" fill="#888888">fluent output the image did not support</text>
+      <text x="380" y="84" font-size="13" font-weight="600" fill="#555555">Best model</text>
+      <rect x="380" y="92" width="166.4" height="26" rx="0" fill="#da7756"/>
+      <text x="554.4" y="110" font-size="16" font-weight="600" fill="#da7756">66.56%</text>
+      <text x="380" y="150" font-size="13" font-weight="600" fill="#555555">Humans, one pass</text>
+      <rect x="380" y="158" width="86.2" height="26" rx="0" fill="#888888"/>
+      <text x="474.2" y="176" font-size="16" font-weight="600" fill="#111111">34.48%</text>
+    </g>
+  </svg>
+  <figcaption>The best model came within a modest gap of people overall, but its table errors were more often fluent substitutions the page did not support, which are harder to spot. Source: WildHandBench, August 2026. Diagram: Quarri.</figcaption>
+</figure>
+  <h2>What the 2026 benchmark found</h2>
+  <p>WildHandBench, by Zhang and colleagues (<a href="https://arxiv.org/abs/2608.22959" target="_blank" rel="noopener">arXiv 2608.22959</a>), covers free text, tables and formulas from nine real-world settings, forms among them. Its documents are 66.6% Simplified Chinese and 28.6% English. The authors say it "should not be interpreted as a population-level estimate of handwritten OCR performance".</p>
+  <p>The 71.85 is an average of three scores: a text edit-distance score, a table similarity score and a formula score. It is not a share of fields read correctly. The paper contrasts it with 96.34% for the top model on a separate printed-document benchmark, a different set of pages.</p>
+  <p>Against people, "the relatively modest gap indicates that wild handwriting challenges humans and models alike". On text, "the best model actually surpasses humans". Tables were the weak point. The best table score "indicates nearly 40% structural and content mismatch", and humans led on tables by more than 14 points.</p>
+  <p>The authors also classified each error by whether it came from the image or from the model's expectations. Models tend toward "generating fluent but visually unsupported output where humans tend toward conservative partial transcriptions". They add a caution: a high prior-driven rate "does not mean a model is less reliable, only that its errors are more systematic". Compact, OCR-focused models had the lowest rates and made more visible misreadings.</p>
+  <h2>A test on real forms</h2>
+  <p>Businessware Technologies, a document-processing developer with an interest in the result, published a <a href="https://www.businesswaretech.com/blog/handwritten-form-recognition-benchmark-accuracy-cost-and-performance-comparison-of-leading-ai-models" target="_blank" rel="noopener">January 2026 benchmark</a> scored field by field on 10 real hand-filled forms. A field counted as correct at 80% text similarity, but was marked wrong when errors hit names, dates, IDs or phone numbers. Its conclusion: "Even the best models rarely exceed 95% business-level accuracy". Ten forms is a small sample, and the company doesn't publish per-field results.</p>
+  <h2>The 2025 study</h2>
+  <p>A <a href="https://arxiv.org/abs/2503.15195" target="_blank" rel="noopener">2025 benchmark by Crosilla, Klic and Colavizza</a> found general models "achieve excellent results in recognizing modern handwriting", mostly clean lines of European-language text. It also found that the models, the 2024 generation, "demonstrate limited ability to autonomously correct errors in zero-shot transcriptions". Clean modern lines are easier than degraded pages with ruled tables, which is how the two benchmarks can both be right.</p>
+  <h2>Reading it through a data lens</h2>
+  <p>Timber forms are mostly tables of numbers, which is the harder case in the 2026 results. The error type matters. A garbled field gets noticed. A 7 read as a 1 in a column of diameters, or a volume that fits the rows above, does not. For numbers, a plain similarity threshold is too lenient: one wrong digit in a five-digit number still scores 80%.</p>
+  <p>In our view, the useful checks sit outside the page. Columns should add to the written totals and stay within physical ranges. Better still, each form should agree with another record of the same load, such as its weighbridge weight.</p>
+  <p>The strongest objection is that timber forms are the easy case: labelled fields, digits only, a small vocabulary and known ranges. That may be right. Neither benchmark tested timber forms, so the only way to know is to key a sample of a business's own sheets by hand and compare field by field, scoring numbers exactly.</p>
+  <h2>When it doesn't apply</h2>
+  <p>Forms typed or filled in on screen sit in the printed range, where accuracy is far higher. In our judgement, tick boxes and single-digit boxes are easier than free handwriting or ruled tables.</p>
+  <p><a href="../operations-teams.html">Quarri for operations teams</a> is built for the people running the crews, the lines and the yard.</p>
+
+  <aside class="art-related"><h2>Related reading</h2><ul><li><a href="../insights/can-harvester-data-predict-productivity-what-the-studies-found.html">Can harvester data predict productivity? What the studies found</a></li><li><a href="../insights/what-is-data-integration-worth-to-a-manufacturer-what-studies-measured.html">What is data integration worth to a manufacturer? What studies measured</a></li><li><a href="../insights/how-do-you-keep-reports-trustworthy-when-the-underlying-data-changes.html">How do you keep reports trustworthy when the underlying data changes?</a></li></ul></aside>
+
+  <div class="art-sources">
+    <h2>Sources</h2>
+    <ol><li>Zhang, Zhao, Cui, Qu, Sun, Yang, Zhou, Liu and Han, "WildHandBench: A Benchmark for Handwritten Text Understanding that Challenges MLLMs and Humans", arXiv 2608.22959, 24 August 2026, read in full: <a href="https://arxiv.org/abs/2608.22959" target="_blank" rel="noopener">arxiv.org</a></li><li>Businessware Technologies, "Handwritten Form Recognition Benchmark: Accuracy, Cost, and Performance Comparison of Leading AI Models", January 2026: <a href="https://www.businesswaretech.com/blog/handwritten-form-recognition-benchmark-accuracy-cost-and-performance-comparison-of-leading-ai-models" target="_blank" rel="noopener">businesswaretech.com</a></li><li>Crosilla, Klic and Colavizza, "Benchmarking Large Language Models for Handwritten Text Recognition", arXiv 2503.15195, revised 23 June 2025 (abstract): <a href="https://arxiv.org/abs/2503.15195" target="_blank" rel="noopener">arxiv.org</a></li></ol>
+  </div>
+
+  <p class="art-about">Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.</p>
+
+  <aside class="author">
+    <img src="../assets/theo-leslie.webp" alt="Theo Leslie" width="76" height="76">
+    <div>
+      <div class="who">Theo Leslie</div>
+      <div class="role">CEO &amp; Co-founder, Quarri</div>
+      <p>Theo is ex-PwC and leads Quarri&rsquo;s AI implementations in forestry, sawmill and wood products businesses, including a publicly listed timberland company.</p>
+      <p class="disc">Researched and drafted with AI, reviewed and edited by Theo Leslie, CEO &amp; Co-founder of Quarri.</p>
+      <a class="li" href="https://www.linkedin.com/in/theo-leslie-quarri" target="_blank" rel="noopener">Theo on LinkedIn &rarr;</a>
+    </div>
+  </aside>
+
+
+</article>
+
+<section class="on-dark cta cta-forest" style="background-image:url('../images/opt/pexels-nc-farm-bureau-mark-12278574.webp')">
+  <div class="container">
+    <h2 class="display reveal">See it on <span class="coral">your own data.</span></h2>
+    <p class="lead reveal d1">Live in two weeks, on the systems you already run.</p>
+    <div class="hero-cta reveal d2"><a href="../book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="../index.html" class="footer-logo"><img src="../assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">The timber data platform.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="../index.html#platform">Modules</a></li>
+          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../security.html">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="../forest-management.html">Forest Management</a></li>
+          <li><a href="../sawmills.html">Sawmills</a></li>
+          <li><a href="../wood-products.html">Wood Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Inc.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+})();
+</script>
+<script src="../assets/consent.js?v=121" defer></script>
+<script src="../assets/blueprint.js?v=121" defer></script>
+</body>
+</html>

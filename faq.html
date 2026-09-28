@@ -31,8 +31,8 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=118">
-<link rel="stylesheet" href="components.css?v=118">
+<link rel="stylesheet" href="styles.css?v=121">
+<link rel="stylesheet" href="components.css?v=121">
 
 <script type="application/ld+json" id="quarri-schema">
 {
@@ -161,7 +161,8 @@
     customer or a prospect on a real call. The answers keep the parts that are awkward for us, because
     an answer that only holds when nothing goes wrong is not worth reading.</p>
     <p class="faq-meta reveal d3">By Theo Leslie &middot; Updated 31 July 2026</p>
-    <nav class="faq-jump reveal d3" aria-label="On this page"><a href="#getting-started">Getting started</a> <a href="#the-platform">The platform</a></nav>
+    <nav class="faq-jump reveal d3" aria-label="On this page"><a href="#getting-started">Getting started</a> <a href="#working-with-what-you-have">Working with what you have</a> <a href="#how-it-works">How it works</a> <a href="#support-and-people">Support and people</a></nav>
+    <div class="faq-ctrl"><button type="button" data-x="1">Expand all</button><button type="button" data-x="0">Collapse all</button></div>
   </div>
 </section>
 
@@ -169,11 +170,10 @@
     <div class="container">
       <div class="section-intro">
         <span class="label reveal">// Getting started</span>
-        <p class="lead reveal d1">Access, onboarding, what we need from you, and what happens when something breaks.</p>
       </div>
       <div class="faq-list">
-      <article class="faq-q reveal">
-        <h3 id="how-long-does-it-take-to-get-something-live">How long does it take to get something live?</h3>
+      <details class="faq-q" id="how-long-does-it-take-to-get-something-live">
+        <summary><h3>How long does it take to get something live?</h3></summary>
         <div class="faq-a">
   <p>Connecting a source and modelling it is usually a day or two. Getting it running cleanly on a messy database takes a few weeks. Those are two different problems and they're worth separating, because people quote the first number and then get surprised by the second.</p>
   <p>Connection is quick where the database sits on your own server and your own people administer it. It's slower where it belongs to a software vendor who has to expose it to us, and that clock isn't under our control, which is why we ask about data access before we ask about projects. Modelling on top of it - making the data usable, so a question in your own vocabulary returns the right answer rather than a plausible one - is fast once the data is reachable.</p>
@@ -181,28 +181,18 @@
   <p>A first build on top - a report, an extraction pipeline, a reconciliation - runs in parallel and can land inside the same window. Full coverage across every system you have takes considerably longer and depends almost entirely on how many systems there are.</p>
   <p>The honest caveat: when we've been late it has been because a vendor was slow to grant access, or because a field meant something nobody had written down. It has almost never been build time.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-do-you-need-from-us-to-start">What do you need from us to start?</h3>
+      </details>
+      <details class="faq-q" id="what-do-you-need-from-us-to-start">
+        <summary><h3>What do you need from us to start?</h3></summary>
         <div class="faq-a">
   <p>Four things. Read access to the systems that hold the data. Enough of someone's time to explain what the fields mean. Examples of the documents and reports you actually work with. And one named person on your side who can approve access and answer questions.</p>
   <p>The second one is the constraint, not the first. Getting credentials to a database is a morning's work. Learning that a particular grade abbreviation means rough-milled and green on sticks, or that a code in one system is the same thing as a differently-named code in another, takes a conversation with the person who has been doing the job for years. A mill general manager walked us through exactly this problem: every qualifying phrase his team says out loud ties back to one or more keys in the system, and none of that mapping was documented. Where there are a dozen values, an hour with a spreadsheet solves it. Where there are hundreds, the system learns them from the history already in the database.</p>
   <p>Send us the reports and queries you already run. If someone has built a good query over the years and exports it to a spreadsheet every week, that's the clearest possible statement of what matters to you, and it saves us guessing.</p>
   <p>What we don't need is for you to tidy anything up first. The mess is the thing we're being brought in for, and a cleaned-up sample tells us less than the real one.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="will-our-software-vendors-need-to-be-involved-and-could-that">Will our software vendors need to be involved, and could that cost us?</h3>
-        <div class="faq-a">
-  <p>Sometimes, and sometimes yes. This is the part of getting started that most often causes a delay, so it's worth being blunt about it.</p>
-  <p>Where a database sits on your own hardware and your own team administers it, no third party is involved at all. Some of the systems in this industry have no API and don't need one, because the data is already yours and already local. Those are the easiest connections we make.</p>
-  <p>Where the system is a vendor's cloud product, we need them to expose the data. The ask is narrow: give us access to the underlying tables. We do the integration work, so it costs the vendor a few hours at most and there's no joint project for them to staff. Some vendors do this without fuss. Others price data access as a product and quote an annual fee for it - one quoted a customer a four-figure sum per year, which we thought was steep for what was actually being asked. That charge is between you and your vendor; it isn't something we can absorb.</p>
-  <p>Two things usually help. First, ask for raw data access rather than an integration, because the integration is what they're pricing. Second, the honest framing is that this extends the life of their system rather than replacing it - a customer made that argument to their own vendor and it landed.</p>
-  <p>If a vendor simply won't expose the data, we'll tell you rather than build something fragile around them.</p>
-        </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-does-onboarding-actually-involve">What does onboarding actually involve?</h3>
+      </details>
+      <details class="faq-q" id="what-does-onboarding-actually-involve">
+        <summary><h3>What does onboarding actually involve?</h3></summary>
         <div class="faq-a">
   <p>Four stages, and the order matters more than the speed.</p>
   <p>We connect a data set your team already knows well. We pick it for familiarity rather than value or difficulty. People need a feel for what the right answer looks like, so they can tell immediately when something's off.</p>
@@ -211,9 +201,9 @@
   <p>Then we widen access, and run training for the people joining.</p>
   <p>A first build project runs alongside all of this rather than after it, because it's usually why you called. We'd rather do that incrementally than agree a rigid twelve-month roadmap up front. On every engagement so far the priority list changed once people had used the tool for a fortnight and could see what was possible, and a roadmap written before that point is a roadmap written blind.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="how-do-we-get-access-to-it-what-does-everyone-log-into">How do we get access to it - what does everyone log into?</h3>
+      </details>
+      <details class="faq-q" id="how-do-we-get-access-to-it-what-does-everyone-log-into">
+        <summary><h3>How do we get access to it - what does everyone log into?</h3></summary>
         <div class="faq-a">
   <p>It runs as a connector inside Claude, the AI assistant made by Anthropic. Your organisation's owner or admin adds the connector once. After that each person finds it in their connector list, clicks connect, and signs in with their own credentials. Credentials are issued either by us or by your own internal admin, so you can add and remove people without waiting on us.</p>
   <p>There's no new desktop application to roll out beyond Claude itself. Saved dashboards and reports can also be opened directly in a browser, which is how people who don't want to work through a chat interface tend to use it. And there's a Claude add-in for Excel, so anyone who lives in spreadsheets can pull live figures into a workbook without leaving it - which in practice is most of a finance team.</p>
@@ -221,9 +211,9 @@
   <p>Using it requires your organisation to have a Claude plan.</p>
   <p>The Claude subscription is bought separately. It isn't inside the Quarri fee, and we'd rather say so than have it turn up as a surprise line later.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="do-we-need-our-own-technical-people">Do we need our own technical people?</h3>
+      </details>
+      <details class="faq-q" id="do-we-need-our-own-technical-people">
+        <summary><h3>Do we need our own technical people?</h3></summary>
         <div class="faq-a">
   <p>No. It changes what onboarding looks like, but it isn't a requirement.</p>
   <p>We have customers with a full-time developer or data specialist, and customers with nobody technical at all. Where there's a technical person, we hand over more: some customers do their own data modelling because they want that level of control, and some write and maintain their own scripts inside the platform. Where there isn't one, we hold that work and you interact with the results.</p>
@@ -231,9 +221,9 @@
   <p>What you do need is one person who understands what the numbers mean and is willing to review output rather than accept it. That person doesn't have to be technical - on our strongest engagement they're an operations lead, not a developer. What matters is the combination of being open to the tool and being rigorous about checking it. Someone who wants it to fail will find that it does; someone who treats a wrong answer as something to diagnose and fix gets a system that works within weeks.</p>
   <p>If you have a technical person, expect them to be busier at the start and largely free of it later.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="can-you-train-our-people">Can you train our people?</h3>
+      </details>
+      <details class="faq-q" id="can-you-train-our-people">
+        <summary><h3>Can you train our people?</h3></summary>
         <div class="faq-a">
   <p>Yes, and it's included as scheduled sessions rather than something you have to ask for.</p>
   <p>Sessions run as webinars for business users. We usually wait a couple of months after kick-off before running the first one, so that people are looking at their own modelled data rather than a demo. The content is aimed at people who won't be building anything technical: here's what it can do, here's what other teams have automated with it, here's how to ask for something. Your technical people don't need that session - they get ongoing direct contact with us instead, which isn't rationed.</p>
@@ -241,29 +231,78 @@
   <p>One thing worth knowing, because a customer raised it as the thing that made the difference for their team: when someone corrects the system's understanding of a term, that correction can be pushed up into the shared layer rather than living in one person's chat history. So the organisation's understanding compounds rather than each person having to re-teach it.</p>
   <p>The real obstacle in training isn't the software. It's that many people tried an early model two years ago, got a poor result, and concluded these tools don't work.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="who-supports-it-once-it-is-running-and-what-happens-when-som">Who supports it once it is running, and what happens when something breaks?</h3>
+      </details>
+      </div>
+    </div>
+  </section>
+  <section class="bordered" id="working-with-what-you-have">
+    <div class="container">
+      <div class="section-intro">
+        <span class="label reveal">// Working with what you have</span>
+      </div>
+      <div class="faq-list">
+      <details class="faq-q" id="what-systems-does-it-connect-to">
+        <summary><h3>What systems does it connect to?</h3></summary>
         <div class="faq-a">
-  <p>You email us. There's no ticket portal and no support tier to navigate.</p>
-  <p>The split of responsibilities is clear and worth stating, because it determines who you chase. We own the connectors, the data modelling, schema changes, the ingestion infrastructure and keeping your environment separate from anyone else's. You own the things built on top: reports, dashboards, saved workflows, your own manual tables, all within the permissions your admin sets.</p>
-  <p>Schema changes are deliberately not user-editable. That's a design decision rather than a limitation - it means anyone in your team can build and save freely without the risk of breaking the foundations that everyone else's reports run on. If something you're building needs a structural change, you ask us and we make it.</p>
-  <p>Three things typically break. A connector stops pulling, or a field changes meaning upstream: ours, and usually invisible to you. A report returns a number that looks wrong: nearly always a definition problem rather than a data problem, and the fix is teaching the shared layer what the term means, which then holds for everyone. A document won't parse: it goes to an exception queue for a person rather than being silently guessed at.</p>
-  <p>Expect the volume of small fixes to be highest in the first weeks and to tail off. That pattern has held on every engagement.</p>
-  <p>In practice we respond within a few hours. Something genuinely complicated can take a day or two to resolve, and that's rare rather than routine.</p>
+  <p>Anything that will surface its data - and the list is wider than most people expect, because documents count as a system.</p>
+  <p>In timber engagements to date we have connected to lumber and wood-products ERPs, log inventory and scale-ticket systems, forestry management systems, accounting platforms, branch inventory and shipment feeds, credit and AR data, photo-based lift tagging, public weather and open harvest-volume data, and scanned documents by the hundred - regulator invoices, vendor payment PDFs, wood-sales contracts and handwritten field ledgers.</p>
+  <p>Three points worth knowing before you ask your vendors for access.</p>
+  <p>We prefer the foundational data over the aggregated version. An accounting system has usually already summarised away the detail that makes operational questions answerable, so where a choice exists we take the operational source and let the accounting system stay the accounting system.</p>
+  <p>Your vendor may charge for it. Some will quote for an API integration when all we need is read access to the underlying tables, which is a much smaller ask and much less work at their end. It is worth having that conversation before accepting a quote.</p>
+  <p>And connecting is not the same as integrating. We are not pushing data from one of your systems into another, and we are not touching the connections between them.</p>
+  <p>On where it sits: we host in the US or the EU, whichever your obligations require. If you need your data to stay in a particular region, say so at the start and it will.</p>
+  <p>On how long we keep it: for as long as you're using the platform. If you terminate, it's deleted. We don't retain a copy of your operating data after you've stopped being a customer, and there's no version of this where your data outlives the relationship.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-if-we-have-already-started-building-something-ourselves">What if we have already started building something ourselves?</h3>
+      </details>
+      <details class="faq-q" id="what-if-our-system-is-old-unusual-or-has-no-api">
+        <summary><h3>What if our system is old, unusual, or has no API?</h3></summary>
+        <div class="faq-a">
+  <p>That is the normal case in this industry, and it is usually workable.</p>
+  <p>One customer's core operational system is an on-premise SQL database with no API at all, from a vendor whose product they have been customising for well over a decade. That turned out to be easier than a modern cloud product, not harder, because the database sits on their own server and their own team can grant access directly. No API is not a blocker where we can reach the data underneath.</p>
+  <p>The genuinely awkward cases are different from what people expect. They are:</p>
+  <ul>
+    <li><strong>Cloud products whose vendor will not expose the tables.</strong> This is a commercial conversation, not a technical one, and it is one you have to have rather than us.</li>
+    <li><strong>Systems where the meaning changed partway through the history.</strong> Nineteen years of data where a units field started meaning something different in year eleven is harder than any connection problem.</li>
+    <li><strong>Data that only exists on paper.</strong> Which is a document problem, covered below.</li>
+  </ul>
+  <p>What we would not do is build something fragile against a system that cannot support it and let you find out later. Where a source will not give up its data cleanly we say so at the point we find out.</p>
+  <p>If you are mid-migration, that is not a reason to wait. One customer was replacing their accounting platform while we were working with them. We simply did not connect to the outgoing system and picked up the replacement when it landed.</p>
+  <p class="faq-more">More depth: <a href="insights/can-you-get-data-out-of-an-old-lumber-erp-with-no-api.html">Can you get data out of an old lumber ERP with no API?</a></p>
+        </div>
+      </details>
+      <details class="faq-q" id="will-our-software-vendors-need-to-be-involved-and-could-that">
+        <summary><h3>Will our software vendors need to be involved, and could that cost us?</h3></summary>
+        <div class="faq-a">
+  <p>Sometimes, and sometimes yes. This is the part of getting started that most often causes a delay, so it's worth being blunt about it.</p>
+  <p>Where a database sits on your own hardware and your own team administers it, no third party is involved at all. Some of the systems in this industry have no API and don't need one, because the data is already yours and already local. Those are the easiest connections we make.</p>
+  <p>Where the system is a vendor's cloud product, we need them to expose the data. The ask is narrow: give us access to the underlying tables. We do the integration work, so it costs the vendor a few hours at most and there's no joint project for them to staff. Some vendors do this without fuss. Others price data access as a product and quote an annual fee for it - one quoted a customer a four-figure sum per year, which we thought was steep for what was actually being asked. That charge is between you and your vendor; it isn't something we can absorb.</p>
+  <p>Two things usually help. First, ask for raw data access rather than an integration, because the integration is what they're pricing. Second, the honest framing is that this extends the life of their system rather than replacing it - a customer made that argument to their own vendor and it landed.</p>
+  <p>If a vendor simply won't expose the data, we'll tell you rather than build something fragile around them.</p>
+        </div>
+      </details>
+      <details class="faq-q" id="we-are-in-the-middle-of-an-erp-migration-should-we-wait">
+        <summary><h3>We are in the middle of an ERP migration. Should we wait?</h3></summary>
+        <div class="faq-a">
+  <p>No, and you don't have to sequence the two.</p>
+  <p>This runs alongside a migration rather than competing with it. We simply won't connect to the system you're retiring - we wait until you're on the new one and connect there. Nothing we do requires your migration team to change their plan, take on scope, or hit a joint deadline, because we're not rewiring the connections between your systems. We take a copy of your data and surface it. Your existing integrations stay exactly as they are.</p>
+  <p>There are two real considerations, and both were raised by finance leads rather than by us.</p>
+  <p>The first is duplication. A new ERP will cover some of what you'd otherwise ask us to build, and neither of us wants to pay for that twice. That's a conversation during implementation, not a reason to delay.</p>
+  <p>The second is capacity. One finance director told us plainly that the migration alone was consuming her team, and that thinking about anything else on top felt like a lot at once. That's fair, and we'd rather hear it than have someone agree to a schedule they can't meet.</p>
+  <p>The counter-argument came from her own colleagues on the same call: they could already name processes the new ERP wasn't going to handle well - detailed line-item calculations that would be awkward to build inside it - and those gaps are most visible during the implementation, not after it. Knowing what the new system won't do is one of the more useful things to come out of a migration.</p>
+  <p class="faq-more">More depth: <a href="insights/lumber-erp-alternatives-for-mid-size-distributors.html">Lumber ERP alternatives for mid-size distributors</a></p>
+        </div>
+      </details>
+      <details class="faq-q" id="what-if-we-have-already-started-building-something-ourselves">
+        <summary><h3>What if we have already started building something ourselves?</h3></summary>
         <div class="faq-a">
   <p>Keep going for now, and send us what you have. We have not yet seen a case where a customer's own attempt made the work harder.</p>
   <p>Several customers had already built something. One had two separate internal builds of the same document extractor, developed independently by two people who'd approached it from opposite directions and arrived at similar results. Another had characterised most of their document formats and covered the large majority of their volume before we were engaged. All of that went straight into the work. The format knowledge, the lookup tables and above all the written record of what had already failed are the expensive parts to acquire, and they don't have to be acquired twice.</p>
   <p>The question customers actually ask is whether to keep pushing or stop and wait. The rule we give is this: if what you're doing is saving someone time this week, keep doing it. If you can't see getting that invested time back within about a month, stop. Nobody should be spending evenings tuning something that's about to be rebuilt.</p>
   <p>Two honest caveats. We may build it differently, and if we decide to start fresh we'll tell you why rather than quietly discarding your work. And a prototype running on one person's laptop is not the same thing as a system - what usually needs building is not the extraction but everything around it: surviving a schema change, handling the long tail, proving coverage rather than assuming it, and still running when the person who built it is on leave.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-happens-to-our-existing-reports-and-spreadsheets">What happens to our existing reports and spreadsheets?</h3>
+      </details>
+      <details class="faq-q" id="what-happens-to-our-existing-reports-and-spreadsheets">
+        <summary><h3>What happens to our existing reports and spreadsheets?</h3></summary>
         <div class="faq-a">
   <p>They keep working, and we'd rather rebuild the ones that earn it than all of them.</p>
   <p>If your team has SQL queries or stored procedures that produce the reports people rely on, send them. Those can be loaded in as saved reports and run by asking for them by name, on a schedule if you want, with the output landing as a spreadsheet on someone's desktop. You can also do that yourself afterwards: describe the report you want, save it, set it to run every Monday morning.</p>
@@ -272,30 +311,41 @@
   <p>The spreadsheets that are genuinely hard to replace are the ones carrying logic that has never been written down - where the rules sit in one person's judgement. Those need a conversation, not a migration.</p>
   <p>And if you stop working with us, the work goes with you. Your data and anything your team built are yours. For the reports, models and workflows we built for you, you keep a perpetual licence to use them in your business. We export your data in a standard format and help you move it across. What stays ours is Quarri itself, the engine that runs them.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="we-are-in-the-middle-of-an-erp-migration-should-we-wait">We are in the middle of an ERP migration. Should we wait?</h3>
+      </details>
+      <details class="faq-q" id="does-it-change-our-data-or-only-read-it">
+        <summary><h3>Does it change our data, or only read it?</h3></summary>
         <div class="faq-a">
-  <p>No, and you don't have to sequence the two.</p>
-  <p>This runs alongside a migration rather than competing with it. We simply won't connect to the system you're retiring - we wait until you're on the new one and connect there. Nothing we do requires your migration team to change their plan, take on scope, or hit a joint deadline, because we're not rewiring the connections between your systems. We take a copy of your data and surface it. Your existing integrations stay exactly as they are.</p>
-  <p>There are two real considerations, and both were raised by finance leads rather than by us.</p>
-  <p>The first is duplication. A new ERP will cover some of what you'd otherwise ask us to build, and neither of us wants to pay for that twice. That's a conversation during implementation, not a reason to delay.</p>
-  <p>The second is capacity. One finance director told us plainly that the migration alone was consuming her team, and that thinking about anything else on top felt like a lot at once. That's fair, and we'd rather hear it than have someone agree to a schedule they can't meet.</p>
-  <p>The counter-argument came from her own colleagues on the same call: they could already name processes the new ERP wasn't going to handle well - detailed line-item calculations that would be awkward to build inside it - and those gaps are most visible during the implementation, not after it. Knowing what the new system won't do is one of the more useful things to come out of a migration.</p>
+  <p>Read from your systems. Write into ours.</p>
+  <p>A mill general manager asked us this directly - whether it only pulls, or can also change and add data. The answer has two halves.</p>
+  <p>Quarri is read-write, and the writing happens in Quarri's own database. New tables, corrected mappings, reconciliation results, manual entries, decisions recorded by a user - all of that persists and flows through to whatever reads it next. On one engagement a rep reassignment made in the platform carries straight into the next set of actions generated for that account.</p>
+  <p>Writing back into a source system is a separate question and depends entirely on that system. Some expose a safe write path. Many mill and forestry systems do not, and where that is true we say so rather than forcing it.</p>
+  <p>There is a judgement underneath this that we will raise with you even though it costs us scope. If your inventory system cannot deduct a consumed item and we build that deduction in Quarri instead, your inventory of record is now split across two platforms. Sometimes that is the right call. Often it is better to push the vendor to add the feature and use Quarri for the things they are never going to build. We would rather have that conversation than quietly become a shadow system of record.</p>
+  <p>Write-back into accounting platforms is coming soon. It isn't shipped yet, so treat it as a roadmap item rather than something you can plan around today.</p>
         </div>
-      </article>
+      </details>
+      <details class="faq-q" id="can-it-work-with-scanned-or-handwritten-documents">
+        <summary><h3>Can it work with scanned or handwritten documents?</h3></summary>
+        <div class="faq-a">
+  <p>Yes, and this is one of the areas where the results surprise people. It is also where we are most careful about what we promise.</p>
+  <p>Handwritten and scanned material is routine work. On one engagement handwritten field ledgers, scanned regulator invoices and vendor payment PDFs all feed the same reconciliation. On another, a batch of 140+ wood-sales documents was ingested in full, every scanned one recovered, with +1,700 individual line items parsed and the counterparty identified on all but one document. The extraction is replayable, so the same document produces the same result and the result can be audited later.</p>
+  <p>Where it gets hard is real-world document quality: third and fourth carbon copies, faded thermal prints, watermarks printed over the numbers, handwriting that varies by whoever was holding the pen, and multiple documents on a single scanned page.</p>
+  <p>Two honest limits.</p>
+  <p>If a human being cannot read it, nothing can. There will be a small residue of documents that go to a person no matter what, and any vendor telling you otherwise has not looked at your worst tickets. One prospect had already pushed their own in-house extraction from roughly 30% to roughly 80% and could see the same ceiling coming.</p>
+  <p>And accuracy depends on the document type. A printed tax bill is close to solved. A fourth-copy handwritten haulage ticket is the hardest thing we have seen in this industry, and we will not quote a single accuracy number that covers both.</p>
+  <p class="faq-more">More depth: <a href="insights/can-ai-read-handwritten-trip-tickets-and-scale-slips.html">Can AI read handwritten trip tickets and scale slips?</a>; <a href="insights/why-isnt-a-scanned-document-the-same-as-having-the-data.html">Why isn&#x27;t a scanned document the same as having the data?</a></p>
+        </div>
+      </details>
       </div>
     </div>
   </section>
-  <section class="bordered" id="the-platform">
+  <section class="bordered bg-white" id="how-it-works">
     <div class="container">
       <div class="section-intro">
-        <span class="label reveal">// The platform</span>
-        <p class="lead reveal d1">What Quarri is, what it connects to, how answers are grounded, and what it does not do.</p>
+        <span class="label reveal">// How it works</span>
       </div>
       <div class="faq-list">
-      <article class="faq-q reveal">
-        <h3 id="what-does-quarri-actually-do">What does Quarri actually do?</h3>
+      <details class="faq-q" id="what-does-quarri-actually-do">
+        <summary><h3>What does Quarri actually do?</h3></summary>
         <div class="faq-a">
   <p>It takes a copy of the data your systems already hold, models it so the pieces join up, and puts a layer on top that answers questions in plain language and runs the repetitive work.</p>
   <p>Three parts, in that order.</p>
@@ -304,9 +354,9 @@
   <p><strong>The layer on top.</strong> Once the numbers agree, you can ask questions of them in plain English, build reports and dashboards, and hand over the jobs that currently eat a person's week - reconciliations, roll-forwards, month-end packs, document entry.</p>
   <p>The connecting is the product. The natural-language part is what makes it usable by people who are not analysts.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-does-it-actually-look-like-to-use">What does it actually look like to use?</h3>
+      </details>
+      <details class="faq-q" id="what-does-it-actually-look-like-to-use">
+        <summary><h3>What does it actually look like to use?</h3></summary>
         <div class="faq-a">
   <p>For most people, it looks like a chat window.</p>
   <p>You interact with Quarri through an LLM - Claude, in our case. You ask a question in ordinary language, Quarri retrieves and calculates the answer, and it comes back with the query it ran. There is no separate application to learn for the common case, which matters when the people who most need the answers are production planners and buyers rather than analysts.</p>
@@ -319,66 +369,29 @@
   </ul>
   <p>The honest caveat on the first few weeks: while data is still being brought in and modelled, answers can be wrong or incomplete. We ask customers to keep the initial user group small for that reason, and open it up once the answers are clean. Someone who asks a question mid-setup, gets a bad answer and concludes it does not work is a problem we have created ourselves.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-systems-does-it-connect-to">What systems does it connect to?</h3>
-        <div class="faq-a">
-  <p>Anything that will surface its data - and the list is wider than most people expect, because documents count as a system.</p>
-  <p>In timber engagements to date we have connected to lumber and wood-products ERPs, log inventory and scale-ticket systems, forestry management systems, accounting platforms, branch inventory and shipment feeds, credit and AR data, photo-based lift tagging, public weather and open harvest-volume data, and scanned documents by the hundred - regulator invoices, vendor payment PDFs, wood-sales contracts and handwritten field ledgers.</p>
-  <p>Three points worth knowing before you ask your vendors for access.</p>
-  <p>We prefer the foundational data over the aggregated version. An accounting system has usually already summarised away the detail that makes operational questions answerable, so where a choice exists we take the operational source and let the accounting system stay the accounting system.</p>
-  <p>Your vendor may charge for it. Some will quote for an API integration when all we need is read access to the underlying tables, which is a much smaller ask and much less work at their end. It is worth having that conversation before accepting a quote.</p>
-  <p>And connecting is not the same as integrating. We are not pushing data from one of your systems into another, and we are not touching the connections between them.</p>
-  <p>On where it sits: we host in the US or the EU, whichever your obligations require. If you need your data to stay in a particular region, say so at the start and it will.</p>
-  <p>On how long we keep it: for as long as you're using the platform. If you terminate, it's deleted. We don't retain a copy of your operating data after you've stopped being a customer, and there's no version of this where your data outlives the relationship.</p>
-        </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-if-our-system-is-old-unusual-or-has-no-api">What if our system is old, unusual, or has no API?</h3>
-        <div class="faq-a">
-  <p>That is the normal case in this industry, and it is usually workable.</p>
-  <p>One customer's core operational system is an on-premise SQL database with no API at all, from a vendor whose product they have been customising for well over a decade. That turned out to be easier than a modern cloud product, not harder, because the database sits on their own server and their own team can grant access directly. No API is not a blocker where we can reach the data underneath.</p>
-  <p>The genuinely awkward cases are different from what people expect. They are:</p>
-  <ul>
-    <li><strong>Cloud products whose vendor will not expose the tables.</strong> This is a commercial conversation, not a technical one, and it is one you have to have rather than us.</li>
-    <li><strong>Systems where the meaning changed partway through the history.</strong> Nineteen years of data where a units field started meaning something different in year eleven is harder than any connection problem.</li>
-    <li><strong>Data that only exists on paper.</strong> Which is a document problem, covered below.</li>
-  </ul>
-  <p>What we would not do is build something fragile against a system that cannot support it and let you find out later. Where a source will not give up its data cleanly we say so at the point we find out.</p>
-  <p>If you are mid-migration, that is not a reason to wait. One customer was replacing their accounting platform while we were working with them. We simply did not connect to the outgoing system and picked up the replacement when it landed.</p>
-        </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="does-it-change-our-data-or-only-read-it">Does it change our data, or only read it?</h3>
-        <div class="faq-a">
-  <p>Read from your systems. Write into ours.</p>
-  <p>A mill general manager asked us this directly - whether it only pulls, or can also change and add data. The answer has two halves.</p>
-  <p>Quarri is read-write, and the writing happens in Quarri's own database. New tables, corrected mappings, reconciliation results, manual entries, decisions recorded by a user - all of that persists and flows through to whatever reads it next. On one engagement a rep reassignment made in the platform carries straight into the next set of actions generated for that account.</p>
-  <p>Writing back into a source system is a separate question and depends entirely on that system. Some expose a safe write path. Many mill and forestry systems do not, and where that is true we say so rather than forcing it.</p>
-  <p>There is a judgement underneath this that we will raise with you even though it costs us scope. If your inventory system cannot deduct a consumed item and we build that deduction in Quarri instead, your inventory of record is now split across two platforms. Sometimes that is the right call. Often it is better to push the vendor to add the feature and use Quarri for the things they are never going to build. We would rather have that conversation than quietly become a shadow system of record.</p>
-  <p>Write-back into accounting platforms is coming soon. It isn't shipped yet, so treat it as a roadmap item rather than something you can plan around today.</p>
-        </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="does-it-hallucinate-how-do-we-know-an-answer-is-right">Does it hallucinate? How do we know an answer is right?</h3>
+      </details>
+      <details class="faq-q" id="does-it-hallucinate-how-do-we-know-an-answer-is-right">
+        <summary><h3>Does it hallucinate? How do we know an answer is right?</h3></summary>
         <div class="faq-a">
   <p>This is the most-asked question on technical calls. A customer's data specialist put it plainly: if I ask the same question five times, will the answers drift, or is it strictly grounded in our database?</p>
   <p>The retrieval is deterministic. When you ask a question, Quarri writes and runs a query against your data and returns what came back. Same question, same data, same answer, and you can see the query. That part does not invent anything.</p>
   <p>The LLM sits on top of it, and that is where the real risk lives. It is subtler than invention. The failure we actually see is semantic: the model misunderstands what a word means in your business. One customer had two systems in one database where the same species term meant different things on the forestry side and the mill side, and early answers got confused between them. The fix is not a better model. It is recording the correction once, at the platform level, so it applies for everybody rather than living in one person's chat history.</p>
   <p>The other risk has nothing to do with AI. A customer described getting the right answer for the wrong reason - two figures transposed in a scan, and the arithmetic happening to reconcile anyway. That is why we build coverage and conservation checks rather than sampling outputs and hoping. On one build, over 500 assertions run against the numbers on every edit, with zero arithmetic failures across two full reconciliation ties. On another, every one of 8,000+ eligible rows was proven to be accounted for, with no duplication and no gaps.</p>
+  <p class="faq-more">More depth: <a href="insights/can-ai-be-trusted-with-timber-numbers.html">Can AI be trusted with timber numbers?</a></p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="how-does-it-know-what-our-product-codes-and-grades-mean">How does it know what our product codes and grades mean?</h3>
+      </details>
+      <details class="faq-q" id="how-does-it-know-what-our-product-codes-and-grades-mean">
+        <summary><h3>How does it know what our product codes and grades mean?</h3></summary>
         <div class="faq-a">
   <p>It does not, until someone tells it. That is the main piece of work at the start, and it is yours as much as ours.</p>
   <p>A mill GM described the problem better than we could: if someone orders four-quarter red pine, light stain, grade three and better, something has to know what that means before it can answer a question about it. The abbreviations, the grade shorthand, the two-letter state codes, which product code implies which species - that knowledge is real, it is consistent, and in most timber businesses it has never been written down. It lives in the heads of people who have been doing the job for twenty years.</p>
   <p>Getting it out is usually less work than people fear. When we ask how many distinct values there are for a field like milling state or location, the answer is normally a dozen, not thousands. A dozen can be documented in an afternoon. And where the mapping is implicit in your own history - thousands of orders already keyed correctly - the modelling can learn a great deal from the pattern rather than from a document.</p>
   <p>Two things follow from this. The first is that the constraint on a fast start is access to someone who knows the business, not access to the systems. The second is that this knowledge is worth more than the extraction technology it enables. Knowing that a given species only ever goes to one destination, hauled by one contractor, turns reading a smudged document from an open guessing problem into picking from a short list of legal combinations.</p>
+  <p class="faq-more">More depth: <a href="insights/what-is-a-semantic-layer-and-why-does-ai-need-one.html">What is a semantic layer, and why does AI need one?</a></p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-happens-with-our-edge-cases-and-exceptions">What happens with our edge cases and exceptions?</h3>
+      </details>
+      <details class="faq-q" id="what-happens-with-our-edge-cases-and-exceptions">
+        <summary><h3>What happens with our edge cases and exceptions?</h3></summary>
         <div class="faq-a">
   <p>Expect more of them than you think, and expect them to be handled by counting rather than hiding.</p>
   <p>A prospect's data specialist asked us this head-on: they had counted 25 to 30 distinct edge-case formats across around 80 vendors on a single document type. That is a normal number in this industry, not a bad one, and any answer that implies the tail will be handled invisibly is wrong.</p>
@@ -386,20 +399,9 @@
   <p>What we avoid is silent auto-correction. We have watched extraction spot an error and fix it, and the fix be wrong. Worse, a customer made the point that matters most here: if the person who created the error never learns they made one, the correction has hidden a problem rather than solved it. Where the source of an error is a human process you can improve, telling someone beats quietly patching it.</p>
   <p>The other honest part is that the answer sometimes lies upstream. If one site's documents are unreadable every single time, a change to how they are captured or scanned will beat any amount of work on the reading. Quarri is good at showing you which site that is.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="can-it-work-with-scanned-or-handwritten-documents">Can it work with scanned or handwritten documents?</h3>
-        <div class="faq-a">
-  <p>Yes, and this is one of the areas where the results surprise people. It is also where we are most careful about what we promise.</p>
-  <p>Handwritten and scanned material is routine work. On one engagement handwritten field ledgers, scanned regulator invoices and vendor payment PDFs all feed the same reconciliation. On another, a batch of 140+ wood-sales documents was ingested in full, every scanned one recovered, with +1,700 individual line items parsed and the counterparty identified on all but one document. The extraction is replayable, so the same document produces the same result and the result can be audited later.</p>
-  <p>Where it gets hard is real-world document quality: third and fourth carbon copies, faded thermal prints, watermarks printed over the numbers, handwriting that varies by whoever was holding the pen, and multiple documents on a single scanned page.</p>
-  <p>Two honest limits.</p>
-  <p>If a human being cannot read it, nothing can. There will be a small residue of documents that go to a person no matter what, and any vendor telling you otherwise has not looked at your worst tickets. One prospect had already pushed their own in-house extraction from roughly 30% to roughly 80% and could see the same ceiling coming.</p>
-  <p>And accuracy depends on the document type. A printed tax bill is close to solved. A fourth-copy handwritten haulage ticket is the hardest thing we have seen in this industry, and we will not quote a single accuracy number that covers both.</p>
-        </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="what-does-quarri-not-do">What does Quarri not do?</h3>
+      </details>
+      <details class="faq-q" id="what-does-quarri-not-do">
+        <summary><h3>What does Quarri not do?</h3></summary>
         <div class="faq-a">
   <p>A short list, because the things we are not is usually more useful than the things we are.</p>
   <p><strong>It is not your system of record.</strong> Your ERP, your mill system and your inventory system stay where they are and stay authoritative. Quarri sits above them.</p>
@@ -410,9 +412,29 @@
   <p><strong>It will not reach 100% on documents.</strong> See the question above.</p>
   <p>And one limitation that is about us rather than the product: we can measure a before state far better than an after state. We can tell you your on-time PO rate to the decimal across every closed order. On most engagements we cannot yet show you the improvement a year later, because the engagements are not old enough.</p>
         </div>
-      </article>
-      <article class="faq-q reveal">
-        <h3 id="is-this-going-to-replace-people-s-jobs">Is this going to replace people's jobs?</h3>
+      </details>
+      </div>
+    </div>
+  </section>
+  <section class="bordered" id="support-and-people">
+    <div class="container">
+      <div class="section-intro">
+        <span class="label reveal">// Support and people</span>
+      </div>
+      <div class="faq-list">
+      <details class="faq-q" id="who-supports-it-once-it-is-running-and-what-happens-when-som">
+        <summary><h3>Who supports it once it is running, and what happens when something breaks?</h3></summary>
+        <div class="faq-a">
+  <p>You email us. There's no ticket portal and no support tier to navigate.</p>
+  <p>The split of responsibilities is clear and worth stating, because it determines who you chase. We own the connectors, the data modelling, schema changes, the ingestion infrastructure and keeping your environment separate from anyone else's. You own the things built on top: reports, dashboards, saved workflows, your own manual tables, all within the permissions your admin sets.</p>
+  <p>Schema changes are deliberately not user-editable. That's a design decision rather than a limitation - it means anyone in your team can build and save freely without the risk of breaking the foundations that everyone else's reports run on. If something you're building needs a structural change, you ask us and we make it.</p>
+  <p>Three things typically break. A connector stops pulling, or a field changes meaning upstream: ours, and usually invisible to you. A report returns a number that looks wrong: nearly always a definition problem rather than a data problem, and the fix is teaching the shared layer what the term means, which then holds for everyone. A document won't parse: it goes to an exception queue for a person rather than being silently guessed at.</p>
+  <p>Expect the volume of small fixes to be highest in the first weeks and to tail off. That pattern has held on every engagement.</p>
+  <p>In practice we respond within a few hours. Something genuinely complicated can take a day or two to resolve, and that's rare rather than routine.</p>
+        </div>
+      </details>
+      <details class="faq-q" id="is-this-going-to-replace-people-s-jobs">
+        <summary><h3>Is this going to replace people's jobs?</h3></summary>
         <div class="faq-a">
   <p>Some tasks, yes. That is the point of it, and pretending otherwise would insult the people asking.</p>
   <p>This question comes up on nearly every engagement, and usually from the people who handle the documents rather than the people who bought the software. One customer described exactly that moment - explaining the project to the team who key the tickets, and reading their body language.</p>
@@ -422,7 +444,7 @@
   <p>The reframing a customer offered is the one we have found most useful, and it was theirs, not ours: the job changes from data entry to data verification. That is not a euphemism. Reviewing exceptions needs someone who knows what a plausible weight for that species on that route looks like, which is exactly the knowledge the person doing the keying already has and never gets to use.</p>
   <p>What we cannot tell you is what happens to that time at your company, because that is your decision and not ours. And we have not measured redeployment properly on any engagement. That is a real gap in what we can show you.</p>
         </div>
-      </article>
+      </details>
       </div>
     </div>
   </section>
@@ -438,6 +460,7 @@
   </div>
 </section>
 </main>
+<script>(function(){function openHash(){var h=location.hash.slice(1);if(!h)return;var d=document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;d.scrollIntoView();}}openHash();window.addEventListener('hashchange',openHash);document.querySelectorAll('.faq-ctrl button').forEach(function(b){b.addEventListener('click',function(){var o=b.dataset.x==='1';document.querySelectorAll('details.faq-q').forEach(function(d){d.open=o;});});});})();</script>
 
 <footer>
   <div class="container">
@@ -532,6 +555,6 @@
   }
 })();
 </script>
-<script src="assets/consent.js?v=118" defer></script>
+<script src="assets/consent.js?v=121" defer></script>
 </body>
 </html>

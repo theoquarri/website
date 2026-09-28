@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-bp-page="article">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f3">
+
+<title>What can LiDAR data tell a forest manager, and what can&#x27;t it? | Quarri</title>
+<meta name="description" content="LiDAR measures height and canopy well, models diameter and volume less well, and can miss trees. Check it against the scale record, not the map.">
+<link rel="canonical" href="https://quarri.ai/insights/what-can-lidar-data-tell-a-forest-manager-and-what-cant-it.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="What can LiDAR data tell a forest manager, and what can&#x27;t it? | Quarri">
+<meta property="og:description" content="LiDAR measures height and canopy well, models diameter and volume less well, and can miss trees. Check it against the scale record, not the map.">
+<meta property="og:url" content="https://quarri.ai/insights/what-can-lidar-data-tell-a-forest-manager-and-what-cant-it.html">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What can LiDAR data tell a forest manager, and what can&#x27;t it? | Quarri">
+<meta name="twitter:description" content="LiDAR measures height and canopy well, models diameter and volume less well, and can miss trees. Check it against the scale record, not the map.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+
+<link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="../styles.css?v=121">
+<link rel="stylesheet" href="../components.css?v=121">
+<meta name="quarri-corpus" content="article">
+<meta name="quarri-section" content="Maps and GIS">
+<meta name="quarri-section-url" content="https://quarri.ai/insights/maps-and-gis.html">
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "alternateName": "Quarri AI",
+      "disambiguatingDescription": "Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is the timber data platform. AI-native, it connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "The timber data platform.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://quarri.ai/insights/what-can-lidar-data-tell-a-forest-manager-and-what-cant-it.html#webpage",
+      "url": "https://quarri.ai/insights/what-can-lidar-data-tell-a-forest-manager-and-what-cant-it.html",
+      "headline": "What can LiDAR data tell a forest manager, and what can't it?",
+      "description": "LiDAR measures height and canopy well, models diameter and volume less well, and can miss trees. Check it against the scale record, not the map.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "author": {
+        "@id": "https://quarri.ai/#theo-leslie"
+      },
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "articleSection": "Insights",
+      "about": {
+        "@id": "https://quarri.ai/#software"
+      },
+      "image": "https://quarri.ai/assets/og-image.jpg",
+      "breadcrumb": {
+        "@id": "https://quarri.ai/insights/what-can-lidar-data-tell-a-forest-manager-and-what-cant-it.html#breadcrumb"
+      },
+      "datePublished": "2026-09-28"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://quarri.ai/#theo-leslie",
+      "name": "Theo Leslie",
+      "url": "https://quarri.ai/",
+      "worksFor": {
+        "@id": "https://quarri.ai/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://quarri.ai/insights/what-can-lidar-data-tell-a-forest-manager-and-what-cant-it.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quarri.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://quarri.ai/insights.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Maps and GIS",
+          "item": "https://quarri.ai/insights/maps-and-gis.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "What can LiDAR data tell a forest manager, and what can't it?"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="../assets/quarri-logo.png" alt="" width="26" height="26" decoding="async"><span>Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="../index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="../index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a href="../forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="../sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="../wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="../pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="../finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="../operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
+      <a href="../how-it-works.html">How it works</a>
+      <a href="../security.html">Security</a>
+      <a href="../pricing.html">Pricing</a>
+      <div class="nav-group">
+        <a href="../case-studies.html" tabindex="0">Resources</a>
+        <div class="nav-pop nav-pop-sm">
+          <a href="../case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
+          <a href="../insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a href="../faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        </div>
+      </div>
+      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
+      <a href="../book-a-demo.html" class="btn btn-primary">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<div class="art-hero art-hero-plain">
+  <div class="in">
+    <span class="meta">Maps and GIS &middot; 28 Sep 2026</span>
+    <h1>What can LiDAR data tell a forest manager, and what can&#x27;t it?</h1>
+    <p class="byline">Theo Leslie &middot; 4 min read</p>
+  </div>
+</div>
+
+<article class="article">
+  <a class="art-back" href="maps-and-gis.html">&larr; Maps and GIS</a>
+
+  <p class="standfirst">LiDAR measures the shape of the forest: tree and canopy height, canopy cover and gaps, and the ground surface under the trees, across every hectare. It does not measure diameter, volume, species or grade. Those come from models fitted to field plots, and they are only as good as the plots and the model. LiDAR can also miss trees, and published work finds the small ones under the canopy hardest to detect. The useful question for any LiDAR figure is whether it was measured, modelled or not seen at all.</p>
+  <h2>What the usual answer says</h2>
+  <p>Descriptions of LiDAR in forestry list what it provides: accurate, wall-to-wall height, canopy cover, terrain, stem counts and timber volume, often presented as a replacement for much of the cruise. Each item on that list is available. <a href="https://www.americanforestmanagement.com/news/what-lidar-can-and-cannot-tell-us-about-your-forest" target="_blank" rel="noopener">One forestry consultancy's explanation</a> goes further. It calls LiDAR outputs "estimations", which it says are "very accurate when calibrated with field measurements and data". What the pages don't show is how those estimates compare with the trees that were cut and the logs that were scaled.</p>
+  <figure class="art-fig">
+  <svg viewBox="0 0 720 340" role="img" aria-label="Three columns of LiDAR outputs: measured (height, canopy and terrain), modelled (diameter, volume, stem count) and not seen (branch size in routine data, grade and defect), with the published error or coverage beside each">
+    <g font-family="Archivo, sans-serif">
+      <text x="10" y="26" font-size="16" font-weight="600" fill="#111111">Measured</text>
+      <text x="10" y="44" font-size="13" fill="#888888">directly from the scan</text>
+      <rect x="10" y="58" width="226" height="78" rx="0" fill="#f7f6f3" stroke="#e5e4e0"/>
+      <text x="26" y="83" font-size="16" font-weight="600" fill="#111111">Tree height</text>
+      <text x="26" y="105" font-size="13" fill="#555555">lower error and bias</text>
+      <text x="26" y="123" font-size="13" fill="#555555">than field heights</text>
+      <rect x="10" y="146" width="226" height="78" rx="0" fill="#f7f6f3" stroke="#e5e4e0"/>
+      <text x="26" y="171" font-size="16" font-weight="600" fill="#111111">Canopy and terrain</text>
+      <text x="26" y="193" font-size="13" fill="#555555">cover, gaps, ground</text>
+      <text x="26" y="211" font-size="13" fill="#555555">surface under the trees</text>
+      <text x="247" y="26" font-size="16" font-weight="600" fill="#da7756">Modelled</text>
+      <text x="247" y="44" font-size="13" fill="#888888">from field plots</text>
+      <rect x="247" y="58" width="226" height="78" rx="0" fill="#ffffff" stroke="#da7756"/>
+      <text x="263" y="83" font-size="16" font-weight="600" fill="#111111">Diameter</text>
+      <text x="263" y="105" font-size="13" fill="#555555">error about 8.3 to 8.5 cm</text>
+      <text x="263" y="123" font-size="13" fill="#555555">in one stand</text>
+      <rect x="247" y="146" width="226" height="78" rx="0" fill="#ffffff" stroke="#da7756"/>
+      <text x="263" y="171" font-size="16" font-weight="600" fill="#111111">Volume</text>
+      <text x="263" y="193" font-size="13" fill="#555555">71% to 99% of mill-scaled</text>
+      <text x="263" y="211" font-size="13" fill="#555555">volume, in one stand</text>
+      <rect x="247" y="234" width="226" height="78" rx="0" fill="#ffffff" stroke="#da7756"/>
+      <text x="263" y="259" font-size="16" font-weight="600" fill="#111111">Stem count</text>
+      <text x="263" y="281" font-size="13" fill="#555555">trees underdetected,</text>
+      <text x="263" y="299" font-size="13" fill="#555555">small ones hardest</text>
+      <text x="484" y="26" font-size="16" font-weight="600" fill="#111111">Not seen</text>
+      <text x="484" y="44" font-size="13" fill="#888888">in routine airborne data</text>
+      <rect x="484" y="58" width="226" height="78" rx="0" fill="#f7f6f3" stroke="#e5e4e0"/>
+      <text x="500" y="83" font-size="16" font-weight="600" fill="#111111">Branch size</text>
+      <text x="500" y="105" font-size="13" fill="#555555">only from dense</text>
+      <text x="500" y="123" font-size="13" fill="#555555">drone scans, in research</text>
+      <rect x="484" y="146" width="226" height="78" rx="0" fill="#f7f6f3" stroke="#e5e4e0"/>
+      <text x="500" y="171" font-size="16" font-weight="600" fill="#111111">Grade and defect</text>
+      <text x="500" y="193" font-size="13" fill="#555555">still field and mill</text>
+      <text x="500" y="211" font-size="13" fill="#555555">observations</text>
+    </g>
+  </svg>
+  <figcaption>LiDAR measures the shape of the forest. Diameter, volume and stem count are modelled, and are the layers to check against the scale record. Figures from the published studies cited in the text. Diagram: Quarri.</figcaption>
+</figure>
+  <h2>Measured, modelled, not seen</h2>
+  <p>A 2024 study did the rare thing of following LiDAR inventories through to the felled trees and the mill. Aaron Sparks and colleagues, publishing <a href="https://academic.oup.com/forestscience/article/70/3/228/7637489" target="_blank" rel="noopener">in Forest Science</a>, compared field cruising and three LiDAR methods in a 1.1 hectare stand against measurements of every felled tree and the log scale. LiDAR heights were as good as field heights, with lower error: "ALS measured heights had lower root mean square error (RMSE) and bias". Diameter, modelled from height, had an error of about 8.3 to 8.5 centimetres. The LiDAR methods "underdetected trees", and accounted for 78% to 91% of the field reference harvested merchantable volume and 71% to 99% of the merchantable volume scaled at the mill.</p>
+  <p>The authors add a caution: "the results also illustrate challenges of using mill-scaled volume estimates as validation data". The scale is the best record of what came off the stand, and it is still a record with its own rules.</p>
+  <p>Missed trees are not random. A <a href="https://arxiv.org/html/2511.00653v1" target="_blank" rel="noopener">2025 benchmark of tree segmentation</a> notes that early methods were designed for airborne data "where understory trees are often not visible", and that "accurately detecting small understory trees remains a persistent challenge". A LiDAR stem count describes the upper canopy better than the stand, and any figure built on it, such as average tree size, carries that tilt.</p>
+  <h2>A total can be right by accident</h2>
+  <p>The second finding matters more for anyone reporting LiDAR volume to owners. Janne Räty and colleagues <a href="https://doi.org/10.1139/cjfr-2022-0053" target="_blank" rel="noopener">built large-area forest maps</a> from LiDAR and models trained on harvester measurements over an 8.7 million hectare study area, published in a forestry journal in 2023. Because "harvesters operate in mature forests", the training data were not a random sample of the forest. The bias in stem count was 39%. The bias in volume was 1%, and the authors explain why: "The latter was due to an overestimation of deciduous and an underestimation of spruce forests that by chance balanced".</p>
+  <p>A volume total within 1% would pass most checks. By forest type it was wrong in both directions, and a business that sells by species or product would have felt it. The authors' remedy is standard practice in LiDAR inventory: "a probability sample of reference observations may be required to ensure the unbiasedness of estimators". LiDAR volume calibrated on properly sampled plots is a different product from volume fitted to whatever data was to hand.</p>
+  <h2>What LiDAR can see with more effort</h2>
+  <p>Quality is the frontier. Nicolas Cattaneo and colleagues, <a href="https://www.sciopen.com/article/10.1016/j.fecs.2024.100184?issn=2095-6355" target="_blank" rel="noopener">in Forest Ecosystems in 2024</a>, predicted the diameter of the largest branch per log and stem diameter at several heights from dense drone laser scans of individual trees. They describe it as "an important step towards improved forest inventories". It depends on survey-grade drone scans and individual tree segmentation, a far denser dataset than the airborne LiDAR most estates have. For most operations today, grade and defect remain field and mill observations.</p>
+  <h2>How to use LiDAR figures</h2>
+  <p>Label each LiDAR layer as measured (height, canopy, terrain), modelled (diameter, basal area, volume, stem count) or not seen (species where not modelled, grade, defect, rot). Use measured layers freely. For modelled layers, check them against the scale record of stands already harvested, split by forest type and product. Never check them against a single total, for the reason Räty found. Keep the model's date and the plots it was fitted to beside the layer, because both age.</p>
+  <p>Quarri's own map features are in design, not delivered. This piece describes LiDAR data in general.</p>
+  <h2>When it doesn't apply</h2>
+  <p>Uses that need only height or canopy, such as finding gaps, planning roads or mapping regrowth, can rely on LiDAR directly. Estates that have calibrated LiDAR models on a proper sample of their own plots may do better than the figures above, though the Sparks diameter model was already local and still missed by about 8 centimetres. And the Sparks study covered a single small stand, so its figures show the kind of gap to look for, not its size on any other ground.</p>
+  <p><a href="../forest-management.html">Quarri for forest management</a> is built around how a forest operation runs, from the cruise to the settled account.</p>
+
+  <aside class="art-related"><h2>Related reading</h2><ul><li><a href="../insights/what-can-ai-add-to-gis-in-forest-management.html">What can AI add to GIS in forest management?</a></li><li><a href="../insights/what-works-in-ai-for-forest-management-and-what-is-hype.html">What works in AI for forest management, and what is hype?</a></li><li><a href="../insights/how-accurate-is-lidar-forest-inventory-in-published-trials.html">How accurate is LiDAR forest inventory in published trials?</a></li></ul></aside>
+
+  <div class="art-sources">
+    <h2>Sources</h2>
+    <ol><li>Sparks, Corrao, Keefe, Armstrong and Smith, "An Accuracy Assessment of Field and Airborne Laser Scanning-Derived Individual Tree Inventories using Felled Tree Measurements and Log Scaling Data in a Mixed Conifer Forest", Forest Science 70(3), 29 March 2024: <a href="https://academic.oup.com/forestscience/article/70/3/228/7637489" target="_blank" rel="noopener">academic.oup.com</a></li><li>American Forest Management, "What Lidar Can and Cannot Tell Us About Your Forest": <a href="https://www.americanforestmanagement.com/news/what-lidar-can-and-cannot-tell-us-about-your-forest" target="_blank" rel="noopener">americanforestmanagement.com</a></li><li>Räty, Hauglin, Astrup and Breidenbach, "Assessing and mitigating systematic errors in forest attribute maps utilizing harvester and airborne laser scanning data", journal version 53(4): 284-301, 1 April 2023 (abstract read from the arXiv version, <a href="https://arxiv.org/abs/2203.04679):" target="_blank" rel="noopener">arxiv.org</a> <a href="https://doi.org/10.1139/cjfr-2022-0053" target="_blank" rel="noopener">doi.org</a></li><li>Ruoppa, Hietala, Seppänen and others, "Benchmarking individual tree segmentation using multispectral airborne laser scanning data: the FGI-EMIT dataset", arXiv 2511.00653, 1 November 2025: <a href="https://arxiv.org/html/2511.00653v1" target="_blank" rel="noopener">arxiv.org</a></li><li>Cattaneo, Puliti, Fischer and Astrup, "Estimating wood quality attributes from dense airborne LiDAR point clouds", Forest Ecosystems 11(2), 100184, 16 March 2024: <a href="https://www.sciopen.com/article/10.1016/j.fecs.2024.100184?issn=2095-6355" target="_blank" rel="noopener">sciopen.com</a></li></ol>
+  </div>
+
+  <p class="art-about">Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.</p>
+
+  <aside class="author">
+    <img src="../assets/theo-leslie.webp" alt="Theo Leslie" width="76" height="76">
+    <div>
+      <div class="who">Theo Leslie</div>
+      <div class="role">CEO &amp; Co-founder, Quarri</div>
+      <p>Theo is ex-PwC and leads Quarri&rsquo;s AI implementations in forestry, sawmill and wood products businesses, including a publicly listed timberland company.</p>
+      <p class="disc">Researched and drafted with AI, reviewed and edited by Theo Leslie, CEO &amp; Co-founder of Quarri.</p>
+      <a class="li" href="https://www.linkedin.com/in/theo-leslie-quarri" target="_blank" rel="noopener">Theo on LinkedIn &rarr;</a>
+    </div>
+  </aside>
+
+
+</article>
+
+<section class="on-dark cta cta-forest" style="background-image:url('../images/opt/pexels-nc-farm-bureau-mark-12278574.webp')">
+  <div class="container">
+    <h2 class="display reveal">See it on <span class="coral">your own data.</span></h2>
+    <p class="lead reveal d1">Live in two weeks, on the systems you already run.</p>
+    <div class="hero-cta reveal d2"><a href="../book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="../index.html" class="footer-logo"><img src="../assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">The timber data platform.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="../index.html#platform">Modules</a></li>
+          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../security.html">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="../forest-management.html">Forest Management</a></li>
+          <li><a href="../sawmills.html">Sawmills</a></li>
+          <li><a href="../wood-products.html">Wood Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Inc.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+})();
+</script>
+<script src="../assets/consent.js?v=121" defer></script>
+<script src="../assets/blueprint.js?v=121" defer></script>
+</body>
+</html>

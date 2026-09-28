@@ -7,6 +7,12 @@
 
 Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.
 
+## Insights and glossary
+
+- [Insights hub](https://quarri.ai/insights.html): analysis plus 129 articles on data, AI and systems for
+  forestry, sawmills, wood products and pulp, paper and packaging, grouped by section.
+- [Glossary](https://quarri.ai/glossary.html): timber data terms, defined in plain English, A to Z.
+
 ## What it does
 
 Quarri connects buying, production, sales and inventory from standing forest to

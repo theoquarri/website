@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-bp-page="article">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f3">
+
+<title>What should a forestry database hold, and where? | Quarri</title>
+<meta name="description" content="Dated measurements and events with their source documents, keyed to the same stand and contract IDs as the map, plus a record of how those IDs change.">
+<link rel="canonical" href="https://quarri.ai/insights/what-should-a-forestry-database-hold-and-where.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="What should a forestry database hold, and where? | Quarri">
+<meta property="og:description" content="Dated measurements and events with their source documents, keyed to the same stand and contract IDs as the map, plus a record of how those IDs change.">
+<meta property="og:url" content="https://quarri.ai/insights/what-should-a-forestry-database-hold-and-where.html">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What should a forestry database hold, and where? | Quarri">
+<meta name="twitter:description" content="Dated measurements and events with their source documents, keyed to the same stand and contract IDs as the map, plus a record of how those IDs change.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+
+<link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="../styles.css?v=121">
+<link rel="stylesheet" href="../components.css?v=121">
+<meta name="quarri-corpus" content="article">
+<meta name="quarri-section" content="The case for a timber data platform">
+<meta name="quarri-section-url" content="https://quarri.ai/insights/the-case-for-a-timber-data-platform.html">
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "alternateName": "Quarri AI",
+      "disambiguatingDescription": "Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is the timber data platform. AI-native, it connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "The timber data platform.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://quarri.ai/insights/what-should-a-forestry-database-hold-and-where.html#webpage",
+      "url": "https://quarri.ai/insights/what-should-a-forestry-database-hold-and-where.html",
+      "headline": "What should a forestry database hold, and where?",
+      "description": "Dated measurements and events with their source documents, keyed to the same stand and contract IDs as the map, plus a record of how those IDs change.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "author": {
+        "@id": "https://quarri.ai/#theo-leslie"
+      },
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "articleSection": "Insights",
+      "about": {
+        "@id": "https://quarri.ai/#software"
+      },
+      "image": "https://quarri.ai/assets/og-image.jpg",
+      "breadcrumb": {
+        "@id": "https://quarri.ai/insights/what-should-a-forestry-database-hold-and-where.html#breadcrumb"
+      },
+      "datePublished": "2026-09-28"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://quarri.ai/#theo-leslie",
+      "name": "Theo Leslie",
+      "url": "https://quarri.ai/",
+      "worksFor": {
+        "@id": "https://quarri.ai/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://quarri.ai/insights/what-should-a-forestry-database-hold-and-where.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quarri.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://quarri.ai/insights.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The case for a timber data platform",
+          "item": "https://quarri.ai/insights/the-case-for-a-timber-data-platform.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "What should a forestry database hold, and where?"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="../assets/quarri-logo.png" alt="" width="26" height="26" decoding="async"><span>Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="../index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="../index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a href="../forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="../sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="../wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="../pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="../finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="../operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
+      <a href="../how-it-works.html">How it works</a>
+      <a href="../security.html">Security</a>
+      <a href="../pricing.html">Pricing</a>
+      <div class="nav-group">
+        <a href="../case-studies.html" tabindex="0">Resources</a>
+        <div class="nav-pop nav-pop-sm">
+          <a href="../case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
+          <a href="../insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a href="../faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        </div>
+      </div>
+      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
+      <a href="../book-a-demo.html" class="btn btn-primary">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<div class="art-hero art-hero-plain">
+  <div class="in">
+    <span class="meta">The case for a timber data platform &middot; 28 Sep 2026</span>
+    <h1>What should a forestry database hold, and where?</h1>
+    <p class="byline">Theo Leslie &middot; 4 min read</p>
+  </div>
+</div>
+
+<article class="article">
+  <a class="art-back" href="the-case-for-a-timber-data-platform.html">&larr; The case for a timber data platform</a>
+
+  <p class="standfirst">A forestry database should hold dated measurements and dated events as well as the current total for each stand. Every cruise, harvest, load, contract and payment gets recorded with its date, its source document, and the same stand and contract identifiers the map and the ERP use. The stand shapes belong in the GIS, the invoices in the ERP, and the forestry database holds what links them over time. Of the two requirements, we find the shared identifiers are the harder one. Dated records usually exist somewhere, in cruise reports, scale tickets and settlements. Joining them is where it breaks.</p>
+  <h2>What the usual answer says</h2>
+  <p>The top results for this question are public databases describing their contents: growing stock, biomass, carbon, species, growth and mortality. A public subcompartment dataset calls itself an authoritative source for recording and reporting. Those descriptions are right for what they are. They say little about what a forest owner, manager or harvesting business should keep about its own land and operations, or how. A <a href="https://greentimberforestry.com/technology/database-management" target="_blank" rel="noopener">forestry consultancy's description</a> of its own client geodatabase is closer, and typical: "Examples of attributes we track include forest type, recommended harvest, date a management plan was written, and more." Those are attributes of each property as it stands now.</p>
+  <figure class="art-fig">
+  <svg viewBox="0 0 720 420" role="img" aria-label="Table of forestry record types with the key each carries, whether it is current state or a dated record, and which system holds it">
+    <defs><marker id="ah-011" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#888888"/></marker><marker id="ahc-011" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#da7756"/></marker></defs>
+    <g font-family="Archivo, sans-serif">
+      <text x="32" y="38" font-size="13" font-weight="600" fill="#555555">Record</text>
+      <text x="187" y="38" font-size="13" font-weight="600" fill="#555555">Key it carries</text>
+      <text x="372" y="38" font-size="13" font-weight="600" fill="#555555">State or event</text>
+      <text x="552" y="38" font-size="13" font-weight="600" fill="#555555">Where it lives</text>
+      <line x1="20" y1="50" x2="700" y2="50" stroke="#111111" stroke-width="1"/>
+      <rect x="20" y="50" width="680" height="40" rx="0" fill="#f7f6f3"/>
+      <text x="32" y="74.9" font-size="14" font-weight="600" fill="#111111">Stand shape</text>
+      <text x="187" y="74.9" font-size="14" fill="#555555">Stand ID</text>
+      <text x="372" y="74.9" font-size="14" fill="#555555">Current state</text>
+      <text x="552" y="74.9" font-size="14" fill="#555555">GIS</text>
+      <text x="32" y="114.9" font-size="14" font-weight="600" fill="#111111">Stand measurement</text>
+      <text x="187" y="114.9" font-size="14" fill="#555555">Stand ID</text>
+      <text x="372" y="114.9" font-size="14" fill="#555555">Dated, with method</text>
+      <text x="552" y="114.9" font-size="14" fill="#555555">Forestry database</text>
+      <rect x="20" y="130" width="680" height="40" rx="0" fill="#f7f6f3"/>
+      <text x="32" y="154.9" font-size="14" font-weight="600" fill="#111111">Harvest</text>
+      <text x="187" y="154.9" font-size="14" fill="#555555">Stand and contract ID</text>
+      <text x="372" y="154.9" font-size="14" fill="#555555">Event</text>
+      <text x="552" y="154.9" font-size="14" fill="#555555">Forestry database</text>
+      <text x="32" y="194.9" font-size="14" font-weight="600" fill="#111111">Load</text>
+      <text x="187" y="194.9" font-size="14" fill="#555555">Stand and contract ID</text>
+      <text x="372" y="194.9" font-size="14" fill="#555555">Event</text>
+      <text x="552" y="194.9" font-size="14" fill="#555555">Forestry database</text>
+      <rect x="20" y="210" width="680" height="40" rx="0" fill="#f7f6f3"/>
+      <text x="32" y="234.9" font-size="14" font-weight="600" fill="#111111">Contract</text>
+      <text x="187" y="234.9" font-size="14" fill="#555555">Contract and stand ID</text>
+      <text x="372" y="234.9" font-size="14" fill="#555555">Event</text>
+      <text x="552" y="234.9" font-size="14" fill="#555555">Forestry database</text>
+      <text x="32" y="274.9" font-size="14" font-weight="600" fill="#111111">Payment</text>
+      <text x="187" y="274.9" font-size="14" fill="#555555">Contract ID</text>
+      <text x="372" y="274.9" font-size="14" fill="#555555">Event</text>
+      <text x="552" y="274.9" font-size="14" fill="#555555">ERP ledger, linked</text>
+      <rect x="20" y="290" width="680" height="40" rx="0" fill="#f7f6f3"/>
+      <text x="32" y="314.9" font-size="14" font-weight="600" fill="#111111">Document</text>
+      <text x="187" y="314.9" font-size="14" fill="#555555">The record's ID</text>
+      <text x="372" y="314.9" font-size="14" fill="#555555">Source for a figure</text>
+      <text x="552" y="314.9" font-size="14" fill="#555555">Document store</text>
+      <text x="32" y="354.9" font-size="14" font-weight="600" fill="#111111">Stand ID history</text>
+      <text x="187" y="354.9" font-size="14" fill="#555555">Old and new stand ID</text>
+      <text x="372" y="354.9" font-size="14" fill="#555555">Dated change</text>
+      <text x="552" y="354.9" font-size="14" fill="#555555">Forestry database</text>
+      <rect x="20" y="330" width="680" height="40" rx="0" fill="none" stroke="#da7756" stroke-width="1.5"/>
+      <line x1="20" y1="370" x2="700" y2="370" stroke="#e5e4e0" stroke-width="1"/>
+      <text x="20" y="400" font-size="13" fill="#555555">Stands are split, merged and renumbered, so keep a table of how stand identifiers have</text>
+      <text x="20" y="418" font-size="13" fill="#555555">changed over time.</text>
+    </g>
+  </svg>
+  <figcaption>Every record carries the same stand and contract identifiers as the map and the ERP, and a table of how stand identifiers have changed keeps old records joining. Diagram: Quarri.</figcaption>
+</figure>
+  <h2>What a public inventory does with time</h2>
+  <p>The Forest Inventory and Analysis programme describes its nationwide inventory as "a national network of permanent plots remeasured every five to ten years depending on location." <a href="https://research.fs.usda.gov/programs/fia" target="_blank" rel="noopener">Its programme page</a> shows the two design choices that matter for a business database.</p>
+  <p>The first is that each visit is its own record. A system that keeps only the latest cruise for a stand can report today's volume. It cannot report growth, or recompute past figures when a volume table or a cruise method changes. Keeping each measurement as a dated record, with its method, costs little and keeps both options open.</p>
+  <p>The second is that the units the data is reported by can move. The same page carries a user bulletin warning that some area-based estimates "require careful interpretation", because local boundaries "have changed multiple times since the inception of the FIA annualized inventory (~2004)." A forest business has the same problem at stand level. Stands are split, merged and renumbered after harvests, sales and replanning, and a figure keyed to an old stand number no longer lands anywhere on the current map.</p>
+  <h2>Measured and modelled records</h2>
+  <p>A second reason to keep method with each record is that more inventory figures are now modelled between visits. A <a href="https://doi.org/10.1093/forestry/cpae029" target="_blank" rel="noopener">2024 study in Forestry</a> by Mulverhill and colleagues, read from its abstract, notes that laser-scanning inventories "represent a static point in time". It updated one for a management unit of about 690,000 ha at a two-week interval from satellite data. The models' relative error ranged "from 11.47% (canopy cover) to 31.82% (stem volume)". A modelled update is useful, but it is a different kind of figure from a cruise. A database that stores both in the same field, without saying which is which, loses that difference for good.</p>
+  <h2>What to hold</h2>
+  <p>Hold measurements as dated records, each with the method used. Hold operations as events: each harvest, each load with its scale record, each treatment. Hold commercial records as events too: each contract and its terms, each settlement, each stumpage or levy payment. Give every record the identifiers of the stand and the contract it belongs to, using the same identifiers as the GIS, and keep a table of how stand identifiers have changed over time.</p>
+  <p>Hold the source document with the figure, or a link to it. A ledger total without its document can't be checked, and when the ledger and the documents disagree, only the documents can settle it.</p>
+  <h2>Where each part belongs</h2>
+  <p>Shapes and spatial analysis belong in the GIS, which is built for them. Invoices, payables and the general ledger belong in the ERP. Scanned contracts and tickets belong in a document store the database can link to. The forestry database, or a data platform acting as one, holds the dated measurements and events and the keys that connect all three. It should point to the stand shapes and the ledger rather than copy them, so that a change in one place does not leave a stale copy in another.</p>
+  <p>Whether that sits on a server in the office or in the cloud matters less than two things. It should be backed up, and it should keep its history, and its identifier table, when systems are replaced.</p>
+  <h2>When it doesn't apply</h2>
+  <p>A small woodland with one inventory and an occasional timber sale can keep its records in a well-organised folder and a spreadsheet. The discipline of dated records and linked documents still helps there. A business that only buys delivered wood and owns no land has little use for stand measurements. Its contracts and loads still benefit from the same event structure.</p>
+  <p><a href="../forest-management.html">Quarri for forest management</a> is built around how a forest operation runs, from the cruise to the settled account.</p>
+
+  <aside class="art-related"><h2>Related reading</h2><ul><li><a href="../insights/why-do-forest-operations-keep-maps-and-numbers-in-different-systems.html">Why do forest operations keep their maps and their numbers in different systems?</a></li><li><a href="../insights/how-do-you-connect-harvest-plans-contracts-and-remaining-volume-on-a-map.html">How do you connect harvest plans, contracts and remaining volume on a map?</a></li></ul></aside>
+
+  <div class="art-sources">
+    <h2>Sources</h2>
+    <ol><li>Mulverhill and others, "Evaluating the potential for continuous update of enhanced forest inventory attributes using optical satellite data", Forestry, 2024 (abstract read via Crossref): <a href="https://doi.org/10.1093/forestry/cpae029" target="_blank" rel="noopener">doi.org</a></li><li>Green Timber, "Database Management": <a href="https://greentimberforestry.com/technology/database-management" target="_blank" rel="noopener">greentimberforestry.com</a></li><li>Forest Inventory and Analysis programme page, last updated 24 September 2026: <a href="https://research.fs.usda.gov/programs/fia" target="_blank" rel="noopener">research.fs.usda.gov</a></li></ol>
+  </div>
+
+  <p class="art-about">Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.</p>
+
+  <aside class="author">
+    <img src="../assets/theo-leslie.webp" alt="Theo Leslie" width="76" height="76">
+    <div>
+      <div class="who">Theo Leslie</div>
+      <div class="role">CEO &amp; Co-founder, Quarri</div>
+      <p>Theo is ex-PwC and leads Quarri&rsquo;s AI implementations in forestry, sawmill and wood products businesses, including a publicly listed timberland company.</p>
+      <p class="disc">Researched and drafted with AI, reviewed and edited by Theo Leslie, CEO &amp; Co-founder of Quarri.</p>
+      <a class="li" href="https://www.linkedin.com/in/theo-leslie-quarri" target="_blank" rel="noopener">Theo on LinkedIn &rarr;</a>
+    </div>
+  </aside>
+
+
+</article>
+
+<section class="on-dark cta cta-forest" style="background-image:url('../images/opt/pexels-nc-farm-bureau-mark-12278574.webp')">
+  <div class="container">
+    <h2 class="display reveal">See it on <span class="coral">your own data.</span></h2>
+    <p class="lead reveal d1">Live in two weeks, on the systems you already run.</p>
+    <div class="hero-cta reveal d2"><a href="../book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="../index.html" class="footer-logo"><img src="../assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">The timber data platform.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="../index.html#platform">Modules</a></li>
+          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../security.html">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="../forest-management.html">Forest Management</a></li>
+          <li><a href="../sawmills.html">Sawmills</a></li>
+          <li><a href="../wood-products.html">Wood Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Inc.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+})();
+</script>
+<script src="../assets/consent.js?v=121" defer></script>
+<script src="../assets/blueprint.js?v=121" defer></script>
+</body>
+</html>

@@ -2257,3 +2257,86 @@ p.cap::before{
   .bp-rule, .bp-sect{ display:none }
   body{ background-image:none }
 }
+
+/* ---------- CORPUS (org task 24, promoted 28 Sep 2026) ---------- */
+/* Corpus components (org task 24). Preview-only file: on promotion these rules move into
+   components.css. Tokens only (Marketing/Brand guidelines/tokens.json); corners are square;
+   forest is a surface. Built from the MOCK ONLY block of the approved model page, with its
+   two rounded corners (author box, author photo) squared. */
+
+/* Hero without a photograph: the brief allows no images other than Theo's */
+.art-hero.art-hero-plain{background:var(--forest-2);background-image:none;min-height:0}
+.art-hero.art-hero-plain::after{display:none}
+.art-hero.art-hero-plain .in{padding-top:clamp(72px,10vh,112px);padding-bottom:clamp(40px,6vh,64px)}
+.art-hero.art-hero-plain .meta{color:var(--coral-hi)}
+.art-hero.art-hero-plain .byline{color:var(--on-forest)}
+
+.art-fig{margin:36px 0}
+.art-fig svg{width:100%;height:auto;display:block}
+.art-fig figcaption{font-size:13px;color:var(--ink-3);margin-top:10px;line-height:1.55}
+
+.art-table{overflow-x:auto;margin:28px 0}
+.art-table table{border-collapse:collapse;width:100%;font-size:14.5px}
+.art-table th,.art-table td{border:1px solid var(--rule);padding:9px 12px;text-align:left;vertical-align:top}
+.art-table th{background:var(--bone);font-weight:600}
+
+.art-related{margin-top:44px;padding:22px 24px;background:var(--bone);border:1px solid var(--rule)}
+.art-related h2{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);font-weight:500;margin:0 0 10px}
+.art-related ul{margin:0;padding-left:18px}
+.art-related li{margin:6px 0}
+
+.art-sources{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule)}
+.art-sources h2{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);font-weight:500;margin:0 0 12px}
+.art-sources ol{margin:0 0 0 18px}
+.art-sources li{font-size:14px;line-height:1.6;color:var(--ink-3);margin-bottom:6px;overflow-wrap:anywhere}
+.art-sources a{color:var(--ink-2)}
+.art-about{font-size:14.5px;line-height:1.65;color:var(--ink-3);margin:28px 0 0}
+
+.author{display:flex;gap:18px;align-items:flex-start;margin-top:28px;padding:22px;background:var(--bone);border:1px solid var(--rule)}
+.author img{width:76px;height:76px;object-fit:cover;margin:0;flex:none}
+.author .who{font-weight:600;font-size:16px;color:var(--ink)}
+.author .role{font-size:13.5px;color:var(--ink-3);margin-bottom:8px}
+.author p{font-size:14.5px;line-height:1.6;color:var(--ink-2);margin:0 0 8px}
+.author .disc{font-size:13px;color:var(--ink-3);font-style:italic}
+.author a.li{font-size:13.5px;font-weight:600;color:var(--coral);text-decoration:none}
+@media (max-width:520px){.author{flex-direction:column}}
+
+/* Hubs */
+.hub{padding-top:48px;padding-bottom:80px}
+.hub-lead{color:var(--ink-3);margin:0 0 16px}
+.hub-sec{margin:0 0 56px}
+.hub-sec h2{font-weight:300;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.02em;margin:0 0 18px}
+.hub-sec h2 a{color:var(--ink);text-decoration:none}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.hub-card{display:flex;flex-direction:column;gap:8px;padding:20px;background:var(--white);color:var(--ink);text-decoration:none}
+.hub-card[hidden]{display:none}
+.hub-card:hover .hc-t{color:var(--coral)}
+.hc-t{font-weight:500;font-size:17px;line-height:1.35}
+.hc-d{font-size:14px;line-height:1.55;color:var(--ink-2)}
+.hub-more{display:inline-block;margin-top:14px;font-weight:600;color:var(--coral);text-decoration:none}
+.hub-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px}
+.hub-filter button{font:500 13px/1 var(--font);padding:10px 14px;border:1px solid var(--rule);background:var(--white);color:var(--ink-2);cursor:pointer}
+.hub-filter button.on{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.az{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 36px}
+.az a{font-family:var(--mono);font-size:13px;padding:8px 10px;border:1px solid var(--rule);color:var(--ink);text-decoration:none}
+.gloss{margin:0}
+.gloss dt{font-weight:600;margin-top:16px}
+.gloss dt a{color:var(--ink)}
+.gloss dd{margin:4px 0 0;color:var(--ink-2);font-size:15px;line-height:1.55}
+
+.hub-sec{padding:0}
+.hub-sec[hidden]{display:none}
+
+/* Collapsible FAQ: native details, readable with JavaScript off */
+details.faq-q{padding:0;border-top:1px solid var(--rule)}
+details.faq-q:first-child{border-top:none}
+details.faq-q summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:14px;padding:clamp(20px,2.4vw,28px) 0}
+details.faq-q summary::-webkit-details-marker{display:none}
+details.faq-q summary::before{content:"+";font-family:var(--mono);color:var(--coral);font-size:20px;line-height:1.3;flex:none;width:14px}
+details.faq-q[open] summary::before{content:"\2212"}
+details.faq-q summary h3{margin:0}
+details.faq-q summary:focus-visible{outline:2px solid var(--coral);outline-offset:4px}
+details.faq-q .faq-a{padding:0 0 clamp(22px,2.6vw,30px) 28px}
+.faq-more{font-size:14.5px!important;color:var(--ink-3)!important}
+.faq-ctrl{display:flex;gap:10px;margin-top:14px}
+.faq-ctrl button{font:500 13px/1 var(--font);padding:9px 12px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer}

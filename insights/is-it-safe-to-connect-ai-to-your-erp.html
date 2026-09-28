@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" data-bp-page="article">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f3">
+
+<title>Is it safe to connect AI to your ERP? | Quarri</title>
+<meta name="description" content="It can be. Beyond least privilege and logging: keep document reading apart from anything that acts, and treat a confident wrong answer as a safety risk.">
+<link rel="canonical" href="https://quarri.ai/insights/is-it-safe-to-connect-ai-to-your-erp.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="Is it safe to connect AI to your ERP? | Quarri">
+<meta property="og:description" content="It can be. Beyond least privilege and logging: keep document reading apart from anything that acts, and treat a confident wrong answer as a safety risk.">
+<meta property="og:url" content="https://quarri.ai/insights/is-it-safe-to-connect-ai-to-your-erp.html">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Is it safe to connect AI to your ERP? | Quarri">
+<meta name="twitter:description" content="It can be. Beyond least privilege and logging: keep document reading apart from anything that acts, and treat a confident wrong answer as a safety risk.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+
+<link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="../styles.css?v=121">
+<link rel="stylesheet" href="../components.css?v=121">
+<meta name="quarri-corpus" content="article">
+<meta name="quarri-section" content="Data practice">
+<meta name="quarri-section-url" content="https://quarri.ai/insights/data-practice.html">
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "alternateName": "Quarri AI",
+      "disambiguatingDescription": "Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is the timber data platform. AI-native, it connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "The timber data platform.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://quarri.ai/insights/is-it-safe-to-connect-ai-to-your-erp.html#webpage",
+      "url": "https://quarri.ai/insights/is-it-safe-to-connect-ai-to-your-erp.html",
+      "headline": "Is it safe to connect AI to your ERP?",
+      "description": "It can be. Beyond least privilege and logging: keep document reading apart from anything that acts, and treat a confident wrong answer as a safety risk.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "author": {
+        "@id": "https://quarri.ai/#theo-leslie"
+      },
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "articleSection": "Insights",
+      "about": {
+        "@id": "https://quarri.ai/#software"
+      },
+      "image": "https://quarri.ai/assets/og-image.jpg",
+      "breadcrumb": {
+        "@id": "https://quarri.ai/insights/is-it-safe-to-connect-ai-to-your-erp.html#breadcrumb"
+      },
+      "datePublished": "2026-09-28"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://quarri.ai/#theo-leslie",
+      "name": "Theo Leslie",
+      "url": "https://quarri.ai/",
+      "worksFor": {
+        "@id": "https://quarri.ai/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://quarri.ai/insights/is-it-safe-to-connect-ai-to-your-erp.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quarri.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://quarri.ai/insights.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Data practice",
+          "item": "https://quarri.ai/insights/data-practice.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Is it safe to connect AI to your ERP?"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="../assets/quarri-logo.png" alt="" width="26" height="26" decoding="async"><span>Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="../index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="../index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a href="../forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="../sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="../wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="../pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="../finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="../operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
+      <a href="../how-it-works.html">How it works</a>
+      <a href="../security.html">Security</a>
+      <a href="../pricing.html">Pricing</a>
+      <div class="nav-group">
+        <a href="../case-studies.html" tabindex="0">Resources</a>
+        <div class="nav-pop nav-pop-sm">
+          <a href="../case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
+          <a href="../insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a href="../faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        </div>
+      </div>
+      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
+      <a href="../book-a-demo.html" class="btn btn-primary">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<div class="art-hero art-hero-plain">
+  <div class="in">
+    <span class="meta">Data practice &middot; 28 Sep 2026</span>
+    <h1>Is it safe to connect AI to your ERP?</h1>
+    <p class="byline">Theo Leslie &middot; 4 min read</p>
+  </div>
+</div>
+
+<article class="article">
+  <a class="art-back" href="data-practice.html">&larr; Data practice</a>
+
+  <p class="standfirst">It can be. The standard controls are well known: the AI reads with the permissions of the person asking, starts read-only, needs a person's approval before writing anything, and logs every question and answer. Two things matter beyond those. An AI that reads supplier invoices, settlements and emails can be steered by text inside them, so the step that reads documents should be kept apart from any step that acts. And in a read-only setup, the likeliest harm is a confident wrong answer that a manager acts on, which makes answer accuracy a safety issue as well as a quality one.</p>
+  <h2>What the usual answer says</h2>
+  <p>The usual advice is least-privilege access, strong authentication, read-only access first, full logging and approval rules for sensitive actions, on top of an enterprise-grade provider, encryption and certifications such as SOC 2 or ISO 27001. That is sound, and certifications audit the credential and access controls behind many real incidents. What the advice rarely covers is software that reads text and may act on it.</p>
+  <figure class="art-fig">
+  <svg viewBox="0 0 720 400" role="img" aria-label="Four controls as layers between an AI assistant and the ERP, each with the risk it guards against: permissions of the asker, documents treated as data, human approval for writes, and full logging">
+    <defs><marker id="ah-099" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#888888"/></marker><marker id="ac-099" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#da7756"/></marker></defs>
+    <g font-family="Archivo, sans-serif">
+      <rect x="0" y="8" width="720" height="44" rx="0" fill="#102a1c"/>
+      <text x="360.0" y="34.6" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">AI assistant</text>
+      <text x="60" y="78" font-size="13" font-weight="600" fill="#555555">Control</text>
+      <text x="400" y="78" font-size="13" font-weight="600" fill="#555555">What it guards against</text>
+      <rect x="44" y="88" width="676" height="56" rx="0" fill="#f7f6f3" stroke="#e5e4e0" stroke-width="1"/>
+      <text x="60" y="122" font-size="16" font-weight="600" fill="#111111">Reads with the asker's permissions</text>
+      <text x="400" y="112" font-size="13" fill="#555555">Reading too much: access beyond</text>
+      <text x="400" y="130" font-size="13" fill="#555555">what the person may see</text>
+      <rect x="44" y="152" width="676" height="56" rx="0" fill="#ffffff" stroke="#da7756" stroke-width="1.5"/>
+      <text x="60" y="186" font-size="16" font-weight="600" fill="#111111">Documents treated as data</text>
+      <text x="400" y="176" font-size="13" fill="#555555">Instructions hidden in invoices,</text>
+      <text x="400" y="194" font-size="13" fill="#555555">settlements and emails</text>
+      <rect x="44" y="216" width="676" height="56" rx="0" fill="#f7f6f3" stroke="#e5e4e0" stroke-width="1"/>
+      <text x="60" y="250" font-size="16" font-weight="600" fill="#111111">A person approves any write</text>
+      <text x="400" y="240" font-size="13" fill="#555555">Doing too much: actions nobody</text>
+      <text x="400" y="258" font-size="13" fill="#555555">asked for</text>
+      <rect x="44" y="280" width="676" height="56" rx="0" fill="#f7f6f3" stroke="#e5e4e0" stroke-width="1"/>
+      <text x="60" y="314" font-size="16" font-weight="600" fill="#111111">Every question and answer logged</text>
+      <text x="400" y="304" font-size="13" fill="#555555">Answers and actions that cannot</text>
+      <text x="400" y="322" font-size="13" fill="#555555">be traced and checked</text>
+      <rect x="0" y="348" width="720" height="44" rx="0" fill="#f7f6f3" stroke="#e5e4e0" stroke-width="1"/>
+      <text x="360.0" y="374.6" font-size="16" font-weight="600" fill="#111111" text-anchor="middle">ERP</text>
+      <path d="M20,54 L20,346" fill="none" stroke="#888888" stroke-width="1.5" marker-end="url(#ah-099)"/>
+    </g>
+  </svg>
+  <figcaption>The standard controls, plus one that matters more once the AI reads documents: text inside an invoice or email is treated as content, never as an instruction. Diagram: Quarri.</figcaption>
+</figure>
+  <h2>Instructions hidden in data</h2>
+  <p>The Open Worldwide Application Security Project, OWASP, ranks prompt injection first in its <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener">2025 list of risks for language model applications</a>. Indirect injection happens "when an LLM accepts input from external sources, such as websites or files". On prevention, OWASP says "it is unclear if there are fool-proof methods of prevention for prompt injection".</p>
+  <p>AgentDojo, a benchmark <a href="https://arxiv.org/abs/2406.13352" target="_blank" rel="noopener">published in 2024</a> by Edoardo Debenedetti and colleagues, tests agents "that execute tools over untrusted data". Building on it with a fictitious banking agent and synthetic conversations, Meysam Alizadeh and colleagues <a href="https://arxiv.org/abs/2506.01055" target="_blank" rel="noopener">reported in June 2025</a> that simple injected instructions succeeded in around 20% of attacks across 16 tasks and around 15% across 48, on models available then. They also found that "some defenses reduce ASR to zero", though none of the benchmark's built-in defences fully prevented leakage across the board, and that most models avoided leaking highly sensitive data such as passwords.</p>
+  <p>For a timber business, the external files are the daily paperwork: supplier invoices, buyer settlements, contractor emails, PDFs from mills. The design rule that follows is to separate the steps. Extract fields from documents into records, check them, and only then let anything that answers questions or acts see them, so text in a document is treated as content and never as an instruction.</p>
+  <h2>Reading too much, doing too much</h2>
+  <p>OWASP's <a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" target="_blank" rel="noopener">entry on excessive agency</a> names three root causes: "excessive functionality; excessive permissions; excessive autonomy". An assistant built to answer questions about stock does not need to create purchase orders. Give each function only the access it needs, and add write actions one at a time, each with its own approval.</p>
+  <h2>The likeliest harm is a wrong answer</h2>
+  <p>In a read-only, question-answering setup, injection can at worst skew an answer. A more common failure is an answer that is simply wrong: a definition that doesn't match the business's, a unit error, stale data. A manager who acts on it has been harmed as surely as by an attack. So a safe setup also shows which records each answer used, so it can be checked, and is tested on questions whose answers are already known before anyone relies on it.</p>
+  <h2>Practical risks: licensing and load</h2>
+  <p>Two questions come up before any security review. ERP licences may treat access by third-party software as indirect use that needs licensing, so check the terms with the ERP vendor. And heavy querying can slow the live system. Connecting the AI to a copy of the ERP data that refreshes daily, rather than to the live system, avoids the load and keeps the first project read-only by design.</p>
+  <h2>Questions for the vendor</h2>
+  <p>Ask whether text from a document can reach any step that acts. Ask what the AI can write, and who approves it. Ask it to show which records an answer used. Ask how it performed on questions with known answers. And ask for a sample of the logs, then read a day of them.</p>
+  <h2>When it doesn't apply</h2>
+  <p>AI used only on public information, with no connection to business systems, carries none of these risks, though staff pasting in private data is its own risk. Read-only reporting assistants that never read external documents carry much less.</p>
+  <p><a href="../security.html">Quarri's security page</a> sets out how customer data is isolated, encrypted and audited.</p>
+
+  <aside class="art-related"><h2>Related reading</h2><ul><li><a href="../insights/does-ai-train-on-your-companys-data.html">Does AI train on your company&#x27;s data?</a></li><li><a href="../insights/what-should-an-ai-vendor-tell-you-about-your-data-before-you-sign.html">What should an AI vendor tell you about your data before you sign?</a></li><li><a href="../insights/where-should-a-timber-business-host-its-data-us-or-eu.html">Where should a timber business host its data, US or EU?</a></li></ul></aside>
+
+  <div class="art-sources">
+    <h2>Sources</h2>
+    <ol><li>OWASP, "LLM01:2025 Prompt Injection", Top 10 for LLM Applications 2025: <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener">genai.owasp.org</a></li><li>OWASP, "LLM06:2025 Excessive Agency": <a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" target="_blank" rel="noopener">genai.owasp.org</a></li><li>Debenedetti, Zhang, Balunović, Beurer-Kellner et al., "AgentDojo", arXiv 2406.13352, 19 June 2024: <a href="https://arxiv.org/abs/2406.13352" target="_blank" rel="noopener">arxiv.org</a></li><li>Alizadeh, Samei, Stetsenko and Gilardi, "Simple Prompt Injection Attacks Can Leak Personal Data Observed by LLM Agents During Task Execution", arXiv 2506.01055, 1 June 2025: <a href="https://arxiv.org/abs/2506.01055" target="_blank" rel="noopener">arxiv.org</a></li></ol>
+  </div>
+
+  <p class="art-about">Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.</p>
+
+  <aside class="author">
+    <img src="../assets/theo-leslie.webp" alt="Theo Leslie" width="76" height="76">
+    <div>
+      <div class="who">Theo Leslie</div>
+      <div class="role">CEO &amp; Co-founder, Quarri</div>
+      <p>Theo is ex-PwC and leads Quarri&rsquo;s AI implementations in forestry, sawmill and wood products businesses, including a publicly listed timberland company.</p>
+      <p class="disc">Researched and drafted with AI, reviewed and edited by Theo Leslie, CEO &amp; Co-founder of Quarri.</p>
+      <a class="li" href="https://www.linkedin.com/in/theo-leslie-quarri" target="_blank" rel="noopener">Theo on LinkedIn &rarr;</a>
+    </div>
+  </aside>
+
+
+</article>
+
+<section class="on-dark cta cta-forest" style="background-image:url('../images/opt/pexels-nc-farm-bureau-mark-12278574.webp')">
+  <div class="container">
+    <h2 class="display reveal">See it on <span class="coral">your own data.</span></h2>
+    <p class="lead reveal d1">Live in two weeks, on the systems you already run.</p>
+    <div class="hero-cta reveal d2"><a href="../book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="../index.html" class="footer-logo"><img src="../assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">The timber data platform.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="../index.html#platform">Modules</a></li>
+          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../security.html">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="../forest-management.html">Forest Management</a></li>
+          <li><a href="../sawmills.html">Sawmills</a></li>
+          <li><a href="../wood-products.html">Wood Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Inc.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+})();
+</script>
+<script src="../assets/consent.js?v=121" defer></script>
+<script src="../assets/blueprint.js?v=121" defer></script>
+</body>
+</html>

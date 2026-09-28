@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-bp-page="article">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f3">
+
+<title>What is the difference between OCR and AI document extraction? | Quarri</title>
+<meta name="description" content="OCR turns an image into characters; AI extraction turns it into fields. Quality depends on what the model sees and whether its confidence is calibrated.">
+<link rel="canonical" href="https://quarri.ai/insights/what-is-the-difference-between-ocr-and-ai-document-extraction.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="What is the difference between OCR and AI document extraction? | Quarri">
+<meta property="og:description" content="OCR turns an image into characters; AI extraction turns it into fields. Quality depends on what the model sees and whether its confidence is calibrated.">
+<meta property="og:url" content="https://quarri.ai/insights/what-is-the-difference-between-ocr-and-ai-document-extraction.html">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What is the difference between OCR and AI document extraction? | Quarri">
+<meta name="twitter:description" content="OCR turns an image into characters; AI extraction turns it into fields. Quality depends on what the model sees and whether its confidence is calibrated.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+
+<link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="../styles.css?v=121">
+<link rel="stylesheet" href="../components.css?v=121">
+<meta name="quarri-corpus" content="article">
+<meta name="quarri-section" content="Documents and paperwork">
+<meta name="quarri-section-url" content="https://quarri.ai/insights/documents-and-paperwork.html">
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "alternateName": "Quarri AI",
+      "disambiguatingDescription": "Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is the timber data platform. AI-native, it connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "The timber data platform.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://quarri.ai/insights/what-is-the-difference-between-ocr-and-ai-document-extraction.html#webpage",
+      "url": "https://quarri.ai/insights/what-is-the-difference-between-ocr-and-ai-document-extraction.html",
+      "headline": "What is the difference between OCR and AI document extraction?",
+      "description": "OCR turns an image into characters; AI extraction turns it into fields. Quality depends on what the model sees and whether its confidence is calibrated.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "author": {
+        "@id": "https://quarri.ai/#theo-leslie"
+      },
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "articleSection": "Insights",
+      "about": {
+        "@id": "https://quarri.ai/#software"
+      },
+      "image": "https://quarri.ai/assets/og-image.jpg",
+      "breadcrumb": {
+        "@id": "https://quarri.ai/insights/what-is-the-difference-between-ocr-and-ai-document-extraction.html#breadcrumb"
+      },
+      "datePublished": "2026-09-28"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://quarri.ai/#theo-leslie",
+      "name": "Theo Leslie",
+      "url": "https://quarri.ai/",
+      "worksFor": {
+        "@id": "https://quarri.ai/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://quarri.ai/insights/what-is-the-difference-between-ocr-and-ai-document-extraction.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quarri.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://quarri.ai/insights.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Documents and paperwork",
+          "item": "https://quarri.ai/insights/documents-and-paperwork.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "What is the difference between OCR and AI document extraction?"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="../assets/quarri-logo.png" alt="" width="26" height="26" decoding="async"><span>Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="../index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="../index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a href="../forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="../sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="../wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="../pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="../finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="../operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
+      <a href="../how-it-works.html">How it works</a>
+      <a href="../security.html">Security</a>
+      <a href="../pricing.html">Pricing</a>
+      <div class="nav-group">
+        <a href="../case-studies.html" tabindex="0">Resources</a>
+        <div class="nav-pop nav-pop-sm">
+          <a href="../case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
+          <a href="../insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a href="../faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        </div>
+      </div>
+      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
+      <a href="../book-a-demo.html" class="btn btn-primary">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<div class="art-hero art-hero-plain">
+  <div class="in">
+    <span class="meta">Documents and paperwork &middot; 28 Sep 2026</span>
+    <h1>What is the difference between OCR and AI document extraction?</h1>
+    <p class="byline">Theo Leslie &middot; 4 min read</p>
+  </div>
+</div>
+
+<article class="article">
+  <a class="art-back" href="documents-and-paperwork.html">&larr; Documents and paperwork</a>
+
+  <p class="standfirst">Optical character recognition (OCR) turns an image into characters: it reads what is printed or written and outputs text, roughly in the layout it found. AI document extraction turns a document into fields: it reads the page, works out which number is the net weight, the invoice total or the contract number, and returns structured data. Many AI extraction tools read OCR text as well as the image, so the two are less rivals than layers. What decides the quality of the output is what the model is given to read, and whether its confidence scores can be trusted to send the right documents to a person.</p>
+  <h2>What the usual answer says</h2>
+  <p>The usual explanation presents AI extraction as OCR's successor. OCR relies on templates and rules and breaks on new layouts. AI understands context, handles any format and is more accurate. That is broadly right about capability. It leaves out how either one fails, and how you would know.</p>
+  <figure class="art-fig">
+  <svg viewBox="0 0 720 370" role="img" aria-label="How to read a calibration check: the share of fields actually correct in each confidence group, against the diagonal where perfect calibration would sit">
+    <defs><marker id="ah-069" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#888888"/></marker><marker id="ahc-069" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#da7756"/></marker></defs>
+    <g font-family="Archivo, sans-serif">
+      <path d="M90,300 L390,40 L390,300 Z" fill="#f7f6f3"/>
+      <line x1="90" y1="300" x2="390" y2="300" stroke="#888888" stroke-width="1"/>
+      <line x1="90" y1="300" x2="90" y2="40" stroke="#888888" stroke-width="1"/>
+      <line x1="90" y1="300" x2="390" y2="40" stroke="#da7756" stroke-width="2"/>
+      <text x="100" y="150" font-size="13" font-weight="600" fill="#da7756">Perfect calibration</text>
+      <text x="348" y="260" font-size="13" font-weight="600" fill="#111111" text-anchor="end">Overconfident:</text>
+      <text x="348" y="278" font-size="13" fill="#555555" text-anchor="end">less often right</text>
+      <text x="348" y="294" font-size="13" fill="#555555" text-anchor="end">than it claims</text>
+      <line x1="360" y1="300" x2="360" y2="40" stroke="#888888" stroke-width="1" stroke-dasharray="4 4"/>
+      <text x="360" y="320" font-size="13" font-weight="600" fill="#555555" text-anchor="middle">90%</text>
+      <text x="90" y="340" font-size="13" fill="#555555">Tool's confidence, low to high</text>
+      <text x="20" y="36" font-size="13" fill="#555555">Share</text>
+      <text x="20" y="54" font-size="13" fill="#555555">actually</text>
+      <text x="20" y="72" font-size="13" fill="#555555">correct</text>
+      <rect x="440" y="20" width="260" height="68" rx="0" fill="#f7f6f3" stroke="#e5e4e0"/>
+      <text x="456" y="49" font-size="13" font-weight="600" fill="#111111">Key the fields of a hundred</text>
+      <text x="456" y="67" font-size="13" font-weight="600" fill="#111111">documents by hand</text>
+      <path d="M570,90 L570,102" fill="none" stroke="#888888" stroke-width="1.5" marker-end="url(#ah-069)"/>
+      <rect x="440" y="104" width="260" height="68" rx="0" fill="#f7f6f3" stroke="#e5e4e0"/>
+      <text x="456" y="133" font-size="13" font-weight="600" fill="#111111">Run the same documents through</text>
+      <text x="456" y="151" font-size="13" font-weight="600" fill="#111111">the tool</text>
+      <path d="M570,174 L570,186" fill="none" stroke="#888888" stroke-width="1.5" marker-end="url(#ah-069)"/>
+      <rect x="440" y="188" width="260" height="68" rx="0" fill="#f7f6f3" stroke="#e5e4e0"/>
+      <text x="456" y="217" font-size="13" font-weight="600" fill="#111111">Group fields by confidence and</text>
+      <text x="456" y="235" font-size="13" font-weight="600" fill="#111111">check the share correct in each</text>
+      <path d="M570,258 L570,270" fill="none" stroke="#888888" stroke-width="1.5" marker-end="url(#ah-069)"/>
+      <rect x="440" y="272" width="260" height="86" rx="0" fill="#ffffff" stroke="#da7756" stroke-width="1.5"/>
+      <text x="570.0" y="291" font-size="16" font-weight="600" fill="#111111" text-anchor="middle">On the line, scores can</text>
+      <text x="570.0" y="311" font-size="16" font-weight="600" fill="#111111" text-anchor="middle">route work</text>
+      <text x="570.0" y="329" font-size="13" fill="#555555" text-anchor="middle">Well below it, move the</text>
+      <text x="570.0" y="347" font-size="13" fill="#555555" text-anchor="middle">threshold</text>
+    </g>
+  </svg>
+  <figcaption>A tool whose groups sit on the diagonal knows when it is unsure, so its scores can route work. Groups below the line are overconfident. The steps on the right run the check on your own documents. Diagram: Quarri.</figcaption>
+</figure>
+  <h2>Both make errors that pass through</h2>
+  <p>A 2024 benchmark, <a href="https://arxiv.org/abs/2412.02592" target="_blank" rel="noopener">OHRBench</a>, tested "OCR solutions" on 8,561 document images with 8,498 question and answer pairs. Those included traditional OCR pipelines and vision-language models used for OCR. Its verdict was that "none is competent for constructing high-quality knowledge bases" for AI retrieval systems. It measured retrieval quality rather than field extraction. Still, the point carries: neither kind of reader is clean enough to skip checking. Its authors separate formatting noise from semantic noise, meaning wrong characters, and a wrong character in a weight can look entirely plausible from either tool.</p>
+  <p>AI adds a further kind of error. Zhentao He and colleagues, in a <a href="https://arxiv.org/abs/2506.20168" target="_blank" rel="noopener">June 2025 study</a> of identity cards and invoices with simulated degradation, found models often fail "to adequately perceive visual degradation and ambiguity, leading to overreliance on linguistic priors". That, they write, "frequently results in the generation of hallucinatory content, especially when a precise answer is not feasible". OCR garbles what is on the page. A model can also supply what isn't.</p>
+  <h2>Confidence scores decide what a person sees</h2>
+  <p>Most extraction tools attach a confidence score to each field and send low-confidence fields to a person. That only works if the scores mean something. Priyashree Roy and colleagues, in <a href="https://arxiv.org/abs/2608.01792" target="_blank" rel="noopener">ConfBench</a>, published in August 2026, tested this across 1,346 degraded document variants and more than 70,000 field-level evaluations, with three kinds of input. They found calibration "varies widely across models, from near-perfect to severely overconfident". And of the inputs tested, "OCR+Image modality results in more accurate confidence estimates".</p>
+  <p>So the practical answer to OCR or AI is often both: OCR text alongside the image makes the model better at knowing when it is unsure. A sound setup keeps three things for every document, the image, the OCR text and the extracted fields, so a reviewer can see what the model saw.</p>
+  <h2>Test the confidence, not just the accuracy</h2>
+  <p>A vendor's accuracy figure says how often the tool is right. It doesn't say whether the tool knows when it is wrong, which decides how many errors reach your ledger. We suggest measuring both on your own documents. Take a hundred, key the fields by hand, and run them through the tool. Group the fields by the tool's confidence and check the share that is correct in each group. If fields scored above 90% are right about nine times in ten, the scores can route work. If they are right far less often, the threshold has to move, or every document needs a check.</p>
+  <p>Timber paperwork also carries internal arithmetic, such as net equal to gross less tare, which catches some errors whatever the confidence. Our piece on handwritten trip tickets covers those checks.</p>
+  <h2>Choosing for a given document</h2>
+  <p>In our view, volume and variety decide most cases. A mill receiving thousands of tickets a month on one form can do well with OCR and a template, checked by arithmetic. A forest manager receiving settlements, invoices and contracts from dozens of buyers and contractors, each with its own layout, gets more from AI extraction, because no one will maintain dozens of templates. Handwritten documents need AI reading, with the most checking.</p>
+  <h2>When it doesn't apply</h2>
+  <p>Digital PDFs generated by software contain their text already, so neither OCR nor image reading is needed, only extraction of fields from text. And some documents carry nothing to check against, such as a contract's special conditions, which need a person to read them.</p>
+  <p><a href="../forest-management.html">Quarri for forest management</a> is built around how a forest operation runs, from the cruise to the settled account.</p>
+
+  <aside class="art-related"><h2>Related reading</h2><ul><li><a href="../insights/can-ai-read-handwritten-trip-tickets-and-scale-slips.html">Can AI read handwritten trip tickets and scale slips?</a></li><li><a href="../insights/how-accurate-is-ai-at-reading-invoices-and-settlement-statements.html">How accurate is AI at reading invoices and settlement statements?</a></li><li><a href="../insights/how-do-you-check-that-ai-read-a-document-correctly.html">How do you check that AI read a document correctly?</a></li></ul></aside>
+
+  <div class="art-sources">
+    <h2>Sources</h2>
+    <ol><li>Zhang et al., "OCR Hinders RAG: Evaluating the Cascading Impact of OCR on Retrieval-Augmented Generation", arXiv 2412.02592, first posted 3 December 2024, v4 read (30 August 2025): <a href="https://arxiv.org/abs/2412.02592" target="_blank" rel="noopener">arxiv.org</a></li><li>He, Zhang, Wu, Chen et al., "Seeing is Believing? Mitigating OCR Hallucinations in Multimodal Large Language Models", arXiv 2506.20168, 25 June 2025: <a href="https://arxiv.org/abs/2506.20168" target="_blank" rel="noopener">arxiv.org</a></li><li>Roy, Martin, Rostami, Romo et al., "Can You Trust the Confidence? ConfBench for Vision-Language Models on Document Extraction", arXiv 2608.01792, 3 August 2026: <a href="https://arxiv.org/abs/2608.01792" target="_blank" rel="noopener">arxiv.org</a></li></ol>
+  </div>
+
+  <p class="art-about">Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.</p>
+
+  <aside class="author">
+    <img src="../assets/theo-leslie.webp" alt="Theo Leslie" width="76" height="76">
+    <div>
+      <div class="who">Theo Leslie</div>
+      <div class="role">CEO &amp; Co-founder, Quarri</div>
+      <p>Theo is ex-PwC and leads Quarri&rsquo;s AI implementations in forestry, sawmill and wood products businesses, including a publicly listed timberland company.</p>
+      <p class="disc">Researched and drafted with AI, reviewed and edited by Theo Leslie, CEO &amp; Co-founder of Quarri.</p>
+      <a class="li" href="https://www.linkedin.com/in/theo-leslie-quarri" target="_blank" rel="noopener">Theo on LinkedIn &rarr;</a>
+    </div>
+  </aside>
+
+
+</article>
+
+<section class="on-dark cta cta-forest" style="background-image:url('../images/opt/pexels-nc-farm-bureau-mark-12278574.webp')">
+  <div class="container">
+    <h2 class="display reveal">See it on <span class="coral">your own data.</span></h2>
+    <p class="lead reveal d1">Live in two weeks, on the systems you already run.</p>
+    <div class="hero-cta reveal d2"><a href="../book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="../index.html" class="footer-logo"><img src="../assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">The timber data platform.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="../index.html#platform">Modules</a></li>
+          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../security.html">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="../forest-management.html">Forest Management</a></li>
+          <li><a href="../sawmills.html">Sawmills</a></li>
+          <li><a href="../wood-products.html">Wood Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Inc.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+})();
+</script>
+<script src="../assets/consent.js?v=121" defer></script>
+<script src="../assets/blueprint.js?v=121" defer></script>
+</body>
+</html>

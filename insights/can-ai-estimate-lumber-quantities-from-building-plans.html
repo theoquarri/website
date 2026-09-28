@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-bp-page="article">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f3">
+
+<title>Can AI estimate lumber quantities from building plans? | Quarri</title>
+<meta name="description" content="Partly. On a vendor benchmark, AI beat estimators on framing and found more items, but a quantity counted as right within 25%.">
+<link rel="canonical" href="https://quarri.ai/insights/can-ai-estimate-lumber-quantities-from-building-plans.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Quarri">
+<meta property="og:title" content="Can AI estimate lumber quantities from building plans? | Quarri">
+<meta property="og:description" content="Partly. On a vendor benchmark, AI beat estimators on framing and found more items, but a quantity counted as right within 25%.">
+<meta property="og:url" content="https://quarri.ai/insights/can-ai-estimate-lumber-quantities-from-building-plans.html">
+<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Can AI estimate lumber quantities from building plans? | Quarri">
+<meta name="twitter:description" content="Partly. On a vendor benchmark, AI beat estimators on framing and found more items, but a quantity counted as right within 25%.">
+<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+
+<link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
+<link rel="stylesheet" href="../styles.css?v=121">
+<link rel="stylesheet" href="../components.css?v=121">
+<meta name="quarri-corpus" content="article">
+<meta name="quarri-section" content="AI in forestry and lumber">
+<meta name="quarri-section-url" content="https://quarri.ai/insights/ai-in-forestry-and-lumber.html">
+
+<script type="application/ld+json" id="quarri-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://quarri.ai/#organization",
+      "name": "Quarri",
+      "legalName": "Quarri AI Inc",
+      "alternateName": "Quarri AI",
+      "disambiguatingDescription": "Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.",
+      "url": "https://quarri.ai/",
+      "email": "theo@quarri.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/quarri"
+      ],
+      "description": "Quarri is the timber data platform. AI-native, it connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://quarri.ai/#logo",
+        "url": "https://quarri.ai/assets/quarri-logo.png",
+        "caption": "Quarri"
+      },
+      "image": {
+        "@id": "https://quarri.ai/#logo"
+      },
+      "knowsAbout": [
+        "Timber supply chain",
+        "Forest management",
+        "Sawmill operations",
+        "Wood products manufacturing",
+        "Pulp, paper and packaging",
+        "Stumpage reconciliation",
+        "Log purchasing and scaling",
+        "Lumber inventory and yield",
+        "Supply chain data integration"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "theo@quarri.ai",
+        "url": "https://quarri.ai/book-a-demo.html",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://quarri.ai/#website",
+      "url": "https://quarri.ai/",
+      "name": "Quarri",
+      "description": "The timber data platform.",
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://quarri.ai/insights/can-ai-estimate-lumber-quantities-from-building-plans.html#webpage",
+      "url": "https://quarri.ai/insights/can-ai-estimate-lumber-quantities-from-building-plans.html",
+      "headline": "Can AI estimate lumber quantities from building plans?",
+      "description": "Partly. On a vendor benchmark, AI beat estimators on framing and found more items, but a quantity counted as right within 25%.",
+      "isPartOf": {
+        "@id": "https://quarri.ai/#website"
+      },
+      "author": {
+        "@id": "https://quarri.ai/#theo-leslie"
+      },
+      "publisher": {
+        "@id": "https://quarri.ai/#organization"
+      },
+      "inLanguage": "en",
+      "articleSection": "Insights",
+      "about": {
+        "@id": "https://quarri.ai/#software"
+      },
+      "image": "https://quarri.ai/assets/og-image.jpg",
+      "breadcrumb": {
+        "@id": "https://quarri.ai/insights/can-ai-estimate-lumber-quantities-from-building-plans.html#breadcrumb"
+      },
+      "datePublished": "2026-09-28"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://quarri.ai/#theo-leslie",
+      "name": "Theo Leslie",
+      "url": "https://quarri.ai/",
+      "worksFor": {
+        "@id": "https://quarri.ai/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://quarri.ai/insights/can-ai-estimate-lumber-quantities-from-building-plans.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://quarri.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://quarri.ai/insights.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI in forestry and lumber",
+          "item": "https://quarri.ai/insights/ai-in-forestry-and-lumber.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Can AI estimate lumber quantities from building plans?"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo" aria-label="Quarri home">
+      <img src="../assets/quarri-logo.png" alt="" width="26" height="26" decoding="async"><span>Quarri</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="../index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="../index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a href="../forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a href="../sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a href="../wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a href="../pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a href="../finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a href="../operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
+      <a href="../how-it-works.html">How it works</a>
+      <a href="../security.html">Security</a>
+      <a href="../pricing.html">Pricing</a>
+      <div class="nav-group">
+        <a href="../case-studies.html" tabindex="0">Resources</a>
+        <div class="nav-pop nav-pop-sm">
+          <a href="../case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
+          <a href="../insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a href="../faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        </div>
+      </div>
+      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
+      <a href="../book-a-demo.html" class="btn btn-primary">Request a demo</a>
+    </nav>
+  </div>
+</header>
+
+<div class="art-hero art-hero-plain">
+  <div class="in">
+    <span class="meta">AI in forestry and lumber &middot; 28 Sep 2026</span>
+    <h1>Can AI estimate lumber quantities from building plans?</h1>
+    <p class="byline">Theo Leslie &middot; 4 min read</p>
+  </div>
+</div>
+
+<article class="article">
+  <a class="art-back" href="ai-in-forestry-and-lumber.html">&larr; AI in forestry and lumber</a>
+
+  <p class="standfirst">Partly, and in a different way from a human estimator. A 2026 benchmark published by a takeoff vendor tested its own system, general AI models and professional estimators against expert takeoffs of ten residential plan sets. On framing, the vendor's system scored 82 on the benchmark's composite, the estimators 71 and the best general model 54. Across all nine trades, the vendor's system found more of the items a job needed, and the estimators got closer on the quantities they listed. A quantity counted as right if it fell within 25% of the expert figure, which is far looser than a lumber order. The result has not been reproduced independently, so it is best read as what is possible, not what a dealer should expect.</p>
+  <h2>What the usual answer says</h2>
+  <p>Takeoff vendors sell speed and accuracy. <a href="https://www.ibeam.ai/blog/lumber-takeoffs-everything-you-need-to-know" target="_blank" rel="noopener">One vendor's guide to lumber takeoffs</a> says that "Using AI takeoff software improves accuracy, reduces bid turnaround time", and gives no test set or tolerance for the accuracy. The claim of speed is fair. The claim of accuracy needs the measurement behind it.</p>
+  <figure class="art-fig">
+  <svg viewBox="0 0 720 290" role="img" aria-label="Framing composite scores from a 2026 takeoff benchmark: the vendor's system 82, independent estimators 71, best general model 54">
+    <defs><marker id="ah-029" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#888888"/></marker><marker id="ahc-029" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#da7756"/></marker></defs>
+    <g font-family="Archivo, sans-serif">
+      <text x="20" y="26" font-size="13" font-weight="600" fill="#555555">Framing, benchmark composite score</text>
+      <text x="20" y="69" font-size="16" font-weight="600" fill="#111111">Vendor's system</text>
+      <rect x="230" y="50" width="380" height="28" rx="0" fill="#555555"/>
+      <text x="620" y="70" font-size="16" font-weight="600" fill="#111111">82</text>
+      <text x="20" y="121" font-size="16" font-weight="600" fill="#111111">Independent estimators</text>
+      <rect x="230" y="102" width="329" height="28" rx="0" fill="#555555"/>
+      <text x="569" y="122" font-size="16" font-weight="600" fill="#111111">71</text>
+      <text x="20" y="173" font-size="16" font-weight="600" fill="#111111">Best general model</text>
+      <rect x="230" y="154" width="250" height="28" rx="0" fill="#555555"/>
+      <text x="490" y="174" font-size="16" font-weight="600" fill="#111111">54</text>
+      <line x1="230" y1="40" x2="230" y2="200" stroke="#888888" stroke-width="1"/>
+      <rect x="20" y="214" width="680" height="60" rx="0" fill="#ffffff" stroke="#da7756" stroke-width="1.5"/>
+      <text x="36" y="238" font-size="13" fill="#111111">The benchmark is the vendor's own, and matching was scored by an AI judge.</text>
+      <text x="36" y="258" font-size="13" fill="#555555">A quantity counted as right within 25% of the expert figure.</text>
+    </g>
+  </svg>
+  <figcaption>On framing, the vendor's purpose-built system scored highest on its own benchmark. The test set is the vendor's, items were matched by an AI judge, and the result has not been reproduced independently. Diagram: Quarri.</figcaption>
+</figure>
+  <h2>What the benchmarks measured</h2>
+  <p>General-purpose models struggle with drawings. AECV-Bench, <a href="https://arxiv.org/abs/2601.04819" target="_blank" rel="noopener">published in January 2026</a> by Aleksei Kondratenko and colleagues, tested current models on floor plans and drawing questions. They found text reading strong, "up to 0.95 accuracy". The same models were weak at symbols: "reliable counting of doors and windows - remains unsolved (often 0.40-0.55 accuracy) with substantial proportional errors".</p>
+  <p>A purpose-built system does better, on its maker's test. Handoff-H1, <a href="https://arxiv.org/abs/2608.15032" target="_blank" rel="noopener">published in August 2026</a> by researchers at Handoff, which sells the system, was tested on "10 real residential blueprint sets paired with consensus-validated expert takeoffs". Matching predicted items to the expert list was done by an AI judge, OpenAI's gpt-5.5, not by people. Across all nine trades, general models scored between 35 and 61 on the composite. Independent professional estimators scored 77.6%, with 65.5% coverage and 87.9% of quantities within 25%. Handoff-H1 scored 81.6%, with 86.1% coverage and 78.8% within 25%. The blueprint sets are available only on request.</p>
+  <p>The framing row is the one a lumber dealer needs: 82 for the system, 71 for the estimators, 54 for the best general model. The authors add that "Trades measured in linear or square feet (framing, siding, roofing) show consistently higher error rates than discrete-count trades (doors, windows, fixtures), in Handoff-H1 and in every baseline".</p>
+  <h2>Two different kinds of error</h2>
+  <p>Coverage and quantity precision are separate failures. On the benchmark's coverage measure, the estimators missed about a third of the items the experts listed, but were closer on the ones they kept. The system missed fewer items and was further out on more quantities. For a lumber order, a missed item means a second delivery, and a 25% tolerance on a wall's studs is the difference between enough lumber and a second trip.</p>
+  <h2>What the drawing doesn't hold</h2>
+  <p>A takeoff gives quantities in the plan's terms. The order is written in the dealer's: stock lengths, grades and species from its own catalogue, and allowances that depend on how a particular builder frames. None of that is in the drawing, so an AI reading only the plans can't produce the order. It needs the catalogue and the builder's past orders as well.</p>
+  <h2>How to use it</h2>
+  <p>Let AI build the first complete list from the drawings, since coverage is its strength on this benchmark. Have an estimator check the quantities for the items that cost most, since that is where precision matters. Then convert the checked quantities to stock sizes and lengths using the dealer's catalogue. Keep the quoted and delivered quantities for finished jobs side by side. That record becomes the local test the benchmark can't be, and it shows which item types the AI misses most often.</p>
+  <h2>When it doesn't apply</h2>
+  <p>A small, simple job that a skilled estimator can take off in minutes gains little from AI. Some plans are too incomplete for any takeoff, human or machine, to be reliable. And the benchmark covers residential plans only. Commercial and engineered-wood jobs may behave differently.</p>
+  <p><a href="../wood-products.html">Quarri for wood products</a> is built around how a wood products plant runs, where the order book meets real capacity.</p>
+
+  <aside class="art-related"><h2>Related reading</h2><ul><li><a href="../insights/what-can-ai-do-for-a-lumber-yards-pricing-and-stock.html">What can AI do for a lumber yard&#x27;s pricing and stock?</a></li><li><a href="../insights/what-does-lumber-yard-erp-software-need-to-handle.html">What does lumber yard ERP software need to handle?</a></li></ul></aside>
+
+  <div class="art-sources">
+    <h2>Sources</h2>
+    <ol><li>Chicelli et al., "Handoff-H1: An Orchestrated Vision-Agent System for Material Quantity Takeoff from Construction Blueprints", arXiv 2608.15032, 15 August 2026: <a href="https://arxiv.org/abs/2608.15032" target="_blank" rel="noopener">arxiv.org</a></li><li>Beam AI, "Everything You Need to Know About Lumber Takeoffs": <a href="https://www.ibeam.ai/blog/lumber-takeoffs-everything-you-need-to-know" target="_blank" rel="noopener">ibeam.ai</a></li><li>Kondratenko et al., "AECV-Bench: Benchmarking Multimodal Models on Architectural and Engineering Drawings Understanding", arXiv 2601.04819, 8 January 2026: <a href="https://arxiv.org/abs/2601.04819" target="_blank" rel="noopener">arxiv.org</a></li></ol>
+  </div>
+
+  <p class="art-about">Quarri is an AI-native data platform for the timber supply chain. It connects buying, production, sales and inventory for forest management, sawmill, wood products and pulp, paper and packaging operators.</p>
+
+  <aside class="author">
+    <img src="../assets/theo-leslie.webp" alt="Theo Leslie" width="76" height="76">
+    <div>
+      <div class="who">Theo Leslie</div>
+      <div class="role">CEO &amp; Co-founder, Quarri</div>
+      <p>Theo is ex-PwC and leads Quarri&rsquo;s AI implementations in forestry, sawmill and wood products businesses, including a publicly listed timberland company.</p>
+      <p class="disc">Researched and drafted with AI, reviewed and edited by Theo Leslie, CEO &amp; Co-founder of Quarri.</p>
+      <a class="li" href="https://www.linkedin.com/in/theo-leslie-quarri" target="_blank" rel="noopener">Theo on LinkedIn &rarr;</a>
+    </div>
+  </aside>
+
+
+</article>
+
+<section class="on-dark cta cta-forest" style="background-image:url('../images/opt/pexels-nc-farm-bureau-mark-12278574.webp')">
+  <div class="container">
+    <h2 class="display reveal">See it on <span class="coral">your own data.</span></h2>
+    <p class="lead reveal d1">Live in two weeks, on the systems you already run.</p>
+    <div class="hero-cta reveal d2"><a href="../book-a-demo.html" class="btn btn-primary">Request a demo <span class="arw">&rarr;</span></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="../index.html" class="footer-logo"><img src="../assets/quarri-logo-white.png" alt="" width="24" height="24" loading="lazy" decoding="async"><span>Quarri</span></a>
+        <p class="footer-tag">The timber data platform.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="../index.html#platform">Modules</a></li>
+          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../security.html">Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="../forest-management.html">Forest Management</a></li>
+          <li><a href="../sawmills.html">Sawmills</a></li>
+          <li><a href="../wood-products.html">Wood Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../insights.html">Insights</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; Quarri AI Inc.</span>
+      <span>Encrypted &middot; US / EU residency &middot; No model training</span>
+      <span class="ck-line"><a href="#" class="ck-prefs" onclick="if(window.quarriConsentReset){window.quarriConsentReset();}return false;">Cookie preferences</a></span>
+      <a class="fb-social" href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank" aria-label="Quarri on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+})();
+</script>
+<script src="../assets/consent.js?v=121" defer></script>
+<script src="../assets/blueprint.js?v=121" defer></script>
+</body>
+</html>
