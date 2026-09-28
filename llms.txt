@@ -5,6 +5,8 @@
 > business already runs, reconciles them into one governed layer, and answers
 > questions in plain English with deterministic numbers rather than estimates.
 
+Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.
+
 ## What it does
 
 Quarri connects buying, production, sales and inventory from standing forest to
