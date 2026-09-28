@@ -2,10 +2,14 @@
    QUARRI — Website v1
    Fonts are loaded from each page's <head> via preconnect + stylesheet link
    (never @import — it serialises font loading behind the CSS).
-   Built to Marketing/Brand guidelines/Quarri_Brand_Guidelines.html
-   Palette rule: CORAL is the general site accent.
-                 GREEN lives inside data widgets only (gains), never mixed
-                 with coral in the same widget.
+   These two stylesheets ARE the canon. Marketing/Brand guidelines/tokens.json
+   is extracted from them; the guidelines page is generated from tokens.json.
+   Palette rule: CORAL (--coral) is the general site accent.
+                 --forest / --forest-2 are SURFACES: whole dark sections,
+                 never a button or text colour.
+                 --gain / --loss are SEMANTIC: deltas inside data widgets
+                 only, never mixed with coral in the same widget.
+                 "Green" alone is ambiguous here; name the token.
    ========================================================================== */
 
 :root{

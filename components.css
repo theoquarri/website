@@ -1,8 +1,9 @@
 /* ==========================================================================
    QUARRI — Website v1 · components
    Palette rule enforced here:
-     .widget (data surfaces) → GREEN accents only
-     everything else        → CORAL accent only
+     .widget (data surfaces) → --gain / --loss accents only
+     everything else        → --coral accent only
+     --forest is a section SURFACE, not an accent (see tokens.json)
    ========================================================================== */
 
 /* ---------- HERO: problem ↔ solution ---------- */
@@ -56,7 +57,7 @@
 }
 .ps-mid .ml{ font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--coral) }
 
-/* ---------- WIDGET (data surface — GREEN only) ---------- */
+/* ---------- WIDGET (data surface — --gain accents only) ---------- */
 .widget{
   margin-top:18px; overflow:hidden;
   border:1px solid #24242c; background:#0d0d10;
