@@ -14,11 +14,15 @@
 <meta property="og:title" content="Why is public forestry data so hard to use? | Quarri">
 <meta property="og:description" content="Inventories are built to estimate populations, not your land. Plots are moved and swapped for privacy, and county removals estimates carry wide errors.">
 <meta property="og:url" content="https://quarri.ai/insights/why-is-public-forestry-data-so-hard-to-use.html">
-<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta property="og:image" content="https://quarri.ai/images/og/why-is-public-forestry-data-so-hard-to-use.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Median county sampling errors at the 68% confidence level in the 2019 county estimates: 24% for net volume across 1,672 counties, 34% for annual growth across 1,542, and 62% for annual removals across 1,324, 859 of which had errors of 50% or more">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Why is public forestry data so hard to use? | Quarri">
 <meta name="twitter:description" content="Inventories are built to estimate populations, not your land. Plots are moved and swapped for privacy, and county removals estimates carry wide errors.">
-<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:image" content="https://quarri.ai/images/og/why-is-public-forestry-data-so-hard-to-use.png">
+<meta name="twitter:image:alt" content="Median county sampling errors at the 68% confidence level in the 2019 county estimates: 24% for net volume across 1,672 counties, 34% for annual growth across 1,542, and 62% for annual removals across 1,324, 859 of which had errors of 50% or more">
 
 <link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
@@ -31,11 +35,17 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="../styles.css?v=121">
-<link rel="stylesheet" href="../components.css?v=121">
+<link rel="stylesheet" href="../styles.css?v=124">
+<link rel="stylesheet" href="../components.css?v=124">
 <meta name="quarri-corpus" content="article">
 <meta name="quarri-section" content="Public timber and lumber data">
 <meta name="quarri-section-url" content="https://quarri.ai/insights/public-timber-and-lumber-data.html">
+<meta name="quarri-diagram" content="https://quarri.ai/images/diagrams/why-is-public-forestry-data-so-hard-to-use.png">
+<meta name="quarri-diagram-alt" content="Median county sampling errors at the 68% confidence level in the 2019 county estimates: 24% for net volume across 1,672 counties, 34% for annual growth across 1,542, and 62% for annual removals across 1,324, 859 of which had errors of 50% or more">
+<meta name="quarri-diagram-caption" content="At county scale, a removals estimate is a direction, not a number. Aggregating counties into a supply area narrows the error.">
+<meta name="quarri-hero" content="https://quarri.ai/images/opt/conifer-forest-clearing-aerial.webp">
+<meta name="quarri-hero-alt" content="Aerial view of dense conifer forest with a clearing">
+<link rel="preload" as="image" href="../images/opt/conifer-forest-clearing-aerial.webp" fetchpriority="high">
 
 <script type="application/ld+json" id="quarri-schema">
 {
@@ -113,7 +123,35 @@
       "about": {
         "@id": "https://quarri.ai/#software"
       },
-      "image": "https://quarri.ai/assets/og-image.jpg",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://quarri.ai/images/diagrams/why-is-public-forestry-data-so-hard-to-use.png",
+          "url": "https://quarri.ai/images/diagrams/why-is-public-forestry-data-so-hard-to-use.png",
+          "caption": "At county scale, a removals estimate is a direction, not a number. Aggregating counties into a supply area narrows the error.",
+          "description": "Median county sampling errors at the 68% confidence level in the 2019 county estimates: 24% for net volume across 1,672 counties, 34% for annual growth across 1,542, and 62% for annual removals across 1,324, 859 of which had errors of 50% or more",
+          "width": 1440,
+          "encodingFormat": "image/png",
+          "representativeOfPage": true,
+          "creator": {
+            "@id": "https://quarri.ai/#organization"
+          },
+          "copyrightHolder": {
+            "@id": "https://quarri.ai/#organization"
+          },
+          "creditText": "Quarri"
+        },
+        "https://quarri.ai/images/og/why-is-public-forestry-data-so-hard-to-use.png",
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://quarri.ai/images/opt/conifer-forest-clearing-aerial.webp",
+          "url": "https://quarri.ai/images/opt/conifer-forest-clearing-aerial.webp",
+          "description": "Aerial view of dense conifer forest with a clearing",
+          "encodingFormat": "image/webp",
+          "license": "https://www.pexels.com/license/",
+          "acquireLicensePage": "https://www.pexels.com/license/"
+        }
+      ],
       "breadcrumb": {
         "@id": "https://quarri.ai/insights/why-is-public-forestry-data-so-hard-to-use.html#breadcrumb"
       },
@@ -201,7 +239,7 @@
   </div>
 </header>
 
-<div class="art-hero art-hero-plain">
+<div role="img" aria-label="Aerial view of dense conifer forest with a clearing" class="art-hero" style="background-image:url('../images/opt/conifer-forest-clearing-aerial.webp')">
   <div class="in">
     <span class="meta">Public timber and lumber data &middot; 28 Sep 2026</span>
     <h1>Why is public forestry data so hard to use?</h1>
@@ -342,7 +380,7 @@
   } else { els.forEach(function(e){e.classList.add('in')}); }
 })();
 </script>
-<script src="../assets/consent.js?v=121" defer></script>
-<script src="../assets/blueprint.js?v=121" defer></script>
+<script src="../assets/consent.js?v=124" defer></script>
+<script src="../assets/blueprint.js?v=124" defer></script>
 </body>
 </html>

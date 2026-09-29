@@ -14,11 +14,15 @@
 <meta property="og:title" content="What can AI add to GIS in forest management? | Quarri">
 <meta property="og:description" content="New layers the GIS never had, such as canopy height from imagery, each with a known error that decides what it is fit for. Plus help running analyses.">
 <meta property="og:url" content="https://quarri.ai/insights/what-can-ai-add-to-gis-in-forest-management.html">
-<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta property="og:image" content="https://quarri.ai/images/og/what-can-ai-add-to-gis-in-forest-management.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI-derived forest layers with their published error, and the error each decision can tolerate, from targeting field work to valuing a sale">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="What can AI add to GIS in forest management? | Quarri">
 <meta name="twitter:description" content="New layers the GIS never had, such as canopy height from imagery, each with a known error that decides what it is fit for. Plus help running analyses.">
-<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:image" content="https://quarri.ai/images/og/what-can-ai-add-to-gis-in-forest-management.png">
+<meta name="twitter:image:alt" content="AI-derived forest layers with their published error, and the error each decision can tolerate, from targeting field work to valuing a sale">
 
 <link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
@@ -31,11 +35,17 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="../styles.css?v=121">
-<link rel="stylesheet" href="../components.css?v=121">
+<link rel="stylesheet" href="../styles.css?v=124">
+<link rel="stylesheet" href="../components.css?v=124">
 <meta name="quarri-corpus" content="article">
 <meta name="quarri-section" content="Maps and GIS">
 <meta name="quarri-section-url" content="https://quarri.ai/insights/maps-and-gis.html">
+<meta name="quarri-diagram" content="https://quarri.ai/images/diagrams/what-can-ai-add-to-gis-in-forest-management.png">
+<meta name="quarri-diagram-alt" content="AI-derived forest layers with their published error, and the error each decision can tolerate, from targeting field work to valuing a sale">
+<meta name="quarri-diagram-caption" content="Each layer&#x27;s error decides what it can feed. Canopy height is useful for targeting field work, volume from airborne data carries a much larger error, and local calibration against scaled logs brings it close to the field cruise.">
+<meta name="quarri-hero" content="https://quarri.ai/images/opt/mixed-forest-aerial-winter.webp">
+<meta name="quarri-hero-alt" content="Aerial view of mixed conifer and bare broadleaf forest in winter">
+<link rel="preload" as="image" href="../images/opt/mixed-forest-aerial-winter.webp" fetchpriority="high">
 
 <script type="application/ld+json" id="quarri-schema">
 {
@@ -113,7 +123,35 @@
       "about": {
         "@id": "https://quarri.ai/#software"
       },
-      "image": "https://quarri.ai/assets/og-image.jpg",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://quarri.ai/images/diagrams/what-can-ai-add-to-gis-in-forest-management.png",
+          "url": "https://quarri.ai/images/diagrams/what-can-ai-add-to-gis-in-forest-management.png",
+          "caption": "Each layer's error decides what it can feed. Canopy height is useful for targeting field work, volume from airborne data carries a much larger error, and local calibration against scaled logs brings it close to the field cruise.",
+          "description": "AI-derived forest layers with their published error, and the error each decision can tolerate, from targeting field work to valuing a sale",
+          "width": 1440,
+          "encodingFormat": "image/png",
+          "representativeOfPage": true,
+          "creator": {
+            "@id": "https://quarri.ai/#organization"
+          },
+          "copyrightHolder": {
+            "@id": "https://quarri.ai/#organization"
+          },
+          "creditText": "Quarri"
+        },
+        "https://quarri.ai/images/og/what-can-ai-add-to-gis-in-forest-management.png",
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://quarri.ai/images/opt/mixed-forest-aerial-winter.webp",
+          "url": "https://quarri.ai/images/opt/mixed-forest-aerial-winter.webp",
+          "description": "Aerial view of mixed conifer and bare broadleaf forest in winter",
+          "encodingFormat": "image/webp",
+          "license": "https://www.pexels.com/license/",
+          "acquireLicensePage": "https://www.pexels.com/license/"
+        }
+      ],
       "breadcrumb": {
         "@id": "https://quarri.ai/insights/what-can-ai-add-to-gis-in-forest-management.html#breadcrumb"
       },
@@ -201,7 +239,7 @@
   </div>
 </header>
 
-<div class="art-hero art-hero-plain">
+<div role="img" aria-label="Aerial view of mixed conifer and bare broadleaf forest in winter" class="art-hero" style="background-image:url('../images/opt/mixed-forest-aerial-winter.webp')">
   <div class="in">
     <span class="meta">Maps and GIS &middot; 28 Sep 2026</span>
     <h1>What can AI add to GIS in forest management?</h1>
@@ -358,7 +396,7 @@
   } else { els.forEach(function(e){e.classList.add('in')}); }
 })();
 </script>
-<script src="../assets/consent.js?v=121" defer></script>
-<script src="../assets/blueprint.js?v=121" defer></script>
+<script src="../assets/consent.js?v=124" defer></script>
+<script src="../assets/blueprint.js?v=124" defer></script>
 </body>
 </html>

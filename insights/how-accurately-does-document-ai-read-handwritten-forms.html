@@ -14,11 +14,15 @@
 <meta property="og:title" content="How accurately does document AI read handwritten forms? | Quarri">
 <meta property="og:description" content="Close to a careful person on free text, weaker on handwritten tables, and wrong in plausible ways. What 2025 and 2026 benchmarks found.">
 <meta property="og:url" content="https://quarri.ai/insights/how-accurately-does-document-ai-read-handwritten-forms.html">
-<meta property="og:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta property="og:image" content="https://quarri.ai/images/og/how-accurately-does-document-ai-read-handwritten-forms.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Two panels from the 2026 benchmark: the best model scored 71.85 overall against 77.09 for single-pass humans, ahead on text and behind on tables by over 14 points; 66.56% of its table errors were prior-driven against 34.48% for humans">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="How accurately does document AI read handwritten forms? | Quarri">
 <meta name="twitter:description" content="Close to a careful person on free text, weaker on handwritten tables, and wrong in plausible ways. What 2025 and 2026 benchmarks found.">
-<meta name="twitter:image" content="https://quarri.ai/assets/og-image.jpg">
+<meta name="twitter:image" content="https://quarri.ai/images/og/how-accurately-does-document-ai-read-handwritten-forms.png">
+<meta name="twitter:image:alt" content="Two panels from the 2026 benchmark: the best model scored 71.85 overall against 77.09 for single-pass humans, ahead on text and behind on tables by over 14 points; 66.56% of its table errors were prior-driven against 34.48% for humans">
 
 <link rel="icon" type="image/png" href="../assets/favicon.png" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/png" href="../assets/favicon-dark-mode.png" media="(prefers-color-scheme: dark)">
@@ -31,11 +35,17 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="../styles.css?v=121">
-<link rel="stylesheet" href="../components.css?v=121">
+<link rel="stylesheet" href="../styles.css?v=124">
+<link rel="stylesheet" href="../components.css?v=124">
 <meta name="quarri-corpus" content="article">
 <meta name="quarri-section" content="Research through a data lens">
 <meta name="quarri-section-url" content="https://quarri.ai/insights/research-through-a-data-lens.html">
+<meta name="quarri-diagram" content="https://quarri.ai/images/diagrams/how-accurately-does-document-ai-read-handwritten-forms.png">
+<meta name="quarri-diagram-alt" content="Two panels from the 2026 benchmark: the best model scored 71.85 overall against 77.09 for single-pass humans, ahead on text and behind on tables by over 14 points; 66.56% of its table errors were prior-driven against 34.48% for humans">
+<meta name="quarri-diagram-caption" content="The best model came within a modest gap of people overall, but its table errors were more often fluent substitutions the page did not support, which are harder to spot. Source: WildHandBench, August 2026.">
+<meta name="quarri-hero" content="https://quarri.ai/images/opt/paper-stack-clips.webp">
+<meta name="quarri-hero-alt" content="A tall stack of paper-clipped documents on a desk beside reading glasses">
+<link rel="preload" as="image" href="../images/opt/paper-stack-clips.webp" fetchpriority="high">
 
 <script type="application/ld+json" id="quarri-schema">
 {
@@ -113,7 +123,35 @@
       "about": {
         "@id": "https://quarri.ai/#software"
       },
-      "image": "https://quarri.ai/assets/og-image.jpg",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://quarri.ai/images/diagrams/how-accurately-does-document-ai-read-handwritten-forms.png",
+          "url": "https://quarri.ai/images/diagrams/how-accurately-does-document-ai-read-handwritten-forms.png",
+          "caption": "The best model came within a modest gap of people overall, but its table errors were more often fluent substitutions the page did not support, which are harder to spot. Source: WildHandBench, August 2026.",
+          "description": "Two panels from the 2026 benchmark: the best model scored 71.85 overall against 77.09 for single-pass humans, ahead on text and behind on tables by over 14 points; 66.56% of its table errors were prior-driven against 34.48% for humans",
+          "width": 1440,
+          "encodingFormat": "image/png",
+          "representativeOfPage": true,
+          "creator": {
+            "@id": "https://quarri.ai/#organization"
+          },
+          "copyrightHolder": {
+            "@id": "https://quarri.ai/#organization"
+          },
+          "creditText": "Quarri"
+        },
+        "https://quarri.ai/images/og/how-accurately-does-document-ai-read-handwritten-forms.png",
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://quarri.ai/images/opt/paper-stack-clips.webp",
+          "url": "https://quarri.ai/images/opt/paper-stack-clips.webp",
+          "description": "A tall stack of paper-clipped documents on a desk beside reading glasses",
+          "encodingFormat": "image/webp",
+          "license": "https://www.pexels.com/license/",
+          "acquireLicensePage": "https://www.pexels.com/license/"
+        }
+      ],
       "breadcrumb": {
         "@id": "https://quarri.ai/insights/how-accurately-does-document-ai-read-handwritten-forms.html#breadcrumb"
       },
@@ -201,7 +239,7 @@
   </div>
 </header>
 
-<div class="art-hero art-hero-plain">
+<div role="img" aria-label="A tall stack of paper-clipped documents on a desk beside reading glasses" class="art-hero" style="background-image:url('../images/opt/paper-stack-clips.webp')">
   <div class="in">
     <span class="meta">Research through a data lens &middot; 28 Sep 2026</span>
     <h1>How accurately does document AI read handwritten forms?</h1>
@@ -341,7 +379,7 @@
   } else { els.forEach(function(e){e.classList.add('in')}); }
 })();
 </script>
-<script src="../assets/consent.js?v=121" defer></script>
-<script src="../assets/blueprint.js?v=121" defer></script>
+<script src="../assets/consent.js?v=124" defer></script>
+<script src="../assets/blueprint.js?v=124" defer></script>
 </body>
 </html>

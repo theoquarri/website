@@ -2307,13 +2307,16 @@ p.cap::before{
 .hub-sec{margin:0 0 56px}
 .hub-sec h2{font-weight:300;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.02em;margin:0 0 18px}
 .hub-sec h2 a{color:var(--ink);text-decoration:none}
-.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
-.hub-card{display:flex;flex-direction:column;gap:8px;padding:20px;background:var(--white);color:var(--ink);text-decoration:none}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:12px}
+/* cards carry their own border: a grey grid background showed through every empty cell
+   (a part-filled row, or a filtered view), fixed 28 Sep 2026 */
+.hub-card{display:flex;flex-direction:column;gap:8px;padding:20px;background:var(--white);color:var(--ink);text-decoration:none;border:1px solid var(--rule)}
 .hub-card[hidden]{display:none}
 .hub-card:hover .hc-t{color:var(--coral)}
 .hc-t{font-weight:500;font-size:17px;line-height:1.35}
 .hc-d{font-size:14px;line-height:1.55;color:var(--ink-2)}
 .hub-more{display:inline-block;margin-top:14px;font-weight:600;color:var(--coral);text-decoration:none}
+.hub-more[hidden]{display:none}   /* the filter hides it; display above would beat the UA [hidden] rule */
 .hub-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px}
 .hub-filter button{font:500 13px/1 var(--font);padding:10px 14px;border:1px solid var(--rule);background:var(--white);color:var(--ink-2);cursor:pointer}
 .hub-filter button.on{background:var(--ink);color:var(--white);border-color:var(--ink)}
