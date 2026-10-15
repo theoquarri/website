@@ -275,6 +275,12 @@ footer ul a:hover{ color:var(--white) }
 
 @media (max-width:900px){
   :root{ --gutter:22px }
+}
+/* Phones (Theo, 15 Oct 2026): 84px a side made about 180px of empty space between sections. */
+@media (max-width:760px){
+  :root{ --pad-y:clamp(52px, 8vh, 72px) }
+}
+@media (max-width:900px){
   .footer-top{ grid-template-columns:1fr 1fr; gap:30px }
 }
 

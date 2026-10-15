@@ -576,6 +576,16 @@
 .wf-panel .pt{ gap:14px; flex-wrap:wrap }
 .wf-panel .pt span{ text-wrap:balance }
 .wf-panel .pt em{ flex:none; white-space:nowrap; margin-left:auto }
+/* Phones (Theo, 15 Oct 2026): squeezed to a phone's width, a panel's chart text fell to about 6px. Below 600px the
+   chart keeps a readable width (text about 10px) and scrolls sideways inside its own panel; the page never does. */
+@media (max-width:600px){
+  /* !important: later panel rules set overflow for their own decorations; on a phone the chart must scroll */
+  .wf-panel{ overflow-x:auto !important; overflow-y:hidden !important; -webkit-overflow-scrolling:touch; scrollbar-width:thin }
+  .wf-panel > svg{ min-width:480px }
+  /* a grid column grows to its content unless told otherwise, which would widen the page instead */
+  .modrow > *, .soon-block > *, .show > *, .an-grid > *, .sb-vis, .mr-vis, .an-vis{ min-width:0 }
+  :where(*):has(> .wf-panel){ min-width:0 }
+}
 
 /* ==========================================================================
    AI NATIVE
@@ -663,6 +673,14 @@
   background:var(--coral); transition:right .35s var(--ease);
 }
 .phase-track a.on::after{ right:0 }
+/* Phones (Theo, 15 Oct 2026): the four names ran off the screen. Show the four numbers, with the name of the
+   phase you're in beside its number, on one line. */
+@media (max-width:600px){
+  .phase-track .pt-in{ gap:16px }
+  .phase-track a{ font-size:0; gap:0 }
+  .phase-track a .n{ font-size:11px }
+  .phase-track a.on{ font-size:11px; gap:8px }
+}
 /* Anchored rows must clear the nav plus the sticky tracker itself. */
 .modrow[id]{ scroll-margin-top:132px }
 
@@ -710,6 +728,12 @@
 .modrow.reveal{ transform:translate(-30px, 14px) }
 .modrow.flip.reveal{ transform:translate(30px, 14px) }
 .modrow.reveal.in{ transform:none }
+/* Phones (Theo, 15 Oct 2026): a row waiting to enter from the side sat 30px past the screen edge and widened the
+   page until it was scrolled to, so phones zoomed the page out or let it slide sideways. Rows enter upward there. */
+@media (max-width:900px){
+  .modrow.reveal, .modrow.flip.reveal{ transform:translateY(14px) }
+  .modrow.reveal.in, .modrow.flip.reveal.in{ transform:none }
+}
 @media (prefers-reduced-motion: reduce){
   .modrow.reveal, .modrow.flip.reveal{ transform:none }
   .mr-photo img, .mr-vis .wf-panel{ transition:none }
@@ -1455,7 +1479,7 @@
 .consent.is-in{ transform:none }
 .consent-in{ max-width:var(--content); margin:0 auto; padding:16px var(--gutter);
   display:flex; align-items:center; gap:clamp(14px,3vw,34px); flex-wrap:wrap }
-.consent-copy{ flex:1 1 340px; font-size:13.5px; line-height:1.55; color:var(--on-forest); margin:0 }
+.consent-copy{ flex:1 1 min(340px, 100%); min-width:0; font-size:13.5px; line-height:1.55; color:var(--on-forest); margin:0 }
 .consent-copy a{ color:var(--coral-hi); text-decoration:underline; text-underline-offset:2px }
 .consent-btns{ display:flex; gap:10px; flex:none }
 .consent-btns .btn{ min-width:120px }
@@ -1505,6 +1529,22 @@
 .nav-pop a.np-ic:hover .ic, .nav-pop a.np-ic:focus-visible .ic{ animation:np-ic 1.25s steps(30) infinite }
 @keyframes np-ic{ from{ background-position:0 0 } to{ background-position:-840px 0 } }
 @media (prefers-reduced-motion:reduce){ .nav-pop a.np-ic .ic{ animation:none !important } }
+/* Phones and tablets (Theo, 15 Oct 2026: "the nested drop down menus ... are not properly optimised for mobile").
+   In the collapsed menu a flyout can't float on hover: each group opens in place as an accordion when its label is
+   tapped (the label's onclick toggles .open below 1080px, the menu's collapse point), and the menu scrolls if long. */
+@media (max-width:1080px){
+  .nav.open .nav-links{ max-height:calc(100vh - 70px); overflow-y:auto; -webkit-overflow-scrolling:touch }
+  .nav-group{ flex-direction:column; align-items:stretch; width:100% }
+  .nav-group > a{ justify-content:space-between; padding:6px 0 }
+  .nav-group:hover > a::after, .nav-group:focus-within > a::after{ transform:rotate(45deg) translateY(-1px) }
+  .nav-group.open > a::after{ transform:rotate(225deg) translateY(-3px) }
+  .nav-pop, .nav-group:hover .nav-pop, .nav-group:focus-within .nav-pop{
+    position:static; transform:none; min-width:0; width:100%; box-shadow:none; border:0; border-left:1px solid var(--rule);
+    padding:2px 0 6px 10px; margin:2px 0 6px; opacity:1; visibility:visible; display:none; transition:none }
+  .nav-group.open .nav-pop{ display:flex }
+  .nav-pop::before{ display:none }
+  .nav-pop a{ padding:9px 10px }
+}
 .nav-pop a.np-ic .np-t, .nav-pop a.np-ic .np-s{ grid-column:2 }
 .ic-quarri-platform{ background-image:url(assets/nav/quarri-platform.webp) }
 .ic-how-we-work{ background-image:url(assets/nav/how-we-work.webp) }
