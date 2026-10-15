@@ -31,8 +31,8 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=124">
-<link rel="stylesheet" href="components.css?v=124">
+<link rel="stylesheet" href="styles.css?v=144">
+<link rel="stylesheet" href="components.css?v=144">
 
 <script type="application/ld+json" id="quarri-schema">
 {
@@ -136,19 +136,11 @@
       "offers": [
         {
           "@type": "Offer",
-          "name": "Essentials",
-          "price": "500",
+          "name": "Free tier",
+          "price": "0",
           "priceCurrency": "USD",
           "url": "https://quarri.ai/pricing.html",
-          "description": "One live data source, 1 GB of data, unlimited AI queries, one user and unlimited dashboard viewers. Implementation and data modelling included.",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "500",
-            "priceCurrency": "USD",
-            "unitText": "month",
-            "billingDuration": 1,
-            "billingIncrement": 1
-          }
+          "description": "One new data connector, 1 GB of data, unlimited AI queries, one user and unlimited dashboard viewers, set up yourself in Claude. No time limit."
         },
         {
           "@type": "Offer",
@@ -176,33 +168,39 @@
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
     <nav class="nav-links">
-      <a href="#platform">Platform</a>
       <div class="nav-group">
-        <a href="#serve" tabindex="0">Who we serve</a>
+        <a href="how-it-works.html" tabindex="0">How it works</a>
         <div class="nav-pop">
-          <span class="np-group">By operation</span>
-          <a href="forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
-          <a href="sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
-          <a href="wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
-          <a href="pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
-          <span class="np-group">By team</span>
-          <a href="finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
-          <a href="operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+          <a class="np-ic" href="index.html#platform"><span class="ic ic-quarri-platform" aria-hidden="true"></span><span class="np-t">Quarri Platform</span><span class="np-s">What Quarri does</span></a>
+          <a class="np-ic" href="how-it-works.html"><span class="ic ic-how-we-work" aria-hidden="true"></span><span class="np-t">How We Work</span><span class="np-s">A layer, not a migration</span></a>
         </div>
       </div>
-      <a href="how-it-works.html">How it works</a>
+      <div class="nav-group">
+        <a href="index.html#serve" tabindex="0">Who we serve</a>
+        <div class="nav-pop">
+          <span class="np-group">By operation</span>
+          <a class="np-ic" href="forest-management.html"><span class="ic ic-forest-management" aria-hidden="true"></span><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a class="np-ic" href="sawmills.html"><span class="ic ic-sawmills" aria-hidden="true"></span><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a class="np-ic" href="wood-products.html"><span class="ic ic-wood-products" aria-hidden="true"></span><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a class="np-ic" href="pulp-paper-packaging.html"><span class="ic ic-pulp-paper-packaging" aria-hidden="true"></span><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <span class="np-group">By team</span>
+          <a class="np-ic" href="finance-and-strategy-teams.html"><span class="ic ic-finance-strategy" aria-hidden="true"></span><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a class="np-ic" href="operations-teams.html"><span class="ic ic-operations" aria-hidden="true"></span><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+        </div>
+      </div>
       <a href="security.html">Security</a>
       <a href="pricing.html">Pricing</a>
       <div class="nav-group">
         <a href="case-studies.html" tabindex="0">Resources</a>
-        <div class="nav-pop nav-pop-sm">
-          <a href="case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
-          <a href="insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
-          <a href="faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        <div class="nav-pop">
+          <a class="np-ic" href="case-studies.html"><span class="ic ic-case-studies" aria-hidden="true"></span><span class="np-t">Case Studies</span><span class="np-s">What we changed</span></a>
+          <a class="np-ic" href="insights.html"><span class="ic ic-insights" aria-hidden="true"></span><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a class="np-ic" href="faq.html"><span class="ic ic-faq" aria-hidden="true"></span><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
         </div>
       </div>
-      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
-      <a href="book-a-demo.html" class="btn btn-primary">Request a demo</a>
+      <a href="about.html">About</a>
+      <a href="https://app.quarri.ai/signup" class="nav-login">Sign in</a>
+      <span class="nav-pair"><a href="https://app.quarri.ai/signup">Start free <span class="arw" aria-hidden="true">&rarr;</span></a><a href="book-a-demo.html">Request a demo <span class="arw" aria-hidden="true">&rarr;</span></a></span>
     </nav>
   </div>
 </header>
@@ -516,42 +514,38 @@
       </div>
       <div class="mr-vis">
         <div class="wf-panel">
-          <div class="pt"><span>// Your systems &rarr; one layer &rarr; AI</span><em>live</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true">
+          <div class="pt"><span>// Sawmill systems &rarr; one layer &rarr; AI</span><em>live</em></div>
+          <svg class="cardv2" viewBox="0 0 448 162" aria-hidden="true">
             <text x="4" y="13" class="mono-s">YOUR SYSTEMS</text>
-            <g class="dr-up" style="animation-delay:.05s"><rect x="4" y="20" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="30" class="mono-w">ERP</text></g>
-            <g class="dr-up" style="animation-delay:.12s"><rect x="4" y="39" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="49" class="mono-w">MILL SYS</text></g>
-            <g class="dr-up" style="animation-delay:.19s"><rect x="4" y="58" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="68" class="mono-w">SQL</text></g>
-            <g class="dr-up" style="animation-delay:.26s"><rect x="4" y="77" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="87" class="mono-w">SHEETS</text></g>
-            <g class="dr-up" style="animation-delay:.33s"><rect x="4" y="96" width="72" height="14" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="11" y="106" class="mono-w">PAPER</text></g>
-
-            <path class="dr-flow" d="M78 27 C104 27 104 60 122 62" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
-            <path class="dr-flow" d="M78 46 C104 46 104 62 122 64" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
-            <path class="dr-flow" d="M78 65 C104 65 104 65 122 66" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
-            <path class="dr-flow" d="M78 84 C104 84 104 68 122 68" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
-            <path class="dr-flow" d="M78 103 C104 103 104 70 122 70" fill="none" stroke="#35a05f" stroke-width="1.1" opacity=".7"/>
-
-            <rect x="126" y="26" width="92" height="80" rx="6" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.32)"/>
-            <text x="134" y="42" class="mono-g">GOVERNED</text>
-            <text x="134" y="53" class="mono-g">LAYER</text>
-            <line x1="134" y1="60" x2="210" y2="60" stroke="rgba(255,255,255,.14)"/>
-            <text x="134" y="73" class="mono-s">CLEANED</text>
-            <text x="134" y="86" class="mono-s">JOINED</text>
-            <text x="134" y="99" class="mono-s">GOVERNED</text>
-            <circle class="spark-dot pulse" cx="208" cy="36" r="3"/>
-
-            <path class="dr-flow" d="M220 66 h20" fill="none" stroke="#35a05f" stroke-width="1.2"/>
-            <path d="m236 62 6 4-6 4" fill="none" stroke="#35a05f" stroke-width="1.2" stroke-linecap="round"/>
-
-            <rect x="246" y="14" width="110" height="104" rx="6" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.22)"/>
-            <text x="255" y="29" class="mono-w">AI MODELS</text>
-            <line x1="255" y1="35" x2="348" y2="35" stroke="rgba(255,255,255,.14)"/>
-            <g class="dr-up" style="animation-delay:.5s"><rect x="255" y="42" width="86" height="14" rx="4" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="262" y="52" class="mono-g">SKILLS</text></g>
-            <g class="dr-up" style="animation-delay:.58s"><rect x="255" y="60" width="86" height="14" rx="4" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="262" y="70" class="mono-g">TOOLS</text></g>
-            <g class="dr-up" style="animation-delay:.66s"><rect x="255" y="78" width="86" height="14" rx="4" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="262" y="88" class="mono-g">CONTEXT</text></g>
-            <g class="dr-up" style="animation-delay:.74s"><rect x="255" y="96" width="86" height="14" rx="4" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="262" y="106" class="mono-g">AGENTS</text></g>
+            <g class="dr-up" style="animation-delay:0.05s"><rect class="hair" x="4" y="22" width="96" height="18" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="52.0" y="34.5" text-anchor="middle" class="mono-w">SCALE HOUSE</text></g>
+            <path class="dr-flow vs" d="M100 31 C126 31 126 74 150 74" fill="none" stroke="#35a05f" stroke-width="1.1" opacity="0.7"/>
+            <g class="dr-up" style="animation-delay:0.12000000000000001s"><rect class="hair" x="4" y="46" width="96" height="18" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="52.0" y="58.5" text-anchor="middle" class="mono-w">MILL SYSTEM</text></g>
+            <path class="dr-flow vs" d="M100 55 C126 55 126 78 150 78" fill="none" stroke="#35a05f" stroke-width="1.1" opacity="0.7"/>
+            <g class="dr-up" style="animation-delay:0.19s"><rect class="hair" x="4" y="70" width="96" height="18" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="52.0" y="82.5" text-anchor="middle" class="mono-w">ERP</text></g>
+            <path class="dr-flow vs" d="M100 79 C126 79 126 82 150 82" fill="none" stroke="#35a05f" stroke-width="1.1" opacity="0.7"/>
+            <g class="dr-up" style="animation-delay:0.26s"><rect class="hair" x="4" y="94" width="96" height="18" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="52.0" y="106.5" text-anchor="middle" class="mono-w">SHEETS</text></g>
+            <path class="dr-flow vs" d="M100 103 C126 103 126 86 150 86" fill="none" stroke="#35a05f" stroke-width="1.1" opacity="0.7"/>
+            <g class="dr-up" style="animation-delay:0.33s"><rect class="hair" x="4" y="118" width="96" height="18" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="52.0" y="130.5" text-anchor="middle" class="mono-w">PAPER</text></g>
+            <path class="dr-flow vs" d="M100 127 C126 127 126 90 150 90" fill="none" stroke="#35a05f" stroke-width="1.1" opacity="0.7"/>
+            <rect class="hair" x="150" y="30" width="120" height="112" rx="2" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.32)"/>
+            <text x="160" y="50" class="mono-g">GOVERNED</text>
+            <text x="160" y="63" class="mono-g">LAYER</text>
+            <line class="hair" x1="160" y1="72" x2="260" y2="72" stroke="rgba(255,255,255,.14)"/>
+            <text x="160" y="90" class="mono-s">CLEANED</text>
+            <text x="160" y="106" class="mono-s">JOINED</text>
+            <text x="160" y="122" class="mono-s">GOVERNED</text>
+            <circle class="spark-dot pulse" cx="258" cy="42" r="3"/>
+            <path class="dr-flow vs" d="M270 86 h26" fill="none" stroke="#35a05f" stroke-width="1.2" opacity="1"/>
+            <path class="vs" d="m292 82 6 4-6 4" fill="none" stroke="#35a05f" stroke-width="1.2" stroke-linecap="round"/>
+            <rect class="hair" x="306" y="16" width="138" height="134" rx="2" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.22)"/>
+            <text x="316" y="34" class="mono-w">AI MODELS</text>
+            <line class="hair" x1="316" y1="41" x2="434" y2="41" stroke="rgba(255,255,255,.14)"/>
+            <g class="dr-up" style="animation-delay:0.5s"><rect class="hair" x="316" y="50" width="118" height="16" rx="2" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="324" y="61.5" class="mono-g">SKILLS</text></g>
+            <g class="dr-up" style="animation-delay:0.58s"><rect class="hair" x="316" y="74" width="118" height="16" rx="2" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="324" y="85.5" class="mono-g">TOOLS</text></g>
+            <g class="dr-up" style="animation-delay:0.66s"><rect class="hair" x="316" y="98" width="118" height="16" rx="2" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="324" y="109.5" class="mono-g">CONTEXT</text></g>
+            <g class="dr-up" style="animation-delay:0.74s"><rect class="hair" x="316" y="122" width="118" height="16" rx="2" fill="rgba(53,160,95,.12)" stroke="rgba(53,160,95,.3)"/><text x="324" y="133.5" class="mono-g">AGENTS</text></g>
           </svg>
-          <p class="cap">One deployment syncs your ERP daily alongside weighbridge data, scanned authority invoices and live weather.</p>
+          <p class="cap">One sawmill deployment syncs the scale house, mill system and ERP daily, alongside the spreadsheets the team already trusts.</p>
         </div>
       </div>
     </div>
@@ -570,22 +564,25 @@
       </div>
       <div class="mr-vis">
         <div class="wf-panel">
-          <div class="pt"><span>// Document capture</span><em>143 / 143</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true">
-            <rect x="4" y="14" width="86" height="104" rx="5" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.16)"/>
+          <div class="pt"><span>// Document capture</span><em>every page read</em></div>
+          <svg class="cardv2" viewBox="0 0 360 130" aria-hidden="true">
+            <rect class="hair" x="4" y="14" width="86" height="104" rx="2" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.16)"/>
             <text x="14" y="32" class="mono-s">SCANNED</text>
-            <path d="M14 46h60M14 56h44M14 66h66M14 76h38M14 86h58M14 96h30" stroke="rgba(255,255,255,.22)" stroke-width="3" stroke-linecap="round"/>
-            <path class="dr-flow" d="M100 66h30" stroke="#35a05f" stroke-width="1.3" fill="none"/>
-            <path d="m128 62 6 4-6 4" fill="none" stroke="#35a05f" stroke-width="1.3" stroke-linecap="round"/>
-            <rect x="144" y="14" width="212" height="104" rx="5" fill="rgba(53,160,95,.07)" stroke="rgba(53,160,95,.26)"/>
+            <path class="vs" d="M14 46h60M14 56h44M14 76h38M14 86h58M14 96h30" stroke="rgba(255,255,255,.22)" stroke-width="3" stroke-linecap="round"/>
+            <g class="beat" style="--d:1.3s"><path class="vs" d="M14 66h66" stroke="var(--coral)" stroke-width="3" stroke-linecap="round" opacity=".8"/></g>
+            <path class="dr-flow vs" d="M100 66h30" fill="none" stroke="#35a05f" stroke-width="1.3" opacity="1"/>
+            <path class="vs" d="m128 62 6 4-6 4" fill="none" stroke="#35a05f" stroke-width="1.2" stroke-linecap="round"/>
+            <rect class="hair" x="144" y="14" width="212" height="104" rx="2" fill="rgba(53,160,95,.07)" stroke="rgba(53,160,95,.26)"/>
             <text x="154" y="32" class="mono-g">STRUCTURED</text>
-            <line x1="154" y1="40" x2="346" y2="40" stroke="rgba(255,255,255,.14)"/>
-            <text x="154" y="55" class="mono-w">BOL</text><text x="212" y="55" class="mono-w">SPECIES</text><text x="300" y="55" class="mono-w">m3</text>
-            <g class="dr-up" style="animation-delay:.5s"><text x="154" y="72" class="mono-s">431026</text><text x="212" y="72" class="mono-s">White Pine</text><text x="300" y="72" class="mono-g">28.4</text></g>
-            <g class="dr-up" style="animation-delay:.62s"><text x="154" y="89" class="mono-s">431027</text><text x="212" y="89" class="mono-s">Hemlock</text><text x="300" y="89" class="mono-g">31.2</text></g>
-            <g class="dr-up" style="animation-delay:.74s"><text x="154" y="106" class="mono-s">431028</text><text x="212" y="106" class="mono-s">Mixed Hwd</text><text x="300" y="106" class="mono-g">26.9</text></g>
+            <line class="hair" x1="154" y1="40" x2="346" y2="40" stroke="rgba(255,255,255,.14)"/>
+            <text x="154" y="55" class="mono-w">TICKET</text>
+            <text x="222" y="55" class="mono-w">GRADE</text>
+            <text x="306" y="55" class="mono-w">TONNES</text>
+            <g class="dr-up" style="animation-delay:0.5s"><text x="154" y="72" class="mono-s">JT 4471</text><text x="222" y="72" class="mono-s">Kraft liner</text><text x="306" y="72" class="mono-g">18.4</text></g>
+            <g class="beat" style="--d:1.3s"><text x="154" y="89" class="mono-c">JT 4472</text><text x="222" y="89" class="mono-s">Fluting</text><text x="306" y="89" class="mono-g">21.0</text></g>
+            <g class="dr-up" style="animation-delay:0.74s"><text x="154" y="106" class="mono-s">JT 4473</text><text x="222" y="106" class="mono-s">Test liner</text><text x="306" y="106" class="mono-g">16.7</text></g>
           </svg>
-          <p class="cap">Every contract, offer and measurement ingested.</p>
+          <p class="cap">Every job ticket, delivery note and invoice read into one table, page by page.</p>
         </div>
       </div>
     </div>
@@ -604,39 +601,21 @@
       </div>
       <div class="mr-vis">
         <div class="wf-panel">
-          <div class="pt"><span>// Ticket &rarr; invoice &rarr; ledger</span><em>1 variance</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true">
-            <text x="6" y="14" class="mono-s">BOL</text>
-            <text x="76" y="14" class="mono-s">TICKET</text>
-            <text x="150" y="14" class="mono-s">INVOICE</text>
-            <text x="228" y="14" class="mono-s">LEDGER</text>
-            <text x="300" y="14" class="mono-s">MATCH</text>
-            <line x1="6" y1="20" x2="354" y2="20" stroke="rgba(255,255,255,.14)"/>
-
-            <g class="dr-up" style="animation-delay:.1s">
-              <text x="6" y="38" class="mono-s">431026</text><text x="76" y="38" class="mono-s">39.6 t</text>
-              <text x="150" y="38" class="mono-s">39.6 t</text><text x="228" y="38" class="mono-s">39.6 t</text>
-              <text x="300" y="38" class="mono-g">TIED</text>
-            </g>
-            <g class="dr-up" style="animation-delay:.22s">
-              <text x="6" y="58" class="mono-s">431027</text><text x="76" y="58" class="mono-s">41.2 t</text>
-              <text x="150" y="58" class="mono-s">41.2 t</text><text x="228" y="58" class="mono-s">41.2 t</text>
-              <text x="300" y="58" class="mono-g">TIED</text>
-            </g>
-            <g class="dr-up" style="animation-delay:.34s">
-              <text x="6" y="78" class="mono-s">431028</text><text x="76" y="78" class="mono-s">38.9 t</text>
-              <text x="150" y="78" class="mono-s">38.9 t</text><text x="228" y="78" class="mono-s">38.9 t</text>
-              <text x="300" y="78" class="mono-g">TIED</text>
-            </g>
-            <g class="dr-up" style="animation-delay:.46s">
-              <rect x="2" y="86" width="356" height="22" rx="4" fill="rgba(192,57,43,.13)" stroke="rgba(192,57,43,.45)"/>
-              <text x="6" y="101" class="mono-s">431029</text><text x="76" y="101" class="mono-r">$1.50/t</text>
-              <text x="150" y="101" class="mono-r">$9/t</text><text x="228" y="101" class="mono-s">not posted</text>
-              <text x="300" y="101" class="mono-r">+500%</text>
-            </g>
-            <text x="6" y="124" class="mono-s">TOLERANCE ON VOLUME AND VALUE &middot; LARGEST GAP UNDER A PENNY</text>
+          <div class="pt"><span>// Weigh ticket &rarr; bill of lading &rarr; invoice</span><em class="pt-warn">one variance</em></div>
+          <svg class="cardv2" viewBox="0 0 448 161" aria-hidden="true">
+            <text x="6" y="16" class="mono-s">LOAD</text>
+            <text x="96" y="16" class="mono-s">WEIGH</text>
+            <text x="186" y="16" class="mono-s">BOL</text>
+            <text x="282" y="16" class="mono-s">INVOICE</text>
+            <text x="380" y="16" class="mono-s">MATCH</text>
+            <line class="hair" x1="6" y1="24" x2="442" y2="24" stroke="rgba(255,255,255,.14)"/>
+            <g class="dr-up" style="animation-delay:0.1s"><text x="6" y="46" class="mono-s">L 2206</text><text x="96" y="46" class="mono-s">39.6 t</text><text x="186" y="46" class="mono-s">39.6 t</text><text x="282" y="46" class="mono-s">39.6 t</text><text x="380" y="46" class="mono-g">TIED</text></g>
+            <g class="dr-up" style="animation-delay:0.22s"><text x="6" y="70" class="mono-s">L 2207</text><text x="96" y="70" class="mono-s">41.2 t</text><text x="186" y="70" class="mono-s">41.2 t</text><text x="282" y="70" class="mono-s">41.2 t</text><text x="380" y="70" class="mono-g">TIED</text></g>
+            <g class="dr-up" style="animation-delay:0.33999999999999997s"><text x="6" y="94" class="mono-s">L 2208</text><text x="96" y="94" class="mono-s">38.9 t</text><text x="186" y="94" class="mono-s">38.9 t</text><text x="282" y="94" class="mono-s">38.9 t</text><text x="380" y="94" class="mono-g">TIED</text></g>
+            <g class="beat" style="--d:.9s"><rect class="hair" x="2" y="106" width="444" height="26" rx="2" fill="rgba(218,119,86,.12)" stroke="rgba(218,119,86,.45)"/><text x="6" y="123" class="mono-s">L 2209</text><text x="96" y="123" class="mono-s">40.1 t</text><text x="186" y="123" class="mono-s">40.1 t</text><text x="282" y="123" class="mono-c">42.8 t</text><text x="380" y="123" class="mono-c">VARIANCE</text></g>
+            <text x="6" y="152" class="mono-s">MATCHED LOAD BY LOAD, NOT BY TOTALS &middot; AGED UNTIL CLEARED</text>
           </svg>
-          <p class="cap">Caught by matching at bill-of-lading level, not by comparing totals.</p>
+          <p class="cap">Caught by matching every load against its bill of lading and invoice, not by comparing totals.</p>
         </div>
       </div>
     </div>
@@ -655,26 +634,24 @@
       </div>
       <div class="mr-vis">
         <div class="wf-panel">
-          <div class="pt"><span>// 15-day forecast &middot; tonnes/day</span><em>&plusmn;258 t</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true">
-            <defs><linearGradient id="fc" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#35a05f" stop-opacity=".26"/><stop offset="100%" stop-color="#35a05f" stop-opacity="0"/>
-            </linearGradient></defs>
-            <line class="gridline" x1="8" y1="30" x2="352" y2="30"/>
-            <line class="gridline" x1="8" y1="62" x2="352" y2="62"/>
-            <line class="gridline" x1="8" y1="94" x2="352" y2="94"/>
-            <path d="M12,74 C48,56 70,44 108,40 C146,36 168,52 206,58 C244,64 266,48 300,42 C324,38 336,44 348,46 L348,86 C336,84 324,76 300,72 C266,66 244,84 206,90 C168,96 146,74 108,70 C70,66 48,84 12,98 Z" fill="url(#fc)" class="spark-area"/>
-            <path class="spark-line" d="M12,86 C48,70 70,56 108,55 C146,54 168,68 206,74 C244,80 266,66 300,57 C324,51 336,54 348,56"/>
+          <div class="pt"><span>// Demand forecast &middot; orders by week</span><em>a band, not a point</em></div>
+          <svg class="cardv2" viewBox="0 0 360 130" aria-hidden="true">
+            <defs><linearGradient id="fc2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#35a05f" stop-opacity=".26"/><stop offset="100%" stop-color="#35a05f" stop-opacity="0"/></linearGradient></defs>
+            <line class="hair" x1="8" y1="30" x2="352" y2="30" stroke="rgba(255,255,255,.1)" stroke-dasharray="2 5"/>
+            <line class="hair" x1="8" y1="62" x2="352" y2="62" stroke="rgba(255,255,255,.1)" stroke-dasharray="2 5"/>
+            <line class="hair" x1="8" y1="94" x2="352" y2="94" stroke="rgba(255,255,255,.1)" stroke-dasharray="2 5"/>
+            <path class="spark-area" d="M12,74 C48,56 70,44 108,40 C146,36 168,52 206,58 C244,64 266,48 300,42 C324,38 336,44 348,46 L348,86 C336,84 324,76 300,72 C266,66 244,84 206,90 C168,96 146,74 108,70 C70,66 48,84 12,98 Z" fill="url(#fc2)"/>
+            <path class="spark-line vs" d="M12,86 C48,70 70,56 108,55 C146,54 168,68 206,74 C244,80 266,66 300,57 C324,51 336,54 348,56"/>
             <circle class="spark-dot pulse" cx="348" cy="56" r="3"/>
-            <rect x="12" y="112" width="14" height="8" rx="2" fill="#35a05f" opacity=".8"/>
-            <rect x="30" y="112" width="14" height="8" rx="2" fill="#35a05f" opacity=".8"/>
-            <rect x="48" y="112" width="14" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
-            <rect x="66" y="112" width="14" height="8" rx="2" fill="#35a05f" opacity=".8"/>
-            <rect x="84" y="112" width="14" height="8" rx="2" fill="#35a05f" opacity=".8"/>
-            <rect x="102" y="112" width="14" height="8" rx="2" fill="rgba(255,255,255,.2)"/>
-            <text x="126" y="120" class="mono-s">OPERABILITY &middot; HIGH / LOW BY DAY</text>
+            <rect class="hair" x="12" y="112" width="14" height="8" fill="#35a05f" opacity=".8"/>
+            <rect class="hair" x="30" y="112" width="14" height="8" fill="#35a05f" opacity=".8"/>
+            <rect class="hair" x="48" y="112" width="14" height="8" fill="#35a05f" opacity=".8"/>
+            <g class="beat" style="--d:1.6s"><rect class="hair" x="66" y="112" width="14" height="8" fill="var(--coral)"/></g>
+            <rect class="hair" x="84" y="112" width="14" height="8" fill="#35a05f" opacity=".8"/>
+            <rect class="hair" x="102" y="112" width="14" height="8" fill="rgba(255,255,255,.2)"/>
+            <text x="126" y="120" class="mono-s">SUPPLY COVER BY WEEK &middot; ONE WEEK SHORT</text>
           </svg>
-          <p class="cap">Harvest forecasting trained on 1,461 days of history against live weather.</p>
+          <p class="cap">Your own order history, overlaid with live prices and supplier lead times.</p>
         </div>
       </div>
     </div>
@@ -693,36 +670,36 @@
       </div>
       <div class="mr-vis">
         <div class="wf-panel">
-          <div class="pt"><span>// Process flow &middot; utilisation</span><em>trim 78% down</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true">
-            <text x="6" y="18" class="mono-s">LOGS IN</text>
-            <rect x="6" y="34" width="58" height="34" rx="5" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/>
-            <text x="20" y="55" class="mono-w">SAW</text>
-            <rect x="6" y="76" width="58" height="6" rx="3" fill="rgba(255,255,255,.14)"/>
-            <rect class="dr-bar" x="6" y="76" width="46" height="6" rx="3" fill="#35a05f"/>
-
-            <rect x="82" y="34" width="58" height="34" rx="5" fill="rgba(192,57,43,.14)" stroke="rgba(192,57,43,.5)"/>
-            <text x="94" y="55" class="mono-w">TRIM</text>
-            <rect x="82" y="76" width="58" height="6" rx="3" fill="rgba(255,255,255,.14)"/>
-            <rect class="dr-bar" style="animation-delay:.12s" x="82" y="76" width="13" height="6" rx="3" fill="#c0392b"/>
-            <text x="82" y="96" class="mono-s">BOTTLENECK</text>
-
-            <rect x="158" y="34" width="58" height="34" rx="5" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/>
-            <text x="172" y="55" class="mono-w">KILN</text>
-            <rect x="158" y="76" width="58" height="6" rx="3" fill="rgba(255,255,255,.14)"/>
-            <rect class="dr-bar" style="animation-delay:.24s" x="158" y="76" width="50" height="6" rx="3" fill="#35a05f"/>
-
-            <rect x="234" y="34" width="58" height="34" rx="5" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/>
-            <text x="243" y="55" class="mono-w">PLANER</text>
-            <rect x="234" y="76" width="58" height="6" rx="3" fill="rgba(255,255,255,.14)"/>
-            <rect class="dr-bar" style="animation-delay:.36s" x="234" y="76" width="40" height="6" rx="3" fill="#35a05f"/>
-
-            <rect x="310" y="34" width="46" height="34" rx="5" fill="rgba(53,160,95,.1)" stroke="rgba(53,160,95,.3)"/>
-            <text x="319" y="55" class="mono-g">SHIP</text>
-
-            <path d="M66 51h14M142 51h14M218 51h14M294 51h14" stroke="rgba(255,255,255,.3)" stroke-width="1.2"/>
+          <div class="pt"><span>// Sawmill line</span><em class="pt-warn">kiln flagged</em></div>
+          <svg class="cardv2" viewBox="0 0 448 157" aria-hidden="true">
+            <text x="0" y="14" class="mono-s">FLOW &middot; LOGS IN, DRIED LUMBER OUT</text>
+            <g class="dr-up" style="animation-delay:0.05s"><rect class="hair" x="0" y="30" width="72" height="36" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="36.0" y="51.5" text-anchor="middle" class="mono-w">LOG YARD</text></g>
+            <g class="dr-up" style="animation-delay:0.15000000000000002s"><rect class="hair" x="86" y="30" width="72" height="36" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="122.0" y="51.5" text-anchor="middle" class="mono-w">HEADRIG</text></g>
+            <g class="dr-up" style="animation-delay:0.25s"><rect class="hair" x="172" y="30" width="72" height="36" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="208.0" y="51.5" text-anchor="middle" class="mono-w">EDGER</text></g>
+            <g class="dr-up" style="animation-delay:0.35s"><rect class="hair flag" x="290" y="30" width="72" height="36" rx="2"/><text x="326" y="51.5" class="mono-w" text-anchor="middle">KILN</text></g>
+            <g class="dr-up" style="animation-delay:0.45s"><rect class="hair" x="376" y="30" width="72" height="36" rx="2" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.16)"/><text x="412.0" y="51.5" text-anchor="middle" class="mono-w">PLANER</text></g>
+            <path class="dr-flow vs" d="M72 48h14" fill="none" stroke="#35a05f" stroke-width="1.1" opacity="0.7"/>
+            <path class="dr-flow vs" d="M158 48h14" fill="none" stroke="#35a05f" stroke-width="1.1" opacity="0.7"/>
+            <path class="dr-flow vs" d="M362 48h14" fill="none" stroke="#35a05f" stroke-width="1.1" opacity="0.7"/>
+            <line class="hair" x1="244" y1="48" x2="290" y2="48" stroke="rgba(255,255,255,.22)"/>
+            <circle class="qdot" style="--d:1.00s" cx="283" cy="48" r="2.5"/>
+            <circle class="qdot" style="--d:1.18s" cx="276" cy="48" r="2.5"/>
+            <circle class="qdot" style="--d:1.36s" cx="269" cy="48" r="2.5"/>
+            <circle class="qdot" style="--d:1.54s" cx="262" cy="48" r="2.5"/>
+            <circle class="qdot" style="--d:1.72s" cx="255" cy="48" r="2.5"/>
+            <circle class="qdot" style="--d:1.90s" cx="248" cy="48" r="2.5"/>
+            <g class="dr-up" style="animation-delay:1.9s"><text x="267" y="84" class="mono-c" text-anchor="middle">WAITING TO DRY</text></g>
+            <circle class="spark-dot pulse hot" cx="358" cy="34" r="3"/>
+            <line class="hair" x1="0" y1="104" x2="448" y2="104" stroke="rgba(255,255,255,.14)"/>
+            <text x="0" y="125" class="mono-s">REACHING KILN</text>
+            <rect class="hair" x="140" y="119" width="160" height="6" fill="rgba(255,255,255,.12)"/>
+            <rect class="dr-bar hair" style="animation-delay:0.6s" x="140" y="119" width="146" height="6" fill="#35a05f" opacity="0.8"/>
+            <text x="0" y="147" class="mono-s">DRYING RATE</text>
+            <rect class="hair" x="140" y="141" width="160" height="6" fill="rgba(255,255,255,.12)"/>
+            <rect class="dr-bar hair" style="animation-delay:0.75s" x="140" y="141" width="64" height="6" fill="var(--coral)" opacity="0.9"/>
+            <g class="dr-up" style="animation-delay:2.1s"><text x="312" y="147" class="mono-c">THE CONSTRAINT</text></g>
           </svg>
-          <p class="cap">Early warning of key bottlenecks in the process line.</p>
+          <p class="cap">Green lumber reaches the kiln faster than it dries, so the queue builds there.</p>
         </div>
       </div>
     </div>
@@ -741,37 +718,20 @@
       </div>
       <div class="mr-vis">
         <div class="wf-panel">
-          <div class="pt"><span>// Cover vs lead time</span><em>2 reorder flags</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true">
+          <div class="pt"><span>// Cover vs lead time</span><em class="pt-warn">reorders flagged</em></div>
+          <svg class="cardv2" viewBox="0 0 360 130" aria-hidden="true">
             <text x="6" y="14" class="mono-s">ITEM</text>
             <text x="150" y="14" class="mono-s">WEEKS OF COVER</text>
             <text x="266" y="14" class="mono-s">LEAD</text>
             <text x="310" y="14" class="mono-s">ACTION</text>
-            <line x1="6" y1="20" x2="354" y2="20" stroke="rgba(255,255,255,.14)"/>
-
-            <text x="6" y="40" class="mono-s">WRC 2&amp;BTR</text>
-            <rect x="150" y="32" width="100" height="9" rx="3" fill="rgba(255,255,255,.12)"/>
-            <rect class="dr-bar" x="150" y="32" width="78" height="9" rx="3" fill="#35a05f" opacity=".85"/>
-            <text x="266" y="40" class="mono-s">3 wk</text><text x="310" y="40" class="mono-g">OK</text>
-
-            <text x="6" y="62" class="mono-s">BASSWOOD S2S</text>
-            <rect x="150" y="54" width="100" height="9" rx="3" fill="rgba(255,255,255,.12)"/>
-            <rect class="dr-bar" style="animation-delay:.12s" x="150" y="54" width="22" height="9" rx="3" fill="#c0392b"/>
-            <text x="266" y="62" class="mono-r">6 wk</text><text x="310" y="62" class="mono-r">REORDER</text>
-
-            <text x="6" y="84" class="mono-s">RED OAK FAS</text>
-            <rect x="150" y="76" width="100" height="9" rx="3" fill="rgba(255,255,255,.12)"/>
-            <rect class="dr-bar" style="animation-delay:.24s" x="150" y="76" width="64" height="9" rx="3" fill="#35a05f" opacity=".85"/>
-            <text x="266" y="84" class="mono-s">2 wk</text><text x="310" y="84" class="mono-g">OK</text>
-
-            <text x="6" y="106" class="mono-s">HARD MAPLE</text>
-            <rect x="150" y="98" width="100" height="9" rx="3" fill="rgba(255,255,255,.12)"/>
-            <rect class="dr-bar" style="animation-delay:.36s" x="150" y="98" width="30" height="9" rx="3" fill="#c0392b"/>
-            <text x="266" y="106" class="mono-r">9 wk</text><text x="310" y="106" class="mono-r">REORDER</text>
-
+            <line class="hair" x1="6" y1="20" x2="354" y2="20" stroke="rgba(255,255,255,.14)"/>
+            <text x="6" y="40" class="mono-s">KRAFT LINER</text><rect class="hair" x="150" y="32" width="100" height="9" fill="rgba(255,255,255,.12)"/><rect class="dr-bar hair" style="animation-delay:0.0s" x="150" y="32" width="78" height="9" fill="#35a05f" opacity="0.85"/><text x="266" y="40" class="mono-s">3 wk</text><text x="310" y="40" class="mono-g">OK</text>
+            <text x="6" y="62" class="mono-s">FLUTING</text><rect class="hair" x="150" y="54" width="100" height="9" fill="rgba(255,255,255,.12)"/><g class="beat" style="--d:1.4s"><rect class="dr-bar hair" style="animation-delay:0.12s" x="150" y="54" width="22" height="9" fill="var(--coral)" opacity="0.95"/><text x="266" y="62" class="mono-c">6 wk</text><text x="310" y="62" class="mono-c">REORDER</text></g>
+            <text x="6" y="84" class="mono-s">STARCH</text><rect class="hair" x="150" y="76" width="100" height="9" fill="rgba(255,255,255,.12)"/><rect class="dr-bar hair" style="animation-delay:0.24s" x="150" y="76" width="64" height="9" fill="#35a05f" opacity="0.85"/><text x="266" y="84" class="mono-s">2 wk</text><text x="310" y="84" class="mono-g">OK</text>
+            <text x="6" y="106" class="mono-s">PRINT INK</text><rect class="hair" x="150" y="98" width="100" height="9" fill="rgba(255,255,255,.12)"/><g class="beat" style="--d:1.8s"><rect class="dr-bar hair" style="animation-delay:0.36s" x="150" y="98" width="30" height="9" fill="var(--coral)" opacity="0.95"/><text x="266" y="106" class="mono-c">5 wk</text><text x="310" y="106" class="mono-c">REORDER</text></g>
             <text x="6" y="126" class="mono-s">OLDEST STOCK DRAWN FIRST &middot; DEAD STOCK SURFACED</text>
           </svg>
-          <p class="cap">AI powered reordering, tailored to your workflows, inputs and outputs, flagging reorders so you hit every PO.</p>
+          <p class="cap">Reorders flagged before stock runs short, with the order book sequenced against what the plant can actually make.</p>
         </div>
       </div>
     </div>
@@ -790,34 +750,19 @@
       </div>
       <div class="mr-vis">
         <div class="wf-panel">
-          <div class="pt"><span>// Input benchmark &middot; output trend</span><em>proven saving</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true">
-            <defs><linearGradient id="bs" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#35a05f" stop-opacity=".24"/><stop offset="100%" stop-color="#35a05f" stop-opacity="0"/>
-            </linearGradient></defs>
-
-            <text x="6" y="13" class="mono-s">IN &middot; $ PER UNIT BY SUPPLIER</text>
-            <line x1="6" y1="52" x2="164" y2="52" stroke="rgba(255,255,255,.3)" stroke-dasharray="4 5"/>
-            <rect class="dr-bar" x="16" y="36" width="24" height="26" rx="3" fill="#35a05f" opacity=".7"/>
-            <rect class="dr-bar" style="animation-delay:.1s" x="56" y="32" width="24" height="30" rx="3" fill="#35a05f" opacity=".7"/>
-            <rect class="dr-bar" style="animation-delay:.2s" x="96" y="22" width="24" height="40" rx="3" fill="#c0392b" opacity=".9"/>
-            <rect class="dr-bar" style="animation-delay:.3s" x="136" y="34" width="24" height="28" rx="3" fill="#35a05f" opacity=".7"/>
-            <text x="94" y="76" class="mono-r">OUTLIER</text>
-
-            <line x1="182" y1="8" x2="182" y2="88" stroke="rgba(255,255,255,.14)"/>
-
-            <text x="194" y="13" class="mono-s">OUT &middot; YOU VS MARKET</text>
-            <path class="spark-area" fill="url(#bs)" d="M194,50 C216,44 230,36 252,32 C274,28 294,34 316,30 C334,27 344,24 354,22 L354,62 L194,62 Z"/>
-            <path class="spark-line" d="M194,50 C216,44 230,36 252,32 C274,28 294,34 316,30 C334,27 344,24 354,22"/>
-            <path d="M194,56 C216,53 230,50 252,48 C274,46 294,47 316,44 C334,42 344,40 354,39" fill="none" stroke="rgba(255,255,255,.38)" stroke-width="1.1" stroke-dasharray="3 4"/>
-            <circle class="spark-dot pulse" cx="354" cy="22" r="3"/>
-            <text x="194" y="76" class="mono-s">MARKET DASHED</text>
-
-            <line x1="6" y1="92" x2="354" y2="92" stroke="rgba(255,255,255,.14)"/>
-            <text x="6" y="108" class="mono-s">PROVEN &middot; SAME SPEC, SAME QUARTER</text>
-            <text x="268" y="108" class="mono-g">SIX FIGURES</text>
-            <text x="6" y="124" class="mono-s">INDICATIVE &middot; NEEDS QUOTES</text>
-            <text x="280" y="124" class="mono-s">$119,195</text>
+          <div class="pt"><span>// Input price &middot; four suppliers, one spec</span><em class="pt-warn">one supplier above market</em></div>
+          <svg class="cardv2" viewBox="0 0 448 161" aria-hidden="true">
+            <text x="6" y="16" class="mono-s">SUPPLIER</text>
+            <text x="126" y="16" class="mono-s">PRICE PAID PER UNIT, SAME SPEC</text>
+            <text x="372" y="16" class="mono-s">VS MARKET</text>
+            <line class="hair" x1="6" y1="24" x2="442" y2="24" stroke="rgba(255,255,255,.14)"/>
+            <line class="vs" x1="236" y1="30" x2="236" y2="142" stroke="rgba(255,255,255,.35)" stroke-dasharray="3 4"/>
+            <text x="242" y="38" class="mono-s">MARKET</text>
+            <text x="6" y="58" class="mono-s">SUPPLIER A</text><rect class="hair" x="126" y="50" width="200" height="10" fill="rgba(255,255,255,.12)"/><rect class="dr-bar hair" style="animation-delay:0.0s" x="126" y="50" width="104" height="10" fill="#35a05f" opacity="0.85"/><text x="372" y="58" class="mono-g">BELOW</text>
+            <text x="6" y="84" class="mono-s">SUPPLIER B</text><rect class="hair" x="126" y="76" width="200" height="10" fill="rgba(255,255,255,.12)"/><rect class="dr-bar hair" style="animation-delay:0.12s" x="126" y="76" width="116" height="10" fill="#35a05f" opacity="0.85"/><text x="372" y="84" class="mono-s">AT MARKET</text>
+            <text x="6" y="110" class="mono-s">SUPPLIER C</text><rect class="hair" x="126" y="102" width="200" height="10" fill="rgba(255,255,255,.12)"/><g class="beat" style="--d:1.2s"><rect class="dr-bar hair" style="animation-delay:0.24s" x="126" y="102" width="168" height="10" fill="var(--coral)" opacity="0.95"/><text x="372" y="110" class="mono-c">ABOVE MARKET</text></g>
+            <text x="6" y="136" class="mono-s">SUPPLIER D</text><rect class="hair" x="126" y="128" width="200" height="10" fill="rgba(255,255,255,.12)"/><rect class="dr-bar hair" style="animation-delay:0.36s" x="126" y="128" width="98" height="10" fill="#35a05f" opacity="0.85"/><text x="372" y="136" class="mono-g">BELOW</text>
+            <text x="6" y="156" class="mono-s">LIKE FOR LIKE &middot; SAME SPEC, SAME QUARTER</text>
           </svg>
           <p class="cap">Supply and sale optimised with internal and external market data.</p>
         </div>
@@ -838,34 +783,16 @@
       </div>
       <div class="mr-vis">
         <div class="wf-panel">
-          <div class="pt"><span>// Ask, then keep it</span><em>saved &amp; scheduled</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true">
-            <rect x="4" y="14" width="352" height="26" rx="6" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)"/>
-            <text x="14" y="31" class="mono-g">&#10095;</text>
-            <text x="30" y="31" class="mono-w">Build me a weekly kiln utilisation workbook by species</text>
-
-            <path class="dr-flow" d="M180 44 v12" fill="none" stroke="#35a05f" stroke-width="1.2"/>
-            <path d="m176 52 4 6 4-6" fill="none" stroke="#35a05f" stroke-width="1.2" stroke-linecap="round"/>
-
-            <g class="dr-up" style="animation-delay:.3s">
-              <rect x="4" y="62" width="112" height="52" rx="6" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.3)"/>
-              <text x="14" y="79" class="mono-g">WORKBOOK</text>
-              <path d="M14 88h92M14 96h64M14 104h80" stroke="rgba(255,255,255,.2)" stroke-width="3" stroke-linecap="round"/>
-            </g>
-            <g class="dr-up" style="animation-delay:.42s">
-              <rect x="124" y="62" width="112" height="52" rx="6" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.3)"/>
-              <text x="134" y="79" class="mono-g">DASHBOARD</text>
-              <rect x="134" y="88" width="16" height="20" rx="2" fill="#35a05f" opacity=".7"/>
-              <rect x="156" y="94" width="16" height="14" rx="2" fill="#35a05f" opacity=".55"/>
-              <rect x="178" y="84" width="16" height="24" rx="2" fill="#35a05f" opacity=".8"/>
-              <rect x="200" y="92" width="16" height="16" rx="2" fill="#35a05f" opacity=".6"/>
-            </g>
-            <g class="dr-up" style="animation-delay:.54s">
-              <rect x="244" y="62" width="112" height="52" rx="6" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.3)"/>
-              <text x="254" y="79" class="mono-g">SCHEDULED JOB</text>
-              <text x="254" y="95" class="mono-s">RUNS EVERY MONDAY</text>
-              <text x="254" y="107" class="mono-s">WRITES BACK</text>
-            </g>
+          <div class="pt"><span>// Ask, then keep it</span><em>saved and scheduled</em></div>
+          <svg class="cardv2" viewBox="0 0 360 130" aria-hidden="true">
+            <rect class="hair" x="4" y="14" width="352" height="26" rx="2" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)"/>
+            <g class="beat" style="--d:.2s"><text x="14" y="31" class="mono-c">&#10095;</text></g>
+            <text x="30" y="31" class="mono-w">Build me a weekly harvest and haul workbook by block</text>
+            <path class="dr-flow vs" d="M180 44 v12" fill="none" stroke="#35a05f" stroke-width="1.2" opacity="1"/>
+            <path class="vs" d="m176 52 4 6 4-6" fill="none" stroke="#35a05f" stroke-width="1.2" stroke-linecap="round"/>
+            <g class="dr-up" style="animation-delay:0.3s"><rect class="hair" x="4" y="62" width="112" height="52" rx="2" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.32)"/><text x="14" y="79" class="mono-g">WORKBOOK</text><path class="vs" d="M14 88h92M14 96h64M14 104h80" stroke="rgba(255,255,255,.2)" stroke-width="3" stroke-linecap="round"/></g>
+            <g class="dr-up" style="animation-delay:0.42s"><rect class="hair" x="124" y="62" width="112" height="52" rx="2" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.32)"/><text x="134" y="79" class="mono-g">MAP</text><path class="vs" d="M134 88 L152 86 L158 98 L140 104 Z" fill="rgba(53,160,95,.35)" stroke="#35a05f" stroke-width="1"/><path class="vs" d="M156 86 L180 84 L186 96 L160 100 Z" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.35)" stroke-width="1"/><path class="vs" d="M184 85 L210 88 L204 104 L188 98 Z" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.35)" stroke-width="1"/><path class="vs" d="M142 104 L162 100 L190 100 L206 106" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1" stroke-dasharray="2 3"/></g>
+            <g class="dr-up" style="animation-delay:0.54s"><rect class="hair" x="244" y="62" width="112" height="52" rx="2" fill="rgba(53,160,95,.08)" stroke="rgba(53,160,95,.32)"/><text x="254" y="79" class="mono-g">SCHEDULED JOB</text><text x="254" y="95" class="mono-s">RUNS EVERY MONDAY</text><text x="254" y="107" class="mono-s">WRITES BACK</text></g>
           </svg>
           <p class="cap">The spreadsheet one person maintains becomes a workflow the whole team can run.</p>
         </div>
@@ -1094,8 +1021,8 @@
       <div>
         <h4>Platform</h4>
         <ul>
-          <li><a href="index.html#platform">The eight steps</a></li>
-          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="index.html#platform">Quarri Platform</a></li>
+          <li><a href="how-it-works.html">How We Work</a></li>
           <li><a href="security.html">Security</a></li>
           <li><a href="pricing.html">Pricing</a></li>
         </ul>
@@ -1114,10 +1041,12 @@
       <div>
         <h4>Company</h4>
         <ul>
+          <li><a href="about.html">About</a></li>
           <li><a href="case-studies.html">Case studies</a></li>
           <li><a href="insights.html">Insights</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://app.quarri.ai/signup">Start free</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
           <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
@@ -1194,8 +1123,8 @@
   rail();
 })();
 </script>
-<script src="assets/consent.js?v=124" defer></script>
-<script src="assets/carousel.js?v=124" defer></script>
-<script src="assets/blueprint.js?v=124" defer></script>
+<script src="assets/consent.js?v=144" defer></script>
+<script src="assets/carousel.js?v=144" defer></script>
+<script src="assets/blueprint.js?v=144" defer></script>
 </body>
 </html>

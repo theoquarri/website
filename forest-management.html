@@ -31,8 +31,8 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=124">
-<link rel="stylesheet" href="components.css?v=124">
+<link rel="stylesheet" href="styles.css?v=144">
+<link rel="stylesheet" href="components.css?v=144">
 
 <script type="application/ld+json" id="quarri-schema">
 {
@@ -142,33 +142,39 @@
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
     <nav class="nav-links">
-      <a href="index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="how-it-works.html" tabindex="0">How it works</a>
+        <div class="nav-pop">
+          <a class="np-ic" href="index.html#platform"><span class="ic ic-quarri-platform" aria-hidden="true"></span><span class="np-t">Quarri Platform</span><span class="np-s">What Quarri does</span></a>
+          <a class="np-ic" href="how-it-works.html"><span class="ic ic-how-we-work" aria-hidden="true"></span><span class="np-t">How We Work</span><span class="np-s">A layer, not a migration</span></a>
+        </div>
+      </div>
       <div class="nav-group">
         <a href="index.html#serve" tabindex="0">Who we serve</a>
         <div class="nav-pop">
           <span class="np-group">By operation</span>
-          <a href="forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
-          <a href="sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
-          <a href="wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
-          <a href="pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <a class="np-ic" href="forest-management.html"><span class="ic ic-forest-management" aria-hidden="true"></span><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a class="np-ic" href="sawmills.html"><span class="ic ic-sawmills" aria-hidden="true"></span><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a class="np-ic" href="wood-products.html"><span class="ic ic-wood-products" aria-hidden="true"></span><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a class="np-ic" href="pulp-paper-packaging.html"><span class="ic ic-pulp-paper-packaging" aria-hidden="true"></span><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
           <span class="np-group">By team</span>
-          <a href="finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
-          <a href="operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+          <a class="np-ic" href="finance-and-strategy-teams.html"><span class="ic ic-finance-strategy" aria-hidden="true"></span><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a class="np-ic" href="operations-teams.html"><span class="ic ic-operations" aria-hidden="true"></span><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
         </div>
       </div>
-      <a href="how-it-works.html">How it works</a>
       <a href="security.html">Security</a>
       <a href="pricing.html">Pricing</a>
       <div class="nav-group">
         <a href="case-studies.html" tabindex="0">Resources</a>
-        <div class="nav-pop nav-pop-sm">
-          <a href="case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
-          <a href="insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
-          <a href="faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        <div class="nav-pop">
+          <a class="np-ic" href="case-studies.html"><span class="ic ic-case-studies" aria-hidden="true"></span><span class="np-t">Case Studies</span><span class="np-s">What we changed</span></a>
+          <a class="np-ic" href="insights.html"><span class="ic ic-insights" aria-hidden="true"></span><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a class="np-ic" href="faq.html"><span class="ic ic-faq" aria-hidden="true"></span><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
         </div>
       </div>
-      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
-      <a href="book-a-demo.html" class="btn btn-primary">Request a demo</a>
+      <a href="about.html">About</a>
+      <a href="https://app.quarri.ai/signup" class="nav-login">Sign in</a>
+      <span class="nav-pair"><a href="https://app.quarri.ai/signup">Start free <span class="arw" aria-hidden="true">&rarr;</span></a><a href="book-a-demo.html">Request a demo <span class="arw" aria-hidden="true">&rarr;</span></a></span>
     </nav>
   </div>
 </header>
@@ -350,6 +356,27 @@
   </div>
 </section>
 
+<!-- ON THE ROADMAP -->
+<section>
+  <div class="container">
+    <div class="soon-block reveal">
+      <div>
+        <span class="sb-tag">New</span>
+        <h3>Your whole operation, on the map.</h3>
+        <p>Everything above is answered in tables. The question a forest operation asks most, and a table answers worst, is where. Ask in Claude and Quarri draws the answer on a map: units, blocks, mills and volumes, from the same governed data as every other answer. Maps are new and in beta, and haul routing over the road network comes next.</p>
+        <ul><li>Units and blocks shaded by any figure you hold</li><li>Mills, yards and other sites placed on the same map</li><li>Asked in plain English, drawn from the numbers the tables use</li></ul>
+      </div>
+      <div class="sb-vis">
+        <div class="wf-panel">
+          <div class="pt"><span>// Agentic GIS &middot; Ontario open data</span><em>in beta</em></div>
+          <video muted playsinline preload="none" poster="assets/video/agentic-gis-ontario-poster.webp" style="width:100%;height:auto;display:block;aspect-ratio:16/9" data-play-on-view aria-label="Ontario forest management units drawn in 3D, raised by the volume available to harvest, with the licensed mills"><source src="assets/video/agentic-gis-ontario.mp4" type="video/mp4"></video><script>(function(){var v=document.querySelector("video[data-play-on-view]");if(!v||!("IntersectionObserver" in window)||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!v.ended){var p=v.play();if(p&&p.catch)p.catch(function(){});}}else v.pause();});},{threshold:.35}).observe(v);})();</script>
+          <p class="cap">Ontario&#39;s forest management units, raised by the volume available to harvest in 2025, with the province&#39;s licensed mills. Built in Quarri from public data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- AI NATIVE, THE ARGUMENT -->
@@ -427,26 +454,7 @@
   </div>
 </section>
 
-<!-- ON THE ROADMAP -->
-<section>
-  <div class="container">
-    <div class="soon-block reveal">
-      <div>
-        <span class="sb-tag">Coming soon</span>
-        <h3>Your whole operation, on the map.</h3>
-        <p>Everything above is answered in tables. The one question a forest operation asks constantly, and a table answers badly, is where. Blocks, licences, haul routes and remaining volume are all spatial, and right now you read the map in one system and the numbers in another. We are building the version where they are the same screen.</p>
-        <ul><li>Blocks shaded by volume remaining on contract</li><li>Haul distance and route cost in the margin picture</li><li>Harvest plans and operability read on the map</li></ul>
-      </div>
-      <div class="sb-vis">
-        <div class="wf-panel">
-          <div class="pt"><span>// In design</span><em>shaping it now</em></div>
-          <svg viewBox="0 0 360 130" aria-hidden="true"><text x="6" y="12" class="mono-s">MANAGEMENT UNIT &middot; VOLUME REMAINING</text><g class="dr-up" style="animation-delay:0.00s"><rect x="14" y="26" width="78" height="46" rx="3" fill="rgba(45,138,78,0.55)" stroke="rgba(255,255,255,.22)"/><text x="19" y="40" class="mono-s">MU-114</text></g><g class="dr-up" style="animation-delay:0.08s"><rect x="100" y="20" width="62" height="40" rx="3" fill="rgba(45,138,78,0.30)" stroke="rgba(255,255,255,.22)"/><text x="105" y="34" class="mono-s">MU-102</text></g><g class="dr-up" style="animation-delay:0.16s"><rect x="170" y="32" width="74" height="50" rx="3" fill="rgba(45,138,78,0.80)" stroke="rgba(255,255,255,.22)"/><text x="175" y="46" class="mono-s">MU-897</text></g><g class="dr-up" style="animation-delay:0.24s"><rect x="252" y="24" width="58" height="36" rx="3" fill="rgba(45,138,78,0.18)" stroke="rgba(255,255,255,.22)"/><text x="257" y="38" class="mono-s">MU-233</text></g><g class="dr-up" style="animation-delay:0.32s"><rect x="14" y="82" width="96" height="26" rx="3" fill="rgba(45,138,78,0.42)" stroke="rgba(255,255,255,.22)"/></g><g class="dr-up" style="animation-delay:0.40s"><rect x="118" y="70" width="70" height="38" rx="3" fill="rgba(45,138,78,0.62)" stroke="rgba(255,255,255,.22)"/></g><g class="dr-up" style="animation-delay:0.48s"><rect x="196" y="88" width="52" height="20" rx="3" fill="rgba(45,138,78,0.22)" stroke="rgba(255,255,255,.22)"/></g><g class="dr-up" style="animation-delay:0.56s"><rect x="256" y="68" width="62" height="40" rx="3" fill="rgba(45,138,78,0.70)" stroke="rgba(255,255,255,.22)"/></g><text x="6" y="126" class="mono-s">EARLY DESIGN &middot; NOT IN THE PRODUCT TODAY</text></svg>
-          <p class="cap">A design sketch rather than a screenshot. It is not in the product today, and we would rather show you early and hear what it needs to do.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ADJACENT LINKS -->
 <section>
@@ -499,8 +507,8 @@
       <div>
         <h4>Platform</h4>
         <ul>
-          <li><a href="index.html#platform">The eight steps</a></li>
-          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="index.html#platform">Quarri Platform</a></li>
+          <li><a href="how-it-works.html">How We Work</a></li>
           <li><a href="security.html">Security</a></li>
           <li><a href="pricing.html">Pricing</a></li>
         </ul>
@@ -519,10 +527,12 @@
       <div>
         <h4>Company</h4>
         <ul>
+          <li><a href="about.html">About</a></li>
           <li><a href="case-studies.html">Case studies</a></li>
           <li><a href="insights.html">Insights</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://app.quarri.ai/signup">Start free</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
           <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
@@ -582,7 +592,7 @@
   }
 })();
 </script>
-<script src="assets/consent.js?v=124" defer></script>
-<script src="assets/blueprint.js?v=124" defer></script>
+<script src="assets/consent.js?v=144" defer></script>
+<script src="assets/blueprint.js?v=144" defer></script>
 </body>
 </html>

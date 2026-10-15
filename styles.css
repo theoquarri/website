@@ -158,22 +158,33 @@ h4{ font-weight:500 }
 .section-intro .lead{ margin-top:22px }
 
 /* ---------- Buttons ---------- */
+/* Canonical buttons (Theo, 12 Oct 2026; the Remotion study is in Marketing/Design elements/
+   Button system (Oct 2026)). One height (36 px) and one base width (156 px) everywhere, label centred,
+   Archivo 400, 6 px corners (the one rounded thing on the site; tokens.json radius-btn), ink fill.
+   No coral fills. A button with an arrow hides it until hover, then widens by 24 px as it slides in;
+   on touch screens the arrow simply shows. */
 .btn{
-  display:inline-flex; align-items:center; gap:9px;
-  font-size:15px; font-weight:500; letter-spacing:-.01em;
-  padding:14px 26px; border:1px solid transparent;
-  transition:transform .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+  display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box;
+  height:36px; min-width:156px; padding:0 16px; border-radius:6px; border:1px solid transparent;
+  font-family:var(--font); font-size:14px; font-weight:400; letter-spacing:.01em; line-height:1; white-space:nowrap;
   cursor:pointer;
+  transition:min-width .25s var(--ease), background-color .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
 }
-.btn:hover{ transform:translateY(-1px) }
-.btn-primary{ background:var(--coral); color:var(--white) }
-.btn-primary:hover{ background:#c96a4b }
-.btn-ghost{ border-color:var(--rule); color:var(--ink); background:transparent }
-.btn-ghost:hover{ border-color:var(--ink); }
-.on-dark .btn-ghost{ border-color:rgba(255,255,255,.28); color:var(--white) }
-.on-dark .btn-ghost:hover{ border-color:var(--white) }
-.btn .arw{ transition:transform .25s var(--ease) }
-.btn:hover .arw{ transform:translateX(3px) }
+.btn-primary{ background:var(--ink); border-color:var(--ink); color:var(--white) }
+.btn-primary:hover{ background:#2b2b2b; border-color:#2b2b2b }
+.btn-ghost{ background:transparent; border-color:var(--ink); color:var(--ink) }
+.btn-ghost:hover{ background:var(--ink); border-color:var(--ink); color:var(--white) }
+.on-dark .btn-primary, .hero-split .btn-primary, .hero-full .btn-primary, .hero-head .btn-primary, .consent-btns .btn-primary{ background:var(--white); border-color:var(--white); color:var(--ink) }
+.on-dark .btn-primary:hover, .hero-split .btn-primary:hover, .hero-full .btn-primary:hover, .hero-head .btn-primary:hover, .consent-btns .btn-primary:hover{ background:#ebe9e4; border-color:#ebe9e4 }
+.on-dark .btn-ghost, .hero-split .btn-ghost, .hero-full .btn-ghost, .hero-head .btn-ghost, .consent-btns .btn-ghost{ background:transparent; border-color:rgba(255,255,255,.55); color:var(--white) }
+.on-dark .btn-ghost:hover, .hero-split .btn-ghost:hover, .hero-full .btn-ghost:hover, .hero-head .btn-ghost:hover, .consent-btns .btn-ghost:hover{ background:var(--white); border-color:var(--white); color:var(--ink) }
+.btn .arw{ display:inline-block; max-width:0; opacity:0; margin-left:0; overflow:hidden; transform:translateX(-6px);
+  transition:max-width .25s var(--ease), opacity .2s var(--ease), margin .25s var(--ease), transform .25s var(--ease) }
+.btn-primary .arw{ color:var(--coral-hi) }
+.on-dark .btn-primary .arw, .hero-split .btn-primary .arw, .hero-full .btn-primary .arw, .hero-head .btn-primary .arw, .consent-btns .btn-primary .arw{ color:var(--coral) }
+.btn:has(.arw):hover, .btn:has(.arw):focus-visible{ min-width:180px }
+.btn:hover .arw, .btn:focus-visible .arw{ max-width:1.2em; opacity:1; margin-left:10px; transform:none }
+@media (hover:none){ .btn .arw{ max-width:1.2em; opacity:1; margin-left:10px; transform:none } }
 
 /* ---------- Surfaces ---------- */
 .on-dark{ background:var(--forest); color:var(--white) }
@@ -206,8 +217,25 @@ h4{ font-weight:500 }
 .nav-links a:hover{ color:var(--ink) }
 .nav-links a.is-active{ color:var(--ink); font-weight:500 }
 .nav-links .btn{ padding:10px 17px; font-size:13px }
-.nav-login{ padding-left:19px; border-left:1px solid var(--rule) }
+.nav-login{ padding:0 8px 0 24px; border-left:1px solid var(--rule) }
 .nav-toggle{ display:none; background:none; border:0; font-size:22px; color:var(--ink); cursor:pointer }
+/* Start a free trial + Request a demo as one joined pair (Theo, 12 Oct 2026: option C, in ink).
+   The trial is filled by default; hovering or focusing either button moves the fill to it. */
+.nav-links .nav-pair{ display:inline-flex; border:1px solid var(--ink); border-radius:6px; overflow:hidden; flex:none }
+.nav-links .nav-pair a{ height:34px; min-width:124px; padding:0 14px; display:inline-flex; align-items:center; justify-content:center;
+  font-size:14px; font-weight:400; letter-spacing:.01em; white-space:nowrap;
+  color:var(--ink); background:transparent; transition:background .2s var(--ease), color .2s var(--ease) }
+.nav-links .nav-pair a + a{ border-left:1px solid var(--ink) }
+.nav-links .nav-pair a:first-child{ background:var(--ink); color:var(--white) }
+.nav-links .nav-pair:hover a:first-child, .nav-links .nav-pair:has(a:focus-visible) a:first-child{ background:transparent; color:var(--ink) }
+/* the same hover arrow as the page buttons: the hovered half widens as the arrow slides in */
+.nav-links .nav-pair a .arw{ display:inline-block; max-width:0; opacity:0; margin-left:0; overflow:hidden; transform:translateX(-6px);
+  transition:max-width .25s var(--ease), opacity .2s var(--ease), margin .25s var(--ease), transform .25s var(--ease) }
+.nav-links .nav-pair a{ transition:background .2s var(--ease), color .2s var(--ease), min-width .25s var(--ease) }
+.nav-links .nav-pair a:hover, .nav-links .nav-pair a:focus-visible{ min-width:146px }
+.nav-links .nav-pair a:hover .arw, .nav-links .nav-pair a:focus-visible .arw{ max-width:1.2em; opacity:1; margin-left:8px; transform:none; color:var(--coral-hi) }
+@media (hover:none){ .nav-links .nav-pair a .arw{ display:none } }
+.nav-links .nav-pair:hover a:hover, .nav-links .nav-pair a:focus-visible{ background:var(--ink); color:var(--white) }
 
 /* ---------- Reveal ---------- */
 .reveal{ opacity:0; transform:translateY(20px); transition:opacity .8s var(--ease), transform .8s var(--ease) }
@@ -230,17 +258,23 @@ footer ul a{ font-size:14px; color:var(--on-forest); transition:color .2s }
 footer ul a:hover{ color:var(--white) }
 .footer-bottom{ display:flex; justify-content:space-between; gap:20px; padding-top:26px; font-size:13px; color:var(--ink-3); flex-wrap:wrap }
 
-@media (max-width:900px){
-  :root{ --gutter:22px }
+/* The nav collapses to the menu button below 1080px: with "Start a free trial" beside
+   "Request a demo" (sign-on launch, 12 Oct 2026) the full row wraps onto two lines
+   between 900 and about 1060px. */
+@media (max-width:1080px){
   .nav-links{
     display:none; position:absolute; top:70px; left:0; right:0;
     flex-direction:column; align-items:flex-start; gap:6px;
     font-size:15px;
-    background:var(--bone); border-bottom:1px solid var(--rule); padding:18px 22px 24px;
+    background:var(--bone); border-bottom:1px solid var(--rule); padding:18px var(--gutter) 24px;
   }
   .nav.open .nav-links{ display:flex }
   .nav-login{ padding-left:0; border-left:0 }
   .nav-toggle{ display:block }
+}
+
+@media (max-width:900px){
+  :root{ --gutter:22px }
   .footer-top{ grid-template-columns:1fr 1fr; gap:30px }
 }
 

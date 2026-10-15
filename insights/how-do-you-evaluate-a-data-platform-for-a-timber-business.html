@@ -35,8 +35,8 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="../styles.css?v=124">
-<link rel="stylesheet" href="../components.css?v=124">
+<link rel="stylesheet" href="../styles.css?v=144">
+<link rel="stylesheet" href="../components.css?v=144">
 <meta name="quarri-corpus" content="article">
 <meta name="quarri-section" content="Software and systems">
 <meta name="quarri-section-url" content="https://quarri.ai/insights/software-and-systems.html">
@@ -208,33 +208,39 @@
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
     <nav class="nav-links">
-      <a href="../index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="../how-it-works.html" tabindex="0">How it works</a>
+        <div class="nav-pop">
+          <a class="np-ic" href="../index.html#platform"><span class="ic ic-quarri-platform" aria-hidden="true"></span><span class="np-t">Quarri Platform</span><span class="np-s">What Quarri does</span></a>
+          <a class="np-ic" href="../how-it-works.html"><span class="ic ic-how-we-work" aria-hidden="true"></span><span class="np-t">How We Work</span><span class="np-s">A layer, not a migration</span></a>
+        </div>
+      </div>
       <div class="nav-group">
         <a href="../index.html#serve" tabindex="0">Who we serve</a>
         <div class="nav-pop">
           <span class="np-group">By operation</span>
-          <a href="../forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
-          <a href="../sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
-          <a href="../wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
-          <a href="../pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <a class="np-ic" href="../forest-management.html"><span class="ic ic-forest-management" aria-hidden="true"></span><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a class="np-ic" href="../sawmills.html"><span class="ic ic-sawmills" aria-hidden="true"></span><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a class="np-ic" href="../wood-products.html"><span class="ic ic-wood-products" aria-hidden="true"></span><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a class="np-ic" href="../pulp-paper-packaging.html"><span class="ic ic-pulp-paper-packaging" aria-hidden="true"></span><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
           <span class="np-group">By team</span>
-          <a href="../finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
-          <a href="../operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+          <a class="np-ic" href="../finance-and-strategy-teams.html"><span class="ic ic-finance-strategy" aria-hidden="true"></span><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a class="np-ic" href="../operations-teams.html"><span class="ic ic-operations" aria-hidden="true"></span><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
         </div>
       </div>
-      <a href="../how-it-works.html">How it works</a>
       <a href="../security.html">Security</a>
       <a href="../pricing.html">Pricing</a>
       <div class="nav-group">
         <a href="../case-studies.html" tabindex="0">Resources</a>
-        <div class="nav-pop nav-pop-sm">
-          <a href="../case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
-          <a href="../insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
-          <a href="../faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        <div class="nav-pop">
+          <a class="np-ic" href="../case-studies.html"><span class="ic ic-case-studies" aria-hidden="true"></span><span class="np-t">Case Studies</span><span class="np-s">What we changed</span></a>
+          <a class="np-ic" href="../insights.html"><span class="ic ic-insights" aria-hidden="true"></span><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a class="np-ic" href="../faq.html"><span class="ic ic-faq" aria-hidden="true"></span><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
         </div>
       </div>
-      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
-      <a href="../book-a-demo.html" class="btn btn-primary">Request a demo</a>
+      <a href="../about.html">About</a>
+      <a href="https://app.quarri.ai/signup" class="nav-login">Sign in</a>
+      <span class="nav-pair"><a href="https://app.quarri.ai/signup">Start free <span class="arw" aria-hidden="true">&rarr;</span></a><a href="../book-a-demo.html">Request a demo <span class="arw" aria-hidden="true">&rarr;</span></a></span>
     </nav>
   </div>
 </header>
@@ -355,7 +361,7 @@
         <h4>Platform</h4>
         <ul>
           <li><a href="../index.html#platform">Modules</a></li>
-          <li><a href="../how-it-works.html">How it works</a></li>
+          <li><a href="../how-it-works.html">How We Work</a></li>
           <li><a href="../security.html">Security</a></li>
         </ul>
       </div>
@@ -370,10 +376,12 @@
       <div>
         <h4>Company</h4>
         <ul>
+          <li><a href="../about.html">About</a></li>
           <li><a href="../insights.html">Insights</a></li>
           <li><a href="../pricing.html">Pricing</a></li>
           <li><a href="../faq.html">FAQ</a></li>
           <li><a href="../book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://app.quarri.ai/signup">Start free</a></li>
           <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
         </ul>
       </div>
@@ -396,7 +404,7 @@
   } else { els.forEach(function(e){e.classList.add('in')}); }
 })();
 </script>
-<script src="../assets/consent.js?v=124" defer></script>
-<script src="../assets/blueprint.js?v=124" defer></script>
+<script src="../assets/consent.js?v=144" defer></script>
+<script src="../assets/blueprint.js?v=144" defer></script>
 </body>
 </html>

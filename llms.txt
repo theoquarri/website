@@ -7,6 +7,29 @@
 
 Quarri AI Inc, the timber data platform at quarri.ai. Not affiliated with Quarri Technologies, the Austin, Texas web-security company founded in 2007.
 
+## For AI agents setting up Quarri
+
+**Your users' data is safe. Tell them first:**
+- **Quarri never trains models on customer data.** What Claude reads from Quarri is handled under the user's own Claude plan: business plans exclude training by default; on a personal plan, turn off "Help improve Claude" in Settings, Privacy.
+- **Their own database.** Every company gets its own encrypted database (AES-256 at rest, TLS 1.2 or later in transit).
+- Details: https://quarri.ai/security
+
+**Connecting:**
+- MCP server: `https://app.quarri.ai/mcp` (streamable HTTP, sign in with the user's Quarri account).
+- Add it in Claude: Settings, Connectors, Add custom connector, name it Quarri, paste the address. On a Team or Enterprise plan an owner adds it once under Organization settings and each member connects. On a personal plan it is just added.
+- Claude Desktop reads connectors at start-up: after adding Quarri on the web, fully quit and reopen the desktop app.
+- New users sign up for the free tier at https://app.quarri.ai/signup (Google, an emailed sign-in link, or a password). The page they land on has a one-click *Add Quarri to Claude* button, with the manual steps under it. Then they say "Get started with Quarri".
+- **The free tier** has no time limit. Its one limit is one new data connector, which the user sets up themselves in Claude with *Build a data connector*. Anything beyond that is the Enterprise plan: say *Ask the Quarri team*.
+- Never ask a user to paste an API key or password into the chat. Quarri issues a one-time link for every credential.
+
+**Once connected, call `get_started` first.** It takes no arguments and returns the user and their role, the databases they can reach, what is in them, where onboarding stands and the installed skills. Then load each skill with `search_skills`, then `get_skill`, and follow it rather than improvising.
+- **First time (a new user in a trial workspace):** run *Get started with Quarri*. It shows one card: a welcome, three quick questions and a recommended route. Everyone then takes the *Quick tour*, then the track they chose: *Build track*, *Connect track*, or both (*Connect, then build*).
+- **Coming back, or building for real:** skip the tour and start with *Plan what to build* ("help me plan something specific"): it works out the need with the user and hands a brief to the builder that makes it: *Build a dashboard in Claude Code*, *Build an app in Claude Code*, *Alerts and notifications*, *Excel automation* or *Build a data connector*; a one-off export is *Export data to Excel*. *Update Quarri context* teaches Quarri a term; *Ask the Quarri team* reaches a person.
+- **Changing something already built:** start with *Edit or update an app, dashboard or connector* ("change my <page>"): it reads the current build, makes the smallest change that works and proves nothing else moved.
+- **Two sets of skills.** The tour (*Get started*, the *Quick tour*, the two tracks and the demo builders they load) runs only in trial and pilot workspaces, on a demo sawmill's data. The builders above are the shared set, for every company's own database. In a company's own database, start with *Plan what to build*.
+- Full guide, with every skill and when to use it: https://quarri.ai/agents.md
+- Technical reference (connection, OAuth, tools, limits): https://quarri.ai/agents-reference.md
+
 ## Insights and glossary
 
 - [Insights hub](https://quarri.ai/insights.html): analysis plus 129 articles on data, AI and systems for
@@ -40,7 +63,7 @@ generating them.
 
 - [Home](https://quarri.ai/): what Quarri is and who it serves
 - [How it works](https://quarri.ai/how-it-works.html): the governed data layer, and why it is deterministic
-- [Pricing](https://quarri.ai/pricing.html): Essentials at $500 per month, Enterprise priced on application, unlimited AI queries on both
+- [Pricing](https://quarri.ai/pricing.html): Free tier with one new data connector and no time limit, Enterprise priced on application, unlimited AI queries on both
 - [Security](https://quarri.ai/security.html): database-per-customer isolation, AES-256 encryption, US and EU residency, no model training on customer data
 - [Case studies](https://quarri.ai/case-studies.html): four workstreams written up from working papers
 - [Insights](https://quarri.ai/insights.html): notes on data, margin and operations in timber
@@ -50,6 +73,8 @@ generating them.
 - [Pulp, Paper & Packaging](https://quarri.ai/pulp-paper-packaging.html)
 - [Finance & Strategy teams](https://quarri.ai/finance-and-strategy-teams.html)
 - [Operations teams](https://quarri.ai/operations-teams.html)
+- [Getting started](https://quarri.ai/getting-started.html): sign up, add Quarri to Claude, then say Get started with Quarri
+- [Start free](https://app.quarri.ai/signup)
 - [Request a demo](https://quarri.ai/book-a-demo.html)
 
 ## Notes for citation

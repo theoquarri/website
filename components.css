@@ -946,8 +946,7 @@
 .hero-full h1{ color:#fff; margin-top:16px; max-width:17ch }
 .hero-full h1 .coral{ color:var(--coral-hi) }
 .hero-full .lead{ color:rgba(255,255,255,.86); margin-top:24px; max-width:60ch }
-.hero-full .btn-ghost{ border-color:rgba(255,255,255,.34); color:var(--white) }
-.hero-full .btn-ghost:hover{ border-color:var(--white); background:rgba(255,255,255,.06) }
+
 
 /* ==========================================================================
    HERO v3 — headline on its own solid ground, photograph broken out below it
@@ -1022,8 +1021,7 @@
 .hero-head h1{ color:#fff; max-width:17ch }
 .hero-head h1 .coral{ color:var(--coral-hi) }
 .hero-head .lead{ color:rgba(255,255,255,.88); margin-top:24px; max-width:58ch }
-.hero-head .btn-ghost{ border-color:rgba(255,255,255,.34); color:#fff }
-.hero-head .btn-ghost:hover{ border-color:#fff; background:rgba(255,255,255,.08) }
+
 .hero-jump{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; align-items:center }
 
 /* The hero entrance runs slower and wider apart than the rest of the site.
@@ -1460,9 +1458,7 @@
 .consent-copy{ flex:1 1 340px; font-size:13.5px; line-height:1.55; color:var(--on-forest); margin:0 }
 .consent-copy a{ color:var(--coral-hi); text-decoration:underline; text-underline-offset:2px }
 .consent-btns{ display:flex; gap:10px; flex:none }
-.consent-btns .btn{ padding:10px 20px; font-size:14px }
-.consent-btns .btn-ghost{ border-color:rgba(255,255,255,.3); color:#fff }
-.consent-btns .btn-ghost:hover{ border-color:#fff; background:rgba(255,255,255,.08) }
+.consent-btns .btn{ min-width:120px }
 @media (prefers-reduced-motion: reduce){ .consent{ transition:none } }
 
 /* ---- generic svg panel sizing on vertical pages ---- */
@@ -1478,7 +1474,7 @@
 .scroll-rail::before{ content:""; position:absolute; left:0; top:0; height:2px; width:var(--scroll,0%); background:var(--coral) }
 
 /* ---- Nav flyout ---- */
-.nav-group{ position:relative }
+.nav-group{ position:relative; display:flex; align-items:center }  /* level with the plain links: a block wrapper sat its link 1.9px low (Theo, 14 Oct 2026) */
 .nav-group > a{ display:inline-flex; align-items:center; gap:6px; cursor:pointer }
 .nav-group > a::after{ content:""; width:5px; height:5px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
   transform:rotate(45deg) translateY(-1px); transition:transform .2s var(--ease) }
@@ -1502,6 +1498,25 @@
 .nav-pop .np-group{ display:block; font-family:var(--mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase;
   color:var(--ink-3); padding:12px 13px 6px; border-top:1px solid var(--rule); margin-top:6px }
 .nav-pop .np-group:first-child{ border-top:0; margin-top:0; padding-top:6px }
+/* Menu icons (Theo, 14 Oct 2026): Remotion renders as 30-frame sprite strips (1.25 s, motion from the first frame) in assets/nav/, resting on a still
+   frame and played only while the row is hovered or focused. Source: agentic_onboarding/website-video. */
+.nav-pop a.np-ic{ display:grid; grid-template-columns:28px 1fr; column-gap:12px; align-items:center }
+.nav-pop a.np-ic .ic{ grid-row:1 / span 2; width:28px; height:28px; background-repeat:no-repeat; background-size:840px 28px; background-position:0 0 }
+.nav-pop a.np-ic:hover .ic, .nav-pop a.np-ic:focus-visible .ic{ animation:np-ic 1.25s steps(30) infinite }
+@keyframes np-ic{ from{ background-position:0 0 } to{ background-position:-840px 0 } }
+@media (prefers-reduced-motion:reduce){ .nav-pop a.np-ic .ic{ animation:none !important } }
+.nav-pop a.np-ic .np-t, .nav-pop a.np-ic .np-s{ grid-column:2 }
+.ic-quarri-platform{ background-image:url(assets/nav/quarri-platform.webp) }
+.ic-how-we-work{ background-image:url(assets/nav/how-we-work.webp) }
+.ic-forest-management{ background-image:url(assets/nav/forest-management.webp) }
+.ic-sawmills{ background-image:url(assets/nav/sawmills.webp) }
+.ic-wood-products{ background-image:url(assets/nav/wood-products.webp) }
+.ic-pulp-paper-packaging{ background-image:url(assets/nav/pulp-paper-packaging.webp) }
+.ic-finance-strategy{ background-image:url(assets/nav/finance-strategy.webp) }
+.ic-operations{ background-image:url(assets/nav/operations.webp) }
+.ic-case-studies{ background-image:url(assets/nav/case-studies.webp) }
+.ic-insights{ background-image:url(assets/nav/insights.webp) }
+.ic-faq{ background-image:url(assets/nav/faq.webp) }
 
 /* ---- Supply-chain map: "where do I sit" ---- */
 .chainmap{ position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:clamp(30px,4vw,48px) }
@@ -2098,13 +2113,20 @@ p.cap::before{
 /* the tick becomes a drafted mark rather than a glyph: a small square with
    the tick inside it, so the yes column reads as a filled checkbox down a
    specification sheet */
-[data-bp-page="pricing"] td.yes{ color:transparent; position:relative; }
+/* 12 Oct 2026 (Theo): a solid coral square with a white tick, centred like the text in
+   the plan columns, and a more compact sheet. Blank cells stay blank. */
+[data-bp-page="pricing"] td.yes{ color:transparent; font-size:0; }
 [data-bp-page="pricing"] td.yes::after{
-  content:"\2713"; position:absolute; inset:0; margin:auto;
-  width:17px; height:17px; line-height:15px; text-align:center;
-  border:1px solid var(--coral); color:var(--coral); font-size:.72rem;
+  content:""; display:inline-block; vertical-align:middle; width:18px; height:18px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Crect width='18' height='18' fill='%23da7756'/%3E%3Cpath d='M4.6 9.3l3 3 5.9-6.3' fill='none' stroke='%23ffffff' stroke-width='1.9'/%3E%3C/svg%3E") no-repeat center / 18px 18px;
 }
 [data-bp-page="pricing"] td.no{ color:var(--bp); }
+[data-bp-page="pricing"] .cmp th:not(:first-child),
+[data-bp-page="pricing"] .cmp td:not(:first-child){ text-align:center; }
+[data-bp-page="pricing"] .cmp th, [data-bp-page="pricing"] .cmp td{ padding:9px 16px; font-size:13.5px; }
+[data-bp-page="pricing"] .cmp thead th{ padding-top:12px; padding-bottom:12px; font-size:14.5px; }
+[data-bp-page="pricing"] .cmp tr.cat td{ padding-top:13px; padding-bottom:5px; }
+[data-bp-page="pricing"] .tier{ padding:26px 26px 28px; gap:11px; }
 
 /* == SECURITY ==========================================================
    Signature: the capability list drawn as a numbered specification sheet.
@@ -2343,3 +2365,121 @@ details.faq-q .faq-a{padding:0 0 clamp(22px,2.6vw,30px) 28px}
 .faq-more{font-size:14.5px!important;color:var(--ink-3)!important}
 .faq-ctrl{display:flex;gap:10px;margin-top:14px}
 .faq-ctrl button{font:500 13px/1 var(--font);padding:9px 12px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer}
+
+/* ---- Getting started (sign-on launch, org task #81, 12 Oct 2026) ----
+   getting-started.html is built by _build_getting_started.py. Images are Remotion stills. */
+.gs-hero{ padding-top:clamp(56px,8vh,96px); padding-bottom:clamp(64px,9vh,110px) }
+.gs-hero-grid{ display:grid; grid-template-columns:1.02fr .98fr; gap:clamp(32px,5vw,72px); align-items:center }
+.gs-h1{ max-width:13ch; margin-top:14px }
+.gs-hero .lead{ margin-top:22px }
+.gs-say{ margin-top:26px; display:inline-flex; align-items:center; gap:12px; font-family:var(--mono); font-size:14px;
+  color:var(--white); border:1px solid rgba(255,255,255,.28); padding:11px 15px }
+.gs-say span{ font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--coral-hi) }
+.gs-trust{ margin-top:22px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--coral-hi); line-height:1.9; max-width:56ch }
+.gs-shot{ display:block; width:100%; height:auto; border:1px solid var(--rule) }
+.on-dark .gs-shot{ border-color:rgba(255,255,255,.16) }
+.gs-h2{ margin-top:12px; max-width:22ch }
+.gs-split{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px); align-items:center }
+.gs-split-tight{ align-items:start; margin-top:30px }
+.gs-split-top{ align-items:start }
+.gs-sticky{ position:sticky; top:96px }
+.gs-prose{ font-size:16px; line-height:1.65; color:var(--ink-2); margin-top:22px }
+.gs-split-tight > .gs-prose{ margin-top:0 }
+.gs-prose p + p, .gs-prose p + .gs-tw, .gs-prose .gs-tw + p{ margin-top:16px }
+.gs-prose strong{ color:var(--ink); font-weight:600 }
+.gs-prose a{ color:var(--coral); text-decoration:underline; text-underline-offset:3px }
+.gs-prose ul{ padding-left:18px; display:flex; flex-direction:column; gap:12px }
+.gs-prose code, .gs-step-body code{ font-family:var(--mono); font-size:.84em; background:var(--bone); padding:1px 5px; overflow-wrap:anywhere }
+.gs-more{ margin-top:22px }
+.gs-safe{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule); margin-top:34px }
+.gs-safe-item{ background:var(--white); padding:24px 24px 26px; font-size:15px; line-height:1.6; color:var(--ink-2) }
+.gs-safe-item strong{ display:block; color:var(--ink); font-weight:600; font-size:16.5px; margin-bottom:8px }
+.gs-steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:34px; align-items:start }
+.gs-step{ background:var(--bone); border:1px solid var(--rule) }
+.gs-step img{ display:block; width:100%; height:auto; border-bottom:1px solid var(--rule) }
+.gs-step-body{ padding:22px 22px 26px; font-size:15px; line-height:1.6; color:var(--ink-2) }
+.gs-step-body strong{ color:var(--ink); font-weight:600 }
+.gs-step-body a{ color:var(--coral); text-decoration:underline; text-underline-offset:3px }
+.gs-step-body ul{ margin-top:14px; padding-left:16px; font-size:14px; display:flex; flex-direction:column; gap:8px }
+.gs-step-n{ display:block; font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--coral); margin-bottom:10px }
+.gs-tw{ overflow-x:auto }
+.gs-table{ width:100%; border-collapse:collapse; font-size:14.5px; line-height:1.5; background:var(--white); border:1px solid var(--rule) }
+.gs-table th{ text-align:left; font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:400; padding:12px 16px; border-bottom:1px solid var(--rule); white-space:nowrap }
+.gs-table td{ padding:12px 16px; border-bottom:1px solid var(--rule); vertical-align:top; color:var(--ink-2) }
+.gs-table td:first-child{ color:var(--ink) }
+.gs-table tr:last-child td{ border-bottom:0 }
+.bg-white .gs-table{ background:var(--bone) }
+.gs-foot{ margin-top:28px; font-size:14px; color:var(--on-forest) }
+@media(max-width:900px){
+  .gs-hero-grid, .gs-split{ grid-template-columns:1fr }
+  .gs-steps, .gs-safe{ grid-template-columns:1fr }
+  .gs-sticky{ position:static }
+}
+
+/* "Under the model. Over your data." fits one screen (Theo, 12 Oct 2026): the title sits
+   beside its intro, each layer's name sits beside its pills, and the lanes are shorter.
+   Scoped to the how-it-works section by .arch-fit, so the diagram's base rules are untouched. */
+.si-row{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); column-gap:clamp(28px,4vw,64px); align-items:end; max-width:none }
+.si-row .label, .si-row h2{ grid-column:1 }
+.si-row .lead{ grid-column:2; grid-row:1 / span 2; margin-top:0; max-width:none }
+.arch-fit .arch{ --arch-lane:28px; --arch-strip-pad:12px }
+.arch-fit .arch-tier{ display:flex; align-items:center; flex-wrap:wrap; column-gap:16px; row-gap:8px; padding:10px 14px }
+.arch-fit .arch-tier .arch-chips{ margin-top:0 }
+.arch-fit .arch-rw{ padding:2px 0 }
+.arch-fit .arch-quarri{ padding:10px 14px 8px }
+.arch-fit .arch-layer{ display:grid; grid-template-columns:clamp(250px,24vw,320px) minmax(0,1fr); column-gap:14px; align-items:center; padding:6px 0 }
+.arch-fit .arch-pills{ margin-top:0 }
+.arch-fit .arch-foot{ margin-top:10px; padding-top:10px }
+@media(max-width:900px){
+  .si-row{ display:block }
+  .si-row .lead{ margin-top:22px }
+  .arch-fit .arch-layer{ grid-template-columns:1fr; row-gap:6px }
+}
+
+/* How-it-works hero (Theo, 12 Oct 2026): the title runs across the page instead of stacking
+   in a 64ch column, and the Keep/Add panel sits beside the intro so the right side is used. */
+.hiw-hero > .container{ display:grid; grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr); column-gap:clamp(32px,5vw,72px); align-items:start }
+.hiw-hero .hero-copy{ display:contents }
+.hiw-hero .hero-copy .label, .hiw-hero .hero-copy h1{ grid-column:1 / -1 }
+.hiw-hero .hero-copy .lead{ grid-column:1; margin-top:30px }
+.hiw-hero .keepadd{ grid-column:2; margin-top:30px; max-width:none }
+@media(max-width:900px){
+  .hiw-hero > .container{ display:block }
+  .hiw-hero .keepadd{ margin-top:28px }
+}
+
+/* The diagram, made readable (Theo, 12 Oct 2026): layer names in the body face at a readable size,
+   the description on its own line, no L1-L5 counters, larger and brighter pills. */
+.arch-fit .arch > .arch-cap{ color:rgba(255,255,255,.66) }
+.arch-fit .arch-lname{ display:block; font-family:var(--font); font-size:14px; font-weight:500; letter-spacing:-.005em;
+  text-transform:none; color:#fff; line-height:1.3 }
+.arch-fit .arch-lname i{ display:block; margin-top:2px; font-size:12.5px; font-weight:400; color:rgba(255,255,255,.62) }
+[data-bp-page="howitworks"] .arch-fit .arch-lname::after{ content:none }
+.arch-fit .arch-layer{ grid-template-columns:clamp(190px,19vw,240px) minmax(0,1fr); padding:7px 0 }
+.arch-fit .arch-pills b, .arch-fit .arch-chip{ font-size:13px; color:#fff }
+.arch-fit .arch-tier h4 em, .arch-fit .arch-quarri > h4 em{ font-size:10.5px }
+.arch-fit .arch-tier h4 em{ color:rgba(255,255,255,.62) }
+.arch-fit .arch-rw span{ font-size:10.5px }
+
+/* Homepage cards v2 (14 Oct 2026) */
+.cardv2 text{ text-rendering:geometricPrecision }
+.cardv2 .mono-s,.cardv2 .mono-w,.cardv2 .mono-g,.cardv2 .mono-c{ font-size:9.5px }
+.cardv2 .mono-c{ font-family:var(--mono); fill:var(--coral) }
+.cardv2 .hair{ vector-effect:non-scaling-stroke; shape-rendering:crispEdges }
+.cardv2 .vs{ vector-effect:non-scaling-stroke }
+.cardv2 .spark-dot.hot{ fill:var(--coral) }
+.cardv2 .flag{ fill:rgba(255,255,255,.07); stroke:rgba(255,255,255,.16) }
+.reveal.in .cardv2 .flag{ animation:cardv2-flag .6s ease var(--d,1.7s) forwards }
+@keyframes cardv2-flag{ to{ fill:rgba(218,119,86,.12); stroke:rgba(218,119,86,.6) } }
+.cardv2 .qdot{ fill:var(--coral); opacity:0 }
+.reveal.in .cardv2 .qdot{ animation:fadein .3s ease var(--d,1s) forwards, cardv2-breathe 2.4s ease-in-out calc(var(--d,1s) + .3s) infinite }
+.cardv2 .beat{ opacity:0 }
+.reveal.in .cardv2 .beat{ animation:fadein .4s ease var(--d,1.2s) forwards, cardv2-breathe 3s ease-in-out calc(var(--d,1.2s) + .4s) infinite }
+@keyframes cardv2-breathe{ 0%,100%{ opacity:.6 } 50%{ opacity:1 } }
+.wf-panel .pt em.pt-warn{ color:var(--coral) }
+@media (prefers-reduced-motion: reduce){
+  .cardv2 .qdot,.reveal.in .cardv2 .qdot,.cardv2 .beat,.reveal.in .cardv2 .beat{ opacity:1; animation:none }
+  .cardv2 .flag,.reveal.in .cardv2 .flag{ fill:rgba(218,119,86,.12); stroke:rgba(218,119,86,.6); animation:none }
+}

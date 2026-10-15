@@ -53,3 +53,11 @@
   for = "/llms.txt"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# The guides for AI agents (agents.md, agents-reference.md). Markdown is read as text by
+# agents and browsers; say so, with the charset, and revalidate like llms.txt.
+[[headers]]
+  for = "/*.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Cache-Control = "public, max-age=0, must-revalidate"

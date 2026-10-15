@@ -31,8 +31,8 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
-<link rel="stylesheet" href="styles.css?v=124">
-<link rel="stylesheet" href="components.css?v=124">
+<link rel="stylesheet" href="styles.css?v=144">
+<link rel="stylesheet" href="components.css?v=144">
 
 <script type="application/ld+json" id="quarri-schema">
 {
@@ -139,19 +139,11 @@
       "offers": [
         {
           "@type": "Offer",
-          "name": "Essentials",
-          "price": "500",
+          "name": "Free tier",
+          "price": "0",
           "priceCurrency": "USD",
           "url": "https://quarri.ai/pricing.html",
-          "description": "One live data source, 1 GB of data, unlimited AI queries, one user and unlimited dashboard viewers. Implementation and data modelling included.",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "500",
-            "priceCurrency": "USD",
-            "unitText": "month",
-            "billingDuration": 1,
-            "billingIncrement": 1
-          }
+          "description": "One new data connector, 1 GB of data, unlimited AI queries, one user and unlimited dashboard viewers, set up yourself in Claude. No time limit."
         },
         {
           "@type": "Offer",
@@ -193,44 +185,50 @@
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
     <nav class="nav-links">
-      <a href="index.html#platform">Platform</a>
+      <div class="nav-group">
+        <a href="how-it-works.html" tabindex="0">How it works</a>
+        <div class="nav-pop">
+          <a class="np-ic" href="index.html#platform"><span class="ic ic-quarri-platform" aria-hidden="true"></span><span class="np-t">Quarri Platform</span><span class="np-s">What Quarri does</span></a>
+          <a class="np-ic" href="how-it-works.html"><span class="ic ic-how-we-work" aria-hidden="true"></span><span class="np-t">How We Work</span><span class="np-s">A layer, not a migration</span></a>
+        </div>
+      </div>
       <div class="nav-group">
         <a href="index.html#serve" tabindex="0">Who we serve</a>
         <div class="nav-pop">
           <span class="np-group">By operation</span>
-          <a href="forest-management.html"><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
-          <a href="sawmills.html"><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
-          <a href="wood-products.html"><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
-          <a href="pulp-paper-packaging.html"><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
+          <a class="np-ic" href="forest-management.html"><span class="ic ic-forest-management" aria-hidden="true"></span><span class="np-t">Forest Management</span><span class="np-s">Land &rarr; log</span></a>
+          <a class="np-ic" href="sawmills.html"><span class="ic ic-sawmills" aria-hidden="true"></span><span class="np-t">Sawmills</span><span class="np-s">Log &rarr; lumber</span></a>
+          <a class="np-ic" href="wood-products.html"><span class="ic ic-wood-products" aria-hidden="true"></span><span class="np-t">Wood Products</span><span class="np-s">Lumber &rarr; finished</span></a>
+          <a class="np-ic" href="pulp-paper-packaging.html"><span class="ic ic-pulp-paper-packaging" aria-hidden="true"></span><span class="np-t">Pulp, Paper &amp; Packaging</span><span class="np-s">Fibre &rarr; board</span></a>
           <span class="np-group">By team</span>
-          <a href="finance-and-strategy-teams.html"><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
-          <a href="operations-teams.html"><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
+          <a class="np-ic" href="finance-and-strategy-teams.html"><span class="ic ic-finance-strategy" aria-hidden="true"></span><span class="np-t">Finance &amp; Strategy</span><span class="np-s">Cash, margin, reporting</span></a>
+          <a class="np-ic" href="operations-teams.html"><span class="ic ic-operations" aria-hidden="true"></span><span class="np-t">Operations</span><span class="np-s">Yield, uptime, inventory</span></a>
         </div>
       </div>
-      <a href="how-it-works.html">How it works</a>
       <a href="security.html">Security</a>
       <a href="pricing.html" class="is-active">Pricing</a>
       <div class="nav-group">
         <a href="case-studies.html" tabindex="0">Resources</a>
-        <div class="nav-pop nav-pop-sm">
-          <a href="case-studies.html"><span class="np-t">Case studies</span><span class="np-s">What we changed</span></a>
-          <a href="insights.html"><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
-          <a href="faq.html"><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
+        <div class="nav-pop">
+          <a class="np-ic" href="case-studies.html"><span class="ic ic-case-studies" aria-hidden="true"></span><span class="np-t">Case Studies</span><span class="np-s">What we changed</span></a>
+          <a class="np-ic" href="insights.html"><span class="ic ic-insights" aria-hidden="true"></span><span class="np-t">Insights</span><span class="np-s">Notes from the forest floor</span></a>
+          <a class="np-ic" href="faq.html"><span class="ic ic-faq" aria-hidden="true"></span><span class="np-t">FAQ</span><span class="np-s">The questions operators ask</span></a>
         </div>
       </div>
-      <a href="https://app.quarri.ai/" class="nav-login">Login</a>
-      <a href="book-a-demo.html" class="btn btn-primary">Request a demo</a>
+      <a href="about.html">About</a>
+      <a href="https://app.quarri.ai/signup" class="nav-login">Sign in</a>
+      <span class="nav-pair"><a href="https://app.quarri.ai/signup">Start free <span class="arw" aria-hidden="true">&rarr;</span></a><a href="book-a-demo.html">Request a demo <span class="arw" aria-hidden="true">&rarr;</span></a></span>
     </nav>
   </div>
 </header>
 
 <main id="main">
 <!-- HERO -->
-<section style="padding-bottom:clamp(30px,4vw,50px)">
+<section style="padding-top:clamp(48px,7vh,84px);padding-bottom:clamp(24px,3vw,40px)">
   <div class="container">
     <span class="label reveal">// Pricing</span>
-    <h1 class="display reveal d1" style="margin-top:14px;max-width:16ch">Tailored pricing for <span class="coral">all operators.</span></h1>
-    <p class="lead reveal d2" style="margin-top:22px">Unlimited AI queries on every plan, and add-ons priced by use, no long-term commitment required. Every plan includes full implementation, data modelling, and data cleaned and maintained for you.</p>
+    <h1 class="display reveal d1" style="margin-top:14px">Tailored pricing for <span class="coral">all operators.</span></h1>
+    <p class="lead reveal d2" style="margin-top:22px">Unlimited AI queries on every plan, with no long-term commitment. Start free and set Quarri up yourself in Claude. On Enterprise, our team implements it, models your data and keeps it clean for you.</p>
   </div>
 </section>
 
@@ -239,17 +237,18 @@
   <div class="container">
     <div class="tiers reveal">
       <div class="tier">
-        <span class="tn">// Essentials</span>
-        <div class="tp">$500 <small>/ month</small></div>
-        <p class="td">Essential AI analytics for growing teams getting started with connected data.</p>
+        <span class="tn">// Free tier</span>
+        <div class="tp">$0 <small>/ no time limit</small></div>
+        <p class="td">Try Quarri on your own data, set up yourself in Claude.</p>
         <ul>
-          <li>1 live data source &middot; 1&nbsp;GB of data included</li>
+          <li>1 new data connector &middot; 1&nbsp;GB of data included</li>
           <li>Unlimited AI queries</li>
-          <li>Data cleaned &amp; maintained</li>
-          <li>Full implementation &amp; data modelling</li>
-          <li>1 user &middot; unlimited dashboard viewers</li>
+          <li>Guided set-up in Claude: a tour on a demo sawmill, then build your own</li>
+          <li>2 users, including anyone a dashboard is shared with</li>
+          <li>1 scheduled job &middot; 5 emails a week</li>
+          <li>No time limit</li>
         </ul>
-        <a href="book-a-demo.html" class="btn btn-ghost">Start your journey <span class="arw">&rarr;</span></a>
+        <a href="https://app.quarri.ai/signup" class="btn btn-ghost">Start free <span class="arw">&rarr;</span></a>
       </div>
       <div class="tier hot">
         <span class="tn">// Enterprise</span>
@@ -257,6 +256,7 @@
         <p class="td">Tailored deployment for complex operations, custom limits, terms and support.</p>
         <ul>
           <li>Custom data sources, storage and users</li>
+          <li>Full implementation, data modelling &amp; data cleaned for you</li>
           <li>Unlimited AI queries</li>
           <li>Included development days &amp; ongoing maintenance</li>
           <li>Custom user roles &amp; access controls</li>
@@ -277,9 +277,9 @@
 </div>
 
 <!-- COMPARISON -->
-<section>
+<section style="padding:clamp(52px,7vh,84px) 0">
   <div class="container">
-    <div class="section-intro">
+    <div class="section-intro" style="margin-bottom:clamp(24px,3vw,40px)">
       <span class="label reveal">// Comparison</span>
       <h2 class="reveal d1">What's included, <span class="coral">side by side.</span></h2>
     </div>
@@ -288,34 +288,36 @@
         <thead>
           <tr>
             <th style="width:44%"></th>
-            <th>Essentials<small>$500 / month</small></th>
+            <th>Free tier<small>No time limit</small></th>
             <th>Enterprise<small>Custom</small></th>
           </tr>
         </thead>
         <tbody>
           <tr class="cat"><td colspan="3">Data</td></tr>
-          <tr><td>Live data sources</td><td>1</td><td>Custom</td></tr>
+          <tr><td>Live data sources</td><td>1 new</td><td>Custom</td></tr>
           <tr><td>Data included</td><td>1 GB</td><td>Custom</td></tr>
-          <tr><td>Data cleaned &amp; maintained</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
-          <tr><td>Full implementation &amp; data modelling</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><td>Data cleaned &amp; maintained</td><td class="no"></td><td class="yes">&#10003;</td></tr>
+          <tr><td>Full implementation &amp; data modelling</td><td class="no"></td><td class="yes">&#10003;</td></tr>
+          <tr><td>Guided set-up in Claude (tour and builders)</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
           <tr class="cat"><td colspan="3">AI &amp; analytics</td></tr>
           <tr><td>Unlimited AI queries</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+          <tr><td>Scheduled jobs</td><td>1</td><td>Custom</td></tr>
+          <tr><td>Emails</td><td>5 a week</td><td>Custom</td></tr>
           <tr class="cat"><td colspan="3">Users &amp; access</td></tr>
-          <tr><td>Users</td><td>1</td><td>Custom</td></tr>
-          <tr><td>Dashboard viewers</td><td>Unlimited</td><td>Unlimited</td></tr>
-          <tr><td>Custom user roles &amp; access controls</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
+          <tr><td>Users</td><td>2</td><td>Custom</td></tr>
+          <tr><td>Dashboard viewers</td><td>Within the 2 users</td><td>Unlimited</td></tr>
+          <tr><td>Custom user roles &amp; access controls</td><td class="no"></td><td class="yes">&#10003;</td></tr>
           <tr class="cat"><td colspan="3">Development &amp; support</td></tr>
-          <tr><td>Included development days</td><td class="no">. </td><td>Custom</td></tr>
-          <tr><td>Ongoing maintenance</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
-          <tr><td>Training sessions per year</td><td class="no">. </td><td>Custom</td></tr>
-          <tr><td>Slack channel support</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
-          <tr><td>Priority support</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
-          <tr><td>Dedicated account contact</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
+          <tr><td>Included development days</td><td class="no"></td><td>Custom</td></tr>
+          <tr><td>Ongoing maintenance</td><td class="no"></td><td class="yes">&#10003;</td></tr>
+          <tr><td>Slack channel support</td><td class="no"></td><td class="yes">&#10003;</td></tr>
+          <tr><td>Priority support</td><td class="no"></td><td class="yes">&#10003;</td></tr>
+          <tr><td>Dedicated account contact</td><td class="no"></td><td class="yes">&#10003;</td></tr>
           <tr class="cat"><td colspan="3">Available add-ons</td></tr>
-          <tr><td>Additional data source</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
-          <tr><td>Additional development day</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
-          <tr><td>Additional storage</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
-          <tr><td>Additional user seat</td><td class="no">. </td><td class="yes">&#10003;</td></tr>
+          <tr><td>Additional data source</td><td class="no"></td><td class="yes">&#10003;</td></tr>
+          <tr><td>Additional development day</td><td class="no"></td><td class="yes">&#10003;</td></tr>
+          <tr><td>Additional storage</td><td class="no"></td><td class="yes">&#10003;</td></tr>
+          <tr><td>Additional user seat</td><td class="no"></td><td class="yes">&#10003;</td></tr>
         </tbody>
       </table>
     </div>
@@ -346,8 +348,8 @@
       <div>
         <h4>Platform</h4>
         <ul>
-          <li><a href="index.html#platform">The eight steps</a></li>
-          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="index.html#platform">Quarri Platform</a></li>
+          <li><a href="how-it-works.html">How We Work</a></li>
           <li><a href="security.html">Security</a></li>
           <li><a href="pricing.html">Pricing</a></li>
         </ul>
@@ -364,9 +366,11 @@
       <div>
         <h4>Company</h4>
         <ul>
+          <li><a href="about.html">About</a></li>
           <li><a href="insights.html">Insights</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="book-a-demo.html">Request a demo</a></li>
+          <li><a href="https://app.quarri.ai/signup">Start free</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
           <li><a href="https://www.linkedin.com/company/quarri" rel="me noopener" target="_blank">LinkedIn</a></li>
@@ -391,6 +395,6 @@
   } else { els.forEach(function(e){e.classList.add('in')}); }
 })();
 </script>
-<script src="assets/consent.js?v=124" defer></script>
+<script src="assets/consent.js?v=144" defer></script>
 </body>
 </html>
