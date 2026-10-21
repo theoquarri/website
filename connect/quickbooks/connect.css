@@ -1,0 +1,92 @@
+/*
+ * Connect QuickBooks pages (connect/quickbooks/, Theo 21 Oct 2026): the pages Quarri's Intuit app
+ * "Quarri" points at. The look is the app's Claude consent page (quarri-data/quarri
+ * templates/oauth_authorize.html + static/css/signon.css): a white card floating on the forest
+ * photograph, Quarri's mark and the other side's at the top. Below 600 px the card sits on bone.
+ * Versioned in each page's link (?v=), because Netlify keeps /*.css for a year.
+ */
+:root {
+    --bone: #f7f6f3; --white: #ffffff; --ink: #111111; --ink-2: #555555; --ink-3: #888888; --rule: #e5e4e0;
+    --forest: #102a1c; --coral: #da7756; --coral-hi: #f0906a; --gain: #2d8a4e;
+    --error-bg: #fbeeea; --error-ink: #8b2e22; --ok-ink: #1b5a2e;
+    --font: 'Archivo', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+    --ctl: 40px; --r: 6px; --btn-h: 36px; --ease: cubic-bezier(.16, 1, .3, 1);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+[hidden] { display: none !important; }
+body {
+    margin: 0; min-height: 100%; display: flex; align-items: center; justify-content: center;
+    padding: 112px 24px 64px; background-color: var(--forest); color: var(--ink);
+    background-position: center; background-size: cover; background-repeat: no-repeat;
+    font-family: var(--font); font-size: 15.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0; background: rgba(16, 42, 28, 0.42); pointer-events: none; }
+@media (min-width: 601px) { body { background-image: url('/connect/quickbooks/canopy.jpg'); background-attachment: fixed; } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
+
+.brand { position: fixed; z-index: 1; top: 52px; left: 40px; display: flex; align-items: center; gap: 10px;
+         color: var(--white); text-decoration: none; }
+.brand span { font-size: 22px; font-weight: 300; letter-spacing: -0.025em; }
+
+.card { position: relative; z-index: 1; width: 100%; max-width: 440px; padding: 40px 36px 32px;
+        background: var(--white); border-radius: 10px;
+        box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.04); }
+.pair { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 0 0 28px; }
+.pair .tile { display: flex; align-items: center; justify-content: center; width: 64px; height: 64px;
+              border: 1px solid var(--rule); border-radius: 14px; background: var(--white); }
+.pair .tile.quarri { color: var(--ink); }
+.pair .tile.qbo { color: #2ca01c; }           /* QuickBooks green (Simple Icons 14.0.0) */
+.pair .swap { color: var(--ink-3); }
+
+.eyebrow { display: block; font-size: 13px; color: var(--ink-2); }
+h1 { margin: 12px 0 0; font-weight: 400; font-size: clamp(28px, 2.6vw, 34px); line-height: 1.1;
+     letter-spacing: -0.025em; text-wrap: balance; }
+.lede { margin: 14px 0 0; font-size: 14.5px; color: var(--ink-2); }
+.lede strong { color: var(--ink); font-weight: 500; }
+.fine { margin: 20px 0 0; font-size: 13.5px; line-height: 1.7; color: var(--ink-2); }
+.notice { margin: 18px 0 0; padding: 12px 14px; border: 1px solid #ebc9c0; border-radius: var(--r);
+          background: var(--error-bg); color: var(--error-ink); font-size: 14px; }
+
+.grants { margin: 22px 0 0; }
+.grants p { margin: 0; font-size: 13px; color: var(--ink-2); }
+.grants ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
+.grants li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.45; }
+.grants li svg { flex: none; margin-top: 3px; color: var(--gain); }
+.steps { margin: 22px 0 0; padding: 0 0 0 20px; display: grid; gap: 8px; font-size: 14.5px; line-height: 1.5; }
+
+/* The website's buttons (styles.css .btn): 36 px, 6 px corners, ink primary, ghost secondary */
+.actions { display: grid; margin-top: 26px; }
+.btn {
+    display: flex; align-items: center; justify-content: center; width: 100%; height: var(--btn-h);
+    padding: 0 16px; border-radius: 6px; border: 1px solid transparent;
+    font-family: var(--font); font-size: 14px; font-weight: 400; letter-spacing: .01em; line-height: 1;
+    white-space: nowrap; text-decoration: none; cursor: pointer;
+    transition: background-color .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+}
+.btn:focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; }
+.btn-primary { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.btn-primary:hover { background: #2b2b2b; border-color: #2b2b2b; }
+.btn-ghost { background: transparent; border-color: var(--ink); color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--white); }
+.btn:disabled { opacity: 0.6; cursor: default; }
+.btn-primary:disabled:hover { background: var(--ink); }
+
+.copy { display: flex; gap: 8px; margin-top: 18px; }
+.copy input { flex: 1; min-width: 0; height: var(--ctl); padding: 0 14px; border: 1px solid var(--rule);
+              border-radius: var(--r); background: var(--white); color: var(--ink);
+              font: 400 12.5px var(--mono); }
+.copy .btn { flex: none; width: auto; height: var(--ctl); }
+.copied { margin: 8px 0 0; font-size: 13px; color: var(--ok-ink); }
+
+@media (max-width: 600px) {
+    body { background-color: var(--bone); align-items: flex-start; padding: 96px 16px 48px; }
+    body::before { display: none; }
+    .brand { position: absolute; top: 36px; left: 20px; color: var(--ink); }
+    .card { padding: 28px 20px 24px; box-shadow: none; border: 1px solid var(--rule); }
+    .copy { flex-direction: column; }
+    .copy input { flex: none; font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }

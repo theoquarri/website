@@ -67,3 +67,18 @@
   for = "/.well-known/openai-apps-challenge"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
+
+# Connect QuickBooks pages (connect/quickbooks/, Theo 21 Oct 2026): the done page's address carries a
+# one-time QuickBooks authorization code, so these pages send no Referer, cannot be framed, run only
+# their own script file, and the done page is never cached.
+[[headers]]
+  for = "/connect/*"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"
+
+[[headers]]
+  for = "/connect/quickbooks/done/*"
+  [headers.values]
+    Cache-Control = "no-store"
