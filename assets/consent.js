@@ -59,8 +59,20 @@
     }
   }
 
+  /* Our own previews (the local build server, a page opened from disk) carry
+     this same script. Left alone they record the team as visitors: on 15 Oct
+     2026 three of the week's ten Clarity dead-click sessions were 127.0.0.1.
+     Only local addresses are skipped; every visitor to quarri.ai, bots and
+     mail scanners included, still loads and is counted. */
+  function isLocalPreview() {
+    var h = (location.hostname || '').toLowerCase();
+    return location.protocol === 'file:' || h === '' || h === 'localhost'
+        || h === '127.0.0.1' || h === '[::1]' || h === '::1'
+        || /\.localhost$/.test(h) || /\.test$/.test(h);
+  }
+
   function loadAnalytics() {
-    if (loaded) return;
+    if (loaded || isLocalPreview()) return;
     loaded = true;
     whenIdle(loadAnalyticsNow);
   }
