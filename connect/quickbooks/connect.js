@@ -14,7 +14,7 @@
 (function () {
     // The production client id of Intuit app "Quarri". It travels in every authorize URL, so it is
     // not secret; the client secret never comes near the website. Empty = connections switched off.
-    var CLIENT_ID = '';
+    var CLIENT_ID = 'ABceVQE4ZvsKSVHf7UGQd8PiASHVwxlgAzCFQQzAnDWCJmbZIn';
     var AUTHORIZE_URL = 'https://appcenter.intuit.com/connect/oauth2';
     var SCOPE = 'com.intuit.quickbooks.accounting';
     var REDIRECT_URI = 'https://quarri.ai/connect/quickbooks/done/';
