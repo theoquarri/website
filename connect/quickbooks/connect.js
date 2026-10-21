@@ -12,9 +12,16 @@
  * (_knowledge/engineering/netlify-rewrites-inline-handlers.md).
  */
 (function () {
-    // The production client id of Intuit app "Quarri". It travels in every authorize URL, so it is
-    // not secret; the client secret never comes near the website. Empty = connections switched off.
-    var CLIENT_ID = 'ABceVQE4ZvsKSVHf7UGQd8PiASHVwxlgAzCFQQzAnDWCJmbZIn';
+    // The client ids of Intuit app "Quarri": production keys for real companies, development keys for
+    // Intuit sandbox companies (?env=sandbox, for rehearsing the journey). An id travels in every
+    // authorize URL, so it is not secret; the client secret never comes near the website.
+    // Empty = connections switched off.
+    var CLIENT_IDS = {
+        production: 'ABceVQE4ZvsKSVHf7UGQd8PiASHVwxlgAzCFQQzAnDWCJmbZIn',
+        sandbox: 'AB8LSlLsQoN8TSVDR9ZAVBEzt06lvNgLhqvEbeQSpbS4hw2tza'
+    };
+    var ENV = new URLSearchParams(window.location.search).get('env') === 'sandbox' ? 'sandbox' : 'production';
+    var CLIENT_ID = CLIENT_IDS[ENV];
     var AUTHORIZE_URL = 'https://appcenter.intuit.com/connect/oauth2';
     var SCOPE = 'com.intuit.quickbooks.accounting';
     var REDIRECT_URI = 'https://quarri.ai/connect/quickbooks/done/';
@@ -37,6 +44,7 @@
 
     function connectPage() {
         var button = document.getElementById('connect');
+        if (ENV === 'sandbox') show('sandbox');
         if (!CLIENT_ID) {
             show('off');
             button.disabled = true;
@@ -46,7 +54,7 @@
             var ss = store();
             if (!ss) { show('nostore'); return; }
             var state = newState();
-            ss.setItem(STATE_KEY, JSON.stringify({ value: state, at: Date.now() }));
+            ss.setItem(STATE_KEY, JSON.stringify({ value: state, at: Date.now(), env: ENV }));
             var q = new URLSearchParams({ client_id: CLIENT_ID, response_type: 'code', scope: SCOPE,
                                           redirect_uri: REDIRECT_URI, state: state });
             window.location.assign(AUTHORIZE_URL + '?' + q.toString());
@@ -66,6 +74,12 @@
         if (window.history && history.replaceState) history.replaceState(null, '', window.location.pathname);
 
         if (!(fresh && given && given === saved.value)) { show('refused'); return; }
+        // The environment comes from what this tab started, never from the answer's address.
+        if (saved.env === 'sandbox') {
+            show('sandbox');
+            var again = document.querySelectorAll('a[href="/connect/quickbooks/"]');
+            for (var i = 0; i < again.length; i++) again[i].href = '/connect/quickbooks/?env=sandbox';
+        }
         if (q.get('error')) { show('cancelled'); return; }   // access_denied: Cancel on Intuit's screen
         if (!code || !realm) { show('refused'); return; }
 

@@ -50,6 +50,8 @@ h1 { margin: 12px 0 0; font-weight: 400; font-size: clamp(28px, 2.6vw, 34px); li
 .notice { margin: 18px 0 0; padding: 12px 14px; border: 1px solid #ebc9c0; border-radius: var(--r);
           background: var(--error-bg); color: var(--error-ink); font-size: 14px; }
 
+.notice.test { border-color: #e0b35b; background: #fff8e6; color: #6b4e00; }
+.pair + .notice.test { margin: 0 0 18px; }      /* the done page: the label sits above the heading */
 .grants { margin: 22px 0 0; }
 .grants p { margin: 0; font-size: 13px; color: var(--ink-2); }
 .grants ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
