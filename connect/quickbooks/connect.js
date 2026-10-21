@@ -21,6 +21,13 @@
         sandbox: 'AB8LSlLsQoN8TSVDR9ZAVBEzt06lvNgLhqvEbeQSpbS4hw2tza'
     };
     var ENV = new URLSearchParams(window.location.search).get('env') === 'sandbox' ? 'sandbox' : 'production';
+    // ?return=<content id>: the journey started in a customer's Connect QuickBooks app inside Quarri.
+    // The done page hands Intuit's answer straight back to that app (in the address fragment, which
+    // never reaches a server) and the app saves it to its own workspace: nothing to copy. Only a
+    // numeric Quarri content id is accepted, so this can't send anyone anywhere else.
+    var RETURN_ID = (new URLSearchParams(window.location.search).get('return') || '').match(/^[0-9]{1,9}$/);
+    RETURN_ID = RETURN_ID ? RETURN_ID[0] : '';
+    var APP_URL = 'https://app.quarri.ai/#content=';
     var CLIENT_ID = CLIENT_IDS[ENV];
     var AUTHORIZE_URL = 'https://appcenter.intuit.com/connect/oauth2';
     var SCOPE = 'com.intuit.quickbooks.accounting';
@@ -54,7 +61,7 @@
             var ss = store();
             if (!ss) { show('nostore'); return; }
             var state = newState();
-            ss.setItem(STATE_KEY, JSON.stringify({ value: state, at: Date.now(), env: ENV }));
+            ss.setItem(STATE_KEY, JSON.stringify({ value: state, at: Date.now(), env: ENV, ret: RETURN_ID }));
             var q = new URLSearchParams({ client_id: CLIENT_ID, response_type: 'code', scope: SCOPE,
                                           redirect_uri: REDIRECT_URI, state: state });
             window.location.assign(AUTHORIZE_URL + '?' + q.toString());
@@ -80,8 +87,17 @@
             var again = document.querySelectorAll('a[href="/connect/quickbooks/"]');
             for (var i = 0; i < again.length; i++) again[i].href = '/connect/quickbooks/?env=sandbox';
         }
-        if (q.get('error')) { show('cancelled'); return; }   // access_denied: Cancel on Intuit's screen
+        var ret = /^[0-9]{1,9}$/.test(saved.ret || '') ? saved.ret : '';
+        if (q.get('error')) {                                 // access_denied: Cancel on Intuit's screen
+            if (ret) { window.location.replace(APP_URL + ret + '&qbo_error=' + encodeURIComponent(q.get('error'))); return; }
+            show('cancelled'); return;
+        }
         if (!code || !realm) { show('refused'); return; }
+        if (ret) {
+            show('returning');
+            window.location.replace(APP_URL + ret + '&' + new URLSearchParams({ qbo_code: code, qbo_realm: realm, qbo_state: given }).toString());
+            return;
+        }
 
         var address = REDIRECT_URI + '?' + new URLSearchParams({ code: code, state: given, realmId: realm }).toString();
         document.getElementById('realm').textContent = realm;
