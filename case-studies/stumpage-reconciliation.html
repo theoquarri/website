@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"></noscript>
 <link rel="stylesheet" href="../styles.css?v=153">
-<link rel="stylesheet" href="../components.css?v=153">
+<link rel="stylesheet" href="../components.css?v=155">
 
 <script type="application/ld+json" id="quarri-schema">
 {
@@ -291,7 +291,7 @@
 
         <div class="wf-panel cf-wide">
           <div class="pt"><span>// Documents in</span><em>read, not retyped</em></div>
-          <svg viewBox="0 0 760 132" aria-hidden="true">
+          <svg class="cf-desk" viewBox="0 0 760 132" aria-hidden="true">
             <text x="6" y="14" class="mono-s">WHAT ARRIVES</text>
             <text x="286" y="14" class="mono-s">WHAT THE APPLICATION READS</text>
             <text x="586" y="14" class="mono-s">WHAT COMES OUT</text>
@@ -333,6 +333,44 @@
               <rect x="586" y="70" width="150" height="8" rx="2" fill="#2d8a4e" class="dr-bar" style="animation-delay:.6s"/>
               <text x="586" y="96" class="mono-r">ANYTHING UNREADABLE</text>
               <text x="586" y="110" class="mono-r">IS FLAGGED, NOT GUESSED</text>
+            </g>
+          </svg>
+          <svg class="cf-ph" viewBox="0 0 320 362" aria-hidden="true">
+            <text x="6" y="14" class="mono-s">WHAT ARRIVES</text>
+            <line x1="6" y1="20" x2="314" y2="20" stroke="rgba(255,255,255,.14)"/>
+            <g class="dr-up" style="animation-delay:.1s">
+              <rect x="6"  y="42" width="50" height="62" rx="3" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.20)"/>
+              <rect x="16" y="36" width="50" height="62" rx="3" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.26)"/>
+              <rect x="26" y="30" width="50" height="62" rx="3" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.34)"/>
+              <line x1="34" y1="44" x2="68" y2="44" stroke="rgba(255,255,255,.32)"/>
+              <line x1="34" y1="54" x2="68" y2="54" stroke="rgba(255,255,255,.32)"/>
+              <line x1="34" y1="64" x2="58" y2="64" stroke="rgba(255,255,255,.32)"/>
+              <line x1="34" y1="74" x2="68" y2="74" stroke="rgba(255,255,255,.32)"/>
+              <text x="92" y="48" class="mono-s">SCANNED PDF INVOICES</text>
+              <text x="92" y="64" class="mono-s">BILLS OF LADING</text>
+              <text x="92" y="80" class="mono-s">SCALE SLIPS AND TALLY SHEETS</text>
+              <text x="92" y="96" class="mono-s">CREDIT NOTES, MID-CYCLE</text>
+            </g>
+            <path d="M 160 110 L 160 126" stroke="rgba(255,255,255,.30)" fill="none" class="dr-flow"/><path d="M 156 120 L 160 126 L 164 120" stroke="rgba(255,255,255,.45)" fill="none"/>
+            <text x="6" y="142" class="mono-s">WHAT THE APPLICATION READS</text>
+            <line x1="6" y1="148" x2="314" y2="148" stroke="rgba(255,255,255,.14)"/>
+            <g class="dr-up" style="animation-delay:.3s">
+              <rect x="6" y="156" width="308" height="76" rx="4" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.16)"/>
+              <text x="18" y="174" class="mono-s">BILL OF LADING NUMBER</text><text x="302" y="174" class="mono-g" text-anchor="end">READ</text>
+              <text x="18" y="190" class="mono-s">VOLUME AND UNIT</text><text x="302" y="190" class="mono-g" text-anchor="end">READ</text>
+              <text x="18" y="206" class="mono-s">CHARGE TYPE AND RATE</text><text x="302" y="206" class="mono-g" text-anchor="end">READ</text>
+              <text x="18" y="222" class="mono-s">CREDIT LINES</text><text x="302" y="222" class="mono-g" text-anchor="end">READ</text>
+              <text x="6" y="250" class="mono-s">NO PERSON KEYS A FIELD</text>
+              <text x="6" y="264" class="mono-s">SAME FILE READS THE SAME WAY NEXT CYCLE</text>
+            </g>
+            <path d="M 160 272 L 160 288" stroke="rgba(255,255,255,.30)" fill="none" class="dr-flow"/><path d="M 156 282 L 160 288 L 164 282" stroke="rgba(255,255,255,.45)" fill="none"/>
+            <text x="6" y="304" class="mono-s">WHAT COMES OUT</text>
+            <line x1="6" y1="310" x2="314" y2="310" stroke="rgba(255,255,255,.14)"/>
+            <g class="dr-up" style="animation-delay:.5s">
+              <text x="6" y="326" class="mono-w">STRUCTURED CHARGES, ONE ROW PER LOAD</text>
+              <rect x="6" y="334" width="150" height="8" rx="2" fill="rgba(255,255,255,.10)"/>
+              <rect x="6" y="334" width="150" height="8" rx="2" fill="#2d8a4e" class="dr-bar" style="animation-delay:.6s"/>
+              <text x="6" y="358" class="mono-r">ANYTHING UNREADABLE IS FLAGGED, NOT GUESSED</text>
             </g>
           </svg>
           <p class="cap">The month arrives as paper and scans. Nobody at the operation reads a document to get a number out of it any more, and what cannot be read cleanly is raised rather than filled in.</p>

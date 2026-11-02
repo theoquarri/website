@@ -2566,3 +2566,27 @@ details.faq-q .faq-a{padding:0 0 clamp(22px,2.6vw,30px) 28px}
   /* homepage card 07: the "vs market" column steps 8 units left so "ABOVE MARKET" ends inside the chart */
   .mr-vis > .wf-panel .cardv2 text[x="372"]{ transform:translateX(-8px) }
 }
+
+/* ==========================================================================
+   Case-study flow charts on phones (2 Nov 2026). Below 600px these panels used
+   to keep a 480px chart and scroll sideways inside the panel. Now they fit the
+   screen like the homepage panels: edge to edge with 8px side padding and
+   larger chart text. The wide three-step chart (cf-wide) swaps to a stacked
+   320-unit version (svg.cf-ph) authored in each case study beside the desktop
+   one (svg.cf-desk). Desktop is untouched.
+   ========================================================================== */
+.cs-flow .cf-wide > svg.cf-ph{ display:none }
+@media (max-width:600px){
+  /* !important and the extra class beat the generic phone rule that makes panels scroll */
+  .cs-flow .cf-grid > .wf-panel{
+    overflow:hidden !important;
+    margin-left:calc(-1 * var(--gutter)); margin-right:calc(-1 * var(--gutter));
+    padding-left:8px; padding-right:8px; border-left:0; border-right:0;
+  }
+  .cs-flow .cf-grid > .wf-panel > svg{ min-width:0 }
+  .cs-flow .cf-wide > svg.cf-desk{ display:none }
+  .cs-flow .cf-wide > svg.cf-ph{ display:block }
+  .cs-flow .cf-grid > .wf-panel > :is(.pt, .cap){ padding-left:calc(var(--gutter) - 8px); padding-right:calc(var(--gutter) - 8px) }
+  .cs-flow .cf-grid > .wf-panel svg :is(.mono-s, .mono-g, .mono-r){ font-size:9.5px; letter-spacing:-.03em }
+  .cs-flow .cf-grid > .wf-panel svg .mono-w{ font-size:9.9px; letter-spacing:-.03em }
+}
